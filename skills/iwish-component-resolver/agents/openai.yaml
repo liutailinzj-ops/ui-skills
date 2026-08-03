@@ -1,0 +1,4 @@
+interface:
+  display_name: "IWISH Component Resolver"
+  short_description: "根据页面蓝图复用或创建可编辑的项目级Figma组件和变体"
+  default_prompt: "使用 $iwish-component-resolver 为页面蓝图复用、扩展或创建可编辑的 Figma 组件。"

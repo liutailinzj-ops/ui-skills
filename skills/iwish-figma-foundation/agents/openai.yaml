@@ -1,0 +1,4 @@
+interface:
+  display_name: "IWISH Figma Foundation"
+  short_description: "在空白或既有Figma文件中建立项目级页面结构、变量与样式基础"
+  default_prompt: "使用 $iwish-figma-foundation 在目标 Figma 文件中建立或补齐项目基础。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "IWISH Figma Page Builder"
+  short_description: "使用原生Figma节点、组件实例和自动布局生成桌面与移动端页面"
+  default_prompt: "使用 $iwish-figma-page-builder 在目标 Figma 文件中生成可编辑的桌面与移动端页面。"

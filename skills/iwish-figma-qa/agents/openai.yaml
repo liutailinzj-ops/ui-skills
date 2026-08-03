@@ -1,0 +1,4 @@
+interface:
+  display_name: "IWISH Figma QA"
+  short_description: "检查并修复Figma文件结构、组件、响应式页面和视觉问题"
+  default_prompt: "使用 $iwish-figma-qa 在客户确认或开发交接前检查并修复可编辑的 Figma 网站设计。"
