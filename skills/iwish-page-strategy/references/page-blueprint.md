@@ -8,6 +8,7 @@ page:
   site_model: dtc | b2b | mixed
   strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
   content_mode: final | mixed | placeholder
+  content_mode_label: 正式内容 | 混合内容 | 占位内容
   build_route: template | theme_customization | custom
   reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
 analysis:

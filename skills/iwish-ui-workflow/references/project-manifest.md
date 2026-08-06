@@ -42,6 +42,7 @@ figma:
   handoff_nodes: {}
 content:
   mode: final | mixed | placeholder
+  display_label: 正式内容 | 混合内容 | 占位内容
   placeholders: []
 analysis:
   status: pending | complete | blocked
@@ -103,6 +104,8 @@ risks: []
 ```
 
 Persist exact Figma node IDs returned by tools. Never guess or reconstruct IDs. Resume from this manifest after interruption.
+
+Treat `content.mode` as an internal field. Use `content.display_label` in recognition cards, UI questions, and handoff summaries.
 
 For theme-based work, keep one mapping record per page section with the exact theme section/block, evidence URL, implementation level, divergence, approval, and owner.
 

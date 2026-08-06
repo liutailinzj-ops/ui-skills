@@ -29,6 +29,7 @@ Obtain these from sales, the project owner, UI, or engineering:
 - Reference intent for each supplied site: `reference_to_theme`, `structure_target`, `visual_inspiration`, or `competitor_evidence`. Use `reference_to_theme` only when content inventory, order, and layout anatomy are approved targets. Infer this from the brief or confirm internally; do not ask the customer to provide a design analysis.
 - Strategy source: `research_led`, `reference_led`, `hybrid_led`, or `existing_site_led`. Infer it from Chinese instructions; UI does not need to provide the enum.
 - Theme state: `to_be_selected`, `demo_only`, `code_available`, or `current_site`.
+- Content mode: ask UI to use `正式内容`, `混合内容`, or `占位内容`. Normalize these internally to `final`, `mixed`, or `placeholder`.
 - For PDP work, available catalog/product records and known product differences. A complete catalog is not required.
 
 For `template` and `theme_customization` routes, the theme/demo/current-site reference is required before page strategy can approve implementation mappings. Obtain it internally; do not ask the customer to research the theme.
@@ -61,5 +62,7 @@ UI may use Chinese natural language instead of the enum fields:
 主题情况：{未选择 / 预览链接 / 已购买 / 现有网站}
 目标 Figma：{链接或允许新建}
 本次页面：{页面}
-内容情况：{完整 / 部分缺失 / 允许占位}
+内容模式：{正式内容 / 混合内容 / 占位内容}
 ```
+
+Do not expose `final`, `mixed`, or `placeholder` in a user-facing launch template or clarification question.

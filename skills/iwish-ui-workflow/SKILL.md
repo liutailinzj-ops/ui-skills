@@ -46,6 +46,7 @@ Missing product selections, final copy, product images, brand guidelines, or a S
 - Keep Figma mutations sequential and retain every returned node ID in the project manifest.
 - Resume from recorded node IDs and completed capabilities instead of rebuilding successful work.
 - Use Chinese labels in user-facing messages; keep English enum values internal to the manifest.
+- Present content modes only as `正式内容`, `混合内容`, or `占位内容` to UI. Normalize them internally to `final`, `mixed`, or `placeholder`; never ask UI to type or remember those enum values.
 - Do not pause merely to confirm a high-confidence route. Ask only when two materially different directions remain valid or a hard blocker exists.
 - Limit interactive clarification to one grouped round with no more than three decision-changing questions. Do not turn the workflow into a questionnaire.
 - Never present temporary claims, certifications, prices, reviews, specifications, or competitor assets as customer-approved facts.

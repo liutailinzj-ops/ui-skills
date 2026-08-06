@@ -12,6 +12,16 @@ theme_state: to_be_selected | demo_only | code_available | current_site
 content_state: final | mixed | placeholder
 ```
 
+Use these Chinese labels in every user-facing field, recognition card, question, and handoff summary:
+
+| Chinese label | Internal value | Meaning |
+| --- | --- | --- |
+| 正式内容 | `final` | Customer images, copy, and product information are largely usable |
+| 混合内容 | `mixed` | Real customer material and temporary content are used together |
+| 占位内容 | `placeholder` | Material is insufficient, so build a complete reviewable structure with safe temporary content |
+
+Never display the internal values as options for UI.
+
 ## Chinese intent mapping
 
 - “没有指定结构、由我们策划、根据品类设计” -> `research_led`.
@@ -43,7 +53,7 @@ Display this compact card once, then continue unless a blocking ambiguity exists
 建站方式：模板建站 / 模板二开 / 纯定制
 设计方式：自主策划 / 指定结构 / 混合参考 / 旧站改版
 主题状态：待选择 / 只有预览 / 已有代码 / 现有网站
-内容状态：正式 / 部分占位 / 占位
+内容模式：正式内容 / 混合内容 / 占位内容
 参考网站作用：无 / 竞品研究 / 指定结构 / 部分模块 / 视觉参考
 本次页面：{page}
 接下来：{analysis and build sequence}
