@@ -10,6 +10,14 @@ Aim for a compact evidence set:
 - 1–2 strong reference sites with relevant presentation patterns.
 - The theme demo or existing site when applicable.
 
+For template or theme-customization work, inspect these sources before category references:
+
+- Current official theme-store listing.
+- Current theme-vendor section and product-template documentation.
+- Live theme demo at Desktop and Mobile widths.
+
+Record exact section/block names, supported settings, responsive behavior, and evidence URLs. A marketing feature list proves that a capability exists but does not prove that a proposed geometry or composition is supported.
+
 ## Analyze
 
 For each source, record only decision-useful observations:
@@ -21,6 +29,8 @@ For each source, record only decision-useful observations:
 - Desktop/Mobile differences visible from the site.
 - Patterns repeated across the category.
 - Opportunities to avoid sameness.
+- Which page responsibilities can be expressed with native theme sections or blocks.
+- Which visual differences require configuration, styling, CSS, Liquid, or a genuinely custom section.
 
 ## Do not copy
 
@@ -30,3 +40,4 @@ For each source, record only decision-useful observations:
 
 If browsing is unavailable, use supplied references, state the limitation, and avoid presenting memory-derived trend claims as current research.
 
+For theme-based work, unavailable current theme evidence is a blocker to implementation mapping. Produce research notes only; do not approve custom sections from memory.

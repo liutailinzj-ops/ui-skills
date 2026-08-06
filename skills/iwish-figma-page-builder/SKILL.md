@@ -11,6 +11,7 @@ Write the requested composed page into Figma. Load the available Figma use and s
 
 - Project manifest.
 - Approved page blueprint.
+- Theme Capability Map and approved route budget for theme-based work.
 - Foundation IDs.
 - Component map.
 - Customer assets and placeholder policy.
@@ -23,16 +24,20 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 1. Create the Desktop and Mobile wrapper frames first.
 2. Build one major section per sequential Figma mutation.
 3. Append sections directly to the target wrapper; do not build orphaned top-level sections for later reparenting.
-4. Use component instances for resolved components and project-local components for repeated unsupported patterns.
-5. Bind colors, spacing, radii, text, and effects to existing project variables/styles where appropriate.
-6. Keep Desktop and Mobile separately editable. Use shared component APIs where useful; do not force identical composition.
-7. Set real or placeholder content through component properties rather than detaching instances.
-8. Return every created or mutated node ID and update the project manifest after each section.
-9. Validate each section screenshot before continuing.
+4. For theme-based work, reproduce the approved native section geometry and supported content slots before applying brand styling. Do not invent a layout and label it custom afterward.
+5. Use component instances for resolved components and project-local components for repeated unsupported patterns.
+6. Bind colors, spacing, radii, text, and effects to existing project variables/styles. Bind every client-facing text node to a text style.
+7. Keep Desktop and Mobile separately editable. Use shared component APIs where useful; do not force identical composition.
+8. Set real or placeholder content through component properties rather than detaching instances.
+9. Keep theme mappings, implementation notes, source warnings, and replacement instructions off the rendered client-preview frame. Store them in the manifest and project/handoff documentation.
+10. Return every created or mutated node ID and update the project manifest after each section.
+11. Validate each section screenshot and metadata against the build contract before continuing.
 
 ## Reference Capture
 
 For a renderable theme demo/current page, a web-to-Figma capture may be used as temporary visual truth. Keep it on `90_References`, transfer only permitted imagery, rebuild the final design with native nodes and component instances, and never treat the capture as the final page.
+
+For placeholder mode, build a client-presentable composition with safe sample copy and generated or licensed category imagery when available. Use `Placeholder /` in layer names and the manifest, not as the dominant visible design language. Read the asset policy before inserting any non-customer material.
 
 ## Completion
 
@@ -42,6 +47,5 @@ Return:
 - Desktop and Mobile root node IDs.
 - Completed section IDs.
 - Placeholder inventory.
-- Theme/platform implementation labels.
+- Theme/platform mapping report and custom-budget result.
 - Section validation results.
-

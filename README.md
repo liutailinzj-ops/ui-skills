@@ -57,5 +57,8 @@ skills/iwish-figma-qa
 - 客户只提供事实和现有素材；AI 负责调研和页面策略。
 - UI 负责创意方向、品牌判断和最终微调。
 - 技术部负责平台、主题和实现边界。
+- 模板项目必须先生成 Theme Capability Map，并将每个页面模块映射到主题中的准确 Section/Block。
+- 纯模板项目默认不允许自定义 Section；模板二开项目的自定义模块默认不得超过模块数和预计页面高度的 20%。
+- 客户预览不显示 `THEME NATIVE`、`SECTION CUSTOM`、素材替换说明等内部标注；这些信息保留在 Manifest 或交付说明中。
 - Figma Starter File 可选；Figma 文件结构和生成契约必须遵守。
 - 最终产物必须是原生、可编辑的 Figma 节点和组件结构，不是整页截图。

@@ -7,6 +7,16 @@
 - Desktop frame:
 - Mobile frame:
 - Status: pass | pass_with_followups | blocked
+- Text-style binding:
+- Grid integrity:
+- Equal-height groups:
+- Mobile overflow:
+- Custom section count ratio:
+- Custom section height ratio:
+
+## Theme Mapping
+
+- {page section}: {exact theme section/block, evidence, implementation level}
 
 ## Repaired
 
@@ -30,4 +40,3 @@
 ```
 
 Keep empty sections out of the final report.
-

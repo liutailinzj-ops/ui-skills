@@ -10,18 +10,22 @@ Create a bounded component map for the current page. Load the available Figma us
 ## Inputs
 
 - Page blueprint.
+- Theme Capability Map for template or theme-customization work.
 - Project manifest and foundation IDs.
 - Existing local components and accessible libraries.
 - Platform/theme implementation notes.
 
 ## Resolve in This Order
 
-1. Reuse a compatible existing local component.
-2. Import a compatible subscribed-library component.
-3. Wrap or extend a visually useful component whose property API needs a local contract.
-4. Create a project-local component.
+1. For theme-based work, resolve the exact theme section/block primitive required by the approved mapping.
+2. Reuse a compatible existing local component.
+3. Import a compatible subscribed-library component.
+4. Wrap or extend a visually useful component whose property API needs a local contract.
+5. Create a project-local component.
 
 Reuse only when properties, token bindings, naming, ownership, and editability are compatible. Do not detach imported instances merely to make them look editable.
+
+Do not invent a bespoke component or mark a section custom when the Theme Capability Map identifies a supported native section. Represent brand styling through tokens, allowed settings, and content slots before changing the implementation class.
 
 ## Componentization Rules
 
@@ -34,6 +38,9 @@ Read [references/component-contract.md](references/component-contract.md).
 - Use INSTANCE_SWAP for icon or media choices instead of a variant per asset.
 - If a variant matrix exceeds 30 combinations, split the component.
 - Bind visual properties to variables where appropriate.
+- Bind every client-facing text node to an approved text style.
+- Define the grid span, equal-height policy, and Desktop/Mobile sizing contract for repeated cards before creating instances.
+- Keep implementation annotations in the manifest or handoff documentation, not as visible client-preview content.
 - Build and validate one component family at a time.
 
 ## Company Library Policy
@@ -51,5 +58,6 @@ Return a component map containing:
 - Variable/style bindings.
 - Desktop/Mobile behavior.
 - Page-blueprint sections that consume it.
+- Exact theme section/block represented and permitted divergence.
+- Grid span, equal-height policy, and overflow behavior.
 - Validation screenshot and metadata status.
-

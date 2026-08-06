@@ -27,6 +27,8 @@ Obtain these from sales, the project owner, UI, or engineering:
 - Target Figma file or authorization to create one.
 - Whether missing material may use placeholders.
 
+For `template` and `theme_customization` routes, the theme/demo/current-site reference is required before page strategy can approve implementation mappings. Obtain it internally; do not ask the customer to research the theme.
+
 ## Accepted launch package
 
 ```text
@@ -38,4 +40,3 @@ figma_target: design URL or create_new
 requested_page: one page per initial build
 content_mode: final | mixed | placeholder
 ```
-
