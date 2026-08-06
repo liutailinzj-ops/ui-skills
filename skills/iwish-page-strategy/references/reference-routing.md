@@ -1,12 +1,23 @@
 # Reference Routing
 
-Classify each supplied site before using it. A URL alone does not define how closely the result should follow it.
+Classify each supplied site before using it. A URL alone does not define how closely the result should follow it. Record both its source role and fidelity mode.
+
+## Source roles
+
+- `structure_source`: the page that defines Build Truth. Its identity, content inventory, section order, and Desktop/Mobile anatomy drive the target.
+- `theme_capability`: theme store, vendor documentation, demo, or current-site evidence used only to prove Section, Block, Settings, and responsive behavior.
+- `competitor_evidence`: category and conversion research evidence.
+- `visual_inspiration`: art-direction evidence.
+
+The role invariant is strict: `theme_capability` never becomes `structure_source` unless the user explicitly selected the same URL for both. Preserve the role assignment across research, mapping, Figma build, and QA.
 
 ## Modes
 
 ### `reference_to_theme`
 
 Use when the reference page itself is the approved content-and-layout target and the task is to translate it into the selected theme. Follow [reference-to-theme.md](reference-to-theme.md). This is a low-freedom conversion workflow, not page strategy.
+
+Require exactly one primary `structure_source` per page conversion. Multiple URLs may supply theme capability or competitor evidence, but they may not overwrite the primary source.
 
 ### `structure_target`
 
@@ -67,3 +78,5 @@ For `structure_target`, report:
 - Omissions caused by missing customer content.
 
 Do not claim close reference fidelity when only colors, typography, or section names are similar.
+
+For every fidelity result, print the role table with URL, Chinese role, permitted use, and actual artifact consuming it. If an artifact consumed a URL outside its permitted role, mark `blocked_source_identity`.

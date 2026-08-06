@@ -7,10 +7,24 @@
 - Desktop frame:
 - Mobile frame:
 - Status: pass | pass_with_followups | blocked
+- Build Truth URL:
+- Structure source URL:
+- Theme capability URLs:
+- Competitor evidence URLs:
+- Visual inspiration URLs:
+- Source identity status: pass | blocked_source_identity
+- Product/category identity:
+- Source fingerprint match:
+- Theme-demo promotion check:
 - Text-style binding:
 - Grid integrity:
 - Equal-height groups:
 - Mobile overflow:
+- Multi-line text sizing:
+- Unexpected overlaps:
+- Oversized blank bands:
+- Media/gallery balance:
+- Sticky/anchor navigation match:
 - Custom section count ratio:
 - Custom section height ratio:
 - Reference mode:
@@ -36,7 +50,7 @@
 
 ## Theme Mapping
 
-- {page section}: {exact theme section/block, evidence, implementation level}
+- {source URL + stable source section}: {exact target theme section/block/settings, theme capability evidence URL, implementation level}
 
 ## Product and Competitor Analysis
 

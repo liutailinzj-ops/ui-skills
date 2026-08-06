@@ -54,6 +54,20 @@ LAYOUT_CLASS  Desktop and Mobile source layout class and target match status
 
 For `reference_to_theme`, the contract must preserve the primary reference page's exact visible content slots, repeated-item count, ordering, and Desktop/Mobile layout class. Product-state properties may extend the component only after this primary contract remains reproducible. Do not treat a semantically similar component as compatible when its slot structure or geometry differs.
 
+Add these provenance fields to every strict-reference component contract:
+
+```yaml
+structure_source_url:
+source_section_id:
+source_fingerprint_digest:
+theme_capability_url:
+theme_section:
+theme_blocks: []
+theme_settings: {}
+```
+
+Reject the component contract when `structure_source_url` is missing, differs from Build Truth, or points to a theme demo that the user did not select as the structure source.
+
 ## Properties
 
 Use the smallest useful API:

@@ -6,6 +6,23 @@ Use this low-freedom workflow only when the reference page's visible content inv
 
 Inspect the rendered source page at Desktop and Mobile widths. Use DOM/accessibility content when available and screenshots as visual evidence. If either viewport cannot be inspected, block exact conversion.
 
+Before section capture, create a Source Identity Fingerprint from the exact specified structure-source URL:
+
+```yaml
+source_identity:
+  canonical_url:
+  page_type:
+  product_or_service_name:
+  product_category:
+  h1:
+  hero_signature:
+  stable_section_labels: []
+  desktop_layout_signature:
+  mobile_layout_signature:
+```
+
+Copy this fingerprint into the Source Page Specification, Theme Assembly Plan, build manifest, and QA report. If the URL, product/category, H1, hero, or section sequence describes the theme demo or another site instead, stop as `blocked_source_identity`. Do not start mapping.
+
 Create stable IDs `R01`, `R02`, and so on in rendered order. Capture headers, announcement bars, product information, below-fold sections, recommendations, and footer when they are in scope.
 
 For each source section record:
@@ -38,7 +55,7 @@ Reference text and media may be temporary design evidence only when authorized. 
 
 ## 2. Build the Theme Assembly Plan
 
-Map every source section in the same order:
+Map every source section in the same order to separate theme capability evidence:
 
 ```yaml
 - source_id: R01
@@ -58,6 +75,8 @@ Map every source section in the same order:
   desktop_layout_match: exact | deviation
   mobile_layout_match: exact | deviation
   deviation:
+  structure_source_url:
+  theme_capability_url:
   evidence_url:
 ```
 
@@ -66,6 +85,8 @@ Map every source section in the same order:
 - `unresolved`: the selected route cannot reproduce the section. Stop before Figma.
 
 Do not use `adapted` as an unmeasured success state. A deviation requires explicit approval.
+
+Each row must express `structure_source Rxx -> chosen theme Section/Blocks/Settings`. The `structure_source_url` must match the Source Identity Fingerprint. The `theme_capability_url` and `evidence_url` must prove the chosen target theme primitive. A theme demo row mapped back to the same demo is invalid unless that demo is explicitly the structure source.
 
 ## 3. Route Gate
 
@@ -89,6 +110,9 @@ Do not generate a conventional PDP as a fallback.
 
 Pass only when:
 
+- Build Truth URL identity is 100%.
+- Product/category identity matches the specified structure source.
+- Source fingerprint matches across specification, assembly plan, Figma manifest, and QA.
 - Source section coverage is 100%.
 - Source order match is 100%.
 - Visible content-item coverage is 100%.
@@ -96,6 +120,7 @@ Pass only when:
 - Mobile layout-class coverage is 100%.
 - Theme mappings contain no `unresolved` item.
 - Every deviation is explicitly approved.
+- No theme-capability URL was silently promoted to Build Truth.
 
 These checks measure source correspondence, not visual mood or semantic responsibility.
 

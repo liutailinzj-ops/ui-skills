@@ -8,7 +8,8 @@ Aim for a compact evidence set:
 
 - 2–4 direct competitors or close category peers.
 - 1–2 strong reference sites with relevant presentation patterns.
-- The theme demo or existing site when applicable.
+- The specified structure source when applicable, recorded separately from the theme demo or existing site.
+- The target theme demo or existing site as capability evidence when applicable.
 
 For template or theme-customization work, inspect these sources before category references:
 
@@ -36,7 +37,7 @@ For each source, record only decision-useful observations:
 
 Do not analyze all reference URLs the same way:
 
-- `reference_to_theme`: inspect the rendered Desktop and Mobile source page in full, assign stable ordered section IDs, inventory every visible text/media/control/repeated item, classify both viewport layouts, and map exact theme Section/Blocks/settings. Do not substitute industry research or a generic PDP structure for the source page.
+- `reference_to_theme`: inspect the rendered Desktop and Mobile structure-source page in full, create its identity fingerprint, assign stable ordered section IDs, inventory every visible text/media/control/repeated item, and classify both viewport layouts. Separately inspect target-theme capability sources, then map each structure-source section to evidenced theme Section/Blocks/settings. Do not substitute a theme demo, industry research, or a generic PDP structure for the source page.
 - `structure_target`: inspect every major section and record content responsibility, required content fields, Desktop/Mobile layout anatomy, ordering, interaction, optionality, and the closest theme primitive.
 - `visual_inspiration`: record reusable visual principles such as density, image treatment, hierarchy, typography, and rhythm. Do not imply section-level fidelity.
 - `competitor_evidence`: record buying questions, proof patterns, objections, category conventions, and missing opportunities.

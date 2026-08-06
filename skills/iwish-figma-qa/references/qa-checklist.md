@@ -28,11 +28,15 @@
 - Layout containers are Frames with Auto Layout where appropriate.
 - HUG/FILL/FIXED behavior is deliberate.
 - Text is not clipped.
+- Multi-line or variable-content Text uses Auto Height/HUG; fixed-height text is limited to verified single-line labels or documented clamps.
 - Elements do not overlap unexpectedly.
+- Non-overlay sibling bounding boxes do not intersect after text reflow. Intentional overlays live in a named overlay container and remain legible.
 - Image crops and aspect ratios are usable.
 - Applied grid edges and spans differ by no more than 1 px.
 - Same-row comparison or decision cards are equal height unless intentional asymmetry is documented.
 - Section height uses HUG plus tokenized padding where possible; fixed heights have a reference-backed reason.
+- A fixed-height section has no unexplained unused vertical band larger than both 240 px and 25% of section height.
+- Media and content columns have a source-backed height/aspect balance; galleries do not continue far below an otherwise empty primary media area without evidence.
 - Grid rows have no unexplained remainder space caused by manually rounded widths.
 
 ## Responsive
@@ -73,6 +77,14 @@
 
 ## Reference fidelity
 
+Before either fidelity mode, verify source roles:
+
+- The report lists the exact 指定结构来源, 主题能力来源, 竞品研究来源, and 视觉参考来源 URLs.
+- Build Truth URL equals the specified structure source.
+- Product/category, H1, hero signature, and stable section sequence match the structure-source fingerprint.
+- Theme store, vendor docs, demo, and current-theme URLs are used only as capability evidence unless explicitly assigned another role.
+- No mapping counts a theme demo section mapped back to the same theme demo as source fidelity.
+
 For `structure_target`:
 
 - Every relevant source section has a target responsibility mapping.
@@ -91,6 +103,7 @@ For `reference_to_theme`:
 - Every section uses the exact evidenced theme Section, Blocks, and setting values in the Theme Assembly Plan.
 - Mapping status is `exact_native` or `composed_native`; no required item is `unresolved`.
 - Every deviation is named and explicitly approved; vague `adapted` status is not accepted.
+- Sticky or anchor navigation labels, order, and destinations match the source when present.
 - Section-count, order, content-item, Desktop layout-class, Mobile layout-class, and resolved-mapping coverage are 100% after approved deviations are accounted for.
 
 ## Regression integrity
@@ -120,11 +133,14 @@ For `reference_to_theme`:
 
 Mark QA blocked when any of these fail:
 
+- Build Truth URL, product/category identity, source fingerprint, or source-role integrity.
+- A theme capability source is silently promoted to Build Truth or self-mapped as proof of fidelity.
 - Theme evidence or mapping.
 - Missing Product and Competitor Analysis or untraceable generated sections.
 - Route custom budget.
 - Text-style binding.
 - Grid and equal-height integrity.
+- Text Auto Height/HUG, overlap, oversized blank-band, media-balance, or source-navigation integrity.
 - Mobile clipping or carousel contract.
 - Client-preview separation.
 - Unexplained `structure_target` responsibility, order, or layout divergence.

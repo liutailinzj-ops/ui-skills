@@ -22,6 +22,9 @@ Placeholder / {Content Type}
 - Use equal-height siblings for cards in the same row unless intentional asymmetry is documented in the blueprint.
 - Prefer HUG section height with tokenized top and bottom padding. Use a fixed section height only when the reference or interaction requires it.
 - Do not leave unexplained remainder space inside a grid row; use FILL or exact grid-derived widths.
+- Use Auto Height/HUG for any text that can wrap. A fixed-height Text node is allowed only for a verified single-line label or an intentionally clamped component state.
+- After inserting real or placeholder copy, reflow the parent and verify that text bounds do not intersect non-overlay siblings.
+- Reject a fixed-height section when its unused vertical band exceeds both 240 px and 25% of section height without a source-backed composition reason.
 
 ## Editability
 
@@ -69,11 +72,13 @@ For `structure_target`:
 
 For `reference_to_theme`:
 
+- Verify the Build Truth URL, product/category identity, H1, hero signature, and stable section sequence before creating wrapper frames.
 - Build from the Source Page Specification and Theme Assembly Plan, never from a generic PDP pattern or visual memory.
 - Preserve every stable source section ID, exact section order, visible content item and repeated-item count.
 - Match the recorded Desktop and Mobile layout class, media/content placement, grouping, controls, and responsive transformation.
 - Use only `exact_native` or `composed_native` mappings. Any `unresolved` mapping blocks the build.
 - Apply the recorded theme section, blocks, and concrete setting values. Do not invent settings unsupported by evidence.
+- Preserve provenance in the manifest: source content and order come from `structure_source_url`; Section/Block/Settings feasibility comes from `theme_capability_url`. Do not substitute theme-demo content or map a demo section back to itself.
 - Require 100% section-count, order, content-item, Desktop layout-class, Mobile layout-class, and resolved-mapping coverage unless the manifest contains a named approved deviation.
 - Do not add, omit, reorder, rewrite, or redesign source content under the label of adaptation.
 
@@ -98,11 +103,16 @@ Before continuing, verify:
 
 - Desktop and Mobile screenshots are visually complete.
 - Grid edges, equal heights, HUG/FILL/FIXED behavior, and overflow pass.
+- Every multi-line Text node uses Auto Height/HUG or a documented clamp; no text is cropped or overlapping.
+- No unexplained sibling bounding-box collision exists outside an intentional overlay container.
+- No section contains a source-unjustified blank vertical band larger than 240 px and 25% of its height.
+- Media crop/aspect, gallery height, and content-column balance match the recorded source layout class.
+- Sticky or anchor navigation labels, order, and destinations match the specified structure source when included.
 - Text styles and component instances are bound.
 - The client preview contains no visible internal annotations.
 - Theme mapping still matches the approved capability map.
 - Reference responsibility, order, and layout-anatomy correspondence still matches the approved matrix when applicable.
-- `reference_to_theme` source sections, content items, order, layout classes, and exact theme settings still match the approved specifications when applicable.
+- `reference_to_theme` Build Truth identity, source fingerprint, source sections, content items, order, layout classes, and exact theme settings still match the approved specifications when applicable.
 - The regression result signature contains actual changes for every expected changed section; otherwise it is `blocked_no_op`.
 - PDP scenario states pass without detaching components, clipping content, or leaving empty modules when applicable.
 - Analysis-backed page responsibilities remain represented, or strict-reference gaps are explicitly reported.

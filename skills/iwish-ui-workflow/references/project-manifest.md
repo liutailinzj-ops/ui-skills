@@ -18,10 +18,11 @@ scope:
 sources:
   customer_facts:
   customer_assets:
-  competitor_urls: []
-  reference_urls: []
-  reference_modes: {}
-  theme_reference:
+  structure_source_urls: []
+  theme_capability_urls: []
+  competitor_evidence_urls: []
+  visual_inspiration_urls: []
+  source_role_assignments: {}
 theme:
   name:
   preset:
@@ -64,6 +65,20 @@ pdp:
 reference_fidelity:
   mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
   target_url:
+  build_truth_url:
+  source_identity_status: pass | blocked_source_identity
+  source_fingerprint:
+    canonical_url:
+    page_type:
+    product_or_service_name:
+    product_category:
+    h1:
+    hero_signature:
+    stable_section_ids: []
+    stable_section_labels: []
+    desktop_layout_signature:
+    mobile_layout_signature:
+  mapped_source_fingerprint:
   desktop_capture:
   mobile_capture:
   source_page_specification:
@@ -95,6 +110,10 @@ workflow:
   completed: []
   pending_validations: []
 qa:
+  build_truth_url_identity:
+  product_category_identity:
+  source_fingerprint_match:
+  theme_demo_source_promotion:
   text_style_binding:
   grid_integrity:
   equal_height_groups:
@@ -107,10 +126,12 @@ Persist exact Figma node IDs returned by tools. Never guess or reconstruct IDs. 
 
 Treat `content.mode` as an internal field. Use `content.display_label` in recognition cards, UI questions, and handoff summaries.
 
+Treat `sources.structure_source_urls` and `reference_fidelity.build_truth_url` as immutable after the recognition card. Theme selection or later browsing may append `theme_capability_urls` and `competitor_evidence_urls`, but may not replace Build Truth. Record every role change as a blocking decision, not an internal convenience.
+
 For theme-based work, keep one mapping record per page section with the exact theme section/block, evidence URL, implementation level, divergence, approval, and owner.
 
 For `structure_target` work, keep one correspondence record per source section: source responsibility, source content type, source Desktop/Mobile layout anatomy, target theme mapping, preserved/adapted/omitted status, and reason.
 
-For `reference_to_theme`, do not use responsibility coverage as a proxy for fidelity. Record exact visible content items, stable source section IDs, order, Desktop/Mobile layout class, theme section/block/settings, and mapping status. Any unresolved mapping blocks Figma. Any expected change with an unchanged structure signature blocks completion.
+For `reference_to_theme`, do not use responsibility coverage as a proxy for fidelity. Record exact visible content items, stable source section IDs, order, Desktop/Mobile layout class, theme section/block/settings, and mapping status. The source fingerprint must identify the specified structure source, while theme mapping evidence must identify a theme capability source. Any source-identity mismatch, self-mapping of a theme demo, unresolved mapping, or expected change with an unchanged structure signature blocks completion.
 
 For PDP work, record which product archetypes were tested. `single_template_validated` requires evidence that the base template survives the approved representative and edge states; otherwise use `template_family` or `coverage_partial`.

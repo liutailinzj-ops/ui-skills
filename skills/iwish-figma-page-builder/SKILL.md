@@ -17,6 +17,7 @@ Write the requested composed page into Figma. Load the available Figma use and s
 - Component map.
 - Customer assets and placeholder policy.
 - Theme/current-site reference when applicable.
+- Source-role table and Source Identity Fingerprint for specified-structure work.
 - Source Page Specification, Theme Assembly Plan, and baseline structure signature for `reference_to_theme` work.
 - Reference Content-Layout Matrix for `structure_target` work.
 - Product Coverage Matrix, representative products, and template strategy for PDP work.
@@ -31,7 +32,7 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 4. For theme-based work, reproduce the approved native section geometry and supported content slots before applying brand styling. Do not invent a layout and label it custom afterward.
 5. For `research_led`, `hybrid_led`, and `existing_site_led`, preserve the blueprint's trace from each section to product, competitor, and journey evidence. Do not replace analysis-backed responsibilities with generic ecommerce filler.
 6. For `structure_target`, build from the approved source-to-target correspondence. Preserve the relevant content responsibility, sequence, and layout anatomy unless the blueprint records an adaptation. Do not approximate from the reference screenshot after strategy is complete.
-7. For `reference_to_theme`, verify that all source mappings are `exact_native` or `composed_native` before any Figma mutation. Build a native-node reference skeleton in stable source-section order, bind the captured visible content item by item, apply the evidenced theme settings and Desktop/Mobile layout classes, then apply permitted brand styling. Do not add standard PDP sections, generated content, or a new hierarchy. Keep analysis-identified conversion gaps in the report unless a structural change is approved.
+7. For `reference_to_theme`, verify Build Truth URL identity, source fingerprint, and that all cross-source mappings are `exact_native` or `composed_native` before any Figma mutation. Build a native-node reference skeleton in stable structure-source section order, bind the captured visible content item by item, apply the separately evidenced target-theme settings and Desktop/Mobile layout classes, then apply permitted brand styling. Do not add standard PDP sections, generated content, or a new hierarchy. Keep analysis-identified conversion gaps in the report unless a structural change is approved.
 8. For PDP work, build the primary representative product as the client-preview page, then validate the same component/template structure with the additional approved product states. Keep validation states internal unless multiple client-facing templates are approved. In `reference_to_theme`, these edge-state checks must not change the primary source-page contract.
 9. Use component instances for resolved components and project-local components for repeated unsupported patterns.
 10. Bind colors, spacing, radii, text, and effects to existing project variables/styles. Bind every client-facing text node to a text style.
@@ -39,12 +40,12 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 12. Set real or placeholder content through component properties rather than detaching instances.
 13. Keep theme mappings, implementation notes, source warnings, product-coverage states, and replacement instructions off the rendered client-preview frame. Store them in the manifest and project/handoff documentation.
 14. Return every created or mutated node ID and update the project manifest after each section.
-15. Validate each section screenshot and metadata against the build contract before continuing.
+15. Validate each section screenshot and metadata against the build contract before continuing. Repair text sizing, overlap, underfilled fixed-height bands, crop/aspect mismatch, and source-navigation mismatch before appending the next section.
 16. For regression work, calculate the result structure signature and compare it with the baseline. When expected sections were meant to change but their order, geometry, child tree, and content digest did not change, stop with `blocked_no_op`.
 
 ## Reference Capture
 
-For a renderable theme demo/current page, a web-to-Figma capture may be used as temporary visual truth. Keep it on `90_References`, transfer only permitted imagery, rebuild the final design with native nodes and component instances, and never treat the capture as the final page.
+For a renderable theme demo/current page, a web-to-Figma capture may be used as temporary theme-capability evidence. Keep it on `90_References`, rebuild the final design with native nodes and component instances, and never treat the demo capture as Build Truth or the final page. Only the specified structure-source capture defines strict-reference content and layout.
 
 For placeholder mode, build a client-presentable composition with safe sample copy and generated or licensed category imagery when available. Use `Placeholder /` in layer names and the manifest, not as the dominant visible design language. Read the asset policy before inserting any non-customer material.
 
@@ -60,5 +61,6 @@ Return:
 - Section validation results.
 - Reference responsibility/layout coverage for `structure_target` work.
 - Source section/order/content/layout-class coverage, approved deviations, and baseline/result structure signatures for `reference_to_theme` work.
+- Build Truth URL/fingerprint result and the separate structure-source/theme-capability provenance for every strict mapping.
 - PDP scenario-validation result and truthful template strategy for PDP work.
 - Analysis traceability result and any unresolved conversion/buying responsibility.

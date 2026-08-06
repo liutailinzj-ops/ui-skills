@@ -33,6 +33,19 @@ Never display the internal values as options for UI.
 
 `strategy_mode` controls where page strategy comes from. `build_route` controls implementation freedom. `site_model` controls DTC/B2B analysis. Do not multiply these into separate duplicated workflows.
 
+## Source role routing
+
+Assign URLs by purpose before using them:
+
+| Chinese role | Manifest field | Permitted use |
+| --- | --- | --- |
+| 指定结构来源 | `structure_source_urls` | Defines Build Truth: page identity, content inventory, section order, and Desktop/Mobile layout anatomy |
+| 主题能力来源 | `theme_capability_urls` | Proves available theme Section, Block, Settings, and responsive behavior only |
+| 竞品研究来源 | `competitor_evidence_urls` | Supports product/category and conversion analysis only |
+| 视觉参考来源 | `visual_inspiration_urls` | Supports art direction only |
+
+Do not infer role from domain, visual similarity, or which URL was inspected most recently. A URL may hold two roles only when the user explicitly assigns both. In that case, record both roles separately. Never promote a theme demo to 指定结构来源 automatically.
+
 ## Route behavior
 
 - `research_led`: let product, category, competitor, and journey analysis determine the hierarchy. Select or audit a theme after analysis.
@@ -54,7 +67,11 @@ Display this compact card once, then continue unless a blocking ambiguity exists
 设计方式：自主策划 / 指定结构 / 混合参考 / 旧站改版
 主题状态：待选择 / 只有预览 / 已有代码 / 现有网站
 内容模式：正式内容 / 混合内容 / 占位内容
-参考网站作用：无 / 竞品研究 / 指定结构 / 部分模块 / 视觉参考
+来源角色：
+- 指定结构来源：{URL 或“无”}
+- 主题能力来源：{URL 或“无 / 待选择”}
+- 竞品研究来源：{URL 列表或“由 AI 补充”}
+- 视觉参考来源：{URL 列表或“无”}
 本次页面：{page}
 接下来：{analysis and build sequence}
 ```

@@ -15,17 +15,19 @@ Create a bounded component map for the current page. Load the available Figma us
 - Reference Content-Layout Matrix for `structure_target` work.
 - Product Coverage Matrix and template strategy for PDP work.
 - Theme Capability Map for template or theme-customization work.
+- Source Identity Fingerprint and explicit source-role table for specified-structure work.
 - Project manifest and foundation IDs.
 - Existing local components and accessible libraries.
 - Platform/theme implementation notes.
 
 ## Resolve in This Order
 
-1. For theme-based work, resolve the exact theme section/block primitive required by the approved mapping.
-2. Reuse a compatible existing local component.
-3. Import a compatible subscribed-library component.
-4. Wrap or extend a visually useful component whose property API needs a local contract.
-5. Create a project-local component.
+1. For specified-structure theme work, verify that the Build Truth URL/fingerprint belongs to the structure source and each capability evidence URL belongs to the target theme. Stop on theme-demo self-mapping or source-identity mismatch.
+2. For theme-based work, resolve the exact theme section/block primitive required by the approved cross-source mapping.
+3. Reuse a compatible existing local component.
+4. Import a compatible subscribed-library component.
+5. Wrap or extend a visually useful component whose property API needs a local contract.
+6. Create a project-local component.
 
 Reuse only when properties, token bindings, naming, ownership, and editability are compatible. Do not detach imported instances merely to make them look editable.
 
@@ -50,6 +52,7 @@ Read [references/component-contract.md](references/component-contract.md).
 - When the template strategy is `template_family`, record which components are shared and which are template-specific.
 - For `structure_target`, record which source content/layout responsibility each component preserves or adapts.
 - For `reference_to_theme`, resolve every stable source section ID to the exact theme section, block sequence, settings, content bindings, and Desktop/Mobile layout class in the Theme Assembly Plan. A generic component with different slots, item count, ordering, or layout class is not compatible.
+- For `reference_to_theme`, require every component record to carry `structure_source_url`, `source_fingerprint_digest`, and `theme_capability_url`. Do not accept a component map whose source identity describes the theme demo instead of the specified page.
 - In `reference_to_theme`, use only `exact_native` or `composed_native` for a successful mapping. If a required mapping is `unresolved`, stop before creating or changing Figma components.
 - Keep implementation annotations in the manifest or handoff documentation, not as visible client-preview content.
 - Build and validate one component family at a time.
