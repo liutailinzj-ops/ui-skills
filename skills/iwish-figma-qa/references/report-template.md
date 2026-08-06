@@ -15,6 +15,16 @@
 - Custom section height ratio:
 - Reference mode:
 - Reference responsibility coverage:
+- Source sections mapped:
+- Source order match:
+- Visible content-item coverage:
+- Desktop layout-class coverage:
+- Mobile layout-class coverage:
+- Unresolved mappings:
+- Approved deviations:
+- Baseline structure signature:
+- Result structure signature:
+- No-op guard: pass | blocked_no_op | not_applicable
 - PDP template strategy: single_template_validated | template_family | coverage_partial
 - PDP states tested:
 
@@ -25,6 +35,7 @@
 ## Reference Fidelity
 
 - {source section}: {preserved/adapted/omitted, target section, order/layout divergence and reason}
+- {stable source ID}: {exact_native/composed_native/unresolved, exact theme Section/Blocks/settings, content bindings, Desktop/Mobile layout-class result, approved deviation}
 
 ## PDP Coverage
 

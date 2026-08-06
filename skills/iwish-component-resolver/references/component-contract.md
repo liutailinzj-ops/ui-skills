@@ -40,6 +40,10 @@ OVERFLOW      none, wrap, carousel, scroll, or clip with an explicit interaction
 THEME_MAP     exact native section/block name and evidence
 PRODUCT_STATES product archetypes and optional/required content states validated
 REFERENCE_MAP source responsibility and layout anatomy preserved or adapted
+SOURCE_MAP    stable source section ID and exact source item order
+CONTENT_BINDINGS source text/media/control/repeated-item slots mapped one by one
+THEME_SETTINGS exact section/block settings supported by theme evidence
+LAYOUT_CLASS  Desktop and Mobile source layout class and target match status
 ```
 
 - Use equal-height siblings for cards in the same comparison or decision row unless the blueprint documents intentional asymmetry.
@@ -47,6 +51,8 @@ REFERENCE_MAP source responsibility and layout anatomy preserved or adapted
 - A carousel must define viewport width, card width, gap, visible next-card preview, controls or indicator, and theme-supported behavior.
 - Do not use clipping to hide a card that is wider than the Mobile content grid.
 - Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
+
+For `reference_to_theme`, the contract must preserve the primary reference page's exact visible content slots, repeated-item count, ordering, and Desktop/Mobile layout class. Product-state properties may extend the component only after this primary contract remains reproducible. Do not treat a semantically similar component as compatible when its slot structure or geometry differs.
 
 ## Properties
 

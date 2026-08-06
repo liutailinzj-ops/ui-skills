@@ -72,6 +72,24 @@ For `structure_target`:
 - Theme substitutions and omitted sections have evidence and an owner.
 - Visual similarity is not used as a substitute for content/layout correspondence.
 
+For `reference_to_theme`:
+
+- Every stable source section ID exists exactly once in the target.
+- Target section order matches the Source Page Specification.
+- Every captured visible text, media role, control, and repeated item is bound; item counts match.
+- Desktop and Mobile layout classes, media/content placement, grouping, controls, and responsive transformations match.
+- Every section uses the exact evidenced theme Section, Blocks, and setting values in the Theme Assembly Plan.
+- Mapping status is `exact_native` or `composed_native`; no required item is `unresolved`.
+- Every deviation is named and explicitly approved; vague `adapted` status is not accepted.
+- Section-count, order, content-item, Desktop layout-class, Mobile layout-class, and resolved-mapping coverage are 100% after approved deviations are accounted for.
+
+## Regression integrity
+
+- Baseline and result structure signatures include root IDs, stable section order, Y positions, heights, child counts, and text/content digests.
+- Every declared expected changed section has a real change in geometry, tree, or content.
+- If expected changes exist but the affected signatures are unchanged, the result is `blocked_no_op`.
+- A new page name, wrapper, matrix, or percentage without a changed target structure is not a successful regression.
+
 ## PDP coverage
 
 - Product archetypes and representative/edge states are recorded.
@@ -99,4 +117,7 @@ Mark QA blocked when any of these fail:
 - Mobile clipping or carousel contract.
 - Client-preview separation.
 - Unexplained `structure_target` responsibility, order, or layout divergence.
+- Any unresolved or unapproved `reference_to_theme` section, content, order, layout-class, or theme-setting mismatch.
+- A `reference_to_theme` fidelity metric below 100% after approved deviations.
+- A regression that triggers `blocked_no_op`.
 - False PDP universality or failed required product state.

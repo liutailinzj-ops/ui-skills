@@ -10,6 +10,7 @@ Create a bounded component map for the current page. Load the available Figma us
 ## Inputs
 
 - Page blueprint.
+- Source Page Specification and Theme Assembly Plan for `reference_to_theme` work.
 - Reference Content-Layout Matrix for `structure_target` work.
 - Product Coverage Matrix and template strategy for PDP work.
 - Theme Capability Map for template or theme-customization work.
@@ -46,6 +47,8 @@ Read [references/component-contract.md](references/component-contract.md).
 - Keep product-specific modules conditional. Do not bake one product's ingredients, specifications, proof, or story into the base PDP component contract.
 - When the template strategy is `template_family`, record which components are shared and which are template-specific.
 - For `structure_target`, record which source content/layout responsibility each component preserves or adapts.
+- For `reference_to_theme`, resolve every stable source section ID to the exact theme section, block sequence, settings, content bindings, and Desktop/Mobile layout class in the Theme Assembly Plan. A generic component with different slots, item count, ordering, or layout class is not compatible.
+- In `reference_to_theme`, use only `exact_native` or `composed_native` for a successful mapping. If a required mapping is `unresolved`, stop before creating or changing Figma components.
 - Keep implementation annotations in the manifest or handoff documentation, not as visible client-preview content.
 - Build and validate one component family at a time.
 
@@ -66,6 +69,7 @@ Return a component map containing:
 - Page-blueprint sections that consume it.
 - Product archetypes and content states that consume it for PDP work.
 - Reference section correspondence for `structure_target` work.
+- Source section ID, exact content-slot bindings, theme settings, Desktop/Mobile layout classes, and `exact_native | composed_native | unresolved` status for `reference_to_theme` work.
 - Exact theme section/block represented and permitted divergence.
 - Grid span, equal-height policy, and overflow behavior.
 - Validation screenshot and metadata status.

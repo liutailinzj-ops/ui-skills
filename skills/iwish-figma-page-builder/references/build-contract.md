@@ -59,6 +59,22 @@ For `structure_target`:
 - Compare layout anatomy: column ratio, media/content placement, grouping, repeated item count, interaction, and Mobile transformation.
 - Do not count matching colors or section names as structural fidelity.
 
+For `reference_to_theme`:
+
+- Build from the Source Page Specification and Theme Assembly Plan, never from a generic PDP pattern or visual memory.
+- Preserve every stable source section ID, exact section order, visible content item and repeated-item count.
+- Match the recorded Desktop and Mobile layout class, media/content placement, grouping, controls, and responsive transformation.
+- Use only `exact_native` or `composed_native` mappings. Any `unresolved` mapping blocks the build.
+- Apply the recorded theme section, blocks, and concrete setting values. Do not invent settings unsupported by evidence.
+- Require 100% section-count, order, content-item, Desktop layout-class, Mobile layout-class, and resolved-mapping coverage unless the manifest contains a named approved deviation.
+- Do not add, omit, reorder, rewrite, or redesign source content under the label of adaptation.
+
+## Regression no-op guard
+
+Before mutation, record a baseline signature containing root IDs, stable section IDs/order, section Y positions and heights, child counts, and text/content digests. Record the same fields after the build.
+
+If the regression declares expected changed sections but the affected order, geometry, child tree, and content digests are unchanged, return `blocked_no_op`. A new page name, new coverage report, or newly created wrapper does not prove that the requested design changed.
+
 ## PDP coverage
 
 - Build one primary client-preview product without hardcoding its content into the template structure.
@@ -78,4 +94,6 @@ Before continuing, verify:
 - The client preview contains no visible internal annotations.
 - Theme mapping still matches the approved capability map.
 - Reference responsibility, order, and layout-anatomy correspondence still matches the approved matrix when applicable.
+- `reference_to_theme` source sections, content items, order, layout classes, and exact theme settings still match the approved specifications when applicable.
+- The regression result signature contains actual changes for every expected changed section; otherwise it is `blocked_no_op`.
 - PDP scenario states pass without detaching components, clipping content, or leaving empty modules when applicable.

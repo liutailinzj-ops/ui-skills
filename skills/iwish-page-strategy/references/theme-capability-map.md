@@ -23,11 +23,19 @@ available_sections:
     evidence_url:
 page_mappings:
   - page_section_id:
+    stable_source_id:
     responsibility:
     reference_source_section:
+    source_order:
+    source_content_bindings: []
+    source_layout_class:
+      desktop:
+      mobile:
     product_applicability: []
     chosen_theme_section:
     chosen_blocks: []
+    chosen_settings: {}
+    conversion_status: exact_native | composed_native | unresolved
     implementation_level: theme_native | configuration | style | custom_css | custom_liquid | section_custom | custom
     evidence_url:
     divergence:
@@ -43,6 +51,8 @@ page_mappings:
 - Mark a mapping as `partial` when only a screenshot or marketing feature list is available.
 - Do not classify a section as custom merely because its copy or art direction is project-specific.
 - For `structure_target`, map source responsibility and source layout anatomy separately. A theme section may cover the responsibility while requiring a documented geometry adaptation.
+- For `reference_to_theme`, create one mapping for every stable source section ID. Record exact source order and content bindings, Desktop/Mobile layout classes, exact theme Section/Blocks/settings, and `exact_native | composed_native | unresolved` status. Do not use semantic similarity or `adapted` as a success state.
+- Any `reference_to_theme` `unresolved` mapping blocks the page blueprint and Figma. Return the gap and require one decision: accept the named deviation, change theme, or approve theme customization/custom work.
 - For PDP work, verify conditional visibility, block ordering, product-template assignment, and empty-state behavior where the proposed template strategy depends on them.
 
 ## Route gates

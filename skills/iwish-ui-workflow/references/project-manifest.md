@@ -49,11 +49,33 @@ pdp:
   template_strategy: single_template_validated | template_family | coverage_partial
   template_assignments: []
 reference_fidelity:
+  mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
   target_url:
+  desktop_capture:
+  mobile_capture:
+  source_page_specification:
+  source_section_order: []
+  source_content_inventory:
   content_layout_matrix:
+  theme_assembly_plan:
+  unresolved_mappings: []
   responsibility_coverage:
+  section_count_coverage:
+  order_match:
+  content_item_coverage:
+  desktop_layout_class_coverage:
+  mobile_layout_class_coverage:
+  resolved_mapping_coverage:
   order_divergences: []
   layout_divergences: []
+  approved_deviations: []
+regression:
+  baseline_root_ids: []
+  baseline_structure_signature:
+  expected_changed_sections: []
+  result_structure_signature:
+  actual_changed_sections: []
+  no_op_guard: pass | blocked_no_op | not_applicable
 workflow:
   completed: []
   pending_validations: []
@@ -71,5 +93,7 @@ Persist exact Figma node IDs returned by tools. Never guess or reconstruct IDs. 
 For theme-based work, keep one mapping record per page section with the exact theme section/block, evidence URL, implementation level, divergence, approval, and owner.
 
 For `structure_target` work, keep one correspondence record per source section: source responsibility, source content type, source Desktop/Mobile layout anatomy, target theme mapping, preserved/adapted/omitted status, and reason.
+
+For `reference_to_theme`, do not use responsibility coverage as a proxy for fidelity. Record exact visible content items, stable source section IDs, order, Desktop/Mobile layout class, theme section/block/settings, and mapping status. Any unresolved mapping blocks Figma. Any expected change with an unchanged structure signature blocks completion.
 
 For PDP work, record which product archetypes were tested. `single_template_validated` requires evidence that the base template survives the approved representative and edge states; otherwise use `template_family` or `coverage_partial`.

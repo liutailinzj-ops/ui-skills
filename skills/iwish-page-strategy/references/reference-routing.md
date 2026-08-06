@@ -4,6 +4,10 @@ Classify each supplied site before using it. A URL alone does not define how clo
 
 ## Modes
 
+### `reference_to_theme`
+
+Use when the reference page itself is the approved content-and-layout target and the task is to translate it into the selected theme. Follow [reference-to-theme.md](reference-to-theme.md). This is a low-freedom conversion workflow, not page strategy.
+
 ### `structure_target`
 
 Use when the client expects the selected Shopify or WordPress theme to reproduce the reference page's content structure and layout logic.

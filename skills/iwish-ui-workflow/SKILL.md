@@ -27,8 +27,8 @@ Missing product selections, final copy, product images, brand guidelines, or a S
 ## Workflow
 
 1. Normalize customer facts and internal scope into the manifest defined in [references/project-manifest.md](references/project-manifest.md).
-2. Classify every supplied reference URL as `structure_target`, `visual_inspiration`, or `competitor_evidence`. When the client expects the theme to reproduce a reference page, use `structure_target`; do not silently downgrade it to general inspiration.
-3. Load and apply `$iwish-page-strategy` to audit the current theme first when applicable, then research the industry, market, competitors, and relevant patterns. Produce the Theme Capability Map, Reference Content-Layout Matrix when applicable, Product Coverage Matrix for PDP work, and a project-specific page blueprint; do not use a fixed section list.
+2. Classify every supplied reference URL as `reference_to_theme`, `structure_target`, `visual_inspiration`, or `competitor_evidence`. Use `reference_to_theme` when the approved page must retain the reference page's visible content inventory, section order, and Desktop/Mobile layout anatomy while being assembled from the selected theme. Do not silently downgrade it to a looser mode.
+3. Load and apply `$iwish-page-strategy` to audit the current theme first when applicable, then research the industry, market, competitors, and relevant patterns. For `reference_to_theme`, produce the Source Page Specification and Theme Assembly Plan instead of open-ended page strategy. Otherwise produce the Theme Capability Map, Reference Content-Layout Matrix when applicable, Product Coverage Matrix for PDP work, and a project-specific page blueprint; do not use a fixed section list.
 4. Enforce the build-route gate before Figma work. For template work, block unapproved custom Liquid, section-custom, and custom sections. For theme customization, block when section-custom and custom work exceeds 20% of section count or estimated page height without approval.
 5. For PDP work, approve one of `single_template_validated`, `template_family`, or `coverage_partial`. Never call a layout universal because it fits one sampled product.
 6. Load and apply `$iwish-figma-foundation` to inspect or create the target file structure, variables, styles, grids, and project status. A Starter File is optional.
@@ -46,6 +46,9 @@ Missing product selections, final copy, product images, brand guidelines, or a S
 - Never present temporary claims, certifications, prices, reviews, specifications, or competitor assets as customer-approved facts.
 - Never treat `section_custom` or `custom` as the automatic fallback for a creative idea on a theme-based project.
 - Do not treat a reference URL as visual mood only when the client asked to reproduce its content structure through the selected theme.
+- In `reference_to_theme`, treat the captured source page specification as build truth. Do not add, omit, reorder, rewrite, or redesign visible source content unless the manifest contains explicit approval.
+- In `reference_to_theme`, stop before Figma when any source section lacks an evidenced theme mapping. Return the exact gap and the choices: accept a named deviation, change theme, or approve theme customization.
+- In `reference_to_theme`, do not run open-ended page strategy or propose an alternative creative direction. Translate the approved source page.
 - Do not infer a catalog-wide PDP from one product page. Validate the base template against representative or edge-case product states.
 - Keep internal theme labels, source warnings, and replacement instructions out of client-preview frames.
 - Do not stop after producing a textual Figma specification when Figma write access is available; write the editable design.
@@ -60,6 +63,8 @@ Complete only when:
 - Placeholder layers are clearly tagged while the rendered client preview remains presentable.
 - Theme Capability Map, exact section mappings, and build-route budget pass.
 - A structure-target reference has a section-by-section content/layout correspondence and every unexplained omission or reorder is reported.
+- A `reference_to_theme` run has a verified Source Page Specification and Theme Assembly Plan; source section count, order, content-item coverage, Desktop/Mobile layout-class coverage, and mapping status pass at 100% unless a deviation is explicitly approved.
+- A regression with expected structural changes has a changed Figma structure signature. An unchanged target is blocked as a no-op regression.
 - PDP work has a Product Coverage Matrix and a truthful coverage status; conditional modules and additional templates are documented where required.
 - Client-preview Text nodes use approved Text Styles.
 - Grid, equal-height, overflow, and Mobile carousel checks pass.

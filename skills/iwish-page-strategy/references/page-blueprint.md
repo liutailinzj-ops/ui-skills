@@ -7,9 +7,25 @@ page:
   audience_priority:
   content_mode: final | mixed | placeholder
   build_route: template | theme_customization | custom
-  reference_mode: structure_target | visual_inspiration | competitor_evidence | none
+  reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
 reference_fidelity:
   target_url:
+  source_page_specification:
+  theme_assembly_plan:
+  source_section_order: []
+  source_content_inventory:
+  unresolved_mappings: []
+  section_count_coverage:
+  order_match:
+  content_item_coverage:
+  desktop_layout_class_coverage:
+  mobile_layout_class_coverage:
+  resolved_mapping_coverage:
+  approved_deviations: []
+  baseline_structure_signature:
+  result_structure_signature:
+  expected_changed_sections: []
+  no_op_guard: pass | blocked_no_op | not_applicable
   content_layout_matrix:
   responsibility_coverage:
   order_divergences: []
@@ -51,10 +67,16 @@ sections:
       approval_required: false
     notes:
     reference_correspondence:
+      stable_source_id:
       source_section:
       source_responsibility:
       source_layout_anatomy:
       disposition: preserved | adapted | omitted | added
+      conversion_status: exact_native | composed_native | unresolved
+      content_bindings: []
+      desktop_layout_class:
+      mobile_layout_class:
+      approved_deviation:
       reason:
     product_applicability:
       required_for: []
@@ -68,4 +90,4 @@ Keep section IDs stable so later Skills can map Figma nodes and resume safely.
 
 For theme-based work, every section requires an exact implementation mapping and evidence URL. Do not use `section_custom` or `custom` as a generic fallback.
 
-For PDP work, a page blueprint is incomplete without product applicability and a template strategy. For `structure_target`, a blueprint is incomplete without source-to-target correspondence.
+For PDP work, a page blueprint is incomplete without product applicability and a template strategy. For `structure_target`, a blueprint is incomplete without source-to-target correspondence. For `reference_to_theme`, a blueprint is incomplete until every stable source section has exact content bindings, Desktop/Mobile layout classes, a Theme Assembly Plan mapping, and either `exact_native`, `composed_native`, or an explicitly approved deviation. Any `unresolved` mapping blocks Figma.

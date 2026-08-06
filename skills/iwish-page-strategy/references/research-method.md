@@ -34,6 +34,7 @@ For each source, record only decision-useful observations:
 
 Do not analyze all reference URLs the same way:
 
+- `reference_to_theme`: inspect the rendered Desktop and Mobile source page in full, assign stable ordered section IDs, inventory every visible text/media/control/repeated item, classify both viewport layouts, and map exact theme Section/Blocks/settings. Do not substitute industry research or a generic PDP structure for the source page.
 - `structure_target`: inspect every major section and record content responsibility, required content fields, Desktop/Mobile layout anatomy, ordering, interaction, optionality, and the closest theme primitive.
 - `visual_inspiration`: record reusable visual principles such as density, image treatment, hierarchy, typography, and rhythm. Do not imply section-level fidelity.
 - `competitor_evidence`: record buying questions, proof patterns, objections, category conventions, and missing opportunities.
@@ -42,7 +43,7 @@ For PDP research, inspect product differences rather than one visually attractiv
 
 ## Do not copy
 
-- Do not reproduce competitor copy, brand assets, or distinctive visual identity. When a client explicitly supplies a `structure_target`, structural correspondence may be preserved, but it must be translated into the client's content and the selected theme's supported primitives.
+- Do not reproduce competitor copy, brand assets, or distinctive visual identity as customer-owned production material. When the client explicitly authorizes temporary source material for a `reference_to_theme` preview, preserve it only as attributed placeholder evidence and record replacement responsibility. For `structure_target`, structural correspondence may be preserved, but it must be translated into the client's content and the selected theme's supported primitives.
 - Translate observations into reusable content responsibilities and layout principles.
 - Clearly label inferences and unavailable evidence.
 

@@ -20,11 +20,14 @@ Read [references/research-method.md](references/research-method.md). Browse curr
 
 Classify references before analysis and follow [references/reference-routing.md](references/reference-routing.md):
 
+- `reference_to_theme`: convert the captured reference page's visible content inventory, section order, and Desktop/Mobile layout anatomy into evidenced theme sections/blocks without creative restructuring. Read [references/reference-to-theme.md](references/reference-to-theme.md).
 - `structure_target`: the client expects the target page's content structure and layout logic to be represented through the selected theme.
 - `visual_inspiration`: use art direction and presentation principles without preserving section correspondence.
 - `competitor_evidence`: use the site to understand category conventions, gaps, and opportunities.
 
 For `structure_target`, produce a Reference Content-Layout Matrix before the page blueprint. Analyze content responsibilities, content types, Desktop/Mobile anatomy, ordering, conditional behavior, and theme correspondence. Do not reduce the source to screenshots or mood adjectives.
+
+For `reference_to_theme`, produce the Source Page Specification first, then the Theme Assembly Plan. Do not write the page blueprint or continue to Figma until every source section is mapped or a deviation is explicitly approved.
 
 For template or theme-customization work, build the Theme Capability Map in [references/theme-capability-map.md](references/theme-capability-map.md) before writing the page blueprint. Use the current official theme listing, theme-vendor documentation, and live demo where available. Do not infer theme feasibility from visual similarity alone.
 
@@ -40,6 +43,7 @@ For template or theme-customization work, build the Theme Capability Map in [ref
 - Treat a supplied PDP as one product state, not proof of a universal template. Preserve reusable content responsibilities while making product-specific modules conditional.
 - When only one product can be inspected, use `coverage_partial`; do not claim that the layout fits the full catalog.
 - For `structure_target`, preserve source responsibility coverage and sequence unless theme evidence, product relevance, mobile behavior, or scope requires a documented adaptation.
+- For `reference_to_theme`, do not derive a new content hierarchy, add category-best-practice modules, improve the source sequence, or select a different layout. Preserve captured source content, order, and layout class. Separate temporary source material from customer-approved production content.
 - A creative content responsibility does not imply custom implementation. Map it to an exact theme section or block before considering code.
 - Resolve theme-based implementation in this order: `theme_native` -> `configuration` -> `style` -> `custom_css` -> `custom_liquid` -> `section_custom` -> `custom`.
 - For `template` work, do not use `custom_liquid`, `section_custom`, or `custom` without explicit scope approval.
@@ -64,5 +68,7 @@ Produce the schema in [references/page-blueprint.md](references/page-blueprint.m
 - One primary design direction and, only when materially useful, one alternative direction.
 
 For `structure_target`, report responsibility coverage, ordering divergences, layout divergences, and theme-constrained substitutions. For PDP work, report `single_template_validated`, `template_family`, or `coverage_partial`.
+
+For `reference_to_theme`, report source section count, exact order match, visible content-item coverage, Desktop layout-class coverage, Mobile layout-class coverage, resolved theme mapping count, and approved deviations. Use `blocked` when any unapproved value is below 100%.
 
 Do not write to Figma in this Skill. Pass the blueprint to the foundation, component, and page-building Skills.
