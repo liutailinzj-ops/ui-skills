@@ -1,6 +1,6 @@
 ---
 name: iwish-page-strategy
-description: Research and define a project-specific website page blueprint from brand facts, product category, target market, competitor/reference sites, internal scope, and available assets. Use for Shopify or WordPress DTC/B2B page strategy when the section structure, content emphasis, responsive priorities, and required UI patterns must be derived rather than supplied by the customer.
+description: Analyze products, category context, competitors, DTC conversion chains or B2B buying paths, then define a project-specific website blueprint or reference conversion plan. Use for Shopify or WordPress DTC/B2B research-led, specified-reference, hybrid-reference, current-site revision, template, theme-customized, or fully custom UI strategy.
 ---
 
 # IWISH Page Strategy
@@ -13,10 +13,18 @@ Produce the page blueprint that downstream Figma Skills will build. Treat common
 - Existing customer assets and current site when available.
 - Theme/demo reference for template or theme-customization work. Treat this as required evidence, not optional inspiration.
 - Requested page and contracted features.
+- Inferred `site_model`, `strategy_mode`, `build_route`, `theme_state`, and content state.
 
 ## Research
 
-Read [references/research-method.md](references/research-method.md). Browse current first-party competitor, category, and reference sites when internet access is available. Research what users need to understand and which patterns the market uses; do not copy a competitor page or visual identity.
+Read [references/product-competitor-analysis.md](references/product-competitor-analysis.md) and produce the Product and Competitor Analysis before page hierarchy, theme selection, or reference conversion. Then read [references/research-method.md](references/research-method.md). Browse current first-party product, competitor, category, and reference sources when internet access is available. Research what users need to understand and how the market presents, proves, compares, and converts; do not copy a competitor page or visual identity.
+
+Apply the analysis according to `strategy_mode`:
+
+- `research_led`: let product, competitor, and journey evidence determine the content hierarchy.
+- `reference_led`: use analysis to test source relevance and identify conversion risks, but do not silently change an approved strict structure.
+- `hybrid_led`: preserve selected source modules and use analysis to supply the remaining responsibilities.
+- `existing_site_led`: use analysis to decide what current content and proof to retain, revise, relocate, or replace.
 
 Classify references before analysis and follow [references/reference-routing.md](references/reference-routing.md):
 
@@ -34,6 +42,8 @@ For template or theme-customization work, build the Theme Capability Map in [ref
 ## Strategy Rules
 
 - Derive the content hierarchy from product category, market, audience type, decision complexity, available proof, and page purpose already established internally.
+- For DTC, trace the relevant page responsibilities across product comprehension, relevance/desire, trust/proof, evaluation/selection, objection/risk reduction, action, and retention where applicable. This is a decision chain, not a fixed section list.
+- Record competitor presentation logic and conversion sequencing, not just visual style. Separate category conventions from distinctive competitor choices and unsupported claims.
 - Do not ask the customer to design the page structure.
 - Do not require a priority product. Select representative content for composition and keep it replaceable.
 - Do not force every DTC homepage into the same Hero -> USP -> Products -> Reviews -> FAQ sequence.
@@ -54,6 +64,7 @@ For template or theme-customization work, build the Theme Capability Map in [ref
 
 Produce the schema in [references/page-blueprint.md](references/page-blueprint.md). Include:
 
+- Product and Competitor Analysis with evidence gaps, conversion/buying chain, and page implications.
 - Theme Capability Map and evidence URLs for theme-based work.
 - Reference classification and Reference Content-Layout Matrix when a reference is supplied.
 - Product Coverage Matrix, template strategy, conditional modules, and tested product states for PDP work.

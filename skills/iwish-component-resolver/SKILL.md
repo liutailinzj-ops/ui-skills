@@ -10,6 +10,7 @@ Create a bounded component map for the current page. Load the available Figma us
 ## Inputs
 
 - Page blueprint.
+- Product and Competitor Analysis, including page-level DTC conversion or B2B buying responsibilities.
 - Source Page Specification and Theme Assembly Plan for `reference_to_theme` work.
 - Reference Content-Layout Matrix for `structure_target` work.
 - Product Coverage Matrix and template strategy for PDP work.
@@ -43,6 +44,7 @@ Read [references/component-contract.md](references/component-contract.md).
 - Bind visual properties to variables where appropriate.
 - Bind every client-facing text node to an approved text style.
 - Define the grid span, equal-height policy, and Desktop/Mobile sizing contract for repeated cards before creating instances.
+- Preserve the content slots and states needed to answer the page blueprint's product, proof, evaluation, objection, action, and buying-path responsibilities. Do not bake invented claims into component defaults.
 - For PDP components, define content states rather than binding the API to one sampled product. Cover long/short titles, optional rating/badges, variant wrapping, gallery-count differences, optional subscription/RFQ, and absent below-fold content when applicable.
 - Keep product-specific modules conditional. Do not bake one product's ingredients, specifications, proof, or story into the base PDP component contract.
 - When the template strategy is `template_family`, record which components are shared and which are template-specific.
@@ -67,6 +69,7 @@ Return a component map containing:
 - Variable/style bindings.
 - Desktop/Mobile behavior.
 - Page-blueprint sections that consume it.
+- Analysis and journey responsibilities that consume it.
 - Product archetypes and content states that consume it for PDP work.
 - Reference section correspondence for `structure_target` work.
 - Source section ID, exact content-slot bindings, theme settings, Desktop/Mobile layout classes, and `exact_native | composed_native | unresolved` status for `reference_to_theme` work.

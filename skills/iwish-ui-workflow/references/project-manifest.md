@@ -11,6 +11,7 @@ project:
   audience_type: dtc | b2b | mixed
   platform: shopify | wordpress
   build_route: template | theme_customization | custom
+  strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
 scope:
   requested_page:
   features: []
@@ -24,6 +25,7 @@ sources:
 theme:
   name:
   preset:
+  state: to_be_selected | demo_only | code_available | current_site
   capability_map:
   evidence_urls: []
   custom_section_count_ratio:
@@ -41,6 +43,16 @@ figma:
 content:
   mode: final | mixed | placeholder
   placeholders: []
+analysis:
+  status: pending | complete | blocked
+  product_model:
+  category_context:
+  competitor_matrix:
+  conversion_chain:
+  content_priorities: []
+  evidence_gaps: []
+  page_implications: []
+  sources: []
 pdp:
   product_sources: []
   product_archetypes: []
@@ -77,6 +89,8 @@ regression:
   actual_changed_sections: []
   no_op_guard: pass | blocked_no_op | not_applicable
 workflow:
+  recognition_card:
+  interaction_questions: []
   completed: []
   pending_validations: []
 qa:

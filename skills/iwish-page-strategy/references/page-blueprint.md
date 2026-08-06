@@ -5,9 +5,20 @@ page:
   name:
   strategic_concept:
   audience_priority:
+  site_model: dtc | b2b | mixed
+  strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
   content_mode: final | mixed | placeholder
   build_route: template | theme_customization | custom
   reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
+analysis:
+  product_model:
+  category_context:
+  competitor_matrix:
+  conversion_or_buying_chain:
+  content_priorities: []
+  evidence_gaps: []
+  page_implications: []
+  theme_criteria: []
 reference_fidelity:
   target_url:
   source_page_specification:
@@ -50,6 +61,8 @@ sections:
   - id:
     name:
     responsibility:
+    journey_stages: []
+    analysis_evidence: []
     required_content_types: []
     asset_status: final | available | placeholder
     desktop_priority:
@@ -90,4 +103,4 @@ Keep section IDs stable so later Skills can map Figma nodes and resume safely.
 
 For theme-based work, every section requires an exact implementation mapping and evidence URL. Do not use `section_custom` or `custom` as a generic fallback.
 
-For PDP work, a page blueprint is incomplete without product applicability and a template strategy. For `structure_target`, a blueprint is incomplete without source-to-target correspondence. For `reference_to_theme`, a blueprint is incomplete until every stable source section has exact content bindings, Desktop/Mobile layout classes, a Theme Assembly Plan mapping, and either `exact_native`, `composed_native`, or an explicitly approved deviation. Any `unresolved` mapping blocks Figma.
+Every page section must trace to Product and Competitor Analysis, a required platform responsibility, or an approved strict source section. For PDP work, a page blueprint is incomplete without product applicability and a template strategy. For `structure_target`, a blueprint is incomplete without source-to-target correspondence. For `reference_to_theme`, a blueprint is incomplete until every stable source section has exact content bindings, Desktop/Mobile layout classes, a Theme Assembly Plan mapping, and either `exact_native`, `composed_native`, or an explicitly approved deviation. Any `unresolved` mapping blocks Figma.

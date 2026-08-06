@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH Page Strategy"
-  short_description: "基于行业、品类、市场与竞品动态生成网站页面策略和内容架构"
-  default_prompt: "使用 $iwish-page-strategy 调研行业与竞品并生成项目专属页面蓝图。"
+  short_description: "分析产品、竞品和转化链路并生成对应的网站页面策略"
+  default_prompt: "使用 $iwish-page-strategy 先完成产品、行业、竞品和DTC转化链路或B2B采购路径分析，再生成项目专属页面蓝图。"

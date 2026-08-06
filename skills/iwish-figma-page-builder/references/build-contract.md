@@ -49,6 +49,14 @@ Placeholder / {Content Type}
 - Record every visual divergence and its implementation level.
 - Stop the build when a section would cross the approved route budget; do not auto-promote it to custom.
 
+## Analysis traceability
+
+- For `research_led`, `hybrid_led`, and `existing_site_led`, every customer-facing section must trace to Product and Competitor Analysis, a platform responsibility, or an approved project requirement.
+- Preserve the visitor question and DTC conversion/B2B buying responsibility recorded in the blueprint.
+- Use placeholders for missing proof or content; do not invent factual claims to make the conversion chain appear complete.
+- Do not force the entire journey onto one page when the analysis assigns responsibilities to connected pages.
+- For strict `reference_to_theme`, report analysis gaps without adding or reordering source sections unless a deviation is approved.
+
 ## Reference fidelity
 
 For `structure_target`:
@@ -97,3 +105,4 @@ Before continuing, verify:
 - `reference_to_theme` source sections, content items, order, layout classes, and exact theme settings still match the approved specifications when applicable.
 - The regression result signature contains actual changes for every expected changed section; otherwise it is `blocked_no_op`.
 - PDP scenario states pass without detaching components, clipping content, or leaving empty modules when applicable.
+- Analysis-backed page responsibilities remain represented, or strict-reference gaps are explicitly reported.

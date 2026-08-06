@@ -31,6 +31,8 @@ For each source, record only decision-useful observations:
 - Opportunities to avoid sameness.
 - Which page responsibilities can be expressed with native theme sections or blocks.
 - Which visual differences require configuration, styling, CSS, Liquid, or a genuinely custom section.
+- How the source sequences product comprehension, desired outcome, differentiation, proof, evaluation, objections, offer, CTA, and retention.
+- Which product claims are evidenced, inferred, missing, or unsuitable for the customer.
 
 Do not analyze all reference URLs the same way:
 
@@ -40,6 +42,8 @@ Do not analyze all reference URLs the same way:
 - `competitor_evidence`: record buying questions, proof patterns, objections, category conventions, and missing opportunities.
 
 For PDP research, inspect product differences rather than one visually attractive SKU only. Sample available products that vary in content depth, options, media, specification needs, proof, subscription/bundle behavior, or B2B requirements. Convert these differences into a Product Coverage Matrix.
+
+Complete the Product and Competitor Analysis before choosing page sections. Do not use a competitor matrix as a decorative inspiration board; connect every retained observation to a visitor question, conversion/buying responsibility, theme criterion, or page decision.
 
 ## Do not copy
 

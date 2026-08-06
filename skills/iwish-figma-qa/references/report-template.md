@@ -25,12 +25,23 @@
 - Baseline structure signature:
 - Result structure signature:
 - No-op guard: pass | blocked_no_op | not_applicable
+- Analysis status:
+- Strategy mode:
+- Product model coverage:
+- Competitors analyzed:
+- Conversion/buying responsibilities covered:
+- Evidence gaps:
 - PDP template strategy: single_template_validated | template_family | coverage_partial
 - PDP states tested:
 
 ## Theme Mapping
 
 - {page section}: {exact theme section/block, evidence, implementation level}
+
+## Product and Competitor Analysis
+
+- {visitor question or journey responsibility}: {section, evidence status, source or placeholder}
+- {competitor/category observation}: {page implication}
 
 ## Reference Fidelity
 

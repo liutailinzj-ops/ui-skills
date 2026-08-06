@@ -61,6 +61,16 @@
 - `template` routes contain no unapproved custom Liquid, section-custom, or custom sections.
 - `theme_customization` routes keep section-custom and custom work at or below 20% of both section count and estimated page height unless explicitly approved.
 
+## Product, competitor, and journey analysis
+
+- Product model, competitor matrix, and DTC conversion chain or B2B buying path exist.
+- Decision-critical statements distinguish customer facts, research observations, inferences, unknowns, and placeholders.
+- Each non-strict-reference section traces to a visitor question, journey responsibility, platform responsibility, or approved requirement.
+- Competitor observations explain presentation and conversion logic rather than visual similarity alone.
+- The page does not invent proof, reviews, certifications, results, specifications, prices, or guarantees.
+- Relevant conversion/buying gaps are reported. Do not fail a page merely because a responsibility belongs on another scoped page.
+- For strict `reference_to_theme`, analysis gaps are reported without treating unapproved structural additions as repairs.
+
 ## Reference fidelity
 
 For `structure_target`:
@@ -111,6 +121,7 @@ For `reference_to_theme`:
 Mark QA blocked when any of these fail:
 
 - Theme evidence or mapping.
+- Missing Product and Competitor Analysis or untraceable generated sections.
 - Route custom budget.
 - Text-style binding.
 - Grid and equal-height integrity.
