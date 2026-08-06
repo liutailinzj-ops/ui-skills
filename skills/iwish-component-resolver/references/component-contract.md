@@ -26,6 +26,8 @@ Keep these local until repeated use proves stability:
 
 For theme-based work, keep a theme-specific section shell local to the project. Its contract must preserve the native section's supported blocks, settings, ordering, and responsive behavior. A local Figma component is not permission to require a custom Shopify or WordPress section.
 
+For PDP work, model variable product content through properties and conditional subcomponents. Do not create a component that remains editable only for the representative product used in the client preview.
+
 ## Layout contract
 
 Record these fields for repeated layout components:
@@ -36,12 +38,15 @@ WIDTH_MODE    FILL, FIXED, or HUG with reason
 HEIGHT_MODE   equal-height, content-height, or intentional mixed-height
 OVERFLOW      none, wrap, carousel, scroll, or clip with an explicit interaction
 THEME_MAP     exact native section/block name and evidence
+PRODUCT_STATES product archetypes and optional/required content states validated
+REFERENCE_MAP source responsibility and layout anatomy preserved or adapted
 ```
 
 - Use equal-height siblings for cards in the same comparison or decision row unless the blueprint documents intentional asymmetry.
 - Prefer FILL or grid-derived widths over manually rounded widths.
 - A carousel must define viewport width, card width, gap, visible next-card preview, controls or indicator, and theme-supported behavior.
 - Do not use clipping to hide a card that is wider than the Mobile content grid.
+- Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
 
 ## Properties
 

@@ -14,6 +14,8 @@ Inspect both node structure and rendered screenshots. Load the available Figma u
 - Page blueprint and component map.
 - Theme Capability Map and approved route budget for theme-based work.
 - Theme/platform implementation notes.
+- Reference Content-Layout Matrix and fidelity target when applicable.
+- Product Coverage Matrix, representative products, and template strategy for PDP work.
 
 ## QA Sequence
 
@@ -21,10 +23,12 @@ Inspect both node structure and rendered screenshots. Load the available Figma u
 2. For theme-based work, validate every section against the Theme Capability Map and calculate custom-section count and estimated-height ratios before visual polish.
 3. Run the structural checklist in [references/qa-checklist.md](references/qa-checklist.md).
 4. Capture each major section at a useful scale; do not rely only on a reduced full-page screenshot.
-5. Compare screenshots with the page blueprint, actual theme reference, and available visual references.
-6. Repair deterministic, low-risk problems such as naming, accidental groups, missing layout sizing, visible internal annotations, obvious clipping, and safe variable/style bindings.
-7. Re-run metadata and screenshot checks for every repaired section.
-8. Report creative, factual, theme, or implementation decisions that require UI or engineering judgment using [references/report-template.md](references/report-template.md).
+5. For `structure_target`, compare each section with the Reference Content-Layout Matrix. Measure responsibility coverage and report unexplained ordering or layout-anatomy divergence; do not use overall visual similarity as the only test.
+6. For PDP work, test the approved representative and edge states. Confirm that the base template or template family handles optional modules, long content, media/variant differences, and Mobile behavior without product-specific hardcoding.
+7. Compare screenshots with the page blueprint, actual theme reference, and available visual references.
+8. Repair deterministic, low-risk problems such as naming, accidental groups, missing layout sizing, visible internal annotations, obvious clipping, and safe variable/style bindings.
+9. Re-run metadata and screenshot checks for every repaired section and PDP state.
+10. Report creative, factual, theme, product-coverage, reference-fidelity, or implementation decisions that require UI or engineering judgment using [references/report-template.md](references/report-template.md).
 
 ## Safety
 
@@ -45,6 +49,8 @@ Inspect both node structure and rendered screenshots. Load the available Figma u
 - Content edges and spans match the applied grid within 1 px.
 - Mobile content is not accidentally clipped; carousels have an evidenced interaction and visible affordance.
 - Theme mappings and custom budgets pass the requested build route.
+- `structure_target` responsibility coverage is complete for relevant source sections; every order or layout divergence is justified.
+- PDP work truthfully reports `single_template_validated`, `template_family`, or `coverage_partial`, and all claimed product states pass.
 - Client-preview frames contain no visible implementation labels, source warnings, or replacement instructions.
 - Repeated content follows the component map or has an explicit exception.
 - Remaining risks have an owner: UI, client, or engineering.

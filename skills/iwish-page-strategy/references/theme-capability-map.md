@@ -24,6 +24,8 @@ available_sections:
 page_mappings:
   - page_section_id:
     responsibility:
+    reference_source_section:
+    product_applicability: []
     chosen_theme_section:
     chosen_blocks: []
     implementation_level: theme_native | configuration | style | custom_css | custom_liquid | section_custom | custom
@@ -40,6 +42,8 @@ page_mappings:
 - Record unsupported settings instead of inventing them.
 - Mark a mapping as `partial` when only a screenshot or marketing feature list is available.
 - Do not classify a section as custom merely because its copy or art direction is project-specific.
+- For `structure_target`, map source responsibility and source layout anatomy separately. A theme section may cover the responsibility while requiring a documented geometry adaptation.
+- For PDP work, verify conditional visibility, block ordering, product-template assignment, and empty-state behavior where the proposed template strategy depends on them.
 
 ## Route gates
 

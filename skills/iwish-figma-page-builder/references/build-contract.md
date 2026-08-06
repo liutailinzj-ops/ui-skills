@@ -49,6 +49,25 @@ Placeholder / {Content Type}
 - Record every visual divergence and its implementation level.
 - Stop the build when a section would cross the approved route budget; do not auto-promote it to custom.
 
+## Reference fidelity
+
+For `structure_target`:
+
+- Build from the Reference Content-Layout Matrix, not visual memory.
+- Preserve every relevant source responsibility or record an omission.
+- Preserve section order unless the blueprint records a product, theme, responsive, or scope reason to change it.
+- Compare layout anatomy: column ratio, media/content placement, grouping, repeated item count, interaction, and Mobile transformation.
+- Do not count matching colors or section names as structural fidelity.
+
+## PDP coverage
+
+- Build one primary client-preview product without hardcoding its content into the template structure.
+- Swap or simulate every approved additional product state through component properties and conditional modules.
+- Verify long titles, option wrapping, gallery-count differences, absent ratings/proof, content-rich modules, and Mobile stacking when applicable.
+- Collapse absent optional modules without blank section height.
+- Use multiple product templates only when the blueprint selects `template_family` and theme/platform assignment is evidenced.
+- Report `coverage_partial` when the available product evidence cannot support a catalog-wide claim.
+
 ## Section validation gate
 
 Before continuing, verify:
@@ -58,3 +77,5 @@ Before continuing, verify:
 - Text styles and component instances are bound.
 - The client preview contains no visible internal annotations.
 - Theme mapping still matches the approved capability map.
+- Reference responsibility, order, and layout-anatomy correspondence still matches the approved matrix when applicable.
+- PDP scenario states pass without detaching components, clipping content, or leaving empty modules when applicable.

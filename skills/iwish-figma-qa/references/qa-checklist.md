@@ -61,6 +61,27 @@
 - `template` routes contain no unapproved custom Liquid, section-custom, or custom sections.
 - `theme_customization` routes keep section-custom and custom work at or below 20% of both section count and estimated page height unless explicitly approved.
 
+## Reference fidelity
+
+For `structure_target`:
+
+- Every relevant source section has a target responsibility mapping.
+- Required source content types are represented or explicitly unavailable.
+- Section order matches or has a documented reason to diverge.
+- Desktop and Mobile layout anatomy is preserved or deliberately adapted.
+- Theme substitutions and omitted sections have evidence and an owner.
+- Visual similarity is not used as a substitute for content/layout correspondence.
+
+## PDP coverage
+
+- Product archetypes and representative/edge states are recorded.
+- The primary preview product does not define the only valid content length or module set.
+- Long title, variants/options, gallery count, rating/proof absence, optional modules, and Mobile stacking are tested when relevant.
+- Optional product-specific modules collapse without empty bands.
+- A single base template is called reusable only after scenario validation.
+- Multiple templates have evidenced platform/theme assignment support.
+- Limited catalog evidence is reported as `coverage_partial`, not universal coverage.
+
 ## Client preview separation
 
 - No visible `THEME NATIVE`, `SECTION CUSTOM`, `CONFIGURATION`, source-warning, or replacement-instruction labels appear inside client-preview frames.
@@ -77,3 +98,5 @@ Mark QA blocked when any of these fail:
 - Grid and equal-height integrity.
 - Mobile clipping or carousel contract.
 - Client-preview separation.
+- Unexplained `structure_target` responsibility, order, or layout divergence.
+- False PDP universality or failed required product state.

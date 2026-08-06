@@ -13,10 +13,22 @@
 - Mobile overflow:
 - Custom section count ratio:
 - Custom section height ratio:
+- Reference mode:
+- Reference responsibility coverage:
+- PDP template strategy: single_template_validated | template_family | coverage_partial
+- PDP states tested:
 
 ## Theme Mapping
 
 - {page section}: {exact theme section/block, evidence, implementation level}
+
+## Reference Fidelity
+
+- {source section}: {preserved/adapted/omitted, target section, order/layout divergence and reason}
+
+## PDP Coverage
+
+- {product archetype/state}: {pass/fail/not tested, affected modules}
 
 ## Repaired
 

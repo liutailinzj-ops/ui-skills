@@ -10,6 +10,8 @@ Create a bounded component map for the current page. Load the available Figma us
 ## Inputs
 
 - Page blueprint.
+- Reference Content-Layout Matrix for `structure_target` work.
+- Product Coverage Matrix and template strategy for PDP work.
 - Theme Capability Map for template or theme-customization work.
 - Project manifest and foundation IDs.
 - Existing local components and accessible libraries.
@@ -40,6 +42,10 @@ Read [references/component-contract.md](references/component-contract.md).
 - Bind visual properties to variables where appropriate.
 - Bind every client-facing text node to an approved text style.
 - Define the grid span, equal-height policy, and Desktop/Mobile sizing contract for repeated cards before creating instances.
+- For PDP components, define content states rather than binding the API to one sampled product. Cover long/short titles, optional rating/badges, variant wrapping, gallery-count differences, optional subscription/RFQ, and absent below-fold content when applicable.
+- Keep product-specific modules conditional. Do not bake one product's ingredients, specifications, proof, or story into the base PDP component contract.
+- When the template strategy is `template_family`, record which components are shared and which are template-specific.
+- For `structure_target`, record which source content/layout responsibility each component preserves or adapts.
 - Keep implementation annotations in the manifest or handoff documentation, not as visible client-preview content.
 - Build and validate one component family at a time.
 
@@ -58,6 +64,8 @@ Return a component map containing:
 - Variable/style bindings.
 - Desktop/Mobile behavior.
 - Page-blueprint sections that consume it.
+- Product archetypes and content states that consume it for PDP work.
+- Reference section correspondence for `structure_target` work.
 - Exact theme section/block represented and permitted divergence.
 - Grid span, equal-height policy, and overflow behavior.
 - Validation screenshot and metadata status.

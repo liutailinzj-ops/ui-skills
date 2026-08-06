@@ -26,6 +26,8 @@ Obtain these from sales, the project owner, UI, or engineering:
 - Languages/markets already agreed.
 - Target Figma file or authorization to create one.
 - Whether missing material may use placeholders.
+- Reference intent for each supplied site: `structure_target`, `visual_inspiration`, or `competitor_evidence`. Infer this from the brief or confirm internally; do not ask the customer to provide a design analysis.
+- For PDP work, available catalog/product records and known product differences. A complete catalog is not required.
 
 For `template` and `theme_customization` routes, the theme/demo/current-site reference is required before page strategy can approve implementation mappings. Obtain it internally; do not ask the customer to research the theme.
 
@@ -39,4 +41,5 @@ theme_reference: URL or none
 figma_target: design URL or create_new
 requested_page: one page per initial build
 content_mode: final | mixed | placeholder
+reference_mode: structure_target | visual_inspiration | competitor_evidence | none
 ```

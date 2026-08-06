@@ -27,13 +27,15 @@ Missing product selections, final copy, product images, brand guidelines, or a S
 ## Workflow
 
 1. Normalize customer facts and internal scope into the manifest defined in [references/project-manifest.md](references/project-manifest.md).
-2. Load and apply `$iwish-page-strategy` to audit the current theme first when applicable, then research the industry, market, competitors, and relevant patterns. Produce the Theme Capability Map and a project-specific page blueprint; do not use a fixed section list.
-3. Enforce the build-route gate before Figma work. For template work, block unapproved custom Liquid, section-custom, and custom sections. For theme customization, block when section-custom and custom work exceeds 20% of section count or estimated page height without approval.
-4. Load and apply `$iwish-figma-foundation` to inspect or create the target file structure, variables, styles, grids, and project status. A Starter File is optional.
-5. Load and apply `$iwish-component-resolver` to reuse, extend, wrap, or create only the components needed by the page blueprint and Theme Capability Map.
-6. Load and apply `$iwish-figma-page-builder` to create native editable Desktop and Mobile client-preview pages section by section.
-7. Load and apply `$iwish-figma-qa` to inspect metadata and screenshots, safely repair deterministic problems, and block measurable theme, structure, or client-preview failures.
-8. Return the Figma link, created page/frame names, placeholder list, theme mapping, custom-budget result, implementation-risk list, and the short UI review checklist.
+2. Classify every supplied reference URL as `structure_target`, `visual_inspiration`, or `competitor_evidence`. When the client expects the theme to reproduce a reference page, use `structure_target`; do not silently downgrade it to general inspiration.
+3. Load and apply `$iwish-page-strategy` to audit the current theme first when applicable, then research the industry, market, competitors, and relevant patterns. Produce the Theme Capability Map, Reference Content-Layout Matrix when applicable, Product Coverage Matrix for PDP work, and a project-specific page blueprint; do not use a fixed section list.
+4. Enforce the build-route gate before Figma work. For template work, block unapproved custom Liquid, section-custom, and custom sections. For theme customization, block when section-custom and custom work exceeds 20% of section count or estimated page height without approval.
+5. For PDP work, approve one of `single_template_validated`, `template_family`, or `coverage_partial`. Never call a layout universal because it fits one sampled product.
+6. Load and apply `$iwish-figma-foundation` to inspect or create the target file structure, variables, styles, grids, and project status. A Starter File is optional.
+7. Load and apply `$iwish-component-resolver` to reuse, extend, wrap, or create only the components needed by the page blueprint, product-content states, and Theme Capability Map.
+8. Load and apply `$iwish-figma-page-builder` to create native editable Desktop and Mobile client-preview pages section by section and validate the approved PDP scenarios.
+9. Load and apply `$iwish-figma-qa` to inspect metadata and screenshots, safely repair deterministic problems, and block measurable theme, reference-fidelity, product-coverage, structure, or client-preview failures.
+10. Return the Figma link, created page/frame names, placeholder list, theme mapping, reference-fidelity result, PDP coverage result when applicable, custom-budget result, implementation-risk list, and the short UI review checklist.
 
 ## Execution Contract
 
@@ -43,6 +45,8 @@ Missing product selections, final copy, product images, brand guidelines, or a S
 - Ask only when two materially different directions remain valid or a hard blocker exists.
 - Never present temporary claims, certifications, prices, reviews, specifications, or competitor assets as customer-approved facts.
 - Never treat `section_custom` or `custom` as the automatic fallback for a creative idea on a theme-based project.
+- Do not treat a reference URL as visual mood only when the client asked to reproduce its content structure through the selected theme.
+- Do not infer a catalog-wide PDP from one product page. Validate the base template against representative or edge-case product states.
 - Keep internal theme labels, source warnings, and replacement instructions out of client-preview frames.
 - Do not stop after producing a textual Figma specification when Figma write access is available; write the editable design.
 
@@ -55,6 +59,8 @@ Complete only when:
 - Foundations and component bindings are inspectable.
 - Placeholder layers are clearly tagged while the rendered client preview remains presentable.
 - Theme Capability Map, exact section mappings, and build-route budget pass.
+- A structure-target reference has a section-by-section content/layout correspondence and every unexplained omission or reorder is reported.
+- PDP work has a Product Coverage Matrix and a truthful coverage status; conditional modules and additional templates are documented where required.
 - Client-preview Text nodes use approved Text Styles.
 - Grid, equal-height, overflow, and Mobile carousel checks pass.
 - Client-preview frames contain no visible implementation or replacement notes.
