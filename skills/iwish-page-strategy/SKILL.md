@@ -28,14 +28,14 @@ Apply the analysis according to `strategy_mode`:
 
 Assign source roles before analysis and follow [references/reference-routing.md](references/reference-routing.md). Never merge the structure source and theme capability source into a generic reference field:
 
-- `reference_to_theme`: convert the captured reference page's visible content inventory, section order, and Desktop/Mobile layout anatomy into evidenced theme sections/blocks without creative restructuring. Read [references/reference-to-theme.md](references/reference-to-theme.md).
-- `structure_target`: the client expects the target page's content structure and layout logic to be represented through the selected theme.
+- `reference_to_theme`: strict conversion for an explicitly exact/no-change target. Convert the captured page into evidenced theme sections/blocks without creative restructuring. Read [references/reference-to-theme.md](references/reference-to-theme.md).
+- `structure_target`: the production default when the client expects the selected theme to represent a reference page's content structure and layout logic. Use `theme_adaptation` unless exact replication is explicit.
 - `visual_inspiration`: use art direction and presentation principles without preserving section correspondence.
 - `competitor_evidence`: use the site to understand category conventions, gaps, and opportunities.
 
-For `structure_target`, produce a Reference Content-Layout Matrix before the page blueprint. Analyze content responsibilities, content types, Desktop/Mobile anatomy, ordering, conditional behavior, and theme correspondence. Do not reduce the source to screenshots or mood adjectives.
+For `structure_target`, produce a complete stable `Rxx` Source Page Specification and Reference Content-Layout Matrix before the page blueprint. Analyze every visible module's content responsibility, content items, Desktop/Mobile anatomy, ordering, conditional behavior, and theme correspondence. Create composition groups only after the `Rxx` list is complete; groups reference rows and never replace them. Reuse the capture and mapping schemas in [references/reference-to-theme.md](references/reference-to-theme.md), but apply the `theme_adaptation` gate instead of strict fidelity thresholds. Do not reduce the source to screenshots, topic summaries, or mood adjectives.
 
-For `reference_to_theme`, produce the Source Identity Fingerprint and Source Page Specification from the specified structure source first. Read [references/layout-topology-contract.md](references/layout-topology-contract.md), capture section topology and composition groups, then produce the Theme Assembly Plan using only the separate theme capability sources. Do not write the page blueprint or continue to Figma until source identity passes, Desktop and Mobile topology evidence exists, and every source section and composition group is mapped or a deviation is explicitly approved.
+For strict `reference_to_theme`, produce the Source Identity Fingerprint and Source Page Specification from the specified structure source first. Read [references/layout-topology-contract.md](references/layout-topology-contract.md), capture section topology and composition groups, then produce the Theme Assembly Plan using only separate theme capability sources. Do not write the page blueprint or continue to Figma until source identity and source capture pass, Desktop and Mobile topology evidence exists, and every source section and composition group is mapped or a deviation is explicitly approved.
 
 For template or theme-customization work, build the Theme Capability Map in [references/theme-capability-map.md](references/theme-capability-map.md) before writing the page blueprint. Use the current official theme listing, theme-vendor documentation, and live demo where available. Do not infer theme feasibility from visual similarity alone.
 
@@ -52,20 +52,22 @@ For template or theme-customization work, build the Theme Capability Map in [ref
 - For PDP work, read [references/pdp-coverage.md](references/pdp-coverage.md). Analyze the catalog or available product records, define product archetypes, and decide whether the project needs one validated base template or a template family.
 - Treat a supplied PDP as one product state, not proof of a universal template. Preserve reusable content responsibilities while making product-specific modules conditional.
 - When only one product can be inspected, use `coverage_partial`; do not claim that the layout fits the full catalog.
-- For `structure_target`, preserve source responsibility coverage and sequence unless theme evidence, product relevance, mobile behavior, or scope requires a documented adaptation.
+- Classify every source row as `critical`, `structural`, or `presentational`. Critical means a purchase, inquiry, navigation, comparison, legally required, or other indispensable interaction/content responsibility; structural means order, grouping, and major-region logic; presentational means columns, exact dimensions, spacing, crop, and decoration.
+- For `structure_target` with `theme_adaptation`, preserve every relevant source row, content responsibility, content binding, sequence, critical function, and Desktop/Mobile reading flow. Allow documented theme-native adaptations to structural or presentational topology when they preserve the essential responsibility.
 - For `reference_to_theme`, do not derive a new content hierarchy, add category-best-practice modules, improve the source sequence, or select a different layout. Preserve captured source content, order, and layout class. Separate temporary source material from customer-approved production content.
 - For `reference_to_theme`, treat layout topology as Build Truth: preserve composition groups, major-region geometry, repeated-item visibility, interaction viewport, overflow, and Desktop/Mobile transformation. A matching topic or section title is not a topology match.
 - Do not split a connected source composition group into independent full-width sections unless target-theme evidence reproduces the same visible relationship or a named deviation is explicitly approved.
 - For `reference_to_theme`, the Build Truth URL, product/category identity, H1, hero signature, and stable section sequence must remain the specified structure source throughout all artifacts. A theme demo cannot replace it merely because the demo is easier to inspect or maps cleanly.
 - Map across sources: `structure source Rxx -> target theme Section/Blocks/Settings -> theme capability evidence URL`. A map of `theme demo section -> same theme demo section` is invalid and must never contribute to coverage.
 - Use exact theme-editor or vendor-documentation names. A generic label such as `approved modular composition`, `static prototype`, or `native-like section` is not a valid target-theme mapping.
-- Allow `composed_native` only when each contributing native primitive is evidenced and their combined output preserves the source section boundary, topology, content order, interaction, and responsive transformation. Do not use it as a fallback for semantic similarity.
+- Allow `composed_native` only when each contributing native primitive is evidenced and their combined output preserves the required fidelity profile. In `strict_replication`, this includes source boundary and exact topology. In `theme_adaptation`, multiple adjacent native primitives may preserve one visually continuous responsibility when the relationship and reading flow remain clear.
+- Use `native_adaptation` when an evidenced theme-native substitute preserves required content, critical function, and reading order while changing a non-critical topology detail. Use `requires_custom` when higher fidelity needs code, and record the best feasible native fallback separately.
 - Treat approval as provenance, not wording. Record the decision, exact deviation, approver, source, and date before using `approved`; generated layer names or reports cannot create approval.
 - A creative content responsibility does not imply custom implementation. Map it to an exact theme section or block before considering code.
 - Resolve theme-based implementation in this order: `theme_native` -> `configuration` -> `style` -> `custom_css` -> `custom_liquid` -> `section_custom` -> `custom`.
 - For `template` work, do not use `custom_liquid`, `section_custom`, or `custom` without explicit scope approval.
 - For `theme_customization` work, keep `section_custom` and `custom` at or below 20% of both section count and estimated page height by default. Record explicit approval for every exception.
-- Stop the strategy as blocked when a theme-based section has no evidenced mapping, the theme reference is unavailable, or the custom budget is exceeded without approval. Do not silently fall back to a custom DTC layout.
+- Stop the strategy only when source capture is incomplete, required theme evidence is unavailable, source identity fails, a critical responsibility has no feasible native or approved custom route, or a material route/budget decision remains unresolved. A presentational or structural difference with an evidenced native substitute is not a blocker in `theme_adaptation`.
 
 ## Output
 
@@ -85,7 +87,7 @@ Produce the schema in [references/page-blueprint.md](references/page-blueprint.m
 - Custom-section count and estimated-height ratios.
 - One primary design direction and, only when materially useful, one alternative direction.
 
-For `structure_target`, report responsibility coverage, ordering divergences, layout divergences, and theme-constrained substitutions. For PDP work, report `single_template_validated`, `template_family`, or `coverage_partial`.
+For `structure_target`, report complete `Rxx` and content-item coverage, critical responsibility coverage, exact mappings, native adaptations, ordering/layout divergences, and theme-constrained substitutions. Label AI-selected differences `proposed_adaptation` for UI review. For PDP work, report `single_template_validated`, `template_family`, or `coverage_partial`.
 
 For `reference_to_theme`, report Build Truth URL identity, source fingerprint match, product/category identity, source section count, exact order match, visible content-item coverage, composition-group coverage, Desktop topology coverage, Mobile topology coverage, resolved cross-source theme mapping count, and approved deviations with provenance. Use `blocked` when identity fails or any unapproved value is below 100%.
 

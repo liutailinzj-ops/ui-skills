@@ -40,6 +40,8 @@ OVERFLOW      none, wrap, carousel, scroll, or clip with an explicit interaction
 THEME_MAP     exact native section/block name and evidence
 PRODUCT_STATES product archetypes and optional/required content states validated
 REFERENCE_MAP source responsibility and layout anatomy preserved or adapted
+FIDELITY_PROFILE strict_replication or theme_adaptation
+MAPPING_STATUS exact_native, composed_native, native_adaptation, requires_custom, or unresolved
 SOURCE_MAP    stable source section ID and exact source item order
 CONTENT_BINDINGS source text/media/control/repeated-item slots mapped one by one
 THEME_SETTINGS exact section/block settings supported by theme evidence
@@ -55,7 +57,7 @@ SETTING_EVIDENCE exact evidence for every theme setting used
 - Do not use clipping to hide a card that is wider than the Mobile content grid.
 - Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
 
-For `reference_to_theme`, the contract must preserve the primary reference page's exact visible content slots, repeated-item count, ordering, and Desktop/Mobile layout class. Product-state properties may extend the component only after this primary contract remains reproducible. Do not treat a semantically similar component as compatible when its slot structure or geometry differs.
+For specified-structure work, the contract must preserve the primary reference page's visible content slots, stable ordering, critical function, and Desktop/Mobile reading flow. In `strict_replication`, repeated-item count and topology must also match unless explicitly approved. In `theme_adaptation`, changed item visibility, columns, section boundaries, or interaction form may use `native_adaptation` when the exact difference and theme evidence are recorded. Product-state properties may extend the component only after the primary contract remains reproducible.
 
 When a component belongs to a connected composition group, preserve the group's shared container, adjacency, spacing, interaction, and responsive transformation. Multiple semantic components may exist internally, but they must not render as unrelated page sections.
 
@@ -76,7 +78,7 @@ topology_signature:
 
 Reject the component contract when `structure_source_url` is missing, differs from Build Truth, or points to a theme demo that the user did not select as the structure source.
 
-Reject `exact_native` or `composed_native` when a required Section, Block, or Setting uses a descriptive alias instead of the exact target-theme name, lacks evidence, or changes source topology. Do not use `Approved` to bypass this check without approval provenance in the manifest.
+Reject `exact_native` or `composed_native` when a required Section, Block, or Setting uses a descriptive alias instead of the exact target-theme name or lacks evidence. A topology change is `native_adaptation`, not an exact claim. Do not use `Approved` to bypass this check without approval provenance in the manifest.
 
 ## Properties
 

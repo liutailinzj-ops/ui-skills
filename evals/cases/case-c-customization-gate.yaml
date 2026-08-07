@@ -12,6 +12,8 @@ input:
   platform: shopify
   build_route: theme_customization
   strategy_intent: Follow the specified source structure and topology only where the route can truthfully implement it.
+  reference_mode: reference_to_theme
+  fidelity_profile: strict_replication
   structure_source_urls:
     - https://www.apple.com/airpods-pro/
   theme:

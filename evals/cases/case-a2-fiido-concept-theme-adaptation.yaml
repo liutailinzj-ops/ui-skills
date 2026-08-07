@@ -1,0 +1,47 @@
+case:
+  id: A2
+  name: Production theme-native adaptation DTC PDP
+  kind: golden
+  purpose: Verify that the same difficult reference can still produce editable Figma through truthful theme-native adaptation.
+
+input:
+  brand: Velopro
+  product_category: city electric bicycle
+  target_market: United Kingdom DTC
+  platform: shopify
+  build_route: template
+  strategy_intent: Preserve the specified page's content responsibilities, order, buying flow, and Desktop/Mobile reading logic while adapting unsupported topology to the selected theme.
+  reference_mode: structure_target
+  fidelity_profile: theme_adaptation
+  structure_source_urls:
+    - https://uk.fiido.com/products/fiido-c700-city-ebike
+  theme:
+    name: Concept
+    preset: Inova
+    capability_urls:
+      - https://themes.shopify.com/themes/concept/presets/inova
+      - https://roartheme.co/blogs/concept
+  content_mode: placeholder
+  page: PDP
+  figma:
+    file_url: https://www.figma.com/design/9wxWMFjt5Qdz4Dnn5iGMKQ/Velopro-%E2%80%94-Shopify-PDP-%E2%80%94-Concept
+
+assertions:
+  - Source identity remains the specified product page and never becomes the theme demo.
+  - Every visible source module receives one unique Rxx row; headings, controls, repeated items, and purchase FAQ content are not lost inside summaries or composition groups.
+  - Composition groups reference existing Rxx rows and preserve the connected purchase, navigation, comparison, and narrative intent.
+  - Every target mapping uses exact Concept Section, Block, and Setting names with field-level evidence.
+  - Exact native and valid composed-native mappings are distinguished from native_adaptation and requires_custom.
+  - A theme-native comparison with fewer visible columns or a selector may be proposed when all compared content and comparison responsibility remain available.
+  - Attached product information or bundle content may use the closest evidenced native interaction when content, order, and buying responsibility remain intact.
+  - Presentational differences in columns, visible counts, exact boundaries, spacing, crop, or micro-layout do not block generation when their native fallback is evidenced.
+  - Every native adaptation names the exact difference, preserved responsibility, evidence, consequence, and UI review owner; it is not labeled approved.
+  - Critical content or transaction functionality is never silently omitted. A critical row with no feasible route still blocks.
+  - Editable Desktop and Mobile Figma frames are generated with native nodes, components, Auto Layout, and placeholders that preserve the chosen native geometry.
+  - Source capture, theme mapping, Figma build, and Figma QA statuses are reported separately.
+  - Expected overall status is pass or pass_with_followups when only proposed native adaptations and UI polish remain.
+
+anti_overfit:
+  - Do not encode the fixture brand, product vocabulary, section count, visual identity, theme name, or example adaptation into any Skill.
+  - Treat the named differences as fixture assertions, not universal layout rules.
+  - Do not treat this PDP as proof of catalog-wide coverage.

@@ -11,6 +11,7 @@ page:
   content_mode_label: 正式内容 | 混合内容 | 占位内容
   build_route: template | theme_customization | custom
   reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
+  fidelity_profile: strict_replication | theme_adaptation
 analysis:
   product_model:
   category_context:
@@ -27,6 +28,10 @@ reference_fidelity:
   source_section_order: []
   source_content_inventory:
   unresolved_mappings: []
+  proposed_adaptations: []
+  approved_adaptations: []
+  source_capture_status: pending | pass | blocked_source_capture
+  theme_mapping_status: pending | exact | adapted | blocked
   section_count_coverage:
   order_match:
   content_item_coverage:
@@ -91,14 +96,15 @@ sections:
       source_responsibility:
       source_layout_anatomy:
       disposition: preserved | adapted | omitted | added
-      conversion_status: exact_native | composed_native | unresolved
+      priority: critical | structural | presentational
+      conversion_status: exact_native | composed_native | native_adaptation | requires_custom | unresolved
       content_bindings: []
       desktop_layout_class:
       mobile_layout_class:
       topology_contract:
       topology_match: exact | deviation | unavailable
-      approved_deviation:
-        status: requested | approved | rejected | not_applicable
+      adaptation_decision:
+        status: proposed_adaptation | approved_adaptation | rejected_adaptation | not_applicable
         exact_difference:
         approved_by:
         approval_source:
@@ -116,6 +122,6 @@ Keep section IDs stable so later Skills can map Figma nodes and resume safely.
 
 For theme-based work, every section requires an exact implementation mapping and evidence URL. Do not use `section_custom` or `custom` as a generic fallback.
 
-Every page section must trace to Product and Competitor Analysis, a required platform responsibility, or an approved strict source section. For PDP work, a page blueprint is incomplete without product applicability and a template strategy. For `structure_target`, a blueprint is incomplete without source-to-target correspondence. For `reference_to_theme`, a blueprint is incomplete until every stable source section has exact content bindings, composition-group membership, Desktop/Mobile topology, a Theme Assembly Plan mapping, and either `exact_native`, validated `composed_native`, or a deviation with explicit approval provenance. Any `unresolved` mapping blocks Figma.
+Every page section must trace to Product and Competitor Analysis, a required platform responsibility, or a captured source section. For PDP work, a page blueprint is incomplete without product applicability and a template strategy. For specified-structure work, a blueprint is incomplete until every unique stable source section has exact content bindings, composition-group membership, Desktop/Mobile topology, and a Theme Assembly Plan mapping. In `strict_replication`, only `exact_native`, validated `composed_native`, or an explicitly approved deviation can build. In `theme_adaptation`, an evidenced `native_adaptation` can build and must enter UI review; a critical `unresolved` mapping blocks.
 
 For `reference_to_theme`, the blueprint header must repeat the Build Truth URL and Source Identity Fingerprint, list theme capability URLs separately, and carry the topology signature and composition groups. Reject the blueprint when its product/category, H1, hero signature, stable section sequence, or topology comes from a theme demo or any URL other than the specified structure source.

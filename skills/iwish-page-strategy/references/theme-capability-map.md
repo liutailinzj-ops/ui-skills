@@ -48,14 +48,15 @@ page_mappings:
     chosen_blocks: []
     chosen_settings: {}
     setting_evidence: {}
-    conversion_status: exact_native | composed_native | unresolved
+    conversion_status: exact_native | composed_native | native_adaptation | requires_custom | unresolved
+    priority: critical | structural | presentational
     implementation_level: theme_native | configuration | style | custom_css | custom_liquid | section_custom | custom
     evidence_url:
     structure_source_url:
     theme_capability_url:
     divergence:
-    approved_deviation:
-      status: requested | approved | rejected | not_applicable
+    adaptation_decision:
+      status: proposed_adaptation | approved_adaptation | rejected_adaptation | not_applicable
       exact_difference:
       approved_by:
       approval_source:
@@ -70,14 +71,14 @@ page_mappings:
 - Treat all theme store, vendor documentation, demo, and current-theme URLs as theme capability evidence. They must not define page content, source order, product identity, or Build Truth unless the user explicitly selected the same URL as structure source.
 - Map the content responsibility to the closest native primitive before changing layout geometry.
 - Record unsupported settings instead of inventing them.
-- Mark a mapping as `partial` when only a screenshot or marketing feature list is available.
+- Mark evidence as `partial` when only a screenshot or marketing feature list is available; do not promote partial evidence to an exact mapping.
 - Do not classify a section as custom merely because its copy or art direction is project-specific.
 - For `structure_target`, map source responsibility and source layout anatomy separately. A theme section may cover the responsibility while requiring a documented geometry adaptation.
-- For `reference_to_theme`, create one cross-source mapping for every stable source section ID. Record the structure-source URL, exact source order and content bindings, Desktop/Mobile layout classes, exact target theme Section/Blocks/settings, theme capability evidence URL, and `exact_native | composed_native | unresolved` status. Do not use semantic similarity, theme-demo self-mapping, or `adapted` as a success state.
+- For every specified-structure run, create one cross-source mapping for every stable source section ID. Record the structure-source URL, exact source order and content bindings, Desktop/Mobile layout classes, exact target theme Section/Blocks/settings, theme capability evidence URL, priority, mapping status, and any proposed adaptation. Do not use semantic similarity or theme-demo self-mapping as evidence.
 - Validate the source topology and composition group as a separate axis from content responsibility. A theme primitive that covers the same topic but changes grouping, region proportions, visible-item count, interaction, overflow, or responsive transformation is not an exact mapping.
 - Accept `composed_native` only when all contributing native primitives and settings are evidenced and their combined rendered output preserves one source boundary and topology. Otherwise mark it `unresolved`.
 - Do not use invented names such as `approved modular composition` or `static prototype` as theme evidence. `approved` is valid only when the manifest contains explicit approval provenance for the exact deviation.
-- Any `reference_to_theme` `unresolved` mapping blocks the page blueprint and Figma. Return the gap and require one decision: accept the named deviation, change theme, or approve theme customization/custom work.
+- In `strict_replication`, any `unresolved`, `requires_custom`, or unapproved topology difference blocks the page blueprint and Figma. In `theme_adaptation`, `native_adaptation` continues; `requires_custom` continues with an evidenced native fallback unless the exact custom form is an explicit requirement. A critical `unresolved` row blocks.
 - For PDP work, verify conditional visibility, block ordering, product-template assignment, and empty-state behavior where the proposed template strategy depends on them.
 
 ## Route gates
@@ -98,4 +99,4 @@ page_mappings:
 
 - Theme budgets do not apply, but platform feasibility and component contracts still apply.
 
-Do not continue to Figma when required theme evidence is unavailable, source identity/fingerprint fails, a theme demo was promoted to Build Truth, or a route gate fails.
+Do not continue to Figma when required theme evidence is unavailable, source capture or identity/fingerprint fails, a theme demo was promoted to Build Truth, a critical responsibility has no feasible route, or a material route gate remains unresolved. Non-critical evidenced native adaptations continue to Figma.

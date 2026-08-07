@@ -14,7 +14,8 @@ Use exception-driven interaction. The normal path is automatic routing and conti
 - It is unclear whether a reference is a strict structure target, selected-module reference, or visual inspiration, and the choice would materially change the page.
 - “按 A 的结构用 B 主题做” cannot be resolved into distinct structure-source and theme-capability roles from the supplied brief.
 - The build route or permitted customization scope is genuinely unknown.
-- A required theme mapping is unresolved and a decision is needed among accepting a named deviation, changing theme, or approving customization.
+- A critical purchase, inquiry, navigation, comparison, or required interaction has no evidenced theme-native equivalent, and the choice among changing theme, approving customization, or removing the function would materially change scope.
+- The user explicitly requires strict replication but the selected theme cannot reproduce a named topology or interaction difference.
 - No editable Figma target exists and creation is not authorized.
 - Two valid directions would produce materially different customer-facing outcomes.
 
@@ -25,5 +26,7 @@ Use exception-driven interaction. The normal path is automatic routing and conti
 - Use Chinese project language rather than enum names.
 - Explain the impact of each choice in one sentence.
 - After answers, update the recognition card and continue automatically.
+
+Do not pause for presentational differences that the selected theme can represent through a documented native adaptation, including column count, initially visible item count, section boundary, interaction form, spacing, crop, or micro-layout. Generate the editable Figma result and route those differences to UI review.
 
 If interactive controls are unavailable, ask the same concise questions in plain Chinese. Do not depend on a specific Codex client UI.

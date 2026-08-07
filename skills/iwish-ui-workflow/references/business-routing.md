@@ -10,6 +10,8 @@ build_route: template | theme_customization | custom
 strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
 theme_state: to_be_selected | demo_only | code_available | current_site
 content_state: final | mixed | placeholder
+reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
+fidelity_profile: strict_replication | theme_adaptation
 ```
 
 Use these Chinese labels in every user-facing field, recognition card, question, and handoff summary:
@@ -25,8 +27,9 @@ Never display the internal values as options for UI.
 ## Chinese intent mapping
 
 - “没有指定结构、由我们策划、根据品类设计” -> `research_led`.
-- “按这个网站的内容和布局做、照结构做” -> `reference_led` plus `reference_to_theme` for theme routes.
-- “参考这个网站的结构逻辑” -> `reference_led` plus `structure_target`.
+- “按这个网站的内容和布局做、照结构做、用主题模块转换” -> `reference_led` plus `structure_target` and `theme_adaptation` for theme routes.
+- “参考这个网站的结构逻辑” -> `reference_led` plus `structure_target` and `theme_adaptation`.
+- “1:1 还原、完全一致、不可调整、像素级复刻” -> `reference_led` plus `reference_to_theme` and `strict_replication`.
 - “只参考其中几个模块、多个网站组合” -> `hybrid_led`; classify every selected section separately.
 - “只参考视觉、感觉、风格” -> `visual_inspiration` without section fidelity.
 - “基于客户旧站改版” -> `existing_site_led`.
@@ -55,10 +58,10 @@ Do not infer role from domain, visual similarity, or which URL was inspected mos
 
 For `template`, remain inside native/configuration/style scope. For `theme_customization`, apply the approved custom budget. For `custom`, use analysis, requirements, references, VI, and platform feasibility without theme-module constraints.
 
-The route changes how topology gaps are handled, not whether they are detected:
+The route changes how topology gaps are handled, not whether they are detected. In normal production, specified-reference theme work defaults to `theme_adaptation`; use `strict_replication` only when exact fidelity is explicitly required or a regression case declares it:
 
-- `template`: block any unapproved topology that exact native settings cannot reproduce.
-- `theme_customization`: identify the exact missing topology or interaction, estimate its custom count and height budget, and require approval when the route gate is crossed.
+- `template`: use exact native mapping where available; otherwise choose an evidenced `native_adaptation` that preserves essential content and function, generate Figma, and list the difference for UI review. Block only when an essential function has no feasible native equivalent.
+- `theme_customization`: identify the exact missing topology or interaction and estimate its custom budget. When custom work is outside the approved budget, continue with the best evidenced native adaptation unless the brief explicitly requires high-fidelity custom behavior.
 - `custom`: preserve strict-reference topology when requested; otherwise let research and brand strategy define it.
 
 Do not inherit a section count, product vocabulary, component family, or visual language from a regression fixture.
@@ -73,6 +76,7 @@ Display this compact card once, then continue unless a blocking ambiguity exists
 平台：Shopify / WordPress
 建站方式：模板建站 / 模板二开 / 纯定制
 设计方式：自主策划 / 指定结构 / 混合参考 / 旧站改版
+还原方式：严格复刻 / 主题适配 / 不适用
 主题状态：待选择 / 只有预览 / 已有代码 / 现有网站
 内容模式：正式内容 / 混合内容 / 占位内容
 来源角色：

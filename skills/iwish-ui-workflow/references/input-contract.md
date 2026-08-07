@@ -27,6 +27,7 @@ Obtain these from sales, the project owner, UI, or engineering:
 - Target Figma file or authorization to create one.
 - Whether missing material may use placeholders.
 - Source role for each supplied URL: specified structure source, theme capability source, competitor evidence, or visual inspiration. Keep roles separate even when URLs arrive in one reference list. Use `reference_to_theme` only when the specified source's content inventory, order, and layout anatomy are approved targets.
+- Fidelity expectation for specified-reference work. Infer `theme_adaptation` from ordinary instructions such as “按结构用主题做”; use `strict_replication` only for explicit 1:1/exact/no-change requests or a declared strict regression.
 - Strategy source: `research_led`, `reference_led`, `hybrid_led`, or `existing_site_led`. Infer it from Chinese instructions; UI does not need to provide the enum.
 - Theme state: `to_be_selected`, `demo_only`, `code_available`, or `current_site`.
 - Content mode: ask UI to use `正式内容`, `混合内容`, or `占位内容`. Normalize these internally to `final`, `mixed`, or `placeholder`.
@@ -48,6 +49,7 @@ figma_target: design URL or create_new
 requested_page: one page per initial build
 content_mode: final | mixed | placeholder
 reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
+fidelity_profile: strict_replication | theme_adaptation
 strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
 theme_state: to_be_selected | demo_only | code_available | current_site
 ```

@@ -64,6 +64,7 @@ pdp:
   template_assignments: []
 reference_fidelity:
   mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
+  fidelity_profile: strict_replication | theme_adaptation
   target_url:
   build_truth_url:
   source_identity_status: pass | blocked_source_identity
@@ -89,7 +90,14 @@ reference_fidelity:
   topology_signature:
   content_layout_matrix:
   theme_assembly_plan:
+  source_capture_status: pending | pass | blocked_source_capture
+  theme_mapping_status: pending | exact | adapted | blocked
+  figma_build_status: not_run | pass | blocked
+  figma_qa_status: not_run | pass | pass_with_followups | blocked
+  overall_status: pending | pass | pass_with_followups | blocked
   unresolved_mappings: []
+  proposed_adaptations: []
+  approved_adaptations: []
   responsibility_coverage:
   section_count_coverage:
   order_match:
@@ -143,7 +151,9 @@ For theme-based work, keep one mapping record per page section with the exact th
 
 For `structure_target` work, keep one correspondence record per source section: source responsibility, source content type, source Desktop/Mobile layout anatomy, target theme mapping, preserved/adapted/omitted status, and reason.
 
-For `reference_to_theme`, do not use responsibility coverage as a proxy for fidelity. Record exact visible content items, stable source section IDs, composition groups, normalized layout topology, order, Desktop/Mobile transformation, theme section/block/settings with field-level evidence, and mapping status. The source fingerprint must identify the specified structure source, while theme mapping evidence must identify a theme capability source. Any source-identity mismatch, self-mapping of a theme demo, unsupported setting, unresolved mapping, unapproved topology difference, or expected change with an unchanged structure signature blocks completion.
+For every specified-structure run, record exact visible content items, unique stable source section IDs, composition groups that reference those IDs, normalized layout topology, order, Desktop/Mobile transformation, theme section/block/settings with field-level evidence, and mapping status. The source fingerprint must identify the specified structure source, while theme mapping evidence must identify a theme capability source. Missing or duplicate `Rxx` rows, source-identity mismatch, theme-demo self-mapping, missing required evidence, or an expected change with an unchanged structure signature blocks completion.
+
+For `strict_replication`, any unresolved mapping or unapproved topology difference blocks before Figma. For `theme_adaptation`, use `native_adaptation` when evidenced native behavior preserves the source's essential content and business responsibility. Record the exact difference, consequence, evidence, and UI owner under `proposed_adaptations`, continue to Figma, and never treat that proposal as approval.
 
 Every approved deviation must record the exact difference, approver, approval source, and date. Generated output cannot approve itself, and the word `Approved` must not appear in Figma layer names or reports without this record.
 

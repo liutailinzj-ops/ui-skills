@@ -7,6 +7,10 @@
 - Desktop frame:
 - Mobile frame:
 - Status: pass | pass_with_followups | blocked
+- Source capture status: pending | pass | blocked_source_capture
+- Theme mapping status: pending | exact | adapted | blocked
+- Figma build status: not_run | pass | blocked
+- Figma QA status: not_run | pass | pass_with_followups | blocked
 - Build Truth URL:
 - Structure source URL:
 - Theme capability URLs:
@@ -30,6 +34,7 @@
 - Custom section count ratio:
 - Custom section height ratio:
 - Reference mode:
+- Fidelity profile: strict_replication | theme_adaptation
 - Reference responsibility coverage:
 - Source sections mapped:
 - Source order match:
@@ -39,6 +44,7 @@
 - Mobile topology coverage:
 - Unresolved mappings:
 - Approved deviations:
+- Proposed adaptations:
 - Approval provenance:
 - Exact theme setting evidence:
 - Baseline structure signature:
@@ -67,7 +73,7 @@
 ## Reference Fidelity
 
 - {source section}: {preserved/adapted/omitted, target section, order/layout divergence and reason}
-- {stable source ID}: {composition group, exact_native/validated composed_native/unresolved, exact theme Section/Blocks/settings and evidence, content bindings, Desktop/Mobile topology result, approved deviation provenance}
+- {stable source ID}: {priority, composition group, exact_native/composed_native/native_adaptation/requires_custom/unresolved, exact theme Section/Blocks/settings and evidence, content bindings, Desktop/Mobile exact-or-adapted topology result, adaptation state}
 
 ## PDP Coverage
 

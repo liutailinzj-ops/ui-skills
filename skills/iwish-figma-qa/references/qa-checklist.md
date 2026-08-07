@@ -87,16 +87,18 @@ Before either fidelity mode, verify source roles:
 - Theme store, vendor docs, demo, and current-theme URLs are used only as capability evidence unless explicitly assigned another role.
 - No mapping counts a theme demo section mapped back to the same theme demo as source fidelity.
 
-For `structure_target`:
+For `structure_target` with `theme_adaptation`:
 
 - Every relevant source section has a target responsibility mapping.
 - Required source content types are represented or explicitly unavailable.
 - Section order matches or has a documented reason to diverge.
 - Desktop and Mobile layout anatomy is preserved or deliberately adapted.
-- Theme substitutions and omitted sections have evidence and an owner.
+- Theme substitutions and omissions have evidence and an owner; missing material alone uses placeholders.
+- Every `Rxx` source row exists exactly once, and every composition group references existing rows rather than replacing them.
+- `native_adaptation` rows preserve critical content/function and reading flow, name the exact difference, cite theme evidence, and enter UI review.
 - Visual similarity is not used as a substitute for content/layout correspondence.
 
-For `reference_to_theme`:
+For `strict_replication`:
 
 - Every stable source section ID exists exactly once in the target.
 - Target section order matches the Source Page Specification.
@@ -147,8 +149,11 @@ Mark QA blocked when any of these fail:
 - Parent-child containment or an undocumented overflow viewport.
 - Mobile clipping or carousel contract.
 - Client-preview separation.
-- Unexplained `structure_target` responsibility, order, or layout divergence.
-- Any unresolved or unapproved `reference_to_theme` section, content, order, composition-group, topology, interaction, overflow, or theme-setting mismatch.
-- A `reference_to_theme` fidelity metric below 100% after approved deviations.
+- Missing or duplicate source rows, unexplained critical-function loss, or a `structure_target` difference without evidenced native adaptation.
+- Any unresolved or unapproved `strict_replication` section, content, order, composition-group, topology, interaction, overflow, or theme-setting mismatch.
+- A `strict_replication` fidelity metric below 100% after approved deviations.
+- A critical `theme_adaptation` row with no feasible evidenced native or approved custom route.
 - A regression that triggers `blocked_no_op`.
 - False PDP universality or failed required product state.
+
+Do not block `theme_adaptation` solely because columns, visible-item count, section boundaries, interaction form, spacing, crop, or micro-layout differ from the source. Those differences must be measured, evidenced, and reported to UI.

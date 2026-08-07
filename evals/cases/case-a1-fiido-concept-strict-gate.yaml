@@ -1,8 +1,8 @@
 case:
-  id: A
-  name: Strict reference-to-theme DTC PDP
-  kind: golden
-  purpose: Verify that a specified reference page is converted into a selected theme without semantic-only reconstruction.
+  id: A1
+  name: Strict reference-to-theme DTC PDP gate
+  kind: negative_gate
+  purpose: Verify that explicit exact replication blocks truthfully when the selected theme cannot reproduce required topology.
 
 input:
   brand: Velopro
@@ -11,6 +11,8 @@ input:
   platform: shopify
   build_route: template
   strategy_intent: Follow the specified page's visible content, order, Desktop and Mobile topology.
+  reference_mode: reference_to_theme
+  fidelity_profile: strict_replication
   structure_source_urls:
     - https://uk.fiido.com/products/fiido-c700-city-ebike
   theme:
@@ -36,6 +38,10 @@ assertions:
   - Parent-child containment and named overflow contracts pass.
   - No layer or report uses Approved without approval provenance.
   - A result that only covers source topics is blocked.
+  - Every visible source module receives one unique Rxx row before composition groups or mapping are created.
+  - Any exact topology or interaction mismatch that lacks explicit approval blocks before Figma.
+  - Source capture and theme mapping statuses are reported separately; Figma build and Figma QA are not_run when the strict gate blocks.
+  - The expected overall result is blocked with named evidence gaps, not a low-fidelity generated page.
 
 anti_overfit:
   - Do not encode the Fiido name, bicycle vocabulary, detected section count, lime color, or long-page rhythm in any Skill.

@@ -65,6 +65,14 @@ For strict `reference_to_theme`, require all of the following unless an approved
 
 For `structure_target`, use the same fields but allow a documented product-, theme-, scope-, or responsive-driven adaptation. Semantic responsibility coverage alone never proves a topology match.
 
+For `theme_adaptation`, use priority-aware comparison:
+
+- `critical`: purchase, inquiry, navigation, comparison, legally required, and indispensable interaction/content responsibilities need a functional equivalent and cannot be silently lost.
+- `structural`: section order, composition membership, major regions, and reading flow should be preserved; an evidenced native alternative is allowed when the difference is named.
+- `presentational`: exact columns, initially visible counts, normalized dimensions, spacing, crop, and decorative treatment may adapt to the theme when content and function remain intact.
+
+Do not apply strict numerical topology tolerances as a production blocker to a `native_adaptation`. Record the measured difference and review it visually instead.
+
 ## Evidence and unknowns
 
 - Mark values `observed`, `inferred`, or `unavailable`.

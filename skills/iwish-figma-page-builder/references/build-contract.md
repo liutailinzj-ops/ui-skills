@@ -52,7 +52,7 @@ Placeholder / {Content Type}
 - Use exact target-theme Section, Block, and Setting names with field-level evidence. Descriptive or generated aliases are not mappings.
 - Keep layout, ordering, controls, and responsive behavior within documented theme settings.
 - Record every visual divergence and its implementation level.
-- Stop the build when a section would cross the approved route budget; do not auto-promote it to custom.
+- Do not auto-promote a section to custom. In `theme_adaptation`, use the best evidenced native fallback when higher fidelity crosses the route budget, and record the optional custom route. Stop only when the critical function itself cannot be represented or an explicit exact requirement needs a route decision.
 
 ## Analysis traceability
 
@@ -64,15 +64,15 @@ Placeholder / {Content Type}
 
 ## Reference fidelity
 
-For `structure_target`:
+For `structure_target` with `theme_adaptation`:
 
 - Build from the Reference Content-Layout Matrix, not visual memory.
-- Preserve every relevant source responsibility or record an omission.
+- Preserve every unique relevant `Rxx` row, content binding, and critical responsibility; missing final material uses placeholders rather than omission.
 - Preserve section order unless the blueprint records a product, theme, responsive, or scope reason to change it.
-- Compare layout anatomy: column ratio, media/content placement, grouping, repeated item count, interaction, and Mobile transformation.
+- Compare layout anatomy: column ratio, media/content placement, grouping, repeated item count, interaction, and Mobile transformation. Name evidenced native differences as `native_adaptation` and continue.
 - Do not count matching colors or section names as structural fidelity.
 
-For `reference_to_theme`:
+For `strict_replication`:
 
 - Verify the Build Truth URL, product/category identity, H1, hero signature, and stable section sequence before creating wrapper frames.
 - Build from the Source Page Specification and Theme Assembly Plan, never from a generic PDP pattern or visual memory.
@@ -88,12 +88,12 @@ For `reference_to_theme`:
 
 ## Topology-first build order
 
-For strict reference work, build in this order:
+For all specified-structure work, build in this order:
 
 1. Create section and composition-group skeletons with normalized major-region geometry.
-2. Apply exact theme container, grid, alignment, overflow, and responsive settings.
+2. Apply evidenced theme container, grid, alignment, overflow, and responsive settings. In `theme_adaptation`, use the documented native target values.
 3. Bind visible content items and repeated-item counts.
-4. Validate Desktop and Mobile topology against source evidence.
+4. Validate Desktop and Mobile topology against source evidence and classify each axis as exact or adapted.
 5. Apply brand styling and placeholders without changing geometry.
 
 Do not use a visually polished semantic checklist as a substitute for steps 1–4.
