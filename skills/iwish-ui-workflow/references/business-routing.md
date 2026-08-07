@@ -55,6 +55,14 @@ Do not infer role from domain, visual similarity, or which URL was inspected mos
 
 For `template`, remain inside native/configuration/style scope. For `theme_customization`, apply the approved custom budget. For `custom`, use analysis, requirements, references, VI, and platform feasibility without theme-module constraints.
 
+The route changes how topology gaps are handled, not whether they are detected:
+
+- `template`: block any unapproved topology that exact native settings cannot reproduce.
+- `theme_customization`: identify the exact missing topology or interaction, estimate its custom count and height budget, and require approval when the route gate is crossed.
+- `custom`: preserve strict-reference topology when requested; otherwise let research and brand strategy define it.
+
+Do not inherit a section count, product vocabulary, component family, or visual language from a regression fixture.
+
 ## Chinese Project Recognition Card
 
 Display this compact card once, then continue unless a blocking ambiguity exists:

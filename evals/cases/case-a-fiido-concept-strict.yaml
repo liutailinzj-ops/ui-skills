@@ -1,0 +1,42 @@
+case:
+  id: A
+  name: Strict reference-to-theme DTC PDP
+  kind: golden
+  purpose: Verify that a specified reference page is converted into a selected theme without semantic-only reconstruction.
+
+input:
+  brand: Velopro
+  product_category: city electric bicycle
+  target_market: United Kingdom DTC
+  platform: shopify
+  build_route: template
+  strategy_intent: Follow the specified page's visible content, order, Desktop and Mobile topology.
+  structure_source_urls:
+    - https://uk.fiido.com/products/fiido-c700-city-ebike
+  theme:
+    name: Concept
+    preset: Inova
+    capability_urls:
+      - https://themes.shopify.com/themes/concept/presets/inova
+      - https://roartheme.co/blogs/concept
+  content_mode: placeholder
+  page: PDP
+  figma:
+    file_url: https://www.figma.com/design/9wxWMFjt5Qdz4Dnn5iGMKQ/Velopro-%E2%80%94-Shopify-PDP-%E2%80%94-Concept
+    comparison_node_id: 128:3
+
+assertions:
+  - Source identity remains the Fiido C700 page and never becomes the Concept demo.
+  - Source section count and composition groups are discovered from the current rendered source; no fixed count is supplied by this fixture.
+  - Product media, information, options, purchase controls, and attached add-ons remain grouped when the source renders them as one connected experience.
+  - Every target mapping uses exact Concept Section, Block, and Setting names with evidence.
+  - composed_native is accepted only when the combined native output preserves one source boundary and topology.
+  - Desktop and Mobile topology, visible-item counts, interaction, overflow, and responsive transformation are validated separately.
+  - Placeholder media preserves captured geometry and does not impose a generic black-box or card-grid layout.
+  - Parent-child containment and named overflow contracts pass.
+  - No layer or report uses Approved without approval provenance.
+  - A result that only covers source topics is blocked.
+
+anti_overfit:
+  - Do not encode the Fiido name, bicycle vocabulary, detected section count, lime color, or long-page rhythm in any Skill.
+  - Do not treat this PDP as proof of catalog-wide coverage.

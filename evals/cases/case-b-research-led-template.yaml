@@ -1,0 +1,38 @@
+case:
+  id: B
+  name: Research-led DTC template homepage
+  kind: scenario
+  purpose: Verify autonomous product/competitor analysis and theme selection when no structure source is supplied.
+
+input:
+  brand: AeroNest
+  brand_status: fictional regression fixture
+  product_category: compact smart air purifiers for apartments
+  target_market: United States DTC
+  platform: shopify
+  build_route: template
+  strategy_intent: No specified structure; research the category and design a conversion-led homepage.
+  structure_source_urls: []
+  competitor_evidence_urls: []
+  visual_inspiration_urls: []
+  theme_state: to_be_selected
+  theme_selection_in_scope: true
+  content_mode: placeholder
+  available_materials:
+    - wordmark text only
+    - no final product photography
+    - no approved performance claims
+  page: homepage
+
+assertions:
+  - Route is research_led; strict source-fidelity fields are not fabricated.
+  - Product, category, competitor, and DTC conversion analysis occurs before theme selection and page hierarchy.
+  - Competitors are researched from current evidence and are not copied as one page target.
+  - Theme selection is justified by the resulting page responsibilities and exact documented native capabilities.
+  - Template route contains no unapproved custom Liquid, section-custom, or custom section.
+  - Missing proof and imagery use safe placeholders without invented performance facts.
+  - Desktop and Mobile are editable and pass geometry, containment, overflow, and component QA.
+
+anti_overfit:
+  - Output must not inherit bicycle content, Fiido section order, Concept theme, a 34-section assumption, or the visual language of case A.
+  - Research-led output is judged by evidence traceability and route feasibility, not similarity to case A.

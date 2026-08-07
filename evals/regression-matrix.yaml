@@ -1,0 +1,67 @@
+suite:
+  name: iwish-ui-generalization
+  version: 1.0.0
+  purpose: Prevent benchmark-specific fixes from being promoted as general workflow rules.
+  policy:
+    - Run the changed capability against every ready case before claiming cross-route stability.
+    - A case may expose a defect; no single case can prove general stability.
+    - Keep fixture-specific brands, section counts, visual styles, copy, and topology out of Skills.
+    - Accept a blocked result when the route is genuinely infeasible and the exact evidence gap is reported.
+    - Store result artifacts outside the Skill folders.
+
+cases:
+  - id: A
+    file: cases/case-a-fiido-concept-strict.yaml
+    status: ready
+    coverage:
+      strategy_mode: reference_led
+      build_route: template
+      site_model: dtc
+      page_type: pdp
+      expected_behavior: strict_conversion
+  - id: B
+    file: cases/case-b-research-led-template.yaml
+    status: ready
+    coverage:
+      strategy_mode: research_led
+      build_route: template
+      site_model: dtc
+      page_type: homepage
+      expected_behavior: autonomous_strategy
+  - id: C
+    file: cases/case-c-customization-gate.yaml
+    status: ready
+    coverage:
+      strategy_mode: reference_led
+      build_route: theme_customization
+      site_model: dtc
+      page_type: pdp
+      expected_behavior: truthful_route_gate
+  - id: D
+    status: planned
+    coverage:
+      strategy_mode: research_led
+      build_route: template
+      site_model: dtc
+      page_type: pdp
+      content_mode: insufficient_materials
+  - id: E
+    status: planned
+    coverage:
+      strategy_mode: hybrid_led
+      build_route: custom
+      site_model: dtc
+      page_type: homepage
+  - id: F
+    status: planned
+    coverage:
+      strategy_mode: research_led
+      build_route: custom
+      site_model: b2b
+      page_type: solution_and_inquiry
+
+stability_claims:
+  case_passed: Only the named case and tested capability passed.
+  route_passed: At least two materially different ready cases on the route passed.
+  suite_passed: Every ready case passed or produced its expected truthful blocked result.
+  production_stable: Not permitted from this suite alone; requires repeated real-project evidence.

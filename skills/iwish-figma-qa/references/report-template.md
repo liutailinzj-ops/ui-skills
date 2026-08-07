@@ -22,6 +22,8 @@
 - Mobile overflow:
 - Multi-line text sizing:
 - Unexpected overlaps:
+- Parent-child containment:
+- Overflow contracts:
 - Oversized blank bands:
 - Media/gallery balance:
 - Sticky/anchor navigation match:
@@ -32,12 +34,17 @@
 - Source sections mapped:
 - Source order match:
 - Visible content-item coverage:
-- Desktop layout-class coverage:
-- Mobile layout-class coverage:
+- Composition-group coverage:
+- Desktop topology coverage:
+- Mobile topology coverage:
 - Unresolved mappings:
 - Approved deviations:
+- Approval provenance:
+- Exact theme setting evidence:
 - Baseline structure signature:
 - Result structure signature:
+- Baseline topology signature:
+- Result topology signature:
 - No-op guard: pass | blocked_no_op | not_applicable
 - Analysis status:
 - Strategy mode:
@@ -60,7 +67,7 @@
 ## Reference Fidelity
 
 - {source section}: {preserved/adapted/omitted, target section, order/layout divergence and reason}
-- {stable source ID}: {exact_native/composed_native/unresolved, exact theme Section/Blocks/settings, content bindings, Desktop/Mobile layout-class result, approved deviation}
+- {stable source ID}: {composition group, exact_native/validated composed_native/unresolved, exact theme Section/Blocks/settings and evidence, content bindings, Desktop/Mobile topology result, approved deviation provenance}
 
 ## PDP Coverage
 

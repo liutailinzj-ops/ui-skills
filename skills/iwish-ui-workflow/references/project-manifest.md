@@ -84,6 +84,9 @@ reference_fidelity:
   source_page_specification:
   source_section_order: []
   source_content_inventory:
+  composition_groups: []
+  topology_contract:
+  topology_signature:
   content_layout_matrix:
   theme_assembly_plan:
   unresolved_mappings: []
@@ -91,19 +94,27 @@ reference_fidelity:
   section_count_coverage:
   order_match:
   content_item_coverage:
-  desktop_layout_class_coverage:
-  mobile_layout_class_coverage:
+  composition_group_coverage:
+  desktop_topology_coverage:
+  mobile_topology_coverage:
   resolved_mapping_coverage:
   order_divergences: []
   layout_divergences: []
   approved_deviations: []
 regression:
+  suite_version:
+  case_id:
+  case_kind: golden | scenario | negative_gate
   baseline_root_ids: []
   baseline_structure_signature:
+  baseline_topology_signature:
   expected_changed_sections: []
+  expected_changed_topology: []
   result_structure_signature:
+  result_topology_signature:
   actual_changed_sections: []
   no_op_guard: pass | blocked_no_op | not_applicable
+  cross_case_results: {}
 workflow:
   recognition_card:
   interaction_questions: []
@@ -132,6 +143,10 @@ For theme-based work, keep one mapping record per page section with the exact th
 
 For `structure_target` work, keep one correspondence record per source section: source responsibility, source content type, source Desktop/Mobile layout anatomy, target theme mapping, preserved/adapted/omitted status, and reason.
 
-For `reference_to_theme`, do not use responsibility coverage as a proxy for fidelity. Record exact visible content items, stable source section IDs, order, Desktop/Mobile layout class, theme section/block/settings, and mapping status. The source fingerprint must identify the specified structure source, while theme mapping evidence must identify a theme capability source. Any source-identity mismatch, self-mapping of a theme demo, unresolved mapping, or expected change with an unchanged structure signature blocks completion.
+For `reference_to_theme`, do not use responsibility coverage as a proxy for fidelity. Record exact visible content items, stable source section IDs, composition groups, normalized layout topology, order, Desktop/Mobile transformation, theme section/block/settings with field-level evidence, and mapping status. The source fingerprint must identify the specified structure source, while theme mapping evidence must identify a theme capability source. Any source-identity mismatch, self-mapping of a theme demo, unsupported setting, unresolved mapping, unapproved topology difference, or expected change with an unchanged structure signature blocks completion.
+
+Every approved deviation must record the exact difference, approver, approval source, and date. Generated output cannot approve itself, and the word `Approved` must not appear in Figma layer names or reports without this record.
+
+For regression work, record the suite version and case ID. A single benchmark may expose a defect but cannot establish general stability; do not promote example-specific section counts, product language, visual styles, or topology into a general rule.
 
 For PDP work, record which product archetypes were tested. `single_template_validated` requires evidence that the base template survives the approved representative and edge states; otherwise use `template_family` or `coverage_partial`.

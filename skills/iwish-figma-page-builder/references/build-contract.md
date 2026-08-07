@@ -25,6 +25,7 @@ Placeholder / {Content Type}
 - Use Auto Height/HUG for any text that can wrap. A fixed-height Text node is allowed only for a verified single-line label or an intentionally clamped component state.
 - After inserting real or placeholder copy, reflow the parent and verify that text bounds do not intersect non-overlay siblings.
 - Reject a fixed-height section when its unused vertical band exceeds both 240 px and 25% of section height without a source-backed composition reason.
+- Require every normal child bound to remain inside its parent bound. Overflow is allowed only inside a named viewport with explicit `clip`, `scroll`, or `visible` behavior and evidenced controls or affordance.
 
 ## Editability
 
@@ -48,6 +49,7 @@ Placeholder / {Content Type}
 ## Theme fidelity
 
 - Use the exact section/block mapping approved in the Theme Capability Map.
+- Use exact target-theme Section, Block, and Setting names with field-level evidence. Descriptive or generated aliases are not mappings.
 - Keep layout, ordering, controls, and responsive behavior within documented theme settings.
 - Record every visual divergence and its implementation level.
 - Stop the build when a section would cross the approved route budget; do not auto-promote it to custom.
@@ -75,12 +77,26 @@ For `reference_to_theme`:
 - Verify the Build Truth URL, product/category identity, H1, hero signature, and stable section sequence before creating wrapper frames.
 - Build from the Source Page Specification and Theme Assembly Plan, never from a generic PDP pattern or visual memory.
 - Preserve every stable source section ID, exact section order, visible content item and repeated-item count.
-- Match the recorded Desktop and Mobile layout class, media/content placement, grouping, controls, and responsive transformation.
+- Match the recorded Desktop and Mobile topology: composition groups, major-region normalized bounds, media/content placement, item and visible-item counts, grouping, controls, overflow, and responsive transformation.
 - Use only `exact_native` or `composed_native` mappings. Any `unresolved` mapping blocks the build.
+- Treat `composed_native` as valid only when evidenced native primitives render as one source section with matching topology; semantic coverage across separate generic sections fails.
 - Apply the recorded theme section, blocks, and concrete setting values. Do not invent settings unsupported by evidence.
 - Preserve provenance in the manifest: source content and order come from `structure_source_url`; Section/Block/Settings feasibility comes from `theme_capability_url`. Do not substitute theme-demo content or map a demo section back to itself.
-- Require 100% section-count, order, content-item, Desktop layout-class, Mobile layout-class, and resolved-mapping coverage unless the manifest contains a named approved deviation.
+- Require 100% section-count, order, content-item, composition-group, Desktop topology, Mobile topology, and resolved-mapping coverage unless the manifest contains a deviation with explicit approval provenance.
 - Do not add, omit, reorder, rewrite, or redesign source content under the label of adaptation.
+- Do not place `Approved` in a layer name or implementation note unless the manifest contains approval provenance for the exact deviation.
+
+## Topology-first build order
+
+For strict reference work, build in this order:
+
+1. Create section and composition-group skeletons with normalized major-region geometry.
+2. Apply exact theme container, grid, alignment, overflow, and responsive settings.
+3. Bind visible content items and repeated-item counts.
+4. Validate Desktop and Mobile topology against source evidence.
+5. Apply brand styling and placeholders without changing geometry.
+
+Do not use a visually polished semantic checklist as a substitute for steps 1–4.
 
 ## Regression no-op guard
 
@@ -107,12 +123,14 @@ Before continuing, verify:
 - No unexplained sibling bounding-box collision exists outside an intentional overlay container.
 - No section contains a source-unjustified blank vertical band larger than 240 px and 25% of its height.
 - Media crop/aspect, gallery height, and content-column balance match the recorded source layout class.
+- Every child is contained by its parent or covered by a named, evidenced overflow contract; no hidden overflow is used to conceal sizing errors.
+- Composition groups, normalized major-region geometry, repeated-item counts, and interaction viewports match the topology contract.
 - Sticky or anchor navigation labels, order, and destinations match the specified structure source when included.
 - Text styles and component instances are bound.
 - The client preview contains no visible internal annotations.
 - Theme mapping still matches the approved capability map.
 - Reference responsibility, order, and layout-anatomy correspondence still matches the approved matrix when applicable.
-- `reference_to_theme` Build Truth identity, source fingerprint, source sections, content items, order, layout classes, and exact theme settings still match the approved specifications when applicable.
+- `reference_to_theme` Build Truth identity, source fingerprint, source sections, content items, composition groups, order, topology, and exact evidenced theme settings still match the approved specifications when applicable.
 - The regression result signature contains actual changes for every expected changed section; otherwise it is `blocked_no_op`.
 - PDP scenario states pass without detaching components, clipping content, or leaving empty modules when applicable.
 - Analysis-backed page responsibilities remain represented, or strict-reference gaps are explicitly reported.

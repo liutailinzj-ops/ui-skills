@@ -30,6 +30,7 @@
 - Text is not clipped.
 - Multi-line or variable-content Text uses Auto Height/HUG; fixed-height text is limited to verified single-line labels or documented clamps.
 - Elements do not overlap unexpectedly.
+- Every normal child bound is contained by its parent bound. A child may exceed only a named overflow viewport whose clip, scroll, or visible behavior and affordance are documented.
 - Non-overlay sibling bounding boxes do not intersect after text reflow. Intentional overlays live in a named overlay container and remain legible.
 - Image crops and aspect ratios are usable.
 - Applied grid edges and spans differ by no more than 1 px.
@@ -59,6 +60,7 @@
 ## Platform feasibility
 
 - Every theme-based section maps to an exact documented theme section/block and evidence URL.
+- Every required setting uses its exact target-theme name and has field-level editor, vendor-documentation, or current-theme evidence. Demo observation alone does not prove an editable setting.
 - Implementation levels use theme-native, configuration, style, custom CSS, custom Liquid, section-custom, or custom.
 - Shopify/WordPress implementation risks are visible.
 - Theme-based designs do not silently exceed known theme constraints.
@@ -99,16 +101,17 @@ For `reference_to_theme`:
 - Every stable source section ID exists exactly once in the target.
 - Target section order matches the Source Page Specification.
 - Every captured visible text, media role, control, and repeated item is bound; item counts match.
-- Desktop and Mobile layout classes, media/content placement, grouping, controls, and responsive transformations match.
+- Composition groups remain connected and Desktop/Mobile topology matches: major-region geometry, media/content placement, grouping, item and initially visible counts, overflow, controls, and responsive transformations.
 - Every section uses the exact evidenced theme Section, Blocks, and setting values in the Theme Assembly Plan.
-- Mapping status is `exact_native` or `composed_native`; no required item is `unresolved`.
-- Every deviation is named and explicitly approved; vague `adapted` status is not accepted.
+- Mapping status is `exact_native` or a validated `composed_native`; no required item is `unresolved`. `composed_native` fails when separate native sections merely cover the same topics but change source boundaries or topology.
+- Every deviation is named and has approval provenance; vague `adapted` status or generated `Approved` wording is not accepted.
 - Sticky or anchor navigation labels, order, and destinations match the source when present.
-- Section-count, order, content-item, Desktop layout-class, Mobile layout-class, and resolved-mapping coverage are 100% after approved deviations are accounted for.
+- Section-count, order, content-item, composition-group, Desktop topology, Mobile topology, and resolved-mapping coverage are 100% after approved deviations are accounted for.
 
 ## Regression integrity
 
 - Baseline and result structure signatures include root IDs, stable section order, Y positions, heights, child counts, and text/content digests.
+- Baseline and result topology signatures include composition groups, layout families, normalized major-region bounds, repeated-item counts, overflow/interaction contracts, and Desktop/Mobile transformations.
 - Every declared expected changed section has a real change in geometry, tree, or content.
 - If expected changes exist but the affected signatures are unchanged, the result is `blocked_no_op`.
 - A new page name, wrapper, matrix, or percentage without a changed target structure is not a successful regression.
@@ -141,10 +144,11 @@ Mark QA blocked when any of these fail:
 - Text-style binding.
 - Grid and equal-height integrity.
 - Text Auto Height/HUG, overlap, oversized blank-band, media-balance, or source-navigation integrity.
+- Parent-child containment or an undocumented overflow viewport.
 - Mobile clipping or carousel contract.
 - Client-preview separation.
 - Unexplained `structure_target` responsibility, order, or layout divergence.
-- Any unresolved or unapproved `reference_to_theme` section, content, order, layout-class, or theme-setting mismatch.
+- Any unresolved or unapproved `reference_to_theme` section, content, order, composition-group, topology, interaction, overflow, or theme-setting mismatch.
 - A `reference_to_theme` fidelity metric below 100% after approved deviations.
 - A regression that triggers `blocked_no_op`.
 - False PDP universality or failed required product state.

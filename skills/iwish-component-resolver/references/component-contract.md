@@ -44,6 +44,9 @@ SOURCE_MAP    stable source section ID and exact source item order
 CONTENT_BINDINGS source text/media/control/repeated-item slots mapped one by one
 THEME_SETTINGS exact section/block settings supported by theme evidence
 LAYOUT_CLASS  Desktop and Mobile source layout class and target match status
+COMPOSITION_GROUP connected source region that must remain visually or interactively continuous
+TOPOLOGY normalized major-region bounds, media ratios, repetition, interaction, and responsive transformation
+SETTING_EVIDENCE exact evidence for every theme setting used
 ```
 
 - Use equal-height siblings for cards in the same comparison or decision row unless the blueprint documents intentional asymmetry.
@@ -53,6 +56,8 @@ LAYOUT_CLASS  Desktop and Mobile source layout class and target match status
 - Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
 
 For `reference_to_theme`, the contract must preserve the primary reference page's exact visible content slots, repeated-item count, ordering, and Desktop/Mobile layout class. Product-state properties may extend the component only after this primary contract remains reproducible. Do not treat a semantically similar component as compatible when its slot structure or geometry differs.
+
+When a component belongs to a connected composition group, preserve the group's shared container, adjacency, spacing, interaction, and responsive transformation. Multiple semantic components may exist internally, but they must not render as unrelated page sections.
 
 Add these provenance fields to every strict-reference component contract:
 
@@ -64,9 +69,14 @@ theme_capability_url:
 theme_section:
 theme_blocks: []
 theme_settings: {}
+theme_setting_evidence: {}
+composition_group_id:
+topology_signature:
 ```
 
 Reject the component contract when `structure_source_url` is missing, differs from Build Truth, or points to a theme demo that the user did not select as the structure source.
+
+Reject `exact_native` or `composed_native` when a required Section, Block, or Setting uses a descriptive alias instead of the exact target-theme name, lacks evidence, or changes source topology. Do not use `Approved` to bypass this check without approval provenance in the manifest.
 
 ## Properties
 
