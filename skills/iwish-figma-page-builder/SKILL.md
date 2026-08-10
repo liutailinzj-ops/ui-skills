@@ -1,69 +1,71 @@
 ---
 name: iwish-figma-page-builder
-description: Build or update native editable Figma Desktop and Mobile website pages from an IWISH page blueprint, project foundations, and component map. Use for Shopify/WordPress template, theme-customized, or fully custom DTC/B2B pages, including placeholder-first projects with incomplete copy or imagery.
+description: Build or update complete native editable Figma Desktop and Mobile website pages from an IWISH page blueprint, Visual Direction Contract, representative compositions, project foundations, and component map. Use for Shopify or WordPress template, theme-customized, or fully custom DTC/B2B production after visual direction is established, including projects with incomplete copy or imagery.
 ---
 
 # IWISH Figma Page Builder
 
-Write the requested composed page into Figma. Load the available Figma use and screen-generation Skills before calling Figma tools.
+Extend an established project-specific visual direction into the requested complete Figma page. Load the available Figma use and screen-generation Skills before Figma calls.
 
-## Inputs
+## Required Inputs
 
-- Project manifest.
-- Approved page blueprint.
-- Product and Competitor Analysis with the approved DTC conversion chain or B2B buying path.
-- Theme Capability Map and approved route budget for theme-based work.
-- Foundation IDs.
-- Component map.
-- Customer assets and placeholder policy.
-- Theme/current-site reference when applicable.
-- Source-role table and Source Identity Fingerprint for specified-structure work.
-- Source Page Specification, Layout Topology Contract, composition groups, fidelity profile, Theme Assembly Plan, and baseline structure signature for specified-structure work.
-- Reference Content-Layout Matrix for `structure_target` work.
-- Product Coverage Matrix, representative products, and template strategy for PDP work.
+- Production project manifest and website language.
+- Approved page blueprint and Product/Competitor Analysis.
+- Complete Visual Direction Contract.
+- Representative Desktop/Mobile composition node IDs.
+- Foundation IDs and component map.
+- Customer assets and temporary-asset policy.
+- Theme Capability Map and Theme Assembly Plan for theme-based work.
+- Source specification, content-layout matrix, topology contract, composition groups, and source-role table when applicable.
+- Product Coverage Matrix and template strategy for PDP work.
+
+If the Visual Direction Contract or representative compositions are missing, generic, or inconsistent, return the missing dependency to `$iwish-visual-direction`. Do not invent a fallback house layout.
 
 ## Build Rules
 
 Read [references/build-contract.md](references/build-contract.md) and [references/asset-policy.md](references/asset-policy.md).
 
-1. Create the Desktop and Mobile wrapper frames first.
-2. Build one major section per sequential Figma mutation.
-3. Append sections directly to the target wrapper; do not build orphaned top-level sections for later reparenting.
-4. For theme-based work, reproduce the selected evidenced native section geometry and supported content slots before applying brand styling. Do not invent a layout and label it custom afterward.
-5. For `research_led`, `hybrid_led`, and `existing_site_led`, preserve the blueprint's trace from each section to product, competitor, and journey evidence. Do not replace analysis-backed responsibilities with generic ecommerce filler.
-6. For specified-structure work, build from the Source Page Specification and source-to-target correspondence, never from visual memory. Verify complete unique `Rxx` coverage, Build Truth identity, content bindings, composition groups, theme evidence, and fidelity profile before mutation.
-7. In `strict_replication`, build only `exact_native`, valid `composed_native`, or explicitly approved deviations and preserve exact topology. In `theme_adaptation`, build `exact_native`, valid `composed_native`, and `native_adaptation` rows in stable source order. Preserve every critical content/function, reading order, and connected composition intent; apply the documented theme-native geometry or interaction difference and keep it editable for UI review. Do not add unrelated generic sections or silently omit source rows.
-8. For PDP work, build the primary representative product as the client-preview page, then validate the same component/template structure with the additional approved product states. Keep validation states internal unless multiple client-facing templates are approved. In `reference_to_theme`, these edge-state checks must not change the primary source-page contract.
-9. Use component instances for resolved components and project-local components for repeated unsupported patterns.
-10. Bind colors, spacing, radii, text, and effects to existing project variables/styles. Bind every client-facing text node to a text style.
-11. Keep Desktop and Mobile separately editable. Use shared component APIs where useful; do not force identical composition.
-12. Set real or placeholder content through component properties rather than detaching instances.
-13. Keep theme mappings, implementation notes, source warnings, product-coverage states, and replacement instructions off the rendered client-preview frame. Store them in the manifest and project/handoff documentation.
-14. Return every created or mutated node ID and update the project manifest after each section.
-15. Validate each section screenshot, metadata, parent-child containment, and requested-fidelity topology against the build contract before continuing. Repair text sizing, overlap, overflow, underfilled fixed-height bands, crop/aspect mismatch, and source-navigation mismatch before appending the next section. A documented `native_adaptation` is compared with its approved theme-native target, not strict source tolerances.
-16. For regression work, calculate result structure and topology signatures and compare them with the baseline. When expected sections were meant to change but their order, geometry, child tree, content digest, composition groups, and topology did not change, stop with `blocked_no_op`.
+1. Inspect the representative compositions and extract their actual typography, colors, imagery, media ratios, density, grid, spacing rhythm, component language, and responsive transformations.
+2. Create Desktop and Mobile customer-preview wrapper frames with no visible internal annotations.
+3. Build one major section per sequential Figma mutation and append it directly to the target wrapper.
+4. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
+5. For theme-based work, reproduce evidenced native Section/Block geometry and content slots, then apply the Visual Direction Contract through supported tokens, settings, and styling.
+6. For specified-structure work, build from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation.
+7. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
+8. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
+9. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.
+10. Keep Desktop and Mobile separately editable and intentionally composed.
+11. Validate each completed section at useful screenshot scale before proceeding. Repair deterministic layout problems immediately.
+12. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames.
+13. Return every created or mutated node ID and update the production manifest.
 
-## Reference Capture
+## Visual Continuity Rules
 
-For a renderable theme demo/current page, a web-to-Figma capture may be used as temporary theme-capability evidence. Keep it on `90_References`, rebuild the final design with native nodes and component instances, and never treat the demo capture as Build Truth or the final page. Only the specified structure-source capture defines strict-reference content and layout.
+- Every section must inherit identifiable decisions from the Visual Direction Contract or record a justified section-specific exception.
+- Do not generate repeated black rectangles, generic equal-card rows, default lime accents, or a fixed long-page rhythm unless project evidence explicitly calls for them.
+- Do not use the same component grammar for unrelated content responsibilities merely because it is easy to generate.
+- Do not call a structurally complete wireframe a client preview.
+- If the same output could fit an unrelated brand after text substitution, revise the visual composition before continuing.
+- Auto Layout, components, Rxx coverage, and style binding are implementation requirements, not substitutes for visual design.
 
-For placeholder mode, build a client-presentable composition with safe sample copy and generated or licensed category imagery when available. Use `Placeholder /` in layer names and the manifest, not as the dominant visible design language. Read the asset policy before inserting any non-customer material.
+## Client and Internal Separation
 
-Placeholder media must preserve the source or blueprint's aspect ratio, density, crop role, and composition. Do not replace a topology with repetitive black boxes, generic card grids, or a house layout merely because final assets are missing.
+- Rendered website content uses the agreed website language.
+- Visible internal annotations, when needed outside client frames, use Chinese.
+- Do not create a QA panel in a client-preview page or frame.
+- Default to reporting internal QA in the Codex conversation or an internal artifact.
+- If the customer receives the whole Figma file, place internal QA and implementation documentation in a separate file.
 
 ## Completion
 
 Return:
 
-- Figma file and page/frame URLs.
-- Desktop and Mobile root node IDs.
-- Completed section IDs.
-- Placeholder inventory.
-- Theme/platform mapping report and custom-budget result.
-- Section validation results.
-- Reference responsibility/layout coverage for `structure_target` work.
-- Source capture, theme mapping, Figma build, and Figma QA statuses separately.
-- Source section/order/content/critical-responsibility/composition-group/Desktop-Mobile exact-and-adapted topology coverage, adaptation state, and baseline/result structure signatures for specified-structure work.
-- Build Truth URL/fingerprint result and the separate structure-source/theme-capability provenance for every strict mapping.
-- PDP scenario-validation result and truthful template strategy for PDP work.
-- Analysis traceability result and any unresolved conversion/buying responsibility.
+- Figma file and customer-preview frame URLs.
+- Desktop and Mobile root node IDs and completed section IDs.
+- Visual Direction Contract correspondence and justified exceptions.
+- Temporary asset inventory.
+- Theme/platform mapping and implementation risks.
+- Product scenario result when applicable.
+- Concise internal handoff in Chinese.
+
+Do not return regression-suite, baseline, no-op, or technical visual-gate results from this production Skill.

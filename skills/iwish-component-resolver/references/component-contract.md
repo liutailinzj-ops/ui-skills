@@ -40,6 +40,7 @@ OVERFLOW      none, wrap, carousel, scroll, or clip with an explicit interaction
 THEME_MAP     exact native section/block name and evidence
 PRODUCT_STATES product archetypes and optional/required content states validated
 REFERENCE_MAP source responsibility and layout anatomy preserved or adapted
+VISUAL_DIRECTION typography, imagery, density, spacing, media/content relationship, and responsive rules inherited
 FIDELITY_PROFILE strict_replication or theme_adaptation
 MAPPING_STATUS exact_native, composed_native, native_adaptation, requires_custom, or unresolved
 SOURCE_MAP    stable source section ID and exact source item order
@@ -56,6 +57,7 @@ SETTING_EVIDENCE exact evidence for every theme setting used
 - A carousel must define viewport width, card width, gap, visible next-card preview, controls or indicator, and theme-supported behavior.
 - Do not use clipping to hide a card that is wider than the Mobile content grid.
 - Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
+- Reject a component whose generic visual grammar overrides the approved representative composition even when its content slots are technically compatible.
 
 For specified-structure work, the contract must preserve the primary reference page's visible content slots, stable ordering, critical function, and Desktop/Mobile reading flow. In `strict_replication`, repeated-item count and topology must also match unless explicitly approved. In `theme_adaptation`, changed item visibility, columns, section boundaries, or interaction form may use `native_adaptation` when the exact difference and theme evidence are recorded. Product-state properties may extend the component only after the primary contract remains reproducible.
 

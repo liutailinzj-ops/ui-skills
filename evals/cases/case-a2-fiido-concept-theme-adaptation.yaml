@@ -2,7 +2,7 @@ case:
   id: A2
   name: Production theme-native adaptation DTC PDP
   kind: golden
-  purpose: Verify that the same difficult reference can still produce editable Figma through truthful theme-native adaptation.
+purpose: Verify that a difficult specified reference produces a client-presentable, project-specific editable Figma design through truthful theme-native adaptation rather than a generic compliance wireframe.
 
 input:
   brand: Velopro
@@ -27,6 +27,7 @@ input:
     file_url: https://www.figma.com/design/9wxWMFjt5Qdz4Dnn5iGMKQ/Velopro-%E2%80%94-Shopify-PDP-%E2%80%94-Concept
 
 assertions:
+  - Run this case only through the evaluation path and write output to a sandbox page or separate test file.
   - Source identity remains the specified product page and never becomes the theme demo.
   - Every visible source module receives one unique Rxx row; headings, controls, repeated items, and purchase FAQ content are not lost inside summaries or composition groups.
   - Composition groups reference existing Rxx rows and preserve the connected purchase, navigation, comparison, and narrative intent.
@@ -38,8 +39,13 @@ assertions:
   - Every native adaptation names the exact difference, preserved responsibility, evidence, consequence, and UI review owner; it is not labeled approved.
   - Critical content or transaction functionality is never silently omitted. A critical row with no feasible route still blocks.
   - Editable Desktop and Mobile Figma frames are generated with native nodes, components, Auto Layout, and placeholders that preserve the chosen native geometry.
+  - A project-specific Visual Direction Contract and representative Desktop/Mobile compositions exist before full-page generation.
+  - Website frames contain realistic temporary or real imagery and a coherent brand-specific visual system; repeated black rectangles or a generic house card grammar fail.
+  - The result visibly translates the source hierarchy, media/content relationships, connected compositions, and target-theme behavior rather than only covering the same topics.
+  - Apply the technical visual review rubric before structural QA. Failure of client-presentable usefulness fails the case even when mappings and Figma structure pass.
+  - Visible internal QA is Chinese and does not appear inside customer-preview frames.
   - Source capture, theme mapping, Figma build, and Figma QA statuses are reported separately.
-  - Expected overall status is pass or pass_with_followups when only proposed native adaptations and UI polish remain.
+  - Expected overall status is pass or pass_with_followups only when the visual-usefulness gate and structural checks both pass.
 
 anti_overfit:
   - Do not encode the fixture brand, product vocabulary, section count, visual identity, theme name, or example adaptation into any Skill.

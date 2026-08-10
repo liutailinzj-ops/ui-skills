@@ -1,8 +1,12 @@
 suite:
   name: iwish-ui-generalization
-  version: 1.1.0
-  purpose: Prevent benchmark-specific fixes from being promoted as general workflow rules.
+  version: 2.0.0
+  purpose: Validate Skill behavior outside the UI production workflow and prevent benchmark-specific fixes or technically complete wireframes from being promoted as usable design output.
   policy:
+    - Keep evaluation prompts, case identities, baselines, technical visual gates, and result artifacts outside every production Skill and production manifest.
+    - Run evaluation output in a sandbox page or separate test file, never in a customer production page.
+    - Apply rubrics/technical-visual-review.md before structural pass claims whenever a case generates visual UI.
+    - A visually unusable or generic result fails even when Rxx coverage, Auto Layout, components, styles, and theme mappings pass.
     - Run the changed capability against every ready case before claiming cross-route stability.
     - A case may expose a defect; no single case can prove general stability.
     - Keep fixture-specific brands, section counts, visual styles, copy, and topology out of Skills.
@@ -29,7 +33,7 @@ cases:
       site_model: dtc
       page_type: pdp
       fidelity_profile: theme_adaptation
-      expected_behavior: editable_native_adaptation
+      expected_behavior: client_presentable_theme_adaptation
   - id: B
     file: cases/case-b-research-led-template.yaml
     status: ready

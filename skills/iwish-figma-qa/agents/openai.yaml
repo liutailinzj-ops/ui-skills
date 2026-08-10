@@ -1,4 +1,4 @@
 interface:
-  display_name: "IWISH Figma 质量检查"
-  short_description: "检查来源一致性、Figma 结构、响应式与视觉几何问题"
-  default_prompt: "使用 $iwish-figma-qa 检查来源身份、Figma 结构、响应式与视觉几何问题，并修复安全的确定性缺陷。"
+  display_name: "IWISH Figma 内部检查"
+  short_description: "检查视觉方向、Figma 结构、响应式和主题实现风险"
+  default_prompt: "使用 $iwish-figma-qa 对目标页面执行内部检查，以中文报告问题且不要在客户预览中显示 QA。"

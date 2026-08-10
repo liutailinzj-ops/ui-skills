@@ -32,6 +32,8 @@ assertions:
   - Template route contains no unapproved custom Liquid, section-custom, or custom section.
   - Missing proof and imagery use safe placeholders without invented performance facts.
   - Desktop and Mobile are editable and pass geometry, containment, overflow, and component QA.
+  - A project-specific visual direction and representative compositions exist before the full page; the result does not inherit the visual grammar of another fixture.
+  - Apply the technical visual review rubric before accepting the generated UI.
 
 anti_overfit:
   - Output must not inherit bicycle content, Fiido section order, Concept theme, a 34-section assumption, or the visual language of case A.

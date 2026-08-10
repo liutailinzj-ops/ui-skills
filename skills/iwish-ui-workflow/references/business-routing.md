@@ -14,61 +14,48 @@ reference_mode: reference_to_theme | structure_target | visual_inspiration | com
 fidelity_profile: strict_replication | theme_adaptation
 ```
 
-Use these Chinese labels in every user-facing field, recognition card, question, and handoff summary:
+Use these Chinese labels in every UI-facing field:
 
-| Chinese label | Internal value | Meaning |
+| 中文标签 | 内部值 | 含义 |
 | --- | --- | --- |
-| 正式内容 | `final` | Customer images, copy, and product information are largely usable |
-| 混合内容 | `mixed` | Real customer material and temporary content are used together |
-| 占位内容 | `placeholder` | Material is insufficient, so build a complete reviewable structure with safe temporary content |
-
-Never display the internal values as options for UI.
+| 正式内容 | `final` | 客户图片、文案和产品信息基本可用 |
+| 混合内容 | `mixed` | 客户真实资料与临时内容混合使用 |
+| 占位内容 | `placeholder` | 资料不足，使用可替换内容完成可评审设计 |
 
 ## Chinese intent mapping
 
 - “没有指定结构、由我们策划、根据品类设计” -> `research_led`.
-- “按这个网站的内容和布局做、照结构做、用主题模块转换” -> `reference_led` plus `structure_target` and `theme_adaptation` for theme routes.
-- “参考这个网站的结构逻辑” -> `reference_led` plus `structure_target` and `theme_adaptation`.
-- “1:1 还原、完全一致、不可调整、像素级复刻” -> `reference_led` plus `reference_to_theme` and `strict_replication`.
-- “只参考其中几个模块、多个网站组合” -> `hybrid_led`; classify every selected section separately.
-- “只参考视觉、感觉、风格” -> `visual_inspiration` without section fidelity.
+- “按这个网站的内容和布局做、用主题模块转换” -> `reference_led` + `structure_target` + `theme_adaptation`.
+- “1:1 还原、完全一致、不可调整、像素级复刻” -> `reference_led` + `reference_to_theme` + `strict_replication`.
+- “只参考其中几个模块、多个网站组合” -> `hybrid_led`; classify selected sections separately.
+- “只参考视觉、感觉、风格” -> `visual_inspiration`.
 - “基于客户旧站改版” -> `existing_site_led`.
 
-`strategy_mode` controls where page strategy comes from. `build_route` controls implementation freedom. `site_model` controls DTC/B2B analysis. Do not multiply these into separate duplicated workflows.
+`strategy_mode` controls where page strategy comes from. `build_route` controls implementation freedom. `site_model` controls DTC/B2B analysis. Do not duplicate them into separate user workflows.
 
-## Source role routing
+## Source roles
 
-Assign URLs by purpose before using them:
-
-| Chinese role | Manifest field | Permitted use |
+| 中文角色 | Manifest 字段 | 用途 |
 | --- | --- | --- |
-| 指定结构来源 | `structure_source_urls` | Defines Build Truth: page identity, content inventory, section order, and Desktop/Mobile layout anatomy |
-| 主题能力来源 | `theme_capability_urls` | Proves available theme Section, Block, Settings, and responsive behavior only |
-| 竞品研究来源 | `competitor_evidence_urls` | Supports product/category and conversion analysis only |
-| 视觉参考来源 | `visual_inspiration_urls` | Supports art direction only |
+| 指定结构来源 | `structure_source_urls` | 定义页面身份、内容、顺序和 Desktop/Mobile 布局逻辑 |
+| 主题能力来源 | `theme_capability_urls` | 证明目标主题的 Section、Block、Setting 和响应式能力 |
+| 竞品研究来源 | `competitor_evidence_urls` | 支持产品、行业和转化逻辑研究 |
+| 视觉参考来源 | `visual_inspiration_urls` | 支持视觉方向，不自动成为结构目标 |
 
-Do not infer role from domain, visual similarity, or which URL was inspected most recently. A URL may hold two roles only when the user explicitly assigns both. In that case, record both roles separately. Never promote a theme demo to 指定结构来源 automatically.
+Never promote a theme demo to the structure source unless the user explicitly assigns that role.
 
 ## Route behavior
 
-- `research_led`: let product, category, competitor, and journey analysis determine the hierarchy. Select or audit a theme after analysis.
-- `reference_led`: analyze the product and market, then translate the specified source at the approved fidelity. Report relevance or conversion risks without silently restructuring it.
-- `hybrid_led`: preserve explicitly selected reference sections; use analysis to design the remaining responsibilities.
-- `existing_site_led`: inventory current content, URLs, useful proof, and reusable assets; use analysis to decide what to retain, revise, relocate, or replace.
+- `research_led`: derive hierarchy from product, category, competitor, and journey evidence.
+- `reference_led`: analyze product fit, then translate the specified source at the requested fidelity without silently changing it.
+- `hybrid_led`: preserve selected reference sections and design remaining responsibilities from research.
+- `existing_site_led`: decide what current content and proof to retain, revise, relocate, or replace.
 
-For `template`, remain inside native/configuration/style scope. For `theme_customization`, apply the approved custom budget. For `custom`, use analysis, requirements, references, VI, and platform feasibility without theme-module constraints.
-
-The route changes how topology gaps are handled, not whether they are detected. In normal production, specified-reference theme work defaults to `theme_adaptation`; use `strict_replication` only when exact fidelity is explicitly required or a regression case declares it:
-
-- `template`: use exact native mapping where available; otherwise choose an evidenced `native_adaptation` that preserves essential content and function, generate Figma, and list the difference for UI review. Block only when an essential function has no feasible native equivalent.
-- `theme_customization`: identify the exact missing topology or interaction and estimate its custom budget. When custom work is outside the approved budget, continue with the best evidenced native adaptation unless the brief explicitly requires high-fidelity custom behavior.
-- `custom`: preserve strict-reference topology when requested; otherwise let research and brand strategy define it.
-
-Do not inherit a section count, product vocabulary, component family, or visual language from a regression fixture.
+For `template`, stay inside evidenced native/configuration/style scope. For `theme_customization`, respect the approved custom scope. For `custom`, use research, requirements, references, VI, and platform feasibility without theme-module constraints.
 
 ## Chinese Project Recognition Card
 
-Display this compact card once, then continue unless a blocking ambiguity exists:
+Display once, then continue unless a blocking ambiguity exists:
 
 ```text
 项目识别结果
@@ -76,16 +63,17 @@ Display this compact card once, then continue unless a blocking ambiguity exists
 平台：Shopify / WordPress
 建站方式：模板建站 / 模板二开 / 纯定制
 设计方式：自主策划 / 指定结构 / 混合参考 / 旧站改版
-还原方式：严格复刻 / 主题适配 / 不适用
+还原方式：严格复制 / 主题适配 / 不适用
 主题状态：待选择 / 只有预览 / 已有代码 / 现有网站
 内容模式：正式内容 / 混合内容 / 占位内容
+网站语言：{language}
 来源角色：
 - 指定结构来源：{URL 或“无”}
 - 主题能力来源：{URL 或“无 / 待选择”}
 - 竞品研究来源：{URL 列表或“由 AI 补充”}
 - 视觉参考来源：{URL 列表或“无”}
 本次页面：{page}
-接下来：{analysis and build sequence}
+接下来：产品与竞品分析 → 页面策略 → 视觉方向 → Figma 生成 → 后台内部检查
 ```
 
-Keep internal enum values out of this user-facing card.
+Keep enum values and evaluation case information out of this card.

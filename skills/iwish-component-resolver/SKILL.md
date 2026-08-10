@@ -10,6 +10,7 @@ Create a bounded component map for the current page. Load the available Figma us
 ## Inputs
 
 - Page blueprint.
+- Visual Direction Contract and representative Desktop/Mobile composition node IDs.
 - Product and Competitor Analysis, including page-level DTC conversion or B2B buying responsibilities.
 - Source Page Specification, Layout Topology Contract, composition groups, fidelity profile, and Theme Assembly Plan for specified-structure work.
 - Reference Content-Layout Matrix for `structure_target` work.
@@ -33,6 +34,8 @@ Reuse only when properties, token bindings, naming, ownership, and editability a
 
 Do not invent a bespoke component or mark a section custom when the Theme Capability Map identifies a supported native section. Represent brand styling through tokens, allowed settings, and content slots before changing the implementation class.
 
+Do not resolve components from a generic house library before reading the Visual Direction Contract. A technically compatible component is not visually compatible when its hierarchy, media ratio, density, card language, or responsive behavior contradicts the approved direction. If the representative compositions are missing or still generic, return the missing visual-direction dependency instead of creating a fallback black-box system.
+
 ## Componentization Rules
 
 Read [references/component-contract.md](references/component-contract.md).
@@ -47,6 +50,7 @@ Read [references/component-contract.md](references/component-contract.md).
 - Bind every client-facing text node to an approved text style.
 - Define the grid span, equal-height policy, and Desktop/Mobile sizing contract for repeated cards before creating instances.
 - Preserve the content slots and states needed to answer the page blueprint's product, proof, evaluation, objection, action, and buying-path responsibilities. Do not bake invented claims into component defaults.
+- Preserve the Visual Direction Contract's typography, imagery, density, spacing rhythm, media/content relationship, control language, and Desktop/Mobile transformation through component properties and layout contracts.
 - For PDP components, define content states rather than binding the API to one sampled product. Cover long/short titles, optional rating/badges, variant wrapping, gallery-count differences, optional subscription/RFQ, and absent below-fold content when applicable.
 - Keep product-specific modules conditional. Do not bake one product's ingredients, specifications, proof, or story into the base PDP component contract.
 - When the template strategy is `template_family`, record which components are shared and which are template-specific.
@@ -82,3 +86,4 @@ Return a component map containing:
 - Exact theme section/block represented and permitted divergence.
 - Grid span, equal-height policy, and overflow behavior.
 - Validation screenshot and metadata status.
+- Visual-direction correspondence and any component-level divergence from the representative compositions.

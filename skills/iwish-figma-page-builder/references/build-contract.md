@@ -27,6 +27,14 @@ Placeholder / {Content Type}
 - Reject a fixed-height section when its unused vertical band exceeds both 240 px and 25% of section height without a source-backed composition reason.
 - Require every normal child bound to remain inside its parent bound. Overflow is allowed only inside a named viewport with explicit `clip`, `scroll`, or `visible` behavior and evidenced controls or affordance.
 
+## Visual direction inheritance
+
+- Inspect the approved representative Desktop/Mobile compositions before building the full page.
+- Match their typography hierarchy, color behavior, imagery, media ratios, density, spacing rhythm, control language, and responsive transformation.
+- Record a reason when a section needs a different composition; do not silently fall back to a house component.
+- Reject repeated black boxes, generic card grids, or a fixed palette/rhythm that is not supported by project evidence.
+- Use real or tracked temporary imagery so the result can be judged as UI, not only as information architecture.
+
 ## Editability
 
 - Do not flatten sections.
@@ -98,12 +106,6 @@ For all specified-structure work, build in this order:
 
 Do not use a visually polished semantic checklist as a substitute for steps 1–4.
 
-## Regression no-op guard
-
-Before mutation, record a baseline signature containing root IDs, stable section IDs/order, section Y positions and heights, child counts, and text/content digests. Record the same fields after the build.
-
-If the regression declares expected changed sections but the affected order, geometry, child tree, and content digests are unchanged, return `blocked_no_op`. A new page name, new coverage report, or newly created wrapper does not prove that the requested design changed.
-
 ## PDP coverage
 
 - Build one primary client-preview product without hardcoding its content into the template structure.
@@ -131,6 +133,5 @@ Before continuing, verify:
 - Theme mapping still matches the approved capability map.
 - Reference responsibility, order, and layout-anatomy correspondence still matches the approved matrix when applicable.
 - `reference_to_theme` Build Truth identity, source fingerprint, source sections, content items, composition groups, order, topology, and exact evidenced theme settings still match the approved specifications when applicable.
-- The regression result signature contains actual changes for every expected changed section; otherwise it is `blocked_no_op`.
 - PDP scenario states pass without detaching components, clipping content, or leaving empty modules when applicable.
 - Analysis-backed page responsibilities remain represented, or strict-reference gaps are explicitly reported.

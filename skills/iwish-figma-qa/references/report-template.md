@@ -1,103 +1,69 @@
-# QA Report Template
+# 内部 QA 报告模板
+
+默认在 Codex 对话或内部文档中返回，不要写入客户预览 Frame。
 
 ```markdown
-## Result
+## 检查结果
 
-- Figma file:
-- Desktop frame:
-- Mobile frame:
-- Status: pass | pass_with_followups | blocked
-- Source capture status: pending | pass | blocked_source_capture
-- Theme mapping status: pending | exact | adapted | blocked
-- Figma build status: not_run | pass | blocked
-- Figma QA status: not_run | pass | pass_with_followups | blocked
-- Build Truth URL:
-- Structure source URL:
-- Theme capability URLs:
-- Competitor evidence URLs:
-- Visual inspiration URLs:
-- Source identity status: pass | blocked_source_identity
-- Product/category identity:
-- Source fingerprint match:
-- Theme-demo promotion check:
-- Text-style binding:
-- Grid integrity:
-- Equal-height groups:
-- Mobile overflow:
-- Multi-line text sizing:
-- Unexpected overlaps:
-- Parent-child containment:
-- Overflow contracts:
-- Oversized blank bands:
-- Media/gallery balance:
-- Sticky/anchor navigation match:
-- Custom section count ratio:
-- Custom section height ratio:
-- Reference mode:
-- Fidelity profile: strict_replication | theme_adaptation
-- Reference responsibility coverage:
-- Source sections mapped:
-- Source order match:
-- Visible content-item coverage:
-- Composition-group coverage:
-- Desktop topology coverage:
-- Mobile topology coverage:
-- Unresolved mappings:
-- Approved deviations:
-- Proposed adaptations:
-- Approval provenance:
-- Exact theme setting evidence:
-- Baseline structure signature:
-- Result structure signature:
-- Baseline topology signature:
-- Result topology signature:
-- No-op guard: pass | blocked_no_op | not_applicable
-- Analysis status:
-- Strategy mode:
-- Product model coverage:
-- Competitors analyzed:
-- Conversion/buying responsibilities covered:
-- Evidence gaps:
-- PDP template strategy: single_template_validated | template_family | coverage_partial
-- PDP states tested:
+- Figma 文件：
+- Desktop 页面：
+- Mobile 页面：
+- 总体状态：通过 / 需要调整 / 阻塞
+- 视觉方向一致性：
+- 来源页面一致性：
+- 主题模块映射：
+- Figma 结构：
+- Desktop/Mobile 响应式：
+- 客户预览隔离：
 
-## Theme Mapping
+## 视觉检查
 
-- {source URL + stable source section}: {exact target theme section/block/settings, theme capability evidence URL, implementation level}
+- 字体层级：
+- 颜色与品牌气质：
+- 图片风格与裁切：
+- 页面密度与留白：
+- 模块构图：
+- 是否出现通用模板回退：
 
-## Product and Competitor Analysis
+## 来源与主题
 
-- {visitor question or journey responsibility}: {section, evidence status, source or placeholder}
-- {competitor/category observation}: {page implication}
+- 指定结构来源：
+- 主题能力来源：
+- 内容与布局对应：
+- 主题原生实现：
+- 主题适配：
+- 需要二次开发：
 
-## Reference Fidelity
+## Figma 结构检查
 
-- {source section}: {preserved/adapted/omitted, target section, order/layout divergence and reason}
-- {stable source ID}: {priority, composition group, exact_native/composed_native/native_adaptation/requires_custom/unresolved, exact theme Section/Blocks/settings and evidence, content bindings, Desktop/Mobile exact-or-adapted topology result, adaptation state}
+- Text Style：
+- Variables：
+- Components：
+- Auto Layout：
+- 网格与对齐：
+- 父子节点包含：
+- 文本裁切或重叠：
+- Mobile 溢出：
 
-## PDP Coverage
+## 已自动修复
 
-- {product archetype/state}: {pass/fail/not tested, affected modules}
+- {节点或模块}：{修复内容}
 
-## Repaired
+## UI 需要调整
 
-- {node/section}: {repair}
+- {设计或内容事项}
 
-## UI Review
+## 客户资料待补充
 
-- {creative or brand decision}
+- {占位内容}：{需要替换的资料}
 
-## Client Content Needed
+## 开发实现风险
 
-- {placeholder}: {required replacement}
+- {模块}：{风险和处理建议}
 
-## Engineering Check
+## 阻塞问题
 
-- {section}: {theme/platform risk and required decision}
-
-## Remaining Blockers
-
-- {blocker and owner}
+- {问题和负责人}
 ```
 
-Keep empty sections out of the final report.
+删除空章节。所有可见标题、状态和说明使用中文；网站设计本身继续使用项目约定的网站语言。

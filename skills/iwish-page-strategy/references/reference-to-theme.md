@@ -178,9 +178,3 @@ For `theme_adaptation`, completion requires:
 - Figma build and QA statuses are reported independently from theme-mapping fidelity.
 
 These checks measure source correspondence, not visual mood or semantic responsibility.
-
-## 6. No-Op Regression Guard
-
-Before rebuilding, record a baseline structure signature: root IDs, ordered section names, Y positions, heights, child counts, and text/content digests. Record expected changed `Rxx` sections from the new Source Page Specification.
-
-After rebuilding, record the same signature plus the topology signature from [layout-topology-contract.md](layout-topology-contract.md). If expected changes exist but the affected section order, geometry, child structure, content digests, and topology remain unchanged, mark the regression `blocked_no_op`. Do not report success based only on a new page name, new matrix, or higher coverage percentage.

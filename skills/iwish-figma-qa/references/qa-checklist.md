@@ -40,6 +40,14 @@
 - Media and content columns have a source-backed height/aspect balance; galleries do not continue far below an otherwise empty primary media area without evidence.
 - Grid rows have no unexplained remainder space caused by manually rounded widths.
 
+## Visual direction inheritance
+
+- Major sections visibly inherit the approved typography, colors, imagery, density, spacing rhythm, media/content relationship, control language, and responsive behavior.
+- Representative Desktop/Mobile compositions and the completed page use the same project-specific visual grammar.
+- Repeated black boxes, generic card grids, default accent colors, or fixed long-page rhythms are not used without project evidence.
+- A technically complete wireframe is not reported as a client-ready UI draft.
+- Temporary imagery preserves the intended crop, product scale, density, and composition quality.
+
 ## Responsive
 
 - Desktop and Mobile frames both exist.
@@ -81,7 +89,7 @@
 
 Before either fidelity mode, verify source roles:
 
-- The report lists the exact 指定结构来源, 主题能力来源, 竞品研究来源, and 视觉参考来源 URLs.
+- The report lists the exact 指定结构来源、主题能力来源、竞品研究来源和视觉参考来源 URLs.
 - Build Truth URL equals the specified structure source.
 - Product/category, H1, hero signature, and stable section sequence match the structure-source fingerprint.
 - Theme store, vendor docs, demo, and current-theme URLs are used only as capability evidence unless explicitly assigned another role.
@@ -110,14 +118,6 @@ For `strict_replication`:
 - Sticky or anchor navigation labels, order, and destinations match the source when present.
 - Section-count, order, content-item, composition-group, Desktop topology, Mobile topology, and resolved-mapping coverage are 100% after approved deviations are accounted for.
 
-## Regression integrity
-
-- Baseline and result structure signatures include root IDs, stable section order, Y positions, heights, child counts, and text/content digests.
-- Baseline and result topology signatures include composition groups, layout families, normalized major-region bounds, repeated-item counts, overflow/interaction contracts, and Desktop/Mobile transformations.
-- Every declared expected changed section has a real change in geometry, tree, or content.
-- If expected changes exist but the affected signatures are unchanged, the result is `blocked_no_op`.
-- A new page name, wrapper, matrix, or percentage without a changed target structure is not a successful regression.
-
 ## PDP coverage
 
 - Product archetypes and representative/edge states are recorded.
@@ -133,6 +133,9 @@ For `strict_replication`:
 - No visible `THEME NATIVE`, `SECTION CUSTOM`, `CONFIGURATION`, source-warning, or replacement-instruction labels appear inside client-preview frames.
 - Implementation notes and placeholder provenance live in the manifest or project/handoff documentation.
 - Customer screenshots are exported only from client-preview frames.
+- No QA heading, status, issue list, Rxx identifier, theme mapping, or internal risk label is visible in a client-preview frame.
+- Any visible internal QA content uses Chinese and exists only in the Codex report, internal artifact, `内部检查 / QA`, or a separate internal file.
+- If the customer receives the whole Figma file, internal QA is kept in a separate file.
 
 ## Blocking result
 
@@ -153,7 +156,6 @@ Mark QA blocked when any of these fail:
 - Any unresolved or unapproved `strict_replication` section, content, order, composition-group, topology, interaction, overflow, or theme-setting mismatch.
 - A `strict_replication` fidelity metric below 100% after approved deviations.
 - A critical `theme_adaptation` row with no feasible evidenced native or approved custom route.
-- A regression that triggers `blocked_no_op`.
 - False PDP universality or failed required product state.
 
 Do not block `theme_adaptation` solely because columns, visible-item count, section boundaries, interaction form, spacing, crop, or micro-layout differ from the source. Those differences must be measured, evidenced, and reported to UI.

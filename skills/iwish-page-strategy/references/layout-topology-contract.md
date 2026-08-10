@@ -82,7 +82,7 @@ Do not apply strict numerical topology tolerances as a production blocker to a `
 
 ## Topology signature
 
-Persist a concise signature for regression comparison:
+Persist a concise production topology contract for downstream design and implementation continuity:
 
 ```yaml
 topology_signature:
@@ -95,4 +95,4 @@ topology_signature:
   desktop_mobile_transformations: {}
 ```
 
-An output that preserves section topics but changes this signature is a structural mismatch, not a successful conversion.
+An output that preserves section topics but changes this contract is a structural mismatch unless the production mapping records an allowed adaptation or approved deviation.

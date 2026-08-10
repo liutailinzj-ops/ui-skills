@@ -1,74 +1,66 @@
 ---
 name: iwish-figma-qa
-description: Validate and safely repair IWISH editable Figma website designs for file structure, variables/styles, components, Auto Layout, Desktop/Mobile completeness, placeholders, visual defects, and Shopify/WordPress implementation risks. Use after page generation or UI revision and before client review or developer handoff.
+description: Run silent internal quality checks and safe deterministic repairs for IWISH editable Figma website designs, covering visual-direction inheritance, source/theme fidelity, client-preview separation, variables/styles, components, Auto Layout, Desktop/Mobile geometry, content, assets, and Shopify/WordPress implementation risks. Use after production page generation or UI revision; report visible internal QA in Chinese and never expose QA inside customer-preview frames.
 ---
 
 # IWISH Figma QA
 
-Inspect both node structure and rendered screenshots. Load the available Figma use Skill before Figma calls.
+Inspect rendered screenshots and node structure as an internal safeguard. Load the available Figma use Skill before Figma calls.
 
 ## Inputs
 
-- Project manifest.
-- Requested Desktop and Mobile root node IDs.
-- Page blueprint and component map.
-- Product and Competitor Analysis with DTC conversion or B2B buying responsibilities.
-- Theme Capability Map and approved route budget for theme-based work.
-- Theme/platform implementation notes.
-- Source Page Specification, Layout Topology Contract, composition groups, fidelity profile, Theme Assembly Plan, adaptation decisions, and baseline/result structure signatures for specified-structure work.
-- Source-role table and Source Identity Fingerprint for specified-structure work.
-- Reference Content-Layout Matrix and fidelity target when applicable.
-- Product Coverage Matrix, representative products, and template strategy for PDP work.
+- Production project manifest and delivery-visibility policy.
+- Desktop and Mobile customer-preview root node IDs.
+- Page blueprint, Visual Direction Contract, representative compositions, and component map.
+- Product and Competitor Analysis.
+- Theme Capability Map and implementation notes when applicable.
+- Source specification, topology contract, composition groups, theme assembly, and adaptation decisions when applicable.
+- Product coverage and template strategy for PDP work.
 
-## QA Sequence
+## Internal QA Sequence
 
-1. Inspect file/page/frame metadata and compare it with the manifest.
-2. For specified-structure work, run source identity before any percentage calculation: compare Build Truth URL, product/category, H1, hero signature, and stable section sequence across the brief, Source Page Specification, Theme Assembly Plan, Figma manifest, and rendered page. Block `blocked_source_identity` when any artifact uses the theme demo or another source instead.
-3. For theme-based work, validate every section against the Theme Capability Map and calculate custom-section count and estimated-height ratios before visual polish. Confirm every mapping is cross-source and field-evidenced: structure-source section to exact target-theme Section, Blocks, Settings, and responsive behavior.
-4. Validate that the page blueprint and rendered sections trace to the Product and Competitor Analysis. Check relevant visitor questions, evidence status, and journey responsibilities without imposing a fixed DTC section sequence.
-5. Run the structural checklist in [references/qa-checklist.md](references/qa-checklist.md).
-6. Capture each major section at a useful scale; do not rely only on a reduced full-page screenshot.
-7. For specified-structure work, compare each unique `Rxx` row with the source capture and target side by side. Verify visible content items, priority, composition groups, order, Desktop/Mobile reading flow, target-theme Section/Block/settings, and adaptation state. Semantic responsibility coverage alone is not enough, but a documented `native_adaptation` is not evaluated against strict geometry tolerances.
-8. In `strict_replication`, require exact topology or explicit approval provenance. In `theme_adaptation`, verify that each adapted row preserves critical content/function, uses evidenced native behavior, names the exact topology/interaction difference, and is routed to UI review. Do not auto-repair an adaptation into unsupported custom layout.
-9. Inspect visual geometry at node level and screenshot level: multi-line text sizing, sibling intersections, parent-child containment, underfilled fixed-height sections, media crop/aspect and gallery balance, overflow viewports, and sticky/anchor navigation labels/order/destinations.
-10. For regression work, compare baseline and result structure and topology signatures. If expected changed sections retain the same order, geometry, child tree, content digest, composition groups, and topology, return `blocked_no_op` even when a new page or report exists.
-11. For PDP work, test the approved representative and edge states. Confirm that the base template or template family handles optional modules, long content, media/variant differences, and Mobile behavior without product-specific hardcoding.
-12. Compare screenshots with the page blueprint, actual structure source, target-theme capability evidence, and available visual references.
-13. Reject an `Approved` label when the manifest lacks the exact deviation, approver, approval source, and date. Treat `proposed_adaptation` as awaiting UI review. Reject generic target-theme labels or unsupported settings even when the screenshot appears plausible.
-14. Repair deterministic, low-risk problems such as naming, accidental groups, missing layout sizing, visible internal annotations, obvious clipping, and safe variable/style bindings.
-15. Re-run metadata and screenshot checks for every repaired section and PDP state.
-16. Report creative, factual, theme, product-coverage, reference-fidelity, or implementation decisions that require UI or engineering judgment using [references/report-template.md](references/report-template.md).
+1. Verify that requested customer-preview frames exist and contain only rendered website content.
+2. Compare major-section screenshots with the Visual Direction Contract and representative compositions. Check typography hierarchy, color behavior, imagery, media ratios, density, spacing rhythm, component language, and Desktop/Mobile transformation.
+3. Detect generic visual fallback: repeated black boxes, repeated equal-card grammar, default accent color, or a house long-page rhythm unsupported by project evidence.
+4. Verify source identity, source content/layout correspondence, connected compositions, and target-theme evidence for specified-reference work.
+5. Verify theme route, Section/Block/Setting support, responsive behavior, and approved customization scope for theme-based work.
+6. Verify product/competitor analysis traceability for research-led or hybrid sections.
+7. Run [references/qa-checklist.md](references/qa-checklist.md) for Figma structure, typography, components, parent-child containment, overflow, Desktop/Mobile behavior, assets, and implementation risks.
+8. Capture each major section at useful scale. Do not rely only on a reduced full-page thumbnail.
+9. Repair deterministic low-risk problems such as accidental visible annotations, obvious clipping, safe layout sizing, naming, or variable/style bindings.
+10. Re-run checks for repaired sections.
+11. Return the concise internal report from [references/report-template.md](references/report-template.md).
+
+## Language and Visibility
+
+- Use the agreed website language inside rendered website frames.
+- Use Chinese for every visible internal QA heading, status, finding, implementation note, replacement list, and risk label.
+- Keep internal enum values in the manifest only. Display `通过`, `需要调整`, or `阻塞` to UI.
+- Default to returning QA in the Codex conversation or an internal artifact without creating Figma nodes.
+- If an internal Figma QA page is explicitly required, use `内部检查 / QA` and keep it outside customer-preview pages.
+- If the customer receives the whole Figma file, write QA to a separate internal file.
+- Never place QA status, Rxx labels, theme mappings, source warnings, or replacement instructions inside customer-preview frames.
 
 ## Safety
 
-- Never delete or replace user-owned nodes by broad name-prefix matching.
+- Never delete or replace user-owned nodes by broad name matching.
 - Use manifest IDs or exact validated identities.
 - Do not silently change brand direction, page strategy, customer facts, or approved content.
-- Do not detach components to make a structural check pass.
+- Do not detach components to make a check pass.
 - Keep Figma mutations sequential.
 - Stop on an unclear tool error, inspect state, then retry a corrected operation.
+- Do not run repository regression fixtures or technical visual gates in this production QA Skill.
 
 ## Completion Criteria
 
-- Requested Desktop and Mobile pages exist and are visually inspectable.
-- No unexplained missing sections.
-- No obvious cropped text, overlap, blank required imagery, or placeholder leakage.
-- Multi-line Text nodes are Auto Height/HUG or intentionally clamped; no unexplained sibling collision or oversized blank band remains.
-- Client-preview text-style binding is 100%.
-- Same-row comparison and decision cards are equal height unless the blueprint documents intentional asymmetry.
-- Content edges and spans match the applied grid within 1 px.
-- Mobile content is not accidentally clipped; carousels have an evidenced interaction and visible affordance.
-- Every child is contained by its parent unless a named overflow viewport has an evidenced contract; no overflow hides sizing mistakes.
-- Theme mappings and custom budgets pass the requested build route.
-- Product and Competitor Analysis is complete, every non-strict-reference section has analysis or requirement traceability, and missing proof remains labeled rather than invented.
-- Specified-structure source identity, unique `Rxx` inventory, visible content-item coverage, and critical responsibility coverage are complete. Every mapping is exact, validly composed, an evidenced native adaptation, an approved custom route, or an explicit omission decision.
-- `strict_replication` additionally requires section count/order, composition-group, Desktop/Mobile topology, and resolved cross-source mapping at 100% except for explicitly approved deviations.
-- `theme_adaptation` reports exact and adapted topology separately; proposed native differences become UI follow-ups rather than false failures.
-- A regression with expected changes has changed result structure or topology signatures in every declared affected section; unchanged results are `blocked_no_op`.
-- PDP work truthfully reports `single_template_validated`, `template_family`, or `coverage_partial`, and all claimed product states pass.
-- Client-preview frames contain no visible implementation labels, source warnings, or replacement instructions.
-- Repeated content follows the component map or has an explicit exception.
-- Remaining risks have an owner: UI, client, or engineering.
-- The report is concise enough for UI to act on directly.
+- The full page visibly inherits the Visual Direction Contract rather than a generic house template.
+- Requested Desktop and Mobile pages are complete and visually inspectable.
+- No unexplained missing sections, required blank imagery, cropped text, overlaps, containment errors, or accidental overflow remain.
+- Customer-preview text, components, variables, grids, cards, and responsive behaviors pass the relevant structural checks.
+- Theme mappings and custom scope match the requested route.
+- Source/reference responsibilities and topology are preserved or truthfully documented at the requested fidelity.
+- Temporary material remains presentable, replaceable, and correctly tracked.
+- Customer-preview frames contain no visible internal QA, implementation, source, Rxx, or replacement content.
+- Remaining decisions have a clear UI, client, or engineering owner.
 
-Report `source_capture_status`, `theme_mapping_status`, `figma_build_status`, `figma_qa_status`, and `overall_status` separately. Mark overall `blocked` for source identity/capture failure, missing essential theme evidence, a critical responsibility with no feasible route, a strict-fidelity failure, or a real Figma QA failure. Use `pass_with_followups` for proposed native adaptations, content replacement, or creative review.
+Report internal fields separately, but summarize them in Chinese. Use `通过` only when no production-impacting issue remains, `需要调整` for non-blocking internal follow-ups, and `阻塞` for a real source, route, design, Figma, or implementation failure.

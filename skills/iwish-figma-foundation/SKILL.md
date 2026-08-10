@@ -34,6 +34,9 @@ Never assume an empty local variable list means no library variables exist; sear
 - Do not add Dark Mode unless the project requires it.
 - Return and record every created or mutated node, page, variable, collection, and style ID.
 - Validate foundations with metadata and screenshots before component creation.
+- Create or reuse an internal visual-direction page when representative compositions will be written.
+- Do not create a customer-visible QA page. Internal QA defaults to the Codex conversation or internal artifact; create an internal Figma QA page only when requested and use Chinese visible labels.
+- When the customer will receive the whole Figma file, keep internal QA in a separate file.
 
 ## Output
 
@@ -46,4 +49,4 @@ Update the project manifest with:
 - Existing-library findings.
 - Conflicts and resolutions.
 - Foundation screenshots and validation status.
-
+- Visual-direction page ID and internal-QA location when applicable.
