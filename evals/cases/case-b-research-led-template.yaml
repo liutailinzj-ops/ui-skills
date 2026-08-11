@@ -31,7 +31,7 @@ assertions:
   - Theme selection is justified by the resulting page responsibilities and exact documented native capabilities.
   - Template route contains no unapproved custom Liquid, section-custom, or custom section.
   - Missing proof and imagery use safe placeholders without invented performance facts.
-  - Desktop and Mobile are editable and pass geometry, containment, overflow, and component QA.
+  - Desktop and Mobile are editable paired breakpoint previews of the same responsive Section/component families and pass geometry, content-parity, containment, overflow, and component QA.
   - A project-specific visual direction and representative compositions exist before the full page; the result does not inherit the visual grammar of another fixture.
   - Apply the technical visual review rubric before accepting the generated UI.
 

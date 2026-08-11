@@ -48,12 +48,13 @@ analysis:
 strategy:
   page_blueprint:
   theme_assembly_plan:
+  responsive_section_contract:
   product_coverage_matrix:
 visual_direction:
   status: pending | complete | blocked
   contract:
-  representative_desktop_nodes: []
-  representative_mobile_nodes: []
+  representative_section_family_nodes: []
+  breakpoint_proof_nodes: []
   typography:
   color_system:
   imagery_direction:
@@ -67,7 +68,9 @@ figma:
   frames: {}
   components: {}
   variables: {}
-  client_preview_frames: {}
+  breakpoint_preview_frames: {}
+  responsive_section_components: {}
+  paired_section_instances: {}
   internal_nodes: {}
 delivery_visibility:
   customer_preview_contains_internal_qa: false

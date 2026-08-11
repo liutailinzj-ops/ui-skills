@@ -17,25 +17,32 @@ composition_groups:
     approved_split_deviation:
 sections:
   - source_id: R01
-    viewport: desktop | mobile
-    source_viewport_width:
-    section_bounds_normalized: {x: 0, y: 0, width: 1, height_in_viewports: 1}
-    container_width_ratio:
-    layout_family:
-    major_regions:
-      - region_id:
-        role:
-        normalized_bounds: {x: 0, y: 0, width: 1, height: 1}
-        alignment:
-        content_order:
-    grid: {columns: null, rows: null, gap_ratio: null}
-    media: {aspect_ratios: [], crop: null, position: null}
-    repetition: {total_items: null, visible_items: null, wrapping: null}
-    interaction:
-      type: none | carousel | scroll | tabs | accordion | sticky | hotspot | video
-      viewport_behavior:
-      controls: []
-      overflow: none | clip | scroll | visible
+    shared:
+      responsibility:
+      content_order: []
+      content_bindings: []
+      composition_group_id:
+      layout_family:
+      alignment_group_id:
+    breakpoints:
+      desktop:
+        source_viewport_width:
+        section_bounds_normalized: {x: 0, y: 0, width: 1, height_in_viewports: 1}
+        container_width_ratio:
+        major_regions: []
+        grid: {columns: null, rows: null, gap_ratio: null}
+        media: {aspect_ratios: [], crop: null, position: null}
+        repetition: {total_items: null, visible_items: null, wrapping: null}
+        interaction: {type: none, controls: [], overflow: none}
+      mobile:
+        source_viewport_width:
+        section_bounds_normalized: {x: 0, y: 0, width: 1, height_in_viewports: 1}
+        container_width_ratio:
+        major_regions: []
+        grid: {columns: null, rows: null, gap_ratio: null}
+        media: {aspect_ratios: [], crop: null, position: null}
+        repetition: {total_items: null, visible_items: null, wrapping: null}
+        interaction: {type: none, controls: [], overflow: none}
     responsive_transformation:
     evidence: observed | inferred | unavailable
 ```
@@ -56,7 +63,8 @@ Create a composition group when adjacent source areas share one transaction, nav
 For strict `reference_to_theme`, require all of the following unless an approved deviation names the exact difference:
 
 - Major-region count, reading order, grouping, and media/content placement match.
-- Desktop and Mobile layout families and responsive transformations match.
+- The target keeps one section identity, shared content bindings, order, and component family across breakpoints.
+- Desktop and Mobile states and their responsive transformation match the source or the evidenced target-theme adaptation.
 - Repeated-item total and initially visible counts match.
 - Interaction type, viewport, overflow, controls, and sticky behavior match.
 - Major normalized region x and width differ by no more than `0.02`; y and height differ by no more than `0.05` after accounting for approved theme container settings and content reflow. Use a stricter source-observed value when a fixed interaction depends on it.
@@ -77,7 +85,7 @@ Do not apply strict numerical topology tolerances as a production blocker to a `
 
 - Mark values `observed`, `inferred`, or `unavailable`.
 - Do not claim exact fidelity from `inferred` or `unavailable` geometry.
-- If Desktop or Mobile evidence is unavailable, exact conversion is blocked for that viewport.
+- If Desktop or Mobile evidence is unavailable, exact conversion is blocked for that breakpoint; do not replace the missing state with an independently designed composition.
 - Placeholder assets may replace source media, but they must retain the recorded aspect ratio, crop role, density, and composition. Generic placeholder cards or black rectangles must not redefine the layout.
 
 ## Topology signature
@@ -92,7 +100,9 @@ topology_signature:
   major_region_bounds: {}
   repeated_item_counts: {}
   interaction_contracts: {}
-  desktop_mobile_transformations: {}
+  responsive_section_identities: {}
+  breakpoint_states: {}
+  allowed_transformations: {}
 ```
 
 An output that preserves section topics but changes this contract is a structural mismatch unless the production mapping records an allowed adaptation or approved deviation.

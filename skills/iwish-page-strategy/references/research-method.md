@@ -37,8 +37,8 @@ For each source, record only decision-useful observations:
 
 Do not analyze all reference URLs the same way:
 
-- `reference_to_theme`: inspect the rendered Desktop and Mobile structure-source page in full, create its identity fingerprint, assign stable ordered section IDs, inventory every visible text/media/control/repeated item, and classify both viewport layouts. Separately inspect target-theme capability sources, then map each structure-source section to evidenced theme Section/Blocks/settings. Do not substitute a theme demo, industry research, or a generic PDP structure for the source page.
-- `structure_target`: inspect every major section and record content responsibility, required content fields, Desktop/Mobile layout anatomy, ordering, interaction, optionality, and the closest theme primitive.
+- `reference_to_theme`: inspect the rendered Desktop and Mobile structure-source page in full as paired breakpoint states, create its identity fingerprint, assign stable ordered section IDs, inventory every visible text/media/control/repeated item once, and classify responsive transformations. Separately inspect target-theme capability sources, then map each structure-source section to evidenced theme Section/Blocks/settings. Do not substitute a theme demo, industry research, or a generic PDP structure for the source page.
+- `structure_target`: inspect every major section and record one shared content responsibility and field set plus its breakpoint anatomy, ordering, interaction, optionality, and closest theme primitive.
 - `visual_inspiration`: record reusable visual principles such as density, image treatment, hierarchy, typography, and rhythm. Do not imply section-level fidelity.
 - `competitor_evidence`: record buying questions, proof patterns, objections, category conventions, and missing opportunities.
 

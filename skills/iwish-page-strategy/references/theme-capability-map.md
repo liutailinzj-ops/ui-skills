@@ -27,8 +27,11 @@ available_sections:
         supported_values: []
         evidence_url:
         evidence_quality: editor | vendor_docs | current_theme | demo_observation | marketing_only
-    desktop_behavior:
-    mobile_behavior:
+    responsive_behavior:
+      automatic:
+      desktop_settings: {}
+      mobile_settings: {}
+      allowed_transformations: []
     limitations: []
     evidence_url:
 page_mappings:
@@ -38,11 +41,13 @@ page_mappings:
     reference_source_section:
     source_order:
     source_content_bindings: []
-    source_layout_class:
-      desktop:
-      mobile:
+    source_responsive_layout_class:
+      shared_identity:
+      desktop_state:
+      mobile_state:
     source_composition_group_id:
     source_topology_signature:
+    responsive_section_contract:
     product_applicability: []
     chosen_theme_section:
     chosen_blocks: []
@@ -74,7 +79,8 @@ page_mappings:
 - Mark evidence as `partial` when only a screenshot or marketing feature list is available; do not promote partial evidence to an exact mapping.
 - Do not classify a section as custom merely because its copy or art direction is project-specific.
 - For `structure_target`, map source responsibility and source layout anatomy separately. A theme section may cover the responsibility while requiring a documented geometry adaptation.
-- For every specified-structure run, create one cross-source mapping for every stable source section ID. Record the structure-source URL, exact source order and content bindings, Desktop/Mobile layout classes, exact target theme Section/Blocks/settings, theme capability evidence URL, priority, mapping status, and any proposed adaptation. Do not use semantic similarity or theme-demo self-mapping as evidence.
+- For every specified-structure run, create one cross-source mapping for every stable source section ID. Record the structure-source URL, exact source order and shared content bindings, one responsive layout class with Desktop/Mobile states, exact target theme Section/Blocks/settings, theme capability evidence URL, priority, mapping status, and any proposed adaptation. Do not use semantic similarity or theme-demo self-mapping as evidence.
+- Keep one target Section identity across breakpoints. Record Mobile as theme settings or automatic behavior of that Section, not as a separately invented component or content layout.
 - Validate the source topology and composition group as a separate axis from content responsibility. A theme primitive that covers the same topic but changes grouping, region proportions, visible-item count, interaction, overflow, or responsive transformation is not an exact mapping.
 - Accept `composed_native` only when all contributing native primitives and settings are evidenced and their combined rendered output preserves one source boundary and topology. Otherwise mark it `unresolved`.
 - Do not use invented names such as `approved modular composition` or `static prototype` as theme evidence. `approved` is valid only when the manifest contains explicit approval provenance for the exact deviation.

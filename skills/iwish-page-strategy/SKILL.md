@@ -27,7 +27,7 @@ Use [references/reference-routing.md](references/reference-routing.md) to keep s
 
 ## Specified-Reference Work
 
-For `structure_target`, capture every visible module as a stable Rxx source row, then record content responsibility, content items, Desktop/Mobile anatomy, ordering, connected composition groups, and target-theme correspondence. Use [references/reference-to-theme.md](references/reference-to-theme.md) and [references/layout-topology-contract.md](references/layout-topology-contract.md). Apply `theme_adaptation` unless exact replication is explicit.
+For `structure_target`, capture every visible module as one stable Rxx source row, then record shared content responsibility, content items, ordering, connected composition groups, responsive anatomy, and target-theme correspondence. Read [references/responsive-section-contract.md](references/responsive-section-contract.md), [references/reference-to-theme.md](references/reference-to-theme.md), and [references/layout-topology-contract.md](references/layout-topology-contract.md). Apply `theme_adaptation` unless exact replication is explicit.
 
 For strict `reference_to_theme`, verify source identity and complete source capture before theme mapping. Do not continue when required topology or critical function is unresolved and no approved route exists.
 
@@ -51,6 +51,8 @@ A theme demo may prove capability but may not replace Build Truth.
 - Mark missing customer facts and assets as temporary instead of inventing claims.
 - For PDP work, apply [references/pdp-coverage.md](references/pdp-coverage.md); do not claim catalog-wide coverage from one product.
 - Preserve connected source compositions. Do not split them into unrelated full-width sections because semantic module names appear to match.
+- Define one Responsive Section Contract per page section. Desktop and Mobile are breakpoint states of the same section identity and shared content, not separate compositions.
+- For theme-based work, permit only documented theme breakpoint settings or observed automatic theme behavior. For custom work, define intentional breakpoint changes without creating a second content or component system.
 - Use `native_adaptation` only when evidenced native behavior preserves required content, critical function, and reading order while changing a named topology detail.
 - Resolve theme implementation in this order: native theme → configuration → style → custom CSS → custom Liquid → custom section → custom.
 - Keep template work within native/configuration/style scope unless custom work is explicitly approved.
@@ -62,8 +64,9 @@ A theme demo may prove capability but may not replace Build Truth.
 Produce [references/page-blueprint.md](references/page-blueprint.md) with:
 
 - Product and Competitor Analysis, evidence gaps, and conversion or buying-path implications.
-- Page responsibilities, content types, sequence, Desktop/Mobile priority, and asset state.
+- Page responsibilities, content types, sequence, responsive priority, and asset state.
 - Theme Capability Map and Theme Assembly Plan for theme-based work.
+- Responsive Section Contract, alignment groups, shared content bindings, and breakpoint states.
 - Source specification, content-layout matrix, topology contract, and composition groups when applicable.
 - Product Coverage Matrix and truthful PDP template strategy when applicable.
 - Component requirements and implementation level without pre-designing generic components.

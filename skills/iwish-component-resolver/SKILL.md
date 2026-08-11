@@ -1,6 +1,6 @@
 ---
 name: iwish-component-resolver
-description: Resolve the editable Figma component set required by an IWISH page blueprint by reusing compatible local/library components, extending or wrapping close matches, and creating project-local components when needed. Use after Figma foundations exist and before composing Shopify/WordPress Desktop and Mobile pages.
+description: Resolve the editable responsive Figma component and Section families required by an IWISH page blueprint by reusing compatible local/library components, extending or wrapping close matches, and creating project-local components when needed. Use after Figma foundations exist and before composing Shopify/WordPress breakpoint preview pages.
 ---
 
 # IWISH Component Resolver
@@ -10,7 +10,8 @@ Create a bounded component map for the current page. Load the available Figma us
 ## Inputs
 
 - Page blueprint.
-- Visual Direction Contract and representative Desktop/Mobile composition node IDs.
+- Visual Direction Contract, representative Section-family node IDs, and paired breakpoint-proof node IDs.
+- Responsive Section Contracts, alignment groups, shared content bindings, and allowed breakpoint differences.
 - Product and Competitor Analysis, including page-level DTC conversion or B2B buying responsibilities.
 - Source Page Specification, Layout Topology Contract, composition groups, fidelity profile, and Theme Assembly Plan for specified-structure work.
 - Reference Content-Layout Matrix for `structure_target` work.
@@ -48,14 +49,16 @@ Read [references/component-contract.md](references/component-contract.md).
 - If a variant matrix exceeds 30 combinations, split the component.
 - Bind visual properties to variables where appropriate.
 - Bind every client-facing text node to an approved text style.
-- Define the grid span, equal-height policy, and Desktop/Mobile sizing contract for repeated cards before creating instances.
+- Define the grid span, equal-height policy, and responsive sizing contract for repeated cards before creating instances.
 - Preserve the content slots and states needed to answer the page blueprint's product, proof, evaluation, objection, action, and buying-path responsibilities. Do not bake invented claims into component defaults.
-- Preserve the Visual Direction Contract's typography, imagery, density, spacing rhythm, media/content relationship, control language, and Desktop/Mobile transformation through component properties and layout contracts.
+- Preserve the Visual Direction Contract's typography, imagery, density, spacing rhythm, media/content relationship, control language, and responsive transformation through component properties and layout contracts.
+- Resolve one component family per Responsive Section Contract. Use shared subcomponents, content properties, and the smallest necessary viewport variants; do not resolve Desktop and Mobile as unrelated components.
+- Keep content-slot names, copy bindings, controls, source IDs, and Section order identical across breakpoint variants unless a recorded content variant has evidence.
 - For PDP components, define content states rather than binding the API to one sampled product. Cover long/short titles, optional rating/badges, variant wrapping, gallery-count differences, optional subscription/RFQ, and absent below-fold content when applicable.
 - Keep product-specific modules conditional. Do not bake one product's ingredients, specifications, proof, or story into the base PDP component contract.
 - When the template strategy is `template_family`, record which components are shared and which are template-specific.
-- For `structure_target`, record which unique `Rxx` source row, content slots, critical function, order, and Desktop/Mobile reading flow each component preserves or adapts.
-- For `reference_to_theme`, resolve every stable source section ID to the exact theme section, block sequence, settings, content bindings, and Desktop/Mobile layout class in the Theme Assembly Plan. A generic component with different slots, item count, ordering, or layout class is not compatible.
+- For `structure_target`, record which unique `Rxx` source row, content slots, critical function, order, and responsive reading flow each component preserves or adapts.
+- For `reference_to_theme`, resolve every stable source section ID to one exact theme section, block sequence, shared content bindings, and paired breakpoint states in the Theme Assembly Plan. A generic component with different slots, item count, ordering, or layout class is not compatible.
 - Preserve composition groups and major-region topology. Do not resolve a connected source experience into unrelated component families merely because their semantic labels match available theme sections.
 - Accept `composed_native` only when every contributing native primitive and setting is evidenced and the assembled components satisfy the selected fidelity profile. For `strict_replication`, preserve source boundary, normalized geometry, visible-item count, interaction contract, and Mobile transformation. For `theme_adaptation`, allow a documented native difference while preserving critical function and reading flow.
 - For `reference_to_theme`, require every component record to carry `structure_source_url`, `source_fingerprint_digest`, and `theme_capability_url`. Do not accept a component map whose source identity describes the theme demo instead of the specified page.
@@ -76,14 +79,14 @@ Return a component map containing:
 - Source: local, library, wrapped, or created.
 - Variant axes and component properties.
 - Variable/style bindings.
-- Desktop/Mobile behavior.
+- Responsive behavior, breakpoint states, paired instance contract, and allowed differences.
 - Page-blueprint sections that consume it.
 - Analysis and journey responsibilities that consume it.
 - Product archetypes and content states that consume it for PDP work.
 - Reference section correspondence for `structure_target` work.
-- Source section ID, priority, composition group, exact content-slot bindings, field-evidenced theme settings, Desktop/Mobile topology, and `exact_native | composed_native | native_adaptation | requires_custom | unresolved` status for specified-structure work.
+- Source section ID, priority, composition group, exact shared content-slot bindings, field-evidenced theme settings, paired breakpoint topology, and `exact_native | composed_native | native_adaptation | requires_custom | unresolved` status for specified-structure work.
 - Proposed adaptations, their preserved responsibility, exact difference, evidence, and UI review owner.
 - Exact theme section/block represented and permitted divergence.
-- Grid span, equal-height policy, and overflow behavior.
+- Alignment group, container mode, grid span, equal-height policy, and explicit overflow behavior.
 - Validation screenshot and metadata status.
 - Visual-direction correspondence and any component-level divergence from the representative compositions.

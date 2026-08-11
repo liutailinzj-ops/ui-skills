@@ -33,7 +33,7 @@ For PDP work, model variable product content through properties and conditional 
 Record these fields for repeated layout components:
 
 ```text
-GRID_SPAN     Desktop and Mobile columns occupied
+GRID_SPAN     columns occupied in each recorded breakpoint state
 WIDTH_MODE    FILL, FIXED, or HUG with reason
 HEIGHT_MODE   equal-height, content-height, or intentional mixed-height
 OVERFLOW      none, wrap, carousel, scroll, or clip with an explicit interaction
@@ -46,7 +46,8 @@ MAPPING_STATUS exact_native, composed_native, native_adaptation, requires_custom
 SOURCE_MAP    stable source section ID and exact source item order
 CONTENT_BINDINGS source text/media/control/repeated-item slots mapped one by one
 THEME_SETTINGS exact section/block settings supported by theme evidence
-LAYOUT_CLASS  Desktop and Mobile source layout class and target match status
+RESPONSIVE_SECTION stable shared Section identity and paired breakpoint instance IDs
+LAYOUT_CLASS  shared layout family plus Desktop and Mobile state match status
 COMPOSITION_GROUP connected source region that must remain visually or interactively continuous
 TOPOLOGY normalized major-region bounds, media ratios, repetition, interaction, and responsive transformation
 SETTING_EVIDENCE exact evidence for every theme setting used
@@ -54,12 +55,15 @@ SETTING_EVIDENCE exact evidence for every theme setting used
 
 - Use equal-height siblings for cards in the same comparison or decision row unless the blueprint documents intentional asymmetry.
 - Prefer FILL or grid-derived widths over manually rounded widths.
+- Assign every major edge to a foundation `alignment_group_id`; paired instances must use the group defined for their breakpoint.
 - A carousel must define viewport width, card width, gap, visible next-card preview, controls or indicator, and theme-supported behavior.
 - Do not use clipping to hide a card that is wider than the Mobile content grid.
+- Reject any child overflow inside a clipping parent unless `OVERFLOW` names an evidenced interaction and affordance.
+- Keep shared copy, controls, content bindings, Section order, and component identity equal across viewport variants. A viewport variant may change only fields listed by the Responsive Section Contract.
 - Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
 - Reject a component whose generic visual grammar overrides the approved representative composition even when its content slots are technically compatible.
 
-For specified-structure work, the contract must preserve the primary reference page's visible content slots, stable ordering, critical function, and Desktop/Mobile reading flow. In `strict_replication`, repeated-item count and topology must also match unless explicitly approved. In `theme_adaptation`, changed item visibility, columns, section boundaries, or interaction form may use `native_adaptation` when the exact difference and theme evidence are recorded. Product-state properties may extend the component only after the primary contract remains reproducible.
+For specified-structure work, the contract must preserve the primary reference page's visible content slots, stable ordering, critical function, and responsive reading flow through one shared Section identity. In `strict_replication`, repeated-item count and topology must also match unless explicitly approved. In `theme_adaptation`, changed item visibility, columns, section boundaries, or interaction form may use `native_adaptation` when the exact difference and theme evidence are recorded. Product-state properties may extend the component only after the primary contract remains reproducible.
 
 When a component belongs to a connected composition group, preserve the group's shared container, adjacency, spacing, interaction, and responsive transformation. Multiple semantic components may exist internally, but they must not render as unrelated page sections.
 
@@ -90,7 +94,7 @@ Use the smallest useful API:
 TEXT         editable labels and content
 BOOLEAN      optional labels, badges, icons, proof, helper text
 INSTANCE_SWAP replaceable icon/media/content subcomponent
-VARIANT      size, style, state, and only necessary viewport differences
+VARIANT      size, style, state, and only necessary evidenced viewport differences
 ```
 
 Avoid exposing every visual detail as a variant. UI should be able to update content and common states without detaching the instance.

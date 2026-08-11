@@ -10,7 +10,7 @@ input:
   target_market: United Kingdom DTC
   platform: shopify
   build_route: template
-  strategy_intent: Preserve the specified page's content responsibilities, order, buying flow, and Desktop/Mobile reading logic while adapting unsupported topology to the selected theme.
+  strategy_intent: Preserve the specified page's content responsibilities, order, buying flow, and responsive reading logic while adapting unsupported topology to the selected theme through one shared Section system.
   reference_mode: structure_target
   fidelity_profile: theme_adaptation
   structure_source_urls:
@@ -38,11 +38,18 @@ assertions:
   - Presentational differences in columns, visible counts, exact boundaries, spacing, crop, or micro-layout do not block generation when their native fallback is evidenced.
   - Every native adaptation names the exact difference, preserved responsibility, evidence, consequence, and UI review owner; it is not labeled approved.
   - Critical content or transaction functionality is never silently omitted. A critical row with no feasible route still blocks.
-  - Editable Desktop and Mobile Figma frames are generated with native nodes, components, Auto Layout, and placeholders that preserve the chosen native geometry.
-  - A project-specific Visual Direction Contract and representative Desktop/Mobile compositions exist before full-page generation.
+  - Editable Desktop and Mobile Figma frames are generated as paired breakpoint previews of the same responsive Section/component families; they are not independent designs.
+  - Every paired Section keeps one stable ID, Rxx correspondence, order, component family, content binding, control set, and shared copy.
+  - Breakpoint differences use exact documented Concept settings or observed automatic Concept behavior; independently rewritten Mobile content or topology fails.
+  - Product information Mobile behavior is derived from evidenced Concept settings such as Mobile layout and Show thumbnails on mobile rather than an invented Mobile product section.
+  - A project-specific Visual Direction Contract, representative responsive Section families, and breakpoint proof states exist before full-page generation.
+  - The representative set proves the complete connected purchase composition, one connected media-led sequence, and one information-dense Section family; selecting only easy standalone modules fails.
   - Website frames contain realistic temporary or real imagery and a coherent brand-specific visual system; repeated black rectangles or a generic house card grammar fail.
   - The result visibly translates the source hierarchy, media/content relationships, connected compositions, and target-theme behavior rather than only covering the same topics.
   - Apply the technical visual review rubric before structural QA. Failure of client-presentable usefulness fails the case even when mappings and Figma structure pass.
+  - Foundation alignment groups are declared; nodes in one group differ by at most 1 px at the same breakpoint.
+  - No normal child exceeds a clipping parent unless an explicit evidenced overflow contract names the relationship and affordance.
+  - Customer-facing headings, body copy, labels, and CTAs match across paired states unless an exact evidenced content variant is recorded.
   - Visible internal QA is Chinese and does not appear inside customer-preview frames.
   - Source capture, theme mapping, Figma build, and Figma QA statuses are reported separately.
   - Expected overall status is pass or pass_with_followups only when the visual-usefulness gate and structural checks both pass.
@@ -51,3 +58,4 @@ anti_overfit:
   - Do not encode the fixture brand, product vocabulary, section count, visual identity, theme name, or example adaptation into any Skill.
   - Treat the named differences as fixture assertions, not universal layout rules.
   - Do not treat this PDP as proof of catalog-wide coverage.
+  - Apply responsive pairing, alignment, containment, and content-parity rules to every theme and industry; do not encode Concept-specific setting names in production Skills.

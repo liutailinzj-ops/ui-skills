@@ -27,6 +27,7 @@ visual_direction:
     temporary_asset_route:
   composition:
     container_behavior:
+    alignment_groups: []
     density:
     spacing_rhythm:
     alignment_logic:
@@ -38,10 +39,11 @@ visual_direction:
     carousel_or_scroll_behavior:
     motion_cues:
   responsive:
-    desktop_priority:
-    mobile_priority:
-    stacking_rules:
-    crop_changes:
+    section_contract_ids: []
+    shared_content_policy:
+    breakpoint_states: {}
+    allowed_transformations: []
+    prohibited_viewport_rewrites: []
   evidence:
     customer_brand:
     structure_source:
@@ -65,4 +67,3 @@ visual_direction:
 - `custom`: define an original visual system without theme-module constraints.
 - `reference_led`: preserve requested hierarchy and composition logic; do not reduce the source to topics.
 - `research_led`: derive hierarchy and expression from product, category, competitors, and journey evidence.
-

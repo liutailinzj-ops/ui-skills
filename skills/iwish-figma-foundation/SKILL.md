@@ -35,6 +35,8 @@ Never assume an empty local variable list means no library variables exist; sear
 - Return and record every created or mutated node, page, variable, collection, and style ID.
 - Validate foundations with metadata and screenshots before component creation.
 - Create or reuse an internal visual-direction page when representative compositions will be written.
+- Define viewport preview widths, page gutters, maximum container widths, named container modes, spacing scale, and alignment-group rules before Section production.
+- Treat Desktop and Mobile pages or frames as paired breakpoint previews of one responsive system. Do not create separate foundations, tokens, content systems, or component libraries for them.
 - Do not create a customer-visible QA page. Internal QA defaults to the Codex conversation or internal artifact; create an internal Figma QA page only when requested and use Chinese visible labels.
 - When the customer will receive the whole Figma file, keep internal QA in a separate file.
 
@@ -46,6 +48,7 @@ Update the project manifest with:
 - Collection and variable IDs.
 - Text/effect style IDs.
 - Grid and frame defaults.
+- Responsive preview widths, container modes, alignment groups, and paired-preview conventions.
 - Existing-library findings.
 - Conflicts and resolutions.
 - Foundation screenshots and validation status.

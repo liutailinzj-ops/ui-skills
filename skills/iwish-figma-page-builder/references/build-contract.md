@@ -18,6 +18,7 @@ Placeholder / {Content Type}
 - Set HUG, FILL, and FIXED deliberately after parenting nodes.
 - Use absolute positioning only for intentional decoration or overlap.
 - Keep containers, grids, padding, and section spacing traceable to foundations.
+- Apply the foundation page gutter, named container mode, and `alignment_group_id` before sizing children. Do not select margins independently inside each Section.
 - Align content edges and grid spans to the applied layout grid within 1 px.
 - Use equal-height siblings for cards in the same row unless intentional asymmetry is documented in the blueprint.
 - Prefer HUG section height with tokenized top and bottom padding. Use a fixed section height only when the reference or interaction requires it.
@@ -29,7 +30,7 @@ Placeholder / {Content Type}
 
 ## Visual direction inheritance
 
-- Inspect the approved representative Desktop/Mobile compositions before building the full page.
+- Inspect the approved representative responsive Section families and breakpoint proof states before building the full page.
 - Match their typography hierarchy, color behavior, imagery, media ratios, density, spacing rhythm, control language, and responsive transformation.
 - Record a reason when a section needs a different composition; do not silently fall back to a house component.
 - Reject repeated black boxes, generic card grids, or a fixed palette/rhythm that is not supported by project evidence.
@@ -48,10 +49,13 @@ Placeholder / {Content Type}
 
 ## Responsive behavior
 
-- Desktop and Mobile are independent final frames.
-- Reorder, simplify, stack, or hide content based on priority rather than uniformly scaling.
+- Desktop and Mobile are paired breakpoint previews of the same responsive page, Section identities, component families, order, and shared content bindings.
+- Build the shared Section family once. Use the smallest necessary viewport variants or Auto Layout states, then place paired instances in the preview frames.
+- Keep customer-facing copy and controls identical by default. Do not rewrite headings, body text, labels, or CTAs by viewport unless the Responsive Section Contract records an evidenced content variant.
+- Reorder, simplify, stack, change columns, alter crop, or change interaction only when listed in the Responsive Section Contract. For theme-based work, the difference must come from documented theme settings or observed automatic theme behavior.
+- Do not detach one viewport instance or replace it with an unrelated composition.
 - Ensure touch targets, text size, image crops, and navigation behavior remain practical.
-- Do not clip content accidentally. A card may not be wider than its Mobile viewport unless an evidenced native interaction requires it.
+- Do not clip content accidentally. Any child outside a clipping parent blocks the Section unless a named evidenced overflow contract requires it.
 - For carousels, define viewport width, card width, gap, next-card preview, indicator or controls, and intended swipe behavior. A clipped card alone is not a carousel.
 
 ## Theme fidelity
@@ -99,9 +103,9 @@ For `strict_replication`:
 For all specified-structure work, build in this order:
 
 1. Create section and composition-group skeletons with normalized major-region geometry.
-2. Apply evidenced theme container, grid, alignment, overflow, and responsive settings. In `theme_adaptation`, use the documented native target values.
+2. Create one Responsive Section family and apply evidenced theme container, grid, alignment, overflow, and breakpoint settings. In `theme_adaptation`, use the documented native target values.
 3. Bind visible content items and repeated-item counts.
-4. Validate Desktop and Mobile topology against source evidence and classify each axis as exact or adapted.
+4. Place paired Desktop and Mobile instances and validate them against the same responsive contract; classify each breakpoint state as exact or adapted.
 5. Apply brand styling and placeholders without changing geometry.
 
 Do not use a visually polished semantic checklist as a substitute for steps 1–4.
@@ -120,12 +124,16 @@ Do not use a visually polished semantic checklist as a substitute for steps 1–
 Before continuing, verify:
 
 - Desktop and Mobile screenshots are visually complete.
+- Every Section appears as paired instances of one recorded responsive component family; shared Section IDs, order, content bindings, controls, and copy match.
+- Every breakpoint difference is listed in the Responsive Section Contract and supported by theme evidence or the custom responsive plan.
 - Grid edges, equal heights, HUG/FILL/FIXED behavior, and overflow pass.
+- Nodes in one alignment group share left and right edges within 1 px; no unexplained fixed-width remainder exists.
 - Every multi-line Text node uses Auto Height/HUG or a documented clamp; no text is cropped or overlapping.
 - No unexplained sibling bounding-box collision exists outside an intentional overlay container.
 - No section contains a source-unjustified blank vertical band larger than 240 px and 25% of its height.
 - Media crop/aspect, gallery height, and content-column balance match the recorded source layout class.
 - Every child is contained by its parent or covered by a named, evidenced overflow contract; no hidden overflow is used to conceal sizing errors.
+- Any clipping parent with an out-of-bounds normal child fails, even when the child is visually hidden in the screenshot.
 - Composition groups, normalized major-region geometry, repeated-item counts, and interaction viewports match the topology contract.
 - Sticky or anchor navigation labels, order, and destinations match the specified structure source when included.
 - Text styles and component instances are bound.

@@ -34,6 +34,8 @@
 - Non-overlay sibling bounding boxes do not intersect after text reflow. Intentional overlays live in a named overlay container and remain legible.
 - Image crops and aspect ratios are usable.
 - Applied grid edges and spans differ by no more than 1 px.
+- Nodes in one named alignment group share left and right edges within 1 px at the same breakpoint.
+- Section gutters and container widths use foundation-defined modes; any exception has theme or project evidence.
 - Same-row comparison or decision cards are equal height unless intentional asymmetry is documented.
 - Section height uses HUG plus tokenized padding where possible; fixed heights have a reference-backed reason.
 - A fixed-height section has no unexplained unused vertical band larger than both 240 px and 25% of section height.
@@ -43,19 +45,23 @@
 ## Visual direction inheritance
 
 - Major sections visibly inherit the approved typography, colors, imagery, density, spacing rhythm, media/content relationship, control language, and responsive behavior.
-- Representative Desktop/Mobile compositions and the completed page use the same project-specific visual grammar.
+- Representative responsive Section families and the completed breakpoint previews use the same project-specific visual grammar.
 - Repeated black boxes, generic card grids, default accent colors, or fixed long-page rhythms are not used without project evidence.
 - A technically complete wireframe is not reported as a client-ready UI draft.
 - Temporary imagery preserves the intended crop, product scale, density, and composition quality.
 
 ## Responsive
 
-- Desktop and Mobile frames both exist.
-- Mobile hierarchy is intentionally adapted, not merely scaled.
+- Desktop and Mobile preview frames both exist as states of one responsive page system.
+- Every paired Section keeps the same stable identity, order, component family, content bindings, controls, and shared copy.
+- Mobile behavior is derived from the Responsive Section Contract, not independently redesigned or merely scaled.
+- Every breakpoint difference is listed and supported by theme evidence or the custom responsive plan.
 - Navigation, touch targets, text sizing, wrapping, and stacking are practical.
 - A Mobile child is not wider than its viewport unless an evidenced native interaction requires it.
 - Carousels define viewport, card width, gap, next-card preview, indicator or controls, and swipe behavior.
 - Clipping is intentional and does not cut the active card.
+- A clipping parent has no out-of-bounds normal child unless an explicit overflow contract names that relationship and affordance.
+- Customer-facing headings, body copy, labels, and CTAs do not differ across breakpoints without an evidenced content variant.
 
 ## Content and assets
 
@@ -151,6 +157,8 @@ Mark QA blocked when any of these fail:
 - Text Auto Height/HUG, overlap, oversized blank-band, media-balance, or source-navigation integrity.
 - Parent-child containment or an undocumented overflow viewport.
 - Mobile clipping or carousel contract.
+- Missing paired Section identity, unexplained cross-breakpoint content difference, or an unapproved independent viewport composition.
+- Alignment-group edge mismatch above 1 px or an unexplained container-width change.
 - Client-preview separation.
 - Missing or duplicate source rows, unexplained critical-function loss, or a `structure_target` difference without evidenced native adaptation.
 - Any unresolved or unapproved `strict_replication` section, content, order, composition-group, topology, interaction, overflow, or theme-setting mismatch.

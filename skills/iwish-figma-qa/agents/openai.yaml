@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH Figma 内部检查"
-  short_description: "检查视觉方向、Figma 结构、响应式和主题实现风险"
+  short_description: "检查响应式 Section 配对、对齐裁切、视觉方向与主题实现风险"
   default_prompt: "使用 $iwish-figma-qa 对目标页面执行内部检查，以中文报告问题且不要在客户预览中显示 QA。"

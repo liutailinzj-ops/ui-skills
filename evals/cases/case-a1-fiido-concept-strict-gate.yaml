@@ -10,7 +10,7 @@ input:
   target_market: United Kingdom DTC
   platform: shopify
   build_route: template
-  strategy_intent: Follow the specified page's visible content, order, Desktop and Mobile topology.
+  strategy_intent: Follow the specified page's visible content, order, and paired Desktop/Mobile states of one responsive topology.
   reference_mode: reference_to_theme
   fidelity_profile: strict_replication
   structure_source_urls:
@@ -33,7 +33,7 @@ assertions:
   - Product media, information, options, purchase controls, and attached add-ons remain grouped when the source renders them as one connected experience.
   - Every target mapping uses exact Concept Section, Block, and Setting names with evidence.
   - composed_native is accepted only when the combined native output preserves one source boundary and topology.
-  - Desktop and Mobile topology, visible-item counts, interaction, overflow, and responsive transformation are validated separately.
+  - Desktop and Mobile topology, visible-item counts, interaction, overflow, and responsive transformation are validated as paired states of the same Section identities and shared content bindings.
   - Placeholder media preserves captured geometry and does not impose a generic black-box or card-grid layout.
   - Parent-child containment and named overflow contracts pass.
   - No layer or report uses Approved without approval provenance.

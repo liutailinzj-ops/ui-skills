@@ -1,18 +1,20 @@
 # Representative Compositions
 
-Create a small but visually decisive internal set before full-page production.
+Create a small but visually decisive internal set before full-page production. Select the highest-risk section families, not the easiest modules to draw.
 
 ## Default set
 
-For a commerce page, use:
+For a commerce page, prove:
 
-1. The primary conversion region, such as homepage hero or PDP purchase area.
-2. One media-led product, service, or brand-story region.
-3. One information-dense region, such as specifications, comparison, process, proof, or FAQ.
+1. The complete primary conversion composition, such as a PDP media, product information, options, attached add-ons, trust, and purchase-control group when these responsibilities are connected.
+2. One connected media-led sequence that proves how adjacent product, service, or brand-story modules share rhythm and boundaries.
+3. One information-dense family, such as specifications, comparison, process, proof, feature matrix, geometry, or FAQ.
 
 For B2B, replace the commerce-specific region with the primary value-and-inquiry region when appropriate.
 
-Create both Desktop and Mobile compositions. When a requested page has fewer meaningful families, select the smallest set that still proves typography, imagery, hierarchy, controls, density, and responsive behavior.
+Create one responsive Section/component family for each selected proof. Use the primary breakpoint as the design state, then create a derived Mobile or Desktop proof state only when stacking, crop, repetition, interaction, navigation, or content density changes. The proof state must use the same content bindings, Section identity, and component family.
+
+For theme-based work, derive every breakpoint difference from documented theme settings or observed automatic theme behavior. For custom work, record the intentional transformation in the Responsive Section Contract. Do not author different copy or a separate visual concept for the second state.
 
 ## Figma placement
 
@@ -21,8 +23,9 @@ Create both Desktop and Mobile compositions. When a requested page has fewer mea
 - Use Chinese for visible rationale and internal labels.
 - Do not place QA status, Rxx identifiers, theme mappings, or replacement instructions inside the representative website frames.
 - Keep all images replaceable and text editable.
+- Keep paired breakpoint states linked to the same local component family and record their node IDs.
+- Apply foundation alignment groups; do not introduce a new gutter or container width inside an individual proof without evidence.
 
 ## Completion check
 
-The set is complete only when a reviewer can identify the intended brand character, hierarchy, imagery, spacing rhythm, component language, and Mobile transformation without reading the contract. If the same layout and palette could be reused for an unrelated product with only text changes, revise it.
-
+The set is complete only when a reviewer can identify the intended brand character, hierarchy, imagery, spacing rhythm, component language, and responsive transformation without reading the contract. The paired state must look like the same website Section responding to a breakpoint. If the same layout and palette could be reused for an unrelated product with only text changes, or the second state rewrites the design, revise it.

@@ -1,10 +1,10 @@
 # Reference-to-Theme Conversion
 
-Use this low-freedom workflow only when the reference page's visible content inventory, section order, and Desktop/Mobile layout anatomy are approved targets.
+Use this low-freedom workflow only when the reference page's visible content inventory, section order, and responsive layout anatomy are approved targets.
 
 ## 1. Capture the Source
 
-Inspect the rendered source page at Desktop and Mobile widths. Use DOM/accessibility content when available and screenshots as visual evidence. If either viewport cannot be inspected, block exact conversion.
+Inspect the same rendered source sections at Desktop and Mobile widths. Use DOM/accessibility content when available and screenshots as visual evidence. Record one Responsive Section Contract with paired breakpoint states; if either viewport cannot be inspected, block exact conversion instead of inventing a second layout.
 
 Before section capture, create a Source Identity Fingerprint from the exact specified structure-source URL:
 
@@ -143,7 +143,7 @@ Do not generate a conventional unrelated page as a fallback. A native adaptation
 - Build source sections in stable `Rxx` order. A production adaptation may realize one source row with adjacent native primitives, but each row remains traceable exactly once.
 - Preserve every composition group and its connected boundary behavior.
 - Use the captured visible content inventory or approved replacements.
-- Reproduce Desktop and Mobile topology separately. In `theme_adaptation`, preserve critical regions and reading flow while documenting permitted native differences in proportions, visible-item counts, overflow, controls, or transformation.
+- Reproduce one responsive section system and validate its Desktop and Mobile states. In `theme_adaptation`, preserve shared identity, content, critical regions, and reading flow while documenting permitted native breakpoint differences in proportions, visible-item counts, overflow, controls, or transformation.
 - Apply the Theme Assembly Plan settings before brand polish.
 - Do not add best-practice sections, omit low-value sections, rewrite content hierarchy, or substitute generated creative direction.
 
@@ -173,7 +173,7 @@ For `theme_adaptation`, completion requires:
 
 - Critical responsibility and content coverage are 100%.
 - Every non-exact row has an evidenced `native_adaptation`, feasible approved custom route, or explicit omission decision.
-- Exact and adapted Desktop/Mobile topology results are reported separately.
+- Exact and adapted breakpoint results are reported as paired states of the same responsive Section contract.
 - Proposed adaptations are listed for UI review and are not represented as approved.
 - Figma build and QA statuses are reported independently from theme-mapping fidelity.
 

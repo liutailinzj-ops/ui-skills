@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH 视觉方向"
-  short_description: "将页面策略转化为品牌视觉方向与代表性 Desktop/Mobile 构图"
-  default_prompt: "使用 $iwish-visual-direction 根据页面策略、品牌资料和参考来源建立视觉方向与代表性构图。"
+  short_description: "将页面策略转化为视觉方向、响应式 Section 与断点验证状态"
+  default_prompt: "使用 $iwish-visual-direction 根据页面策略、品牌资料、参考来源和响应式合同建立视觉方向与代表性 Section 构图。"

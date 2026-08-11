@@ -4,7 +4,7 @@ Classify each supplied site before using it. A URL alone does not define how clo
 
 ## Source roles
 
-- `structure_source`: the page that defines Build Truth. Its identity, content inventory, section order, and Desktop/Mobile anatomy drive the target.
+- `structure_source`: the page that defines Build Truth. Its identity, content inventory, section order, and responsive anatomy drive the target.
 - `theme_capability`: theme store, vendor documentation, demo, or current-site evidence used only to prove Section, Block, Settings, and responsive behavior.
 - `competitor_evidence`: category and conversion research evidence.
 - `visual_inspiration`: art-direction evidence.
@@ -56,7 +56,7 @@ Analyze the source in this order:
 1. Identify what question or decision each section serves.
 2. Inventory the content required to make the section work.
 3. Describe layout anatomy: column ratio, media position, content grouping, order, repetition, and interaction.
-4. Check Desktop and Mobile separately.
+4. Inspect Desktop and Mobile as paired states of the same source Sections. Record differences without splitting their identity or content contract.
 5. Map the responsibility and anatomy to an evidenced theme section/block.
 6. Preserve it exactly or select the closest evidenced theme-native adaptation. Omit only when it is irrelevant, out of scope, or explicitly approved; missing material alone should use a placeholder.
 

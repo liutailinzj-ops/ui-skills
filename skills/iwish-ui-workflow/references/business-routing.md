@@ -37,7 +37,7 @@ Use these Chinese labels in every UI-facing field:
 
 | 中文角色 | Manifest 字段 | 用途 |
 | --- | --- | --- |
-| 指定结构来源 | `structure_source_urls` | 定义页面身份、内容、顺序和 Desktop/Mobile 布局逻辑 |
+| 指定结构来源 | `structure_source_urls` | 定义页面身份、共享内容、顺序和响应式断点逻辑 |
 | 主题能力来源 | `theme_capability_urls` | 证明目标主题的 Section、Block、Setting 和响应式能力 |
 | 竞品研究来源 | `competitor_evidence_urls` | 支持产品、行业和转化逻辑研究 |
 | 视觉参考来源 | `visual_inspiration_urls` | 支持视觉方向，不自动成为结构目标 |

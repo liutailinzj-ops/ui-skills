@@ -37,6 +37,11 @@ reference_fidelity:
   approved_adaptations: []
   source_capture_status: pending | pass | blocked
   theme_mapping_status: pending | exact | adapted | blocked
+responsive:
+  section_contract:
+  alignment_groups: []
+  shared_content_policy:
+  breakpoint_preview_widths: {}
 pdp:
   template_strategy: single_template_validated | template_family | coverage_partial
   product_archetypes: []
@@ -56,8 +61,7 @@ visual_direction_brief:
   source_visual_principles: []
   target_theme_constraints: []
   imagery_needs: []
-  desktop_priorities: []
-  mobile_priorities: []
+  responsive_priorities: []
   prohibited_generic_defaults: []
 sections:
   - id:
@@ -67,8 +71,7 @@ sections:
     analysis_evidence: []
     required_content_types: []
     asset_status: final | available | placeholder
-    desktop_priority:
-    mobile_priority:
+    responsive_priority:
     likely_components: []
     implementation:
       level: theme_native | configuration | style | custom_css | custom_liquid | section_custom | custom
@@ -76,8 +79,11 @@ sections:
       theme_blocks: []
       evidence_url:
       allowed_settings: []
-      desktop_behavior:
-      mobile_behavior:
+      responsive_behavior:
+        shared_identity:
+        desktop_state:
+        mobile_state:
+        allowed_differences: []
       divergence:
       approval_required: false
     reference_correspondence:
@@ -90,8 +96,8 @@ sections:
       priority: critical | structural | presentational
       conversion_status: exact_native | composed_native | native_adaptation | requires_custom | unresolved
       content_bindings: []
-      desktop_layout_class:
-      mobile_layout_class:
+      responsive_layout_class:
+      breakpoint_states: {}
       topology_contract:
       adaptation_decision:
         status: proposed_adaptation | approved_adaptation | rejected_adaptation | not_applicable
@@ -111,7 +117,7 @@ Keep section IDs stable so later production Skills can map Figma nodes and resum
 
 Every theme-based section requires an exact implementation mapping and evidence URL. Do not use custom implementation as a generic fallback.
 
-Every page section must trace to Product and Competitor Analysis, a required platform responsibility, or a captured source section. For PDP work, include product applicability and a truthful template strategy. For specified-structure work, include exact content bindings, connected composition groups, Desktop/Mobile topology, and Theme Assembly Plan mapping.
+Every page section must trace to Product and Competitor Analysis, a required platform responsibility, or a captured source section. For PDP work, include product applicability and a truthful template strategy. For specified-structure work, include exact shared content bindings, connected composition groups, one Responsive Section Contract with breakpoint states, and Theme Assembly Plan mapping.
 
 The `visual_direction_brief` supplies evidence and required outcomes to `$iwish-visual-direction`; it must not prescribe an unrelated palette, fixed card system, or regression-fixture style.
 
