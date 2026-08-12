@@ -23,7 +23,7 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 1. Verify that requested customer-preview frames exist and contain only rendered website content.
 2. Compare major-section screenshots with the Visual Direction Contract and representative compositions. Check typography hierarchy, color behavior, imagery, media ratios, density, spacing rhythm, component language, and responsive transformation.
 3. Detect generic visual fallback: repeated black boxes, repeated equal-card grammar, default accent color, or a house long-page rhythm unsupported by project evidence.
-4. Verify source identity, source content/layout correspondence, connected compositions, and target-theme evidence for specified-reference work.
+4. Verify selected-module source identity, content/layout correspondence, connected compositions, and target-theme evidence for selected competitor-module work.
 5. Verify theme route, Section/Block/Setting support, responsive behavior, and approved customization scope for theme-based work.
 6. Verify product/competitor analysis traceability for research-led or hybrid sections.
 7. Read [references/responsive-geometry-audit.md](references/responsive-geometry-audit.md) and run its node-level paired identity, content parity, alignment, containment, clipping, sizing, and preview-isolation checks.

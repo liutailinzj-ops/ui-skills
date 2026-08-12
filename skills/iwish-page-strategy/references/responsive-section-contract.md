@@ -51,7 +51,7 @@ responsive_sections:
 ## Breakpoint behavior
 
 - Record only responsive differences: stacking, order within the same section, columns, media ratio, crop, visible item count, swipe/carousel behavior, navigation treatment, spacing, and controls.
-- For `template` and `theme_customization`, use only documented theme settings or observed automatic theme behavior. Do not invent a Mobile composition that the selected theme cannot produce.
+- For `theme_customization`, use documented theme behavior for native/configured Sections and an explicit responsive implementation plan for custom Sections. Do not present an invented Mobile composition as native theme behavior.
 - For `custom`, define intentional breakpoint behavior, but keep one section/component identity and shared content contract.
 - Treat Desktop and Mobile Figma frames as rendered verification states. Do not use them as permission to create unrelated layouts, copy, or component families.
 

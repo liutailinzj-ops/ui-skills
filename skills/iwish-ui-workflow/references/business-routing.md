@@ -6,12 +6,14 @@ Infer the route from natural-language project facts. Do not require UI to rememb
 
 ```yaml
 site_model: dtc | b2b | mixed
-build_route: template | theme_customization | custom
-strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
+production_scenario: research_led_theme_customization | selected_modules_theme_customization | custom
+build_route: theme_customization | custom
+strategy_mode: research_led | hybrid_led | custom_led
 theme_state: to_be_selected | demo_only | code_available | current_site
 content_state: final | mixed | placeholder
-reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
-fidelity_profile: strict_replication | theme_adaptation
+brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
+reference_mode: selected_structure_modules | visual_inspiration | competitor_evidence | none
+fidelity_profile: theme_adaptation | not_applicable
 ```
 
 Use these Chinese labels in every UI-facing field:
@@ -24,20 +26,18 @@ Use these Chinese labels in every UI-facing field:
 
 ## Chinese intent mapping
 
-- “没有指定结构、由我们策划、根据品类设计” -> `research_led`.
-- “按这个网站的内容和布局做、用主题模块转换” -> `reference_led` + `structure_target` + `theme_adaptation`.
-- “1:1 还原、完全一致、不可调整、像素级复刻” -> `reference_led` + `reference_to_theme` + `strict_replication`.
-- “只参考其中几个模块、多个网站组合” -> `hybrid_led`; classify selected sections separately.
+- “只有 Logo/品牌色，没有指定结构，由我们策划” -> `research_led_theme_customization` + `research_led` + `theme_customization`.
+- “只有 Logo/品牌色，参考竞品的部分模块、只做这几个结构、多个网站组合” -> `selected_modules_theme_customization` + `hybrid_led` + `theme_customization` + `selected_structure_modules`.
+- “纯自定义、没有主题模块约束” -> `custom` + `custom_led` + `custom`.
 - “只参考视觉、感觉、风格” -> `visual_inspiration`.
-- “基于客户旧站改版” -> `existing_site_led`.
 
-`strategy_mode` controls where page strategy comes from. `build_route` controls implementation freedom. `site_model` controls DTC/B2B analysis. Do not duplicate them into separate user workflows.
+`production_scenario` is the single UI-facing route. The other values are derived internally. Do not ask UI to choose multiple technical dimensions.
 
 ## Source roles
 
 | 中文角色 | Manifest 字段 | 用途 |
 | --- | --- | --- |
-| 指定结构来源 | `structure_source_urls` | 定义页面身份、共享内容、顺序和响应式断点逻辑 |
+| 指定结构来源 | `structure_source_urls` | 仅对清单中明确选择的竞品模块定义结构证据 |
 | 主题能力来源 | `theme_capability_urls` | 证明目标主题的 Section、Block、Setting 和响应式能力 |
 | 竞品研究来源 | `competitor_evidence_urls` | 支持产品、行业和转化逻辑研究 |
 | 视觉参考来源 | `visual_inspiration_urls` | 支持视觉方向，不自动成为结构目标 |
@@ -46,12 +46,11 @@ Never promote a theme demo to the structure source unless the user explicitly as
 
 ## Route behavior
 
-- `research_led`: derive hierarchy from product, category, competitor, and journey evidence.
-- `reference_led`: analyze product fit, then translate the specified source at the requested fidelity without silently changing it.
-- `hybrid_led`: preserve selected reference sections and design remaining responsibilities from research.
-- `existing_site_led`: decide what current content and proof to retain, revise, relocate, or replace.
+- `research_led_theme_customization`: derive the page hierarchy from product, category, competitor, and journey evidence, then select and customize a suitable theme.
+- `selected_modules_theme_customization`: preserve only the named selected reference modules and design all remaining responsibilities from research.
+- `custom`: create an original page system from requirements, research, references, and available brand inputs.
 
-For `template`, stay inside evidenced native/configuration/style scope. For `theme_customization`, respect the approved custom scope. For `custom`, use research, requirements, references, VI, and platform feasibility without theme-module constraints.
+For `theme_customization`, use evidenced native capability where it fits, then classify necessary CSS, Liquid, new Sections, apps, or other custom work per module. Do not enforce a universal custom-section percentage; use the contracted scope and engineering feasibility. For `custom`, use research, requirements, references, brand inputs, and platform feasibility without theme-module constraints.
 
 ## Chinese Project Recognition Card
 
@@ -61,14 +60,15 @@ Display once, then continue unless a blocking ambiguity exists:
 项目识别结果
 网站类型：DTC / B2B / 混合
 平台：Shopify / WordPress
-建站方式：模板建站 / 模板二开 / 纯定制
-设计方式：自主策划 / 指定结构 / 混合参考 / 旧站改版
-还原方式：严格复制 / 主题适配 / 不适用
+建站方式：模板部分二开 / 纯定制
+项目场景：自主策划 + 模板部分二开 / 指定竞品部分结构 + 模板部分二开 / 纯定制
+参考方式：无指定结构 / 只转换选中模块 / 不适用
 主题状态：待选择 / 只有预览 / 已有代码 / 现有网站
 内容模式：正式内容 / 混合内容 / 占位内容
+品牌资料：完整 VI / Logo + 品牌色 / 只有 Logo / 无品牌素材
 网站语言：{language}
 来源角色：
-- 指定结构来源：{URL 或“无”}
+- 指定结构来源：{URL + 选中模块清单 / 无}
 - 主题能力来源：{URL 或“无 / 待选择”}
 - 竞品研究来源：{URL 列表或“由 AI 补充”}
 - 视觉参考来源：{URL 列表或“无”}

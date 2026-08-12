@@ -1,40 +1,53 @@
 case:
   id: B
-  name: Research-led DTC template homepage
+  name: Research-led DTC partial theme-customization homepage
   kind: scenario
-  purpose: Verify autonomous product/competitor analysis and theme selection when no structure source is supplied.
+  purpose: "Verify the core IWISH route: Logo/brand color, no specified structure, and partial theme customization driven by product, competitor, and conversion research."
 
 input:
   brand: AeroNest
   brand_status: fictional regression fixture
+  brand_inputs:
+    logo: simple wordmark
+    brand_color: "#2F6B5F"
   product_category: compact smart air purifiers for apartments
   target_market: United States DTC
   platform: shopify
-  build_route: template
+  production_scenario: research_led_theme_customization
+  build_route: theme_customization
   strategy_intent: No specified structure; research the category and design a conversion-led homepage.
   structure_source_urls: []
   competitor_evidence_urls: []
   visual_inspiration_urls: []
   theme_state: to_be_selected
   theme_selection_in_scope: true
+  customization_scope:
+    allow_configuration: true
+    allow_style: true
+    allow_custom_css: true
+    allow_custom_liquid: true
+    allow_new_sections: true
+    approval_basis: per_section_scope_and_engineering_feasibility
   content_mode: placeholder
   available_materials:
-    - wordmark text only
+    - simple Logo
+    - one supplied brand color
     - no final product photography
     - no approved performance claims
   page: homepage
 
 assertions:
-  - Route is research_led; strict source-fidelity fields are not fabricated.
+  - Production scenario is research_led_theme_customization and internal strategy is research_led; selected-module source fields are not fabricated.
   - Product, category, competitor, and DTC conversion analysis occurs before theme selection and page hierarchy.
   - Competitors are researched from current evidence and are not copied as one page target.
   - Theme selection is justified by the resulting page responsibilities and exact documented native capabilities.
-  - Template route contains no unapproved custom Liquid, section-custom, or custom section.
+  - Every page Section is classified by exact theme/native/custom implementation level and scope status; no universal custom percentage is invented.
+  - Native theme capability is used where it preserves the design responsibility, while justified in-scope custom Sections remain available.
   - Missing proof and imagery use safe placeholders without invented performance facts.
   - Desktop and Mobile are editable paired breakpoint previews of the same responsive Section/component families and pass geometry, content-parity, containment, overflow, and component QA.
   - A project-specific visual direction and representative compositions exist before the full page; the result does not inherit the visual grammar of another fixture.
   - Apply the technical visual review rubric before accepting the generated UI.
 
 anti_overfit:
-  - Output must not inherit bicycle content, Fiido section order, Concept theme, a 34-section assumption, or the visual language of case A.
-  - Research-led output is judged by evidence traceability and route feasibility, not similarity to case A.
+  - Output must not inherit another case's product category, theme, section count, content sequence, or visual language.
+  - Research-led output is judged by evidence traceability and route feasibility, not similarity to another case.

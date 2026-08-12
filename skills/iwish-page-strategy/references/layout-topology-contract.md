@@ -1,10 +1,10 @@
 # Layout Topology Contract
 
-Use this contract whenever a page or section must preserve a specified reference structure. It records how content is composed, not only which topics appear.
+Use this contract whenever a selected competitor module must preserve a reference structure. It records how content is composed, not only which topics appear.
 
 ## Source capture
 
-Record one topology object for every stable source section and one composition-group object for source regions that behave as a single experience.
+Record one topology object for every selected module and one composition-group object for selected source regions that behave as a single experience.
 
 ```yaml
 composition_groups:
@@ -60,18 +60,7 @@ Create a composition group when adjacent source areas share one transaction, nav
 
 ## Match rules
 
-For strict `reference_to_theme`, require all of the following unless an approved deviation names the exact difference:
-
-- Major-region count, reading order, grouping, and media/content placement match.
-- The target keeps one section identity, shared content bindings, order, and component family across breakpoints.
-- Desktop and Mobile states and their responsive transformation match the source or the evidenced target-theme adaptation.
-- Repeated-item total and initially visible counts match.
-- Interaction type, viewport, overflow, controls, and sticky behavior match.
-- Major normalized region x and width differ by no more than `0.02`; y and height differ by no more than `0.05` after accounting for approved theme container settings and content reflow. Use a stricter source-observed value when a fixed interaction depends on it.
-- Media aspect ratio differs by no more than `5%`.
-- A `continuous` or `visually_connected` composition group remains connected.
-
-For `structure_target`, use the same fields but allow a documented product-, theme-, scope-, or responsive-driven adaptation. Semantic responsibility coverage alone never proves a topology match.
+For `selected_structure_modules`, apply the topology fields only to the named source modules and their connected composition groups. Preserve major-region count, reading order, grouping, media/content placement, one responsive Section identity, repeated-item logic, interaction, and connected composition intent, or name the exact evidenced theme adaptation or scoped custom implementation. Semantic responsibility coverage alone never proves a topology match.
 
 For `theme_adaptation`, use priority-aware comparison:
 
@@ -79,7 +68,7 @@ For `theme_adaptation`, use priority-aware comparison:
 - `structural`: section order, composition membership, major regions, and reading flow should be preserved; an evidenced native alternative is allowed when the difference is named.
 - `presentational`: exact columns, initially visible counts, normalized dimensions, spacing, crop, and decorative treatment may adapt to the theme when content and function remain intact.
 
-Do not apply strict numerical topology tolerances as a production blocker to a `native_adaptation`. Record the measured difference and review it visually instead.
+Do not apply fixed numerical topology tolerances as a production blocker to a `native_adaptation`. Record the measured difference and review it visually instead.
 
 ## Evidence and unknowns
 

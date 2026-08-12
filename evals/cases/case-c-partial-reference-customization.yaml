@@ -1,0 +1,57 @@
+case:
+  id: C
+  name: Selected competitor sections into partial theme customization
+  kind: core_scenario
+  purpose: "Verify the most common IWISH route: Logo/brand color plus selected competitor-section structures translated into theme-native and scoped custom Sections without turning the whole competitor page into a full-page requirement."
+
+input:
+  brand: Velopro
+  brand_status: fictional regression fixture
+  brand_inputs:
+    logo: VELOPRO wordmark
+    brand_color: "#B8F229"
+  product_category: city electric bicycle
+  target_market: United Kingdom DTC
+  platform: shopify
+  production_scenario: selected_modules_theme_customization
+  build_route: theme_customization
+  strategy_intent: Preserve only the selected competitor modules; derive the rest of the PDP from product, category, competitor, and conversion research.
+  reference_mode: selected_structure_modules
+  fidelity_profile: theme_adaptation
+  selected_structure_modules:
+    - connected product media, information, accessory add-ons, and purchase controls
+    - design exploration with product hotspots
+    - City Wise feature presentation
+  structure_source_urls:
+    - https://uk.fiido.com/products/fiido-c700-city-ebike
+  theme:
+    name: Concept
+    preset: Inova
+    capability_urls:
+      - https://themes.shopify.com/themes/concept/presets/inova
+      - https://roartheme.co/blogs/concept
+  customization_scope:
+    allow_configuration: true
+    allow_style: true
+    allow_custom_css: true
+    allow_custom_liquid: true
+    allow_new_sections: true
+    approval_basis: per_section_scope_and_engineering_feasibility
+  content_mode: placeholder
+  page: PDP
+
+assertions:
+  - Production scenario is selected_modules_theme_customization and internal strategy is hybrid_led; only the three selected module families use the competitor as structure evidence.
+  - The selected modules are captured with their content responsibilities, connected boundaries, major layout relationships, interactions, repeated items, and responsive behavior.
+  - Unselected source modules do not become mandatory page structure and are not silently copied into the customer design.
+  - The remaining PDP responsibilities come from current product/category/competitor/conversion research.
+  - Every final Section has an exact target-theme primitive or a named custom implementation level, scope status, owner, and engineering dependency.
+  - No universal custom Section count or page-height percentage is created or enforced.
+  - Theme-native capability is not stretched into a false exact mapping merely to avoid a justified custom Section.
+  - Logo and supplied brand color inform a restrained project-local website visual system; unsupported high-saturation colors are not invented as additional brand colors.
+  - Desktop and Mobile are paired breakpoint previews of the same responsive Section families.
+  - Apply the technical visual review rubric before accepting the generated UI.
+
+anti_overfit:
+  - Keep the named fixture, product vocabulary, selected modules, theme, color, and topology out of production Skills.
+  - This case validates selected-module translation, not full-page source fidelity or catalog-wide PDP coverage.

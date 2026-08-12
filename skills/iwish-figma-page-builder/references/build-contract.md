@@ -68,39 +68,22 @@ Placeholder / {Content Type}
 
 ## Analysis traceability
 
-- For `research_led`, `hybrid_led`, and `existing_site_led`, every customer-facing section must trace to Product and Competitor Analysis, a platform responsibility, or an approved project requirement.
+- For `research_led`, `hybrid_led`, and `custom_led`, every customer-facing section must trace to Product and Competitor Analysis, a platform responsibility, a selected source module, or an approved project requirement.
 - Preserve the visitor question and DTC conversion/B2B buying responsibility recorded in the blueprint.
 - Use placeholders for missing proof or content; do not invent factual claims to make the conversion chain appear complete.
 - Do not force the entire journey onto one page when the analysis assigns responsibilities to connected pages.
-- For strict `reference_to_theme`, report analysis gaps without adding or reordering source sections unless a deviation is approved.
 
 ## Reference fidelity
 
-For `structure_target` with `theme_adaptation`:
+For `selected_structure_modules` with `theme_adaptation`:
 
-- Build from the Reference Content-Layout Matrix, not visual memory.
-- Preserve every unique relevant `Rxx` row, content binding, and critical responsibility; missing final material uses placeholders rather than omission.
-- Preserve section order unless the blueprint records a product, theme, responsive, or scope reason to change it.
-- Compare layout anatomy: column ratio, media/content placement, grouping, repeated item count, interaction, and Mobile transformation. Name evidenced native differences as `native_adaptation` and continue.
-- Do not count matching colors or section names as structural fidelity.
-
-For `strict_replication`:
-
-- Verify the Build Truth URL, product/category identity, H1, hero signature, and stable section sequence before creating wrapper frames.
-- Build from the Source Page Specification and Theme Assembly Plan, never from a generic PDP pattern or visual memory.
-- Preserve every stable source section ID, exact section order, visible content item and repeated-item count.
-- Match the recorded Desktop and Mobile topology: composition groups, major-region normalized bounds, media/content placement, item and visible-item counts, grouping, controls, overflow, and responsive transformation.
-- Use only `exact_native` or `composed_native` mappings. Any `unresolved` mapping blocks the build.
-- Treat `composed_native` as valid only when evidenced native primitives render as one source section with matching topology; semantic coverage across separate generic sections fails.
-- Apply the recorded theme section, blocks, and concrete setting values. Do not invent settings unsupported by evidence.
-- Preserve provenance in the manifest: source content and order come from `structure_source_url`; Section/Block/Settings feasibility comes from `theme_capability_url`. Do not substitute theme-demo content or map a demo section back to itself.
-- Require 100% section-count, order, content-item, composition-group, Desktop topology, Mobile topology, and resolved-mapping coverage unless the manifest contains a deviation with explicit approval provenance.
-- Do not add, omit, reorder, rewrite, or redesign source content under the label of adaptation.
-- Do not place `Approved` in a layer name or implementation note unless the manifest contains approval provenance for the exact deviation.
+- Apply source-section identity, content bindings, composition-group, topology, interaction, and responsive checks only to the explicitly selected modules.
+- Build unselected page responsibilities from the approved research-led blueprint; do not import the rest of the source page by default.
+- Resolve each selected module independently as theme-native, configured, styled, custom CSS, custom Liquid, new custom Section, app/third-party, or pending engineering confirmation.
 
 ## Topology-first build order
 
-For all specified-structure work, build in this order:
+For selected competitor-module work, build in this order:
 
 1. Create section and composition-group skeletons with normalized major-region geometry.
 2. Create one Responsive Section family and apply evidenced theme container, grid, alignment, overflow, and breakpoint settings. In `theme_adaptation`, use the documented native target values.
@@ -135,11 +118,11 @@ Before continuing, verify:
 - Every child is contained by its parent or covered by a named, evidenced overflow contract; no hidden overflow is used to conceal sizing errors.
 - Any clipping parent with an out-of-bounds normal child fails, even when the child is visually hidden in the screenshot.
 - Composition groups, normalized major-region geometry, repeated-item counts, and interaction viewports match the topology contract.
-- Sticky or anchor navigation labels, order, and destinations match the specified structure source when included.
+- Sticky or anchor navigation labels, order, and destinations match the selected module contract when included.
 - Text styles and component instances are bound.
 - The client preview contains no visible internal annotations.
 - Theme mapping still matches the approved capability map.
 - Reference responsibility, order, and layout-anatomy correspondence still matches the approved matrix when applicable.
-- `reference_to_theme` Build Truth identity, source fingerprint, source sections, content items, composition groups, order, topology, and exact evidenced theme settings still match the approved specifications when applicable.
+- Selected-module source identity, module fingerprints, selected scope, content items, composition groups, local order, topology, and exact evidenced theme settings still match the approved specifications when applicable.
 - PDP scenario states pass without detaching components, clipping content, or leaving empty modules when applicable.
-- Analysis-backed page responsibilities remain represented, or strict-reference gaps are explicitly reported.
+- Analysis-backed page responsibilities remain represented, and selected-module gaps are explicitly reported.

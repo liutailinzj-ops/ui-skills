@@ -1,6 +1,6 @@
 suite:
   name: iwish-ui-generalization
-  version: 2.0.0
+  version: 4.0.0
   purpose: Validate Skill behavior outside the UI production workflow and prevent benchmark-specific fixes or technically complete wireframes from being promoted as usable design output.
   policy:
     - Keep evaluation prompts, case identities, baselines, technical visual gates, and result artifacts outside every production Skill and production manifest.
@@ -14,70 +14,63 @@ suite:
     - Store result artifacts outside the Skill folders.
 
 cases:
-  - id: A1
-    file: cases/case-a1-fiido-concept-strict-gate.yaml
-    status: ready
-    coverage:
-      strategy_mode: reference_led
-      build_route: template
-      site_model: dtc
-      page_type: pdp
-      fidelity_profile: strict_replication
-      expected_behavior: truthful_strict_gate
-  - id: A2
-    file: cases/case-a2-fiido-concept-theme-adaptation.yaml
-    status: ready
-    coverage:
-      strategy_mode: reference_led
-      build_route: template
-      site_model: dtc
-      page_type: pdp
-      fidelity_profile: theme_adaptation
-      expected_behavior: client_presentable_theme_adaptation
   - id: B
-    file: cases/case-b-research-led-template.yaml
+    tier: core
+    file: cases/case-b-research-led-customization.yaml
     status: ready
     coverage:
       strategy_mode: research_led
-      build_route: template
+      production_scenario: research_led_theme_customization
+      build_route: theme_customization
+      brand_input: logo_and_brand_color
       site_model: dtc
       page_type: homepage
-      expected_behavior: autonomous_strategy
+      expected_behavior: autonomous_partial_theme_customization
   - id: C
-    file: cases/case-c-customization-gate.yaml
+    tier: core
+    file: cases/case-c-partial-reference-customization.yaml
     status: ready
     coverage:
-      strategy_mode: reference_led
+      strategy_mode: hybrid_led
+      production_scenario: selected_modules_theme_customization
       build_route: theme_customization
+      brand_input: logo_and_brand_color
       site_model: dtc
       page_type: pdp
-      fidelity_profile: strict_replication
-      expected_behavior: truthful_route_gate
+      expected_behavior: selected_competitor_section_translation
+  - id: E
+    tier: core
+    file: cases/case-e-fully-custom.yaml
+    status: ready
+    coverage:
+      strategy_mode: custom_led
+      production_scenario: custom
+      build_route: custom
+      brand_input: logo_and_brand_color
+      site_model: dtc
+      page_type: homepage
+      expected_behavior: original_fully_custom_system
   - id: D
     status: planned
     coverage:
       strategy_mode: research_led
-      build_route: template
+      production_scenario: research_led_theme_customization
+      build_route: theme_customization
+      brand_input: logo_only
       site_model: dtc
       page_type: pdp
       content_mode: insufficient_materials
-  - id: E
-    status: planned
-    coverage:
-      strategy_mode: hybrid_led
-      build_route: custom
-      site_model: dtc
-      page_type: homepage
   - id: F
     status: planned
     coverage:
-      strategy_mode: research_led
+      strategy_mode: custom_led
+      production_scenario: custom
       build_route: custom
       site_model: b2b
       page_type: solution_and_inquiry
 
 stability_claims:
   case_passed: Only the named case and tested capability passed.
-  route_passed: At least two materially different ready cases on the route passed.
+  core_routes_passed: Every ready core case passed.
   suite_passed: Every ready case passed or produced its expected truthful blocked result.
   production_stable: Not permitted from this suite alone; requires repeated real-project evidence.

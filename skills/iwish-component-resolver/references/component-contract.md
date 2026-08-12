@@ -41,7 +41,7 @@ THEME_MAP     exact native section/block name and evidence
 PRODUCT_STATES product archetypes and optional/required content states validated
 REFERENCE_MAP source responsibility and layout anatomy preserved or adapted
 VISUAL_DIRECTION typography, imagery, density, spacing, media/content relationship, and responsive rules inherited
-FIDELITY_PROFILE strict_replication or theme_adaptation
+FIDELITY_PROFILE theme_adaptation or not_applicable
 MAPPING_STATUS exact_native, composed_native, native_adaptation, requires_custom, or unresolved
 SOURCE_MAP    stable source section ID and exact source item order
 CONTENT_BINDINGS source text/media/control/repeated-item slots mapped one by one
@@ -63,11 +63,11 @@ SETTING_EVIDENCE exact evidence for every theme setting used
 - Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
 - Reject a component whose generic visual grammar overrides the approved representative composition even when its content slots are technically compatible.
 
-For specified-structure work, the contract must preserve the primary reference page's visible content slots, stable ordering, critical function, and responsive reading flow through one shared Section identity. In `strict_replication`, repeated-item count and topology must also match unless explicitly approved. In `theme_adaptation`, changed item visibility, columns, section boundaries, or interaction form may use `native_adaptation` when the exact difference and theme evidence are recorded. Product-state properties may extend the component only after the primary contract remains reproducible.
+For selected competitor-module work, the contract must preserve each selected module's visible content slots, local ordering, critical function, and responsive reading flow through one shared Section identity. Changed item visibility, columns, section boundaries, or interaction form may use `native_adaptation` when the exact difference and theme evidence are recorded; otherwise name the scoped custom implementation. Product-state properties may extend the component only after the selected module contract remains reproducible.
 
 When a component belongs to a connected composition group, preserve the group's shared container, adjacency, spacing, interaction, and responsive transformation. Multiple semantic components may exist internally, but they must not render as unrelated page sections.
 
-Add these provenance fields to every strict-reference component contract:
+Add these provenance fields to every selected competitor-module component contract:
 
 ```yaml
 structure_source_url:
@@ -82,7 +82,7 @@ composition_group_id:
 topology_signature:
 ```
 
-Reject the component contract when `structure_source_url` is missing, differs from Build Truth, or points to a theme demo that the user did not select as the structure source.
+Reject the component contract when `structure_source_url` is missing, differs from the selected module's recorded source, or points to a theme demo that the user did not select as that module's structure source.
 
 Reject `exact_native` or `composed_native` when a required Section, Block, or Setting uses a descriptive alias instead of the exact target-theme name or lacks evidence. A topology change is `native_adaptation`, not an exact claim. Do not use `Approved` to bypass this check without approval provenance in the manifest.
 

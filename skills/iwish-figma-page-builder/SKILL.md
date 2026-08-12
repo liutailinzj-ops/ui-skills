@@ -1,6 +1,6 @@
 ---
 name: iwish-figma-page-builder
-description: Build or update one complete native editable responsive Figma website system with paired Desktop and Mobile preview states from an IWISH page blueprint, Visual Direction Contract, responsive Section contracts, representative compositions, project foundations, and component map. Use for Shopify or WordPress template, theme-customized, or fully custom DTC/B2B production after visual direction is established, including projects with incomplete copy or imagery.
+description: Build or update one complete native editable responsive Figma website system with paired Desktop and Mobile preview states from an IWISH page blueprint, Visual Direction Contract, responsive Section contracts, representative compositions, project foundations, and component map. Use for Shopify or WordPress partially theme-customized or fully custom DTC/B2B production after visual direction is established, including projects with only a Logo or brand color and incomplete copy or imagery.
 ---
 
 # IWISH Figma Page Builder
@@ -31,7 +31,7 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 3. Build one responsive Section/component family per sequential Figma mutation, then place its paired Desktop and Mobile instances before continuing to the next Section.
 4. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
 5. For theme-based work, reproduce evidenced native Section/Block geometry and content slots, then apply the Visual Direction Contract through supported tokens, settings, and styling.
-6. For specified-structure work, build from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation.
+6. For selected competitor-module work, build the selected modules from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation; derive the rest of the page from the approved research-led blueprint.
 7. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
 8. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
 9. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.

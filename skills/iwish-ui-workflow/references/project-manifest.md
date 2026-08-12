@@ -10,8 +10,10 @@ project:
   target_market:
   audience_type: dtc | b2b | mixed
   platform: shopify | wordpress
-  build_route: template | theme_customization | custom
-  strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
+  production_scenario: research_led_theme_customization | selected_modules_theme_customization | custom
+  build_route: theme_customization | custom
+  strategy_mode: research_led | hybrid_led | custom_led
+  brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
   website_language:
 scope:
   requested_page:
@@ -20,6 +22,7 @@ sources:
   customer_facts:
   customer_assets:
   structure_source_urls: []
+  selected_structure_modules: []
   theme_capability_urls: []
   competitor_evidence_urls: []
   visual_inspiration_urls: []
@@ -31,6 +34,11 @@ theme:
   capability_map:
   evidence_urls: []
   route_gate: pass | blocked
+  customization_scope:
+    source:
+    approved_capabilities: []
+    excluded_capabilities: []
+    engineering_review_status: pending | reviewed | not_required
 content:
   mode: final | mixed | placeholder
   display_label: 正式内容 | 混合内容 | 占位内容
@@ -79,11 +87,11 @@ delivery_visibility:
   customer_shares_whole_figma_file: false
   internal_qa_location: conversation | internal_page | separate_file
 reference_fidelity:
-  mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
-  fidelity_profile: strict_replication | theme_adaptation
-  build_truth_url:
-  source_fingerprint:
-  source_page_specification:
+  mode: selected_structure_modules | visual_inspiration | competitor_evidence | none
+  fidelity_profile: theme_adaptation | not_applicable
+  selected_module_sources: []
+  module_fingerprints: []
+  selected_module_specification:
   composition_groups: []
   topology_contract:
   content_layout_matrix:
@@ -115,6 +123,6 @@ Keep regression case IDs, baselines, topology signatures, no-op checks, cross-ca
 
 Treat `content.mode` and status enums as internal values. Use their Chinese display labels in UI-facing messages and internal Figma annotations.
 
-Keep the structure-source URL immutable after recognition. Theme selection may append theme-capability sources but may not replace Build Truth. Record approved deviations with the exact decision, approver, source, and date.
+Keep each selected module's structure-source URL immutable after recognition. Theme selection may append theme-capability sources but may not replace a selected module's source. Record approved deviations with the exact decision, approver, source, and date.
 
 Customer-preview frames may contain only the website design. Internal QA, Rxx labels, theme mappings, source warnings, implementation notes, placeholder provenance, and replacement instructions belong in the conversation, an internal page, or a separate internal file according to `delivery_visibility`.

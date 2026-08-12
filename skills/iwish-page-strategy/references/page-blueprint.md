@@ -7,12 +7,14 @@ page:
   audience_priority:
   website_language:
   site_model: dtc | b2b | mixed
-  strategy_mode: research_led | reference_led | hybrid_led | existing_site_led
+  production_scenario: research_led_theme_customization | selected_modules_theme_customization | custom
+  strategy_mode: research_led | hybrid_led | custom_led
   content_mode: final | mixed | placeholder
   content_mode_label: 正式内容 | 混合内容 | 占位内容
-  build_route: template | theme_customization | custom
-  reference_mode: reference_to_theme | structure_target | visual_inspiration | competitor_evidence | none
-  fidelity_profile: strict_replication | theme_adaptation
+  build_route: theme_customization | custom
+  brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
+  reference_mode: selected_structure_modules | visual_inspiration | competitor_evidence | none
+  fidelity_profile: theme_adaptation | not_applicable
 analysis:
   product_model:
   category_context:
@@ -23,11 +25,13 @@ analysis:
   page_implications: []
   theme_criteria: []
 reference_fidelity:
-  build_truth_url:
-  source_page_specification:
+  selected_module_sources: []
+  selected_structure_modules: []
+  module_fingerprints: []
+  selected_module_specification:
   theme_assembly_plan:
-  source_section_order: []
-  source_content_inventory:
+  selected_module_order: []
+  selected_content_inventory:
   composition_groups: []
   topology_contract:
   content_layout_matrix:
@@ -53,8 +57,11 @@ theme:
   name:
   preset:
   capability_map:
-  custom_section_count_ratio:
-  custom_section_height_ratio:
+  customization_scope:
+    source:
+    approved_capabilities: []
+    excluded_capabilities: []
+    engineering_review_status: pending | reviewed | not_required
 visual_direction_brief:
   required_brand_impression: []
   content_emphasis: []
@@ -74,7 +81,10 @@ sections:
     responsive_priority:
     likely_components: []
     implementation:
-      level: theme_native | configuration | style | custom_css | custom_liquid | section_custom | custom
+      level: theme_native | configuration | style | custom_css | custom_liquid | section_custom | app_or_third_party | custom | pending_engineering
+      scope_status: in_scope | needs_estimate | approved | excluded
+      implementation_owner:
+      engineering_notes:
       theme_section:
       theme_blocks: []
       evidence_url:
@@ -117,7 +127,7 @@ Keep section IDs stable so later production Skills can map Figma nodes and resum
 
 Every theme-based section requires an exact implementation mapping and evidence URL. Do not use custom implementation as a generic fallback.
 
-Every page section must trace to Product and Competitor Analysis, a required platform responsibility, or a captured source section. For PDP work, include product applicability and a truthful template strategy. For specified-structure work, include exact shared content bindings, connected composition groups, one Responsive Section Contract with breakpoint states, and Theme Assembly Plan mapping.
+Every page section must trace to Product and Competitor Analysis, a required platform responsibility, an approved requirement, or an explicitly selected source module. For PDP work, include product applicability and a truthful template strategy. For selected competitor-module work, include exact shared content bindings, connected composition groups, one Responsive Section Contract with breakpoint states, and Theme Assembly Plan mapping for the selected scope only.
 
 The `visual_direction_brief` supplies evidence and required outcomes to `$iwish-visual-direction`; it must not prescribe an unrelated palette, fixed card system, or regression-fixture style.
 

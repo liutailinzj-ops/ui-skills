@@ -84,9 +84,8 @@ For B2B, model the applicable path: business fit, product/category scope, applic
 ## Strategy-mode application
 
 - `research_led`: use the analysis to generate the hierarchy and theme-selection criteria.
-- `reference_led`: complete the same analysis, then compare the specified source with the product and conversion chain. Report gaps and risks; do not alter strict source truth without approval.
 - `hybrid_led`: use specified modules where approved and fill uncovered responsibilities from analysis.
-- `existing_site_led`: compare current content with the product model and journey; mark retain, revise, relocate, replace, and missing.
+- `custom_led`: turn requirements, research, references, and available brand inputs into an original page hierarchy without theme-module constraints.
 
 ## Required output
 
@@ -100,4 +99,4 @@ Return:
 - Evidence gaps and placeholder plan.
 - Theme-selection or theme-audit criteria when applicable.
 
-Do not continue to page hierarchy when the product/category cannot be identified or when analysis sources are unavailable enough to support the proposed strategy. In strict reference work, analysis may complete with reported conversion gaps because the approved source remains the build contract.
+Do not continue to page hierarchy when the product/category cannot be identified or when analysis sources are insufficient to support the proposed strategy. Selected competitor modules do not replace product, category, competitor, and journey analysis for the rest of the page.

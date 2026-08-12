@@ -75,54 +75,35 @@
 
 - Every theme-based section maps to an exact documented theme section/block and evidence URL.
 - Every required setting uses its exact target-theme name and has field-level editor, vendor-documentation, or current-theme evidence. Demo observation alone does not prove an editable setting.
-- Implementation levels use theme-native, configuration, style, custom CSS, custom Liquid, section-custom, or custom.
+- Implementation levels use theme-native, configuration, style, custom CSS, custom Liquid, section-custom, app/third-party, custom, or pending-engineering.
 - Shopify/WordPress implementation risks are visible.
 - Theme-based designs do not silently exceed known theme constraints.
-- `template` routes contain no unapproved custom Liquid, section-custom, or custom sections.
-- `theme_customization` routes keep section-custom and custom work at or below 20% of both section count and estimated page height unless explicitly approved.
+- Production contains no `template` route; theme-based work is classified as `theme_customization`.
+- Every theme-customization Section has an implementation level and scope status. Custom work follows the contracted scope or named engineering estimate, not a universal percentage.
 
 ## Product, competitor, and journey analysis
 
 - Product model, competitor matrix, and DTC conversion chain or B2B buying path exist.
 - Decision-critical statements distinguish customer facts, research observations, inferences, unknowns, and placeholders.
-- Each non-strict-reference section traces to a visitor question, journey responsibility, platform responsibility, or approved requirement.
+- Each section traces to a visitor question, journey responsibility, selected source module, platform responsibility, or approved requirement.
 - Competitor observations explain presentation and conversion logic rather than visual similarity alone.
 - The page does not invent proof, reviews, certifications, results, specifications, prices, or guarantees.
 - Relevant conversion/buying gaps are reported. Do not fail a page merely because a responsibility belongs on another scoped page.
-- For strict `reference_to_theme`, analysis gaps are reported without treating unapproved structural additions as repairs.
 
 ## Reference fidelity
 
-Before either fidelity mode, verify source roles:
+For selected competitor-module work, verify source roles:
 
 - The report lists the exact 指定结构来源、主题能力来源、竞品研究来源和视觉参考来源 URLs.
-- Build Truth URL equals the specified structure source.
-- Product/category, H1, hero signature, and stable section sequence match the structure-source fingerprint.
+- Each selected module's source URL and local signature match its structure-source record.
 - Theme store, vendor docs, demo, and current-theme URLs are used only as capability evidence unless explicitly assigned another role.
 - No mapping counts a theme demo section mapped back to the same theme demo as source fidelity.
 
-For `structure_target` with `theme_adaptation`:
+For `selected_structure_modules`:
 
-- Every relevant source section has a target responsibility mapping.
-- Required source content types are represented or explicitly unavailable.
-- Section order matches or has a documented reason to diverge.
-- Desktop and Mobile layout anatomy is preserved or deliberately adapted.
-- Theme substitutions and omissions have evidence and an owner; missing material alone uses placeholders.
-- Every `Rxx` source row exists exactly once, and every composition group references existing rows rather than replacing them.
-- `native_adaptation` rows preserve critical content/function and reading flow, name the exact difference, cite theme evidence, and enter UI review.
-- Visual similarity is not used as a substitute for content/layout correspondence.
-
-For `strict_replication`:
-
-- Every stable source section ID exists exactly once in the target.
-- Target section order matches the Source Page Specification.
-- Every captured visible text, media role, control, and repeated item is bound; item counts match.
-- Composition groups remain connected and Desktop/Mobile topology matches: major-region geometry, media/content placement, grouping, item and initially visible counts, overflow, controls, and responsive transformations.
-- Every section uses the exact evidenced theme Section, Blocks, and setting values in the Theme Assembly Plan.
-- Mapping status is `exact_native` or a validated `composed_native`; no required item is `unresolved`. `composed_native` fails when separate native sections merely cover the same topics but change source boundaries or topology.
-- Every deviation is named and has approval provenance; vague `adapted` status or generated `Approved` wording is not accepted.
-- Sticky or anchor navigation labels, order, and destinations match the source when present.
-- Section-count, order, content-item, composition-group, Desktop topology, Mobile topology, and resolved-mapping coverage are 100% after approved deviations are accounted for.
+- Only explicitly selected source modules are checked for source-layout correspondence.
+- Selected modules preserve their named content responsibilities, connected boundaries, major layout relationships, interaction, and responsive behavior or document the exact adaptation/custom route.
+- Unselected source modules are not treated as required coverage; remaining page Sections trace to product, competitor, and journey research.
 
 ## PDP coverage
 
@@ -147,11 +128,11 @@ For `strict_replication`:
 
 Mark QA blocked when any of these fail:
 
-- Build Truth URL, product/category identity, source fingerprint, or source-role integrity.
-- A theme capability source is silently promoted to Build Truth or self-mapped as proof of fidelity.
+- Selected-module source URL, product/category identity, module fingerprint, or source-role integrity.
+- A theme-capability source is silently promoted to a selected-module source or self-mapped as proof of correspondence.
 - Theme evidence or mapping.
 - Missing Product and Competitor Analysis or untraceable generated sections.
-- Route custom budget.
+- Missing implementation classification, scope status, or required engineering estimate for theme-customization work.
 - Text-style binding.
 - Grid and equal-height integrity.
 - Text Auto Height/HUG, overlap, oversized blank-band, media-balance, or source-navigation integrity.
@@ -160,9 +141,7 @@ Mark QA blocked when any of these fail:
 - Missing paired Section identity, unexplained cross-breakpoint content difference, or an unapproved independent viewport composition.
 - Alignment-group edge mismatch above 1 px or an unexplained container-width change.
 - Client-preview separation.
-- Missing or duplicate source rows, unexplained critical-function loss, or a `structure_target` difference without evidenced native adaptation.
-- Any unresolved or unapproved `strict_replication` section, content, order, composition-group, topology, interaction, overflow, or theme-setting mismatch.
-- A `strict_replication` fidelity metric below 100% after approved deviations.
+- Missing or duplicate required selected-module rows, unexplained critical-function loss, or a selected-module difference without evidenced native adaptation or a documented custom route.
 - A critical `theme_adaptation` row with no feasible evidenced native or approved custom route.
 - False PDP universality or failed required product state.
 

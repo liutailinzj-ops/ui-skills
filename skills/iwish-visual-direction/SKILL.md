@@ -1,6 +1,6 @@
 ---
 name: iwish-visual-direction
-description: Translate an IWISH product/competitor analysis, page blueprint, brand inputs, references, theme constraints, and Responsive Section Contracts into a project-specific website visual direction and representative editable Figma section families with breakpoint proof states. Use between page strategy and full-page production for Shopify or WordPress template, theme-customized, and fully custom DTC/B2B work, especially when incomplete assets or reference-to-theme translation could otherwise collapse into generic wireframes or disconnected Desktop/Mobile designs.
+description: Translate an IWISH product/competitor analysis, page blueprint, light or complete brand inputs, references, theme-customization constraints, and Responsive Section Contracts into a project-specific website visual direction and representative editable Figma section families with breakpoint proof states. Use between page strategy and full-page production for Shopify or WordPress partially theme-customized and fully custom DTC/B2B work, especially when customers provide only a Logo or brand color, assets are incomplete, or competitor-section translation could collapse into generic UI.
 ---
 
 # IWISH Visual Direction
@@ -23,7 +23,7 @@ Create the visual design contract that the full Figma page must inherit. Load th
 1. Read [references/visual-direction-contract.md](references/visual-direction-contract.md).
 2. Separate customer facts, source observations, industry conventions, visual inspiration, and creative decisions. Do not turn one regression fixture into a default style.
 3. Define one primary art direction: brand character, typography, color behavior, imagery, media crop, density, spacing rhythm, grid behavior, card language, controls, motion or interaction cues, and responsive transformation.
-4. For specified-structure work, preserve the source's visual hierarchy, media/content relationship, connected compositions, repeated-item behavior, and reading flow at the requested fidelity. For theme-based work, express these decisions through evidenced target-theme behavior instead of drawing unsupported custom modules.
+4. For selected competitor-module work, preserve each selected module's visual hierarchy, media/content relationship, connected composition, repeated-item behavior, and reading flow. Express these decisions through evidenced target-theme behavior or a named scoped custom Section.
 5. For research-led work, derive composition from product comprehension, category differentiation, proof, evaluation, objection handling, and action without imposing a house sequence or house visual language.
 6. For custom work, use references as evidence or inspiration without copying their identity.
 7. Read [references/representative-compositions.md](references/representative-compositions.md) and create representative editable Section families on an internal visual-direction page. Build one primary state and only the derived breakpoint proof states needed to validate responsive-risk behavior. Use shared website content across states, the actual website language for rendered content, and Chinese for visible internal annotations.

@@ -1,0 +1,44 @@
+case:
+  id: E
+  name: Fully custom DTC homepage with light brand inputs
+  kind: core_scenario
+  purpose: Verify the fully custom IWISH route without theme-module constraints or inherited fixture layout grammar.
+
+input:
+  brand: LumaField
+  brand_status: fictional regression fixture
+  brand_inputs:
+    logo: simple wordmark
+    brand_color: "#4C5A42"
+  product_category: modular indoor herb growing systems
+  target_market: Germany DTC
+  platform: shopify
+  production_scenario: custom
+  build_route: custom
+  strategy_intent: Research the product, category, competitors, and customer journey, then create an original fully custom homepage system.
+  competitor_evidence_urls: []
+  visual_inspiration_urls: []
+  reference_mode: none
+  content_mode: placeholder
+  available_materials:
+    - simple Logo
+    - one supplied brand color
+    - basic product category description
+    - no final photography
+    - no approved performance claims
+  page: homepage
+
+assertions:
+  - Route is custom_led and build_route is custom; no theme selection, Theme Capability Map, or theme Section mapping is fabricated.
+  - Product, category, competitor, and DTC conversion analysis occurs before page hierarchy and visual direction.
+  - Every page Section traces to analysis, a platform responsibility, or an approved requirement.
+  - The visual system is project-specific, editable through variables and styles, and does not claim to be a complete customer VI.
+  - The supplied Logo and brand color are used with a restrained neutral system; unsupported saturated brand colors are not invented.
+  - Missing proof and imagery use safe, presentable placeholders without invented factual claims.
+  - Components and responsive Section families are designed for the approved page responsibilities rather than forced into theme primitives.
+  - Desktop and Mobile are paired breakpoint previews of the same editable responsive system.
+  - Apply the technical visual review rubric before accepting the generated UI.
+
+anti_overfit:
+  - Output must not inherit bicycle, air-purifier, Fiido, Concept, or previous regression visual grammar.
+  - Do not turn this fixture's product category, color, section count, or content sequence into a production default.

@@ -1,6 +1,6 @@
 ---
 name: iwish-page-strategy
-description: Analyze products, category context, competitors, DTC conversion chains or B2B buying paths, then define an evidence-backed page blueprint and theme implementation route. Use for Shopify or WordPress research-led, specified-reference, hybrid-reference, current-site revision, template, theme-customized, or fully custom UI production before visual direction and Figma page generation.
+description: Analyze products, category context, competitors, DTC conversion chains or B2B buying paths, then define an evidence-backed page blueprint and implementation route. Use for Shopify or WordPress research-led partial theme customization, selected competitor-module translation into partial theme customization, or fully custom UI production before visual direction and Figma page generation.
 ---
 
 # IWISH Page Strategy
@@ -19,17 +19,16 @@ Produce the business, content, source, and implementation blueprint that `$iwish
 Read [references/product-competitor-analysis.md](references/product-competitor-analysis.md) and [references/research-method.md](references/research-method.md). Complete product, category, competitor, and DTC conversion-chain or B2B buying-path analysis before page hierarchy or theme selection.
 
 - `research_led`: let product, competitor, and journey evidence determine content responsibilities and sequence.
-- `reference_led`: test source relevance and risks but do not silently change the requested structure.
 - `hybrid_led`: preserve selected source modules and design remaining responsibilities from research.
-- `existing_site_led`: decide what current content and proof to retain, revise, relocate, or replace.
+- `custom_led`: derive an original page system from requirements, research, references, and available brand inputs without theme-module constraints.
 
-Use [references/reference-routing.md](references/reference-routing.md) to keep source roles separate.
+Keep selected structure sources, theme-capability sources, competitor evidence, and visual inspiration in separate roles throughout the workflow.
 
-## Specified-Reference Work
+## Selected Competitor-Module Work
 
-For `structure_target`, capture every visible module as one stable Rxx source row, then record shared content responsibility, content items, ordering, connected composition groups, responsive anatomy, and target-theme correspondence. Read [references/responsive-section-contract.md](references/responsive-section-contract.md), [references/reference-to-theme.md](references/reference-to-theme.md), and [references/layout-topology-contract.md](references/layout-topology-contract.md). Apply `theme_adaptation` unless exact replication is explicit.
+For `selected_structure_modules`, capture only the explicitly named source modules and the minimum surrounding context needed to understand their boundaries, interaction, responsive behavior, and role in the journey. Do not make the rest of the source page mandatory; design the remaining page from product, category, competitor, and journey evidence.
 
-For strict `reference_to_theme`, verify source identity and complete source capture before theme mapping. Do not continue when required topology or critical function is unresolved and no approved route exists.
+Read [references/responsive-section-contract.md](references/responsive-section-contract.md) and [references/layout-topology-contract.md](references/layout-topology-contract.md). Verify the identity of every selected source module before theme mapping. Do not continue when a selected module's critical function is unresolved and no feasible native or scoped custom route exists.
 
 For theme-based work, build the Theme Capability Map in [references/theme-capability-map.md](references/theme-capability-map.md) from current official theme listing, vendor documentation, editor evidence, and live demo where useful. Map across sources:
 
@@ -39,7 +38,7 @@ structure source Rxx
 → theme capability evidence
 ```
 
-A theme demo may prove capability but may not replace Build Truth.
+A theme demo may prove capability but may not replace a selected competitor module's structure source.
 
 ## Strategy Rules
 
@@ -52,10 +51,10 @@ A theme demo may prove capability but may not replace Build Truth.
 - For PDP work, apply [references/pdp-coverage.md](references/pdp-coverage.md); do not claim catalog-wide coverage from one product.
 - Preserve connected source compositions. Do not split them into unrelated full-width sections because semantic module names appear to match.
 - Define one Responsive Section Contract per page section. Desktop and Mobile are breakpoint states of the same section identity and shared content, not separate compositions.
-- For theme-based work, permit only documented theme breakpoint settings or observed automatic theme behavior. For custom work, define intentional breakpoint changes without creating a second content or component system.
+- For native/configured theme Sections, use documented theme breakpoint settings or observed automatic behavior. For custom Sections and fully custom work, define an explicit responsive implementation plan without creating a second content or component system.
 - Use `native_adaptation` only when evidenced native behavior preserves required content, critical function, and reading order while changing a named topology detail.
 - Resolve theme implementation in this order: native theme → configuration → style → custom CSS → custom Liquid → custom section → custom.
-- Keep template work within native/configuration/style scope unless custom work is explicitly approved.
+- For theme customization, decide each Section independently as native, configured, styled, CSS, Liquid, new custom Section, app/third-party, or pending engineering confirmation. Do not impose a universal custom-work percentage.
 - Do not select a visual palette, component house style, or generic Figma layout in this Skill. Provide evidence and requirements to `$iwish-visual-direction`.
 - Do not read or execute repository regression fixtures in production.
 

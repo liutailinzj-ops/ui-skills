@@ -12,8 +12,8 @@ Use exception-driven interaction. The normal production path is automatic routin
 
 ## Ask only when
 
-- A reference may be a strict structure target, selected-module reference, or visual inspiration and the choice materially changes the page.
-- “按 A 的结构用 B 主题做” cannot be resolved into separate structure and theme-capability sources.
+- A reference may be a selected-module source, competitor evidence, or visual inspiration and the choice materially changes the page.
+- “按 A 的结构用 B 主题做” does not identify which A modules are selected.
 - The build route or permitted customization scope is genuinely unknown.
 - A critical purchase, inquiry, navigation, comparison, or required interaction has no feasible route.
 - No editable Figma target exists and creation is not authorized.

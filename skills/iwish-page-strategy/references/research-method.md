@@ -8,10 +8,10 @@ Aim for a compact evidence set:
 
 - 2–4 direct competitors or close category peers.
 - 1–2 strong reference sites with relevant presentation patterns.
-- The specified structure source when applicable, recorded separately from the theme demo or existing site.
+- The selected competitor-module source when applicable, recorded separately from the theme demo or existing site.
 - The target theme demo or existing site as capability evidence when applicable.
 
-For template or theme-customization work, inspect these sources before category references:
+For theme-customization work, inspect these sources before category references:
 
 - Current official theme-store listing.
 - Current theme-vendor section and product-template documentation.
@@ -37,8 +37,7 @@ For each source, record only decision-useful observations:
 
 Do not analyze all reference URLs the same way:
 
-- `reference_to_theme`: inspect the rendered Desktop and Mobile structure-source page in full as paired breakpoint states, create its identity fingerprint, assign stable ordered section IDs, inventory every visible text/media/control/repeated item once, and classify responsive transformations. Separately inspect target-theme capability sources, then map each structure-source section to evidenced theme Section/Blocks/settings. Do not substitute a theme demo, industry research, or a generic PDP structure for the source page.
-- `structure_target`: inspect every major section and record one shared content responsibility and field set plus its breakpoint anatomy, ordering, interaction, optionality, and closest theme primitive.
+- `selected_structure_modules`: inspect the whole source only far enough to identify the named modules in context, then capture those modules' content, major layout relationships, connected boundaries, interaction, repeated-item behavior, and responsive transformation. Do not make unselected sections mandatory. Build the rest of the page from product/category/competitor/journey research.
 - `visual_inspiration`: record reusable visual principles such as density, image treatment, hierarchy, typography, and rhythm. Do not imply section-level fidelity.
 - `competitor_evidence`: record buying questions, proof patterns, objections, category conventions, and missing opportunities.
 
@@ -48,7 +47,7 @@ Complete the Product and Competitor Analysis before choosing page sections. Do n
 
 ## Do not copy
 
-- Do not reproduce competitor copy, brand assets, or distinctive visual identity as customer-owned production material. When the client explicitly authorizes temporary source material for a `reference_to_theme` preview, preserve it only as attributed placeholder evidence and record replacement responsibility. For `structure_target`, structural correspondence may be preserved, but it must be translated into the client's content and the selected theme's supported primitives.
+- Do not reproduce competitor copy, brand assets, or distinctive visual identity as customer-owned production material. When the client explicitly authorizes temporary source material for a selected-module preview, preserve it only as attributed placeholder evidence and record replacement responsibility. Structural correspondence may be preserved within the selected scope, but it must be translated into the client's content and the selected theme's supported primitives or a documented custom Section.
 - Translate observations into reusable content responsibilities and layout principles.
 - Clearly label inferences and unavailable evidence.
 
