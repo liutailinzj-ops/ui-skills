@@ -60,6 +60,20 @@ strategy:
   product_coverage_matrix:
 visual_direction:
   status: pending | complete | blocked
+  authority_version:
+  authority_state: draft | active | superseded
+  source_precedence:
+    - customer_confirmed_brand_and_requirements
+    - approved_scoped_override
+    - active_project_master_rules
+    - evidence_backed_candidate
+  project_invariants: []
+  page_overrides: {}
+  candidate_decisions: []
+  conflict_check:
+    status: pending | pass | needs_resolution | blocked
+    findings: []
+  revision_log: []
   contract:
   representative_section_family_nodes: []
   breakpoint_proof_nodes: []
@@ -106,8 +120,14 @@ pdp:
   representative_products: []
   template_strategy: single_template_validated | template_family | coverage_partial
 workflow:
+  entry_mode: complete_production | targeted_revision
   recognition_card:
   interaction_questions: []
+  revision_scope:
+    target_node_ids: []
+    invalidated_dependencies: []
+    preserved_dependencies: []
+    qa_scope: local | full_page
   completed: []
 internal_qa:
   status: not_run | pass | needs_adjustment | blocked
@@ -118,6 +138,8 @@ risks: []
 ```
 
 Persist exact Figma node IDs returned by tools. Never guess or reconstruct IDs. Resume from recorded IDs after interruption.
+
+Keep the active visual authority stable across pages and sessions. A page override is valid only for its recorded page/Section scope, named fields, reason, evidence, approval state, and revision date. Recommendations, search results, model inferences, and unapproved alternatives remain under `candidate_decisions` and cannot replace active rules. When a project-wide rule changes, increment `authority_version`, append the exact change to `revision_log`, and list every invalidated page, component, variable, or representative composition under `workflow.revision_scope`.
 
 Keep regression case IDs, baselines, topology signatures, no-op checks, cross-case results, and technical visual-gate results outside this production manifest. Store them only under `evals/` result artifacts.
 

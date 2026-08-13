@@ -1,11 +1,20 @@
 ---
 name: iwish-ui-workflow
-description: "Orchestrate IWISH website UI production for Shopify or WordPress DTC/B2B projects from a concise Chinese launch package through business routing, product and competitor analysis, page strategy, visual direction, editable Figma production, and silent internal QA. Use for exactly three production scenarios: research-led partial theme customization with light brand inputs, selected competitor-module translation into partial theme customization, and fully custom design. This is the UI production workflow, not the Skill regression or technical visual-evaluation workflow."
+description: "Orchestrate or selectively revise IWISH website UI production for Shopify or WordPress DTC/B2B projects from a concise Chinese launch package through business routing, product and competitor analysis, project-persistent visual direction, editable Figma production, and silent internal QA. Use for exactly three production scenarios: research-led partial theme customization with light brand inputs, selected competitor-module translation into partial theme customization, and fully custom design. This is the UI production workflow, not the Skill regression or technical visual-evaluation workflow."
 ---
 
 # IWISH UI Workflow
 
 Run one UI-facing production workflow. Keep internal routing, evidence checks, and deterministic QA automatic unless a hard blocker or material design fork requires input.
+
+## Entry Mode
+
+Choose one entry mode before loading downstream Skills:
+
+- **Complete production:** use when starting a project, changing the production scenario, replacing the page strategy or project visual direction, or creating a new complete page without reusable project state. Follow the full Production Workflow.
+- **Targeted revision:** use when the request names an existing page, Section, component, asset, copy block, color role, spacing issue, or other bounded Figma target and the manifest contains resolvable node IDs plus an active Visual Direction Contract. Follow Targeted Revision instead of replaying the full workflow.
+
+Do not ask UI to choose an English mode. Infer it from the request and show the result in Chinese only when useful.
 
 ## Required Inputs
 
@@ -24,6 +33,21 @@ Read [references/input-contract.md](references/input-contract.md), [references/b
 9. Load `$iwish-figma-qa` as a silent internal safeguard. Inspect screenshots and structure, repair deterministic low-risk problems, and return a concise Chinese internal report. Do not create a visible QA panel in customer-preview frames.
 10. Return the Figma links, recognition card, short analysis, visual-direction summary, page/frame names, placeholder list, theme implementation notes, internal risks, and the concise UI adjustment list.
 
+## Targeted Revision
+
+1. Resolve the exact Figma target IDs from the manifest and inspect the active Visual Direction Contract, applicable page override, responsive/component contract, and immediate parent/dependent nodes.
+2. Classify the smallest invalidated dependency set:
+   - copy or asset replacement normally keeps strategy, visual authority, components, and layout;
+   - visual refinement inside active rules normally loads only `$iwish-figma-page-builder` for the target and `$iwish-figma-qa` for scoped validation;
+   - a component API or responsive-behavior change also loads `$iwish-component-resolver`;
+   - a page-only visual exception loads `$iwish-visual-direction` to record a scoped page override before rebuilding affected Sections;
+   - a project-wide typography, color-role, imagery, composition, or interaction change revises the project master rules and invalidates every dependent page or component;
+   - a structure-source, theme-capability, visitor-journey, or implementation-route change reloads `$iwish-page-strategy` and only the affected downstream Skills.
+3. Preserve every node and decision outside the invalidated scope. Do not recreate the whole page, reset project foundations, rerun unrelated research, or overwrite the active visual authority as a side effect.
+4. Build or revise only the named target plus required responsive counterparts and shared instances. Keep customer-facing content parity and component identity intact.
+5. Run `$iwish-figma-qa` on the changed scope, its responsive pair, and its containment/alignment boundaries. Expand to full-page QA only when a master rule, global foundation, shared component, or page order changed.
+6. Return changed node IDs, preserved scope, invalidated dependencies, scoped QA, and the concise UI adjustment list.
+
 ## Route Behavior
 
 - For research-led partial theme customization, derive structure from the product, market, competitors, and conversion or buying path, then classify every Section by its actual theme/native/custom implementation route.
@@ -36,6 +60,8 @@ Read [references/input-contract.md](references/input-contract.md), [references/b
 - Do not inherit a fixture brand, product vocabulary, section count, color palette, component family, or visual rhythm.
 - Theme-based work records the actual implementation class per Section without a universal percentage cap.
 - Do not begin full-page Figma production without a Visual Direction Contract, representative responsive Section families, and breakpoint proof for responsive-risk modules.
+- Treat the active Visual Direction Contract as the project visual authority. External style searches, competitor observations, theme demos, and model suggestions are candidates or scoped evidence; they may not silently overwrite customer commitments, active project rules, or approved page overrides.
+- A page override changes only its named fields and scope. If a proposed exception changes the project's visual identity, revise the project master rules explicitly and list the affected pages/components instead of hiding the change in one page.
 - Do not treat Desktop and Mobile previews as separate design briefs. They are rendered states of the same content, Section order, component families, and responsive contract.
 - Do not treat Auto Layout, Rxx coverage, component counts, or Text Style binding as proof of design quality.
 - Do not expose internal enum values to UI. Use Chinese labels in recognition cards, questions, summaries, and internal QA.

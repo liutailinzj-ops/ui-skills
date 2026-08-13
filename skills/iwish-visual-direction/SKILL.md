@@ -5,7 +5,7 @@ description: Translate an IWISH product/competitor analysis, page blueprint, lig
 
 # IWISH Visual Direction
 
-Create the visual design contract that the full Figma page must inherit. Load the available Figma use and screen-generation Skills before writing representative compositions.
+Create or deliberately revise the project visual authority that Figma pages must inherit. Load the available Figma use and screen-generation Skills before writing representative compositions.
 
 ## Inputs
 
@@ -21,13 +21,14 @@ Create the visual design contract that the full Figma page must inherit. Load th
 ## Process
 
 1. Read [references/visual-direction-contract.md](references/visual-direction-contract.md).
-2. Separate customer facts, source observations, industry conventions, visual inspiration, and creative decisions. Do not turn one regression fixture into a default style.
-3. Define one primary art direction: brand character, typography, color behavior, imagery, media crop, density, spacing rhythm, grid behavior, card language, controls, motion or interaction cues, and responsive transformation.
+2. Inspect the manifest for an active authority version. Separate customer facts, active project rules, approved scoped overrides, source observations, industry conventions, visual inspiration, retrieved recommendations, and new creative decisions. Do not replace active rules merely because a new recommendation appears.
+3. Define or revise one primary art direction: brand character, typography, color behavior, imagery, media crop, density, spacing rhythm, grid behavior, card language, controls, motion or interaction cues, and responsive transformation. Treat searches and generic design databases as candidate inputs, never as project authority.
 4. For selected competitor-module work, preserve each selected module's visual hierarchy, media/content relationship, connected composition, repeated-item behavior, and reading flow. Express these decisions through evidenced target-theme behavior or a named scoped custom Section.
 5. For research-led work, derive composition from product comprehension, category differentiation, proof, evaluation, objection handling, and action without imposing a house sequence or house visual language.
 6. For custom work, use references as evidence or inspiration without copying their identity.
-7. Read [references/representative-compositions.md](references/representative-compositions.md) and create representative editable Section families on an internal visual-direction page. Build one primary state and only the derived breakpoint proof states needed to validate responsive-risk behavior. Use shared website content across states, the actual website language for rendered content, and Chinese for visible internal annotations.
-8. Validate that the representative compositions visibly express the contract. Revise them before full-page production when they remain generic, under-designed, or disconnected from source/theme evidence.
+7. Run the contract conflict check before Figma production. Resolve or explicitly surface conflicts between customer brand commitments, project master rules, a proposed page override, reference identity, target-theme feasibility, typography/language/font availability, color role/contrast, imagery/crop, density/content load, and interaction purpose/platform cost. Do not combine individually plausible recommendations that contradict one another.
+8. Read [references/representative-compositions.md](references/representative-compositions.md) and create representative editable Section families on an internal visual-direction page. Build one primary state and only the derived breakpoint proof states needed to validate responsive-risk behavior. Use shared website content across states, the actual website language for rendered content, and Chinese for visible internal annotations.
+9. Validate that the representative compositions visibly express the active contract. Revise them before full-page production when they remain generic, under-designed, disconnected from source/theme evidence, or inconsistent with the project master and applicable page override.
 
 ## Non-Negotiable Design Rules
 
@@ -40,12 +41,15 @@ Create the visual design contract that the full Figma page must inherit. Load th
 - Use one foundation-defined container and alignment system. A different section width requires a named container mode and theme or design evidence.
 - Do not pause for a technical visual gate. That gate belongs to the repository evaluation path, not UI production.
 - Keep internal rationale, QA, source labels, and implementation notes outside customer-preview frames.
+- Never silently overwrite an active Visual Direction Contract. A page-only exception records its exact scope, changed fields, reason, evidence, and approval state; a project-wide change increments the authority version and lists invalidated dependents.
+- For a bounded revision, inspect only the target, applicable page override, active project rules, and affected dependencies. Do not regenerate representative compositions or unrelated pages unless the changed rule invalidates them.
 
 ## Output
 
 Update the manifest with:
 
 - Visual Direction Contract.
+- Authority version, active project invariants, applicable page overrides, conflict-check result, and revision log.
 - Primary typography, color, imagery, density, grid, spacing, component, and responsive decisions.
 - Reference/source principles used and deliberately rejected.
 - Theme-native visual constraints and allowed adaptations when applicable.

@@ -4,6 +4,8 @@ Record a compact contract that is specific enough to guide page production witho
 
 ```yaml
 visual_direction:
+  authority_version:
+  authority_state: draft | active | superseded
   brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
   concept_statement:
   brand_character: []
@@ -51,8 +53,51 @@ visual_direction:
     visual_references: []
     competitor_or_category: []
     target_theme: []
+  source_precedence:
+    - customer_confirmed_brand_and_requirements
+    - approved_scoped_override
+    - active_project_master_rules
+    - evidence_backed_candidate
+  project_invariants: []
+  page_overrides:
+    page_or_section_id:
+      scope:
+      changed_fields: []
+      reason:
+      evidence: []
+      approval_state: proposed | approved | rejected
+      approval_record:
+  candidate_decisions: []
+  conflict_check:
+    status: pending | pass | needs_resolution | blocked
+    findings: []
+  revision_log: []
   prohibited_defaults: []
 ```
+
+## Authority and override rules
+
+- This contract is the project visual authority, not a generic style recommendation. Persist it in the production manifest and reuse it across pages and later revisions.
+- Apply source precedence only inside each source's assigned role. Customer-confirmed brand/VI and requirements are binding. An approved page override outranks master rules only for its named scope and fields. Active project master rules govern everything else. Retrieved recommendations, competitor observations, and creative inferences remain candidates until deliberately accepted.
+- Structure sources can bind selected layout relationships; target-theme sources can bind implementation feasibility. Neither source role may silently replace the customer's brand identity, copy, or product truth.
+- Do not overwrite an active authority because a search produced a new style, palette, font pair, animation recipe, or component pattern. Record the proposal under `candidate_decisions`, run the conflict check, and either reject it, approve a scoped override, or revise the master rules explicitly.
+- A page override must contain only deviations. It records exact scope, changed fields, reason, evidence, approval state, and approval record. Missing fields continue to inherit the project master.
+- A project-wide rule change increments `authority_version`, appends the old and new values plus reason to `revision_log`, and invalidates every dependent variable, style, representative composition, component, and page for targeted review.
+
+## Conflict check
+
+Before representative Figma production, check at minimum:
+
+- brand color role versus contrast, surface hierarchy, and supplied Logo usage;
+- typography character versus website language, real font availability, hierarchy, and readability;
+- structure-reference identity versus customer identity and selected-module scope;
+- desired topology or interaction versus evidenced Shopify/WordPress theme capability and engineering route;
+- imagery direction and crop versus available or permitted temporary assets;
+- density and spacing rhythm versus actual content volume and page responsibility;
+- interaction or motion cue versus purpose, usage frequency, platform behavior, performance, and reduced-motion equivalent;
+- proposed page override versus project invariants and already-built dependent components.
+
+Mark `pass` only after contradictory candidates are resolved into one coherent direction. Missing evidence is an explicit gap, not permission to fall back to a generic default.
 
 ## Evidence rules
 

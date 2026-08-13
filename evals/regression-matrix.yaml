@@ -1,6 +1,6 @@
 suite:
   name: iwish-ui-generalization
-  version: 4.0.0
+  version: 4.1.0
   purpose: Validate Skill behavior outside the UI production workflow and prevent benchmark-specific fixes or technically complete wireframes from being promoted as usable design output.
   policy:
     - Keep evaluation prompts, case identities, baselines, technical visual gates, and result artifacts outside every production Skill and production manifest.
@@ -8,6 +8,7 @@ suite:
     - Apply rubrics/technical-visual-review.md before structural pass claims whenever a case generates visual UI.
     - A visually unusable or generic result fails even when Rxx coverage, Auto Layout, components, styles, and theme mappings pass.
     - Run the changed capability against every ready case before claiming cross-route stability.
+    - After every ready case has an independent visual result, apply rubrics/cross-case-bias-review.md before claiming that the changed Skill generalizes without a fixed house aesthetic.
     - A case may expose a defect; no single case can prove general stability.
     - Keep fixture-specific brands, section counts, visual styles, copy, and topology out of Skills.
     - Accept a blocked result when the route is genuinely infeasible and the exact evidence gap is reported.

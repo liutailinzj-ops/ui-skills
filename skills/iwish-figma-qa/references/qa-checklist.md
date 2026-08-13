@@ -44,6 +44,8 @@
 
 ## Visual direction inheritance
 
+- The page uses the active authority version and only approved page/Section overrides; candidate recommendations have not leaked into project tokens or components.
+- Every page override is limited to its named fields and scope. A page-only exception has not silently changed the project-wide visual identity.
 - Major sections visibly inherit the approved typography, colors, imagery, density, spacing rhythm, media/content relationship, control language, and responsive behavior.
 - Representative responsive Section families and the completed breakpoint previews use the same project-specific visual grammar.
 - Repeated black boxes, generic card grids, default accent colors, or fixed long-page rhythms are not used without project evidence.

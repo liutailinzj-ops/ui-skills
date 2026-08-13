@@ -10,7 +10,7 @@ Create a bounded component map for the current page. Load the available Figma us
 ## Inputs
 
 - Page blueprint.
-- Visual Direction Contract, representative Section-family node IDs, and paired breakpoint-proof node IDs.
+- Active Visual Direction Contract, applicable approved page override, representative Section-family node IDs, and paired breakpoint-proof node IDs.
 - Responsive Section Contracts, alignment groups, shared content bindings, and allowed breakpoint differences.
 - Product and Competitor Analysis, including page-level DTC conversion or B2B buying responsibilities.
 - Selected-module specification, Layout Topology Contract, composition groups, and Theme Assembly Plan for selected competitor-module work.
@@ -36,6 +36,8 @@ Reuse only when properties, token bindings, naming, ownership, and editability a
 Do not invent a bespoke component or mark a section custom when the Theme Capability Map identifies a supported native section. Represent brand styling through tokens, allowed settings, and content slots before changing the implementation class.
 
 Do not resolve components from a generic house library before reading the Visual Direction Contract. A technically compatible component is not visually compatible when its hierarchy, media ratio, density, card language, or responsive behavior contradicts the approved direction. If the representative compositions are missing or still generic, return the missing visual-direction dependency instead of creating a fallback black-box system.
+
+Retrieved design recommendations and unapproved candidates do not qualify as component requirements. For a targeted revision, resolve only the named component family and directly invalidated shared dependencies; preserve every unrelated component ID and instance.
 
 ## Componentization Rules
 

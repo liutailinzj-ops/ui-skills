@@ -28,6 +28,7 @@ Never assume an empty local variable list means no library variables exist; sear
 
 - Create variables before components.
 - Use primitive values and semantic aliases as defined in [references/token-model.md](references/token-model.md).
+- Create or reconcile variables and styles from the active project master rules plus the applicable approved page override. Candidate recommendations and unapproved alternatives do not qualify as foundation inputs.
 - Set appropriate variable scopes and code syntax.
 - Create text/effect styles required by the current project.
 - Do not build a large speculative company library.
@@ -37,6 +38,7 @@ Never assume an empty local variable list means no library variables exist; sear
 - Create or reuse an internal visual-direction page when representative compositions will be written.
 - Define viewport preview widths, page gutters, maximum container widths, named container modes, spacing scale, and alignment-group rules before Section production.
 - Treat Desktop and Mobile pages or frames as paired breakpoint previews of one responsive system. Do not create separate foundations, tokens, content systems, or component libraries for them.
+- During a targeted revision, mutate only foundations explicitly invalidated by the authority revision. A page-scoped override should normally use scoped variables/styles or component properties without rewriting unrelated project tokens.
 - Do not create a customer-visible QA page. Internal QA defaults to the Codex conversation or internal artifact; create an internal Figma QA page only when requested and use Chinese visible labels.
 - When the customer will receive the whole Figma file, keep internal QA in a separate file.
 

@@ -12,7 +12,7 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 - Production project manifest and delivery-visibility policy.
 - Desktop and Mobile customer-preview root node IDs.
 - Responsive Section Contracts, paired Section instance IDs, alignment groups, shared content bindings, and overflow contracts.
-- Page blueprint, Visual Direction Contract, representative compositions, and component map.
+- Page blueprint, active Visual Direction Contract, applicable page override, representative compositions, and component map.
 - Product and Competitor Analysis.
 - Theme Capability Map and implementation notes when applicable.
 - Source specification, topology contract, composition groups, theme assembly, and adaptation decisions when applicable.
@@ -33,6 +33,8 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 11. Re-run the geometry audit and screenshots for repaired sections.
 12. Return the concise internal report from [references/report-template.md](references/report-template.md).
 
+For a targeted revision, inspect the changed nodes, their responsive pairs, shared instances, and immediate alignment/containment boundaries. Run full-page QA only when a project master rule, global foundation, shared component, page order, or cross-page dependency changed.
+
 ## Language and Visibility
 
 - Use the agreed website language inside rendered website frames.
@@ -48,6 +50,7 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 - Never delete or replace user-owned nodes by broad name matching.
 - Use manifest IDs or exact validated identities.
 - Do not silently change brand direction, page strategy, customer facts, or approved content.
+- Do not auto-apply subjective visual recommendations, style candidates, new palettes, new fonts, or composition alternatives during QA. Report a concise adjustment brief with exact scope and reason; mutate only after the production route accepts the decision.
 - Do not detach components to make a check pass.
 - Keep Figma mutations sequential.
 - Stop on an unclear tool error, inspect state, then retry a corrected operation.

@@ -11,7 +11,7 @@ Extend an established project-specific visual direction into the requested compl
 
 - Production project manifest and website language.
 - Approved page blueprint and Product/Competitor Analysis.
-- Complete Visual Direction Contract.
+- Active Visual Direction Contract, authority version, and applicable approved page override.
 - Representative Section-family and breakpoint-proof node IDs.
 - Responsive Section Contracts, alignment groups, shared content bindings, and allowed breakpoint differences.
 - Foundation IDs and component map.
@@ -22,27 +22,31 @@ Extend an established project-specific visual direction into the requested compl
 
 If the Visual Direction Contract or representative compositions are missing, generic, or inconsistent, return the missing dependency to `$iwish-visual-direction`. Do not invent a fallback house layout.
 
+For a targeted revision, representative compositions remain valid unless the changed master rule or scoped override invalidates them. Resolve the exact target and dependency set from the manifest rather than requiring a full-page rebuild.
+
 ## Build Rules
 
 Read [references/build-contract.md](references/build-contract.md) and [references/asset-policy.md](references/asset-policy.md).
 
 1. Inspect the representative Section families and extract their actual typography, colors, imagery, media ratios, density, grid, spacing rhythm, component language, and responsive transformations.
-2. Create paired Desktop and Mobile customer-preview wrapper frames with no visible internal annotations. Treat them as breakpoint views of one page system.
-3. Build one responsive Section/component family per sequential Figma mutation, then place its paired Desktop and Mobile instances before continuing to the next Section.
-4. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
-5. For theme-based work, reproduce evidenced native Section/Block geometry and content slots, then apply the Visual Direction Contract through supported tokens, settings, and styling.
-6. For selected competitor-module work, build the selected modules from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation; derive the rest of the page from the approved research-led blueprint.
-7. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
-8. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
-9. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.
-10. Keep both preview states editable through the shared component family. Do not detach or rewrite one state independently; change only the breakpoint fields allowed by the Responsive Section Contract.
-11. Validate each paired Section at useful screenshot scale before proceeding. Compare content parity, alignment groups, parent containment, clipping, and theme-evidenced breakpoint behavior; repair deterministic layout problems immediately.
-12. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames.
-13. Return every created or mutated node ID and update the production manifest.
+2. Resolve whether this is complete production or a targeted revision. For a revision, record target IDs, responsive counterparts, shared instances, immediate containment/alignment boundaries, invalidated dependencies, and preserved scope before mutation.
+3. Create paired Desktop and Mobile customer-preview wrapper frames with no visible internal annotations for complete production. For targeted revision, preserve existing wrappers and unrelated Sections.
+4. Build one responsive Section/component family per sequential Figma mutation, then place or update its paired Desktop and Mobile instances before continuing to the next Section.
+5. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
+6. For theme-based work, reproduce evidenced native Section/Block geometry and content slots, then apply the Visual Direction Contract through supported tokens, settings, and styling.
+7. For selected competitor-module work, build the selected modules from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation; derive the rest of the page from the approved research-led blueprint.
+8. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
+9. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
+10. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.
+11. Keep both preview states editable through the shared component family. Do not detach or rewrite one state independently; change only the breakpoint fields allowed by the Responsive Section Contract.
+12. Validate each paired Section at useful screenshot scale before proceeding. Compare content parity, alignment groups, parent containment, clipping, and theme-evidenced breakpoint behavior; repair deterministic layout problems immediately.
+13. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames.
+14. Return every created or mutated node ID, explicitly preserved node IDs, and update the production manifest.
 
 ## Visual Continuity Rules
 
 - Every section must inherit identifiable decisions from the Visual Direction Contract or record a justified section-specific exception.
+- Apply only active project master rules and approved scoped overrides. Never convert a retrieved recommendation or unapproved candidate directly into a project token, component rule, or page-wide style.
 - Do not generate repeated black rectangles, generic equal-card rows, default lime accents, or a fixed long-page rhythm unless project evidence explicitly calls for them.
 - Do not use the same component grammar for unrelated content responsibilities merely because it is easy to generate.
 - Do not call a structurally complete wireframe a client preview.
