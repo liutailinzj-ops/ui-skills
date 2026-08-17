@@ -26,10 +26,10 @@ Read [references/input-contract.md](references/input-contract.md), [references/b
 2. Infer one of the three production scenarios, then derive site model, build route, strategy source, reference role, theme state, content state, requested page, and website language. Display one compact Chinese project-recognition card and continue when the route is clear.
 3. Ask at most one grouped round of up to three questions only when an unresolved choice materially changes the design, implementation route, or Figma target.
 4. Load `$iwish-page-strategy`. Complete product, category, competitor, DTC conversion-chain or B2B buying-path analysis before selecting page structure. For selected competitor-module work, keep selected-module sources separate from theme-capability and competitor-evidence sources, then produce the selected-module specification, Theme Capability Map, and complete page blueprint.
-5. Load `$iwish-visual-direction`. Translate the approved strategy into a project-specific Visual Direction Contract, representative responsive section families, and only the breakpoint proof states needed to verify their behavior. Do not create independent Desktop/Mobile art directions or continue from a generic wireframe, repeated black boxes, or an undocumented house style.
+5. Load `$iwish-visual-direction`. Translate the approved strategy into a project-specific Visual Direction Contract, evidence-backed visual signature, representative responsive section families, and only the breakpoint proof states needed to verify their behavior. For `logo_and_color`, `logo_only`, or `no_brand_assets`, resolve two deliberately different internal direction candidates before selecting one; do not build two complete Figma directions or ask UI to choose unless the evidence cannot resolve a material fork. Do not create independent Desktop/Mobile art directions or continue from a generic wireframe, repeated black boxes, or an undocumented house style.
 6. Load `$iwish-figma-foundation` only as needed to inspect, create, or reconcile the minimum project variables, styles, grids, pages, and local-component area. A Starter File is optional.
 7. Load `$iwish-component-resolver` to resolve only the components required by the page blueprint and Visual Direction Contract. Theme-based components must represent evidenced native sections, blocks, settings, and responsive behavior.
-8. Load `$iwish-figma-page-builder` to extend the representative visual language into one complete editable responsive page system with Desktop and Mobile preview states. Build one Section family at a time and preserve shared content, component identity, brand, source, theme, and evidenced breakpoint behavior.
+8. Load `$iwish-figma-page-builder` to extend the representative visual language into one complete editable responsive page system with Desktop and Mobile preview states. Before full-page assembly, validate the canonical customer-visible content ledger and one representative responsive-risk Section pair with final styles/content. Build one Section family at a time and preserve shared content, component identity, brand, source, theme, and evidenced breakpoint behavior.
 9. Load `$iwish-figma-qa` as a silent internal safeguard. Inspect screenshots and structure, repair deterministic low-risk problems, and return a concise Chinese internal report. Do not create a visible QA panel in customer-preview frames.
 10. Return the Figma links, recognition card, short analysis, visual-direction summary, page/frame names, placeholder list, theme implementation notes, internal risks, and the concise UI adjustment list.
 
@@ -58,6 +58,7 @@ Read [references/input-contract.md](references/input-contract.md), [references/b
 
 - Do not run regression cases, baseline signatures, no-op checks, fixture assertions, or technical visual gates in this production Skill. Those belong under `evals/`.
 - Do not inherit a fixture brand, product vocabulary, section count, color palette, component family, or visual rhythm.
+- Do not treat “premium”, “modern”, “editorial”, “minimal”, or another generic adjective as sufficient evidence for an identity-bearing font, split hero, pill-button system, numbered trio, rounded-card grammar, or fixed long-page sequence. Record project-specific evidence or choose a different direction.
 - Theme-based work records the actual implementation class per Section without a universal percentage cap.
 - Do not begin full-page Figma production without a Visual Direction Contract, representative responsive Section families, and breakpoint proof for responsive-risk modules.
 - Treat the active Visual Direction Contract as the project visual authority. External style searches, competitor observations, theme demos, and model suggestions are candidates or scoped evidence; they may not silently overwrite customer commitments, active project rules, or approved page overrides.
@@ -68,6 +69,7 @@ Read [references/input-contract.md](references/input-contract.md), [references/b
 - Use the agreed website language for rendered website content. For an English storefront, visible page navigation, commerce labels, headings, body copy, and CTAs remain English.
 - Use Chinese for visible internal Figma annotations, QA panels, implementation notes, replacement lists, and risk labels.
 - Keep Rxx identifiers, theme mappings, QA results, source warnings, replacement instructions, and approval provenance outside customer-preview frames.
+- Build every visible customer-preview string and media slot from the canonical customer-visible content ledger. Keep evidence status, approval state, replacement owner, source class, and placeholder instructions in the manifest or internal layer metadata only.
 - Default to returning QA in the Codex conversation or internal artifact. If Figma QA panels are explicitly required, place them on `内部检查 / QA`; if the whole Figma file will be shared with a customer, use a separate internal file.
 - Never show `Approved` unless the manifest records the exact decision, approver, source, and date.
 - Never present temporary claims, certifications, prices, reviews, specifications, competitor assets, or generated content as customer-approved facts.
@@ -80,8 +82,10 @@ Complete only when:
 
 - Product and competitor analysis, page blueprint, and the project-specific Visual Direction Contract exist.
 - Representative visual compositions are not generic wireframes and are traceable to brand, research, source, or theme evidence.
+- The selected visual signature records evidence for typography, first-screen topology, page rhythm, component grammar, imagery, color behavior, and interaction; light-brand projects include two materially different internal candidates and a recorded selection rationale.
 - Complete editable Desktop and Mobile customer-preview frames exist as paired breakpoint previews of one responsive page system.
 - Paired Section instances share identity, content bindings, and order; every breakpoint difference is theme-evidenced or recorded in the custom responsive plan.
+- Every visible text/media/control slot resolves to the canonical customer-visible content ledger, and Desktop/Mobile use the same slot IDs and values unless an evidenced content variant is recorded.
 - Theme-based sections stay within the approved route and evidence; custom work is identified internally.
 - Missing content uses presentable temporary assets or treatments without visible internal instructions.
 - Client-preview frames contain only website design content and no visible QA, Rxx, mapping, implementation, or replacement labels.

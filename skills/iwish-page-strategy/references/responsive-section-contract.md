@@ -13,6 +13,12 @@ responsive_sections:
     shared:
       responsibility:
       content_bindings: []
+      content_slots:
+        - slot_id:
+          kind: text | media | control
+          role:
+          required: true | false
+          visible_at: [desktop, mobile]
       theme_section:
       theme_blocks: []
       alignment_group_id:
@@ -44,6 +50,7 @@ responsive_sections:
 ## Shared identity
 
 - Keep `section_id`, source correspondence, responsibility, content bindings, order, component family, and theme Section/Blocks shared across breakpoints.
+- Treat `content_slots` as stable references to `content.customer_visible_ledger`. Resolve only its `canonical_client_value`; never append `evidence_status` or any `internal_metadata` field to visible website content.
 - Keep customer-facing copy and controls shared by default. Do not rewrite headings, body copy, labels, or CTAs merely to make Mobile easier to compose.
 - Allow a breakpoint-specific content variant only when the customer requirement or evidenced theme behavior requires it. Record the exact field, reason, evidence, and fallback.
 - Preserve connected composition groups and transaction flow across breakpoints.
@@ -58,6 +65,7 @@ responsive_sections:
 ## Figma representation
 
 - Resolve one component family per responsive section. Use Auto Layout, shared nested components, and the smallest necessary `Viewport=Desktop|Mobile` variants.
+- Bind both viewport states to the same content-slot IDs before styling. Apply actual canonical content and final Text Styles before measuring or locking layout bounds.
 - Keep shared text/media properties and content-slot names identical across viewport variants.
 - Build one section family first, then place its Desktop and Mobile instances into preview frames.
 - Record the paired instance IDs in the manifest so QA can compare them directly.
@@ -81,6 +89,7 @@ responsive_sections:
 Before page production or handoff, compare each paired breakpoint instance:
 
 - Section identity, order, content bindings, controls, and shared copy match.
+- Every visible node resolves to a declared content-slot ID and its canonical client value; internal metadata is absent from rendered text.
 - Every difference appears in `allowed_differences` and is supported by theme evidence or the custom responsive plan.
 - Alignment groups pass within 1 px.
 - No child is accidentally clipped, outside its parent, or hidden by a fixed-height wrapper.

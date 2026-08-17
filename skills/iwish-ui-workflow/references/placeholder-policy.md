@@ -8,7 +8,7 @@ Use placeholder mode whenever final customer copy, product data, or imagery is i
 - Client-presentable neutral image treatments.
 - Licensed stock, generated images, or temporary internal references.
 - Representative products selected for layout testing.
-- AI-drafted copy marked as unapproved.
+- AI-drafted copy whose unapproved status is recorded in the manifest, not rendered beside the copy.
 
 ## Required labels
 
@@ -30,6 +30,8 @@ Placeholder / Certification
 - Prefer generated or licensed category imagery for customer review.
 - Keep the composition visually complete enough for the customer to judge hierarchy, spacing, and style.
 - Do not show implementation classes, source warnings, replacement instructions, or large placeholder indexes as dominant content.
+- Resolve visible copy/media from `content.customer_visible_ledger`. The visible value contains only storefront content; provenance, approval, replacement, and risk fields remain internal.
+- Never render internal markers such as `Placeholder`, `TBD`, `TODO`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` inside customer-preview frames. Use a safe neutral storefront value or omit the optional slot without leaving dead space.
 - Export customer screenshots only from client-preview frames.
 
 ## Handoff record

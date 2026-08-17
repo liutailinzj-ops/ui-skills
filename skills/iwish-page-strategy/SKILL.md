@@ -51,6 +51,7 @@ A theme demo may prove capability but may not replace a selected competitor modu
 - For PDP work, apply [references/pdp-coverage.md](references/pdp-coverage.md); do not claim catalog-wide coverage from one product.
 - Preserve connected source compositions. Do not split them into unrelated full-width sections because semantic module names appear to match.
 - Define one Responsive Section Contract per page section. Desktop and Mobile are breakpoint states of the same section identity and shared content, not separate compositions.
+- Create the canonical customer-visible content ledger before visual direction. Give every visible text, media, and control slot one stable ID, canonical client value, evidence status, and breakpoint visibility. Keep provenance, approval, replacement, and placeholder instructions in internal metadata rather than the rendered value.
 - For native/configured theme Sections, use documented theme breakpoint settings or observed automatic behavior. For custom Sections and fully custom work, define an explicit responsive implementation plan without creating a second content or component system.
 - Use `native_adaptation` only when evidenced native behavior preserves required content, critical function, and reading order while changing a named topology detail.
 - Resolve theme implementation in this order: native theme → configuration → style → custom CSS → custom Liquid → custom section → custom.
@@ -66,6 +67,7 @@ Produce [references/page-blueprint.md](references/page-blueprint.md) with:
 - Page responsibilities, content types, sequence, responsive priority, and asset state.
 - Theme Capability Map and Theme Assembly Plan for theme-based work.
 - Responsive Section Contract, alignment groups, shared content bindings, and breakpoint states.
+- Canonical responsive content ledger shared by Desktop and Mobile, including exact approved content variants when evidence requires one.
 - Source specification, content-layout matrix, topology contract, and composition groups when applicable.
 - Product Coverage Matrix and truthful PDP template strategy when applicable.
 - Component requirements and implementation level without pre-designing generic components.

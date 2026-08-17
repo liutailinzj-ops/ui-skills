@@ -22,17 +22,21 @@ Create or deliberately revise the project visual authority that Figma pages must
 
 1. Read [references/visual-direction-contract.md](references/visual-direction-contract.md).
 2. Inspect the manifest for an active authority version. Separate customer facts, active project rules, approved scoped overrides, source observations, industry conventions, visual inspiration, retrieved recommendations, and new creative decisions. Do not replace active rules merely because a new recommendation appears.
-3. Define or revise one primary art direction: brand character, typography, color behavior, imagery, media crop, density, spacing rhythm, grid behavior, card language, controls, motion or interaction cues, and responsive transformation. Treat searches and generic design databases as candidate inputs, never as project authority.
-4. For selected competitor-module work, preserve each selected module's visual hierarchy, media/content relationship, connected composition, repeated-item behavior, and reading flow. Express these decisions through evidenced target-theme behavior or a named scoped custom Section.
-5. For research-led work, derive composition from product comprehension, category differentiation, proof, evaluation, objection handling, and action without imposing a house sequence or house visual language.
-6. For custom work, use references as evidence or inspiration without copying their identity.
-7. Run the contract conflict check before Figma production. Resolve or explicitly surface conflicts between customer brand commitments, project master rules, a proposed page override, reference identity, target-theme feasibility, typography/language/font availability, color role/contrast, imagery/crop, density/content load, and interaction purpose/platform cost. Do not combine individually plausible recommendations that contradict one another.
-8. Read [references/representative-compositions.md](references/representative-compositions.md) and create representative editable Section families on an internal visual-direction page. Build one primary state and only the derived breakpoint proof states needed to validate responsive-risk behavior. Use shared website content across states, the actual website language for rendered content, and Chinese for visible internal annotations.
-9. Validate that the representative compositions visibly express the active contract. Revise them before full-page production when they remain generic, under-designed, disconnected from source/theme evidence, or inconsistent with the project master and applicable page override.
+3. Build an evidence table for the seven visual-signature dimensions: color behavior, typography, first-screen topology, page rhythm, component grammar, imagery, and interaction. Every identity-bearing choice must cite customer material, selected structure, assigned visual reference, category/competitor research, target-theme behavior, or a named project-specific creative inference.
+4. For `logo_and_color`, `logo_only`, or `no_brand_assets`, create two compact internal direction candidates that differ in at least three visual-signature dimensions. Keep them as contract-level decisions or small composition sketches, not two complete Figma systems. Select one using product, audience, journey, content, asset, and implementation evidence; record why the rejected candidate fits less well. Ask UI only when both remain materially valid and the choice changes the customer-facing outcome.
+5. Define or revise the selected primary art direction: brand character, typography, color behavior, imagery, media crop, density, spacing rhythm, grid behavior, card language, controls, motion or interaction cues, and responsive transformation. Treat searches and generic design databases as candidate inputs, never as project authority.
+6. For selected competitor-module work, preserve each selected module's visual hierarchy, media/content relationship, connected composition, repeated-item behavior, and reading flow. Express these decisions through evidenced target-theme behavior or a named scoped custom Section.
+7. For research-led work, derive composition from product comprehension, category differentiation, proof, evaluation, objection handling, and action without imposing a house sequence or house visual language.
+8. For custom work, use references as evidence or inspiration without copying their identity.
+9. Run the contract conflict check before Figma production. Resolve or explicitly surface conflicts between customer brand commitments, project master rules, a proposed page override, reference identity, target-theme feasibility, typography/language/font availability, color role/contrast, imagery/crop, density/content load, and interaction purpose/platform cost. Do not combine individually plausible recommendations that contradict one another.
+10. Read [references/representative-compositions.md](references/representative-compositions.md) and create representative editable Section families on an internal visual-direction page. Build only the selected direction, one primary state, and the derived breakpoint proof states needed to validate responsive-risk behavior. Use canonical customer-visible content across states, the actual website language for rendered content, and Chinese for visible internal annotations.
+11. Validate that the representative compositions visibly express the selected signature and active contract. Revise them before full-page production when they remain generic, under-designed, disconnected from source/theme evidence, or inconsistent with the project master and applicable page override.
 
 ## Non-Negotiable Design Rules
 
 - Do not use repeated black rectangles, empty generic card grids, or neon accent defaults as the dominant visual language unless the project evidence explicitly requires them.
+- Do not justify a serif/sans pairing, split hero, pill-button system, rounded-card system, numbered trio, alternating full-color Section, FAQ placement, or any other identity-bearing combination only with “premium”, “modern”, “editorial”, “minimal”, “conversion”, or model preference. Those are descriptions, not project evidence.
+- Do not choose a direction merely because it is easier to construct in Figma or matches a previously generated project.
 - Do not call a content inventory, Rxx list, theme map, grayscale skeleton, or styled wireframe a visual direction.
 - Use customer imagery first. When assets are missing, use licensed, generated, or clearly tracked temporary category imagery with realistic crops and density.
 - Missing assets may change content provenance, not composition quality.
@@ -57,6 +61,7 @@ Update the manifest with:
 - Shared content bindings, alignment groups, and allowed responsive differences.
 - Temporary asset inventory and replacement restrictions.
 - Explicit prohibited defaults that would make the project generic.
+- Seven-dimension visual signature, evidence record, two internal candidates when brand inputs are light, selected candidate ID, and selection/rejection rationale.
 - `complete` only when the visual contract and representative compositions agree.
 
 Pass this output to `$iwish-component-resolver` and `$iwish-figma-page-builder`. Do not generate the complete page in this Skill.

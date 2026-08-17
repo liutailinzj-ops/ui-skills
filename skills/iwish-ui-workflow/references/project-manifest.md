@@ -43,6 +43,24 @@ content:
   mode: final | mixed | placeholder
   display_label: 正式内容 | 混合内容 | 占位内容
   placeholders: []
+  customer_visible_ledger:
+    sections:
+      - section_id:
+        slots:
+          - slot_id:
+            kind: text | media | control
+            role:
+            canonical_client_value:
+            evidence_status: fact | inference | placeholder
+            required: true | false
+            internal_metadata:
+              source_class:
+              approval_state:
+              replacement_owner:
+              publication_restrictions: []
+  internal_marker_policy:
+    forbidden_visible_phrases: []
+    internal_only_fields: []
 analysis:
   status: pending | complete | blocked
   product_model:
@@ -70,6 +88,18 @@ visual_direction:
   project_invariants: []
   page_overrides: {}
   candidate_decisions: []
+  direction_candidates: []
+  selected_candidate_id:
+  selection_rationale:
+  visual_signature:
+    color_behavior:
+    typography:
+    first_screen_topology:
+    page_rhythm:
+    component_grammar:
+    imagery:
+    interaction:
+  signature_evidence: []
   conflict_check:
     status: pending | pass | needs_resolution | blocked
     findings: []
@@ -140,6 +170,10 @@ risks: []
 Persist exact Figma node IDs returned by tools. Never guess or reconstruct IDs. Resume from recorded IDs after interruption.
 
 Keep the active visual authority stable across pages and sessions. A page override is valid only for its recorded page/Section scope, named fields, reason, evidence, approval state, and revision date. Recommendations, search results, model inferences, and unapproved alternatives remain under `candidate_decisions` and cannot replace active rules. When a project-wide rule changes, increment `authority_version`, append the exact change to `revision_log`, and list every invalidated page, component, variable, or representative composition under `workflow.revision_scope`.
+
+Maintain one canonical customer-visible content ledger before Figma production. Give every visible text, media, and control a stable slot ID, canonical client value, evidence status, and breakpoint visibility. Store approval state, placeholder provenance, replacement owner, source class, and internal instructions beside the slot as internal metadata; never concatenate those fields into the rendered client value. Desktop and Mobile resolve the same slot IDs and values unless the Responsive Section Contract records an evidenced content variant.
+
+For light-brand projects, persist two materially different internal visual-direction candidates and the selected candidate rationale. Record evidence for all seven visual-signature dimensions. Generic adjectives and model preference are not evidence; a named creative inference must connect to the product, audience, journey, content behavior, implementation route, or supplied asset and explain why the rejected candidate fits less well.
 
 Keep regression case IDs, baselines, topology signatures, no-op checks, cross-case results, and technical visual-gate results outside this production manifest. Store them only under `evals/` result artifacts.
 

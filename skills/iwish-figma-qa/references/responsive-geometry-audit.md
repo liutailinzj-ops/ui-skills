@@ -6,6 +6,7 @@ Run this deterministic read-only audit before reporting QA as passed. Inspect th
 
 - Desktop and Mobile preview root IDs.
 - Responsive Section Contract IDs.
+- Canonical customer-visible content ledger and internal marker policy.
 - Paired Section instance IDs.
 - Alignment-group definitions and expected container modes.
 - Explicit overflow contracts.
@@ -18,7 +19,7 @@ For every responsive Section pair:
 
 - Resolve both instance IDs.
 - Confirm the stable Section ID, source Rxx when applicable, order, component family, content-slot names, shared text/media bindings, and controls match.
-- Compare customer-facing copy. A difference fails unless the exact field is an approved `content_variant` in the Responsive Section Contract.
+- Resolve every visible text/media/control node to its stable content-slot ID and canonical client value. A missing slot, value difference, extra visible node, or breakpoint difference fails unless the exact field is an approved `content_variant` in the Responsive Section Contract.
 - Confirm every layout, crop, repetition, visibility, or interaction difference appears in `allowed_differences` with theme evidence or the custom responsive plan.
 
 ### Alignment groups
@@ -46,7 +47,8 @@ For every responsive Section pair:
 
 ### Customer-preview isolation
 
-- Search visible customer-preview text for QA status, Rxx, mapping, implementation, approval, replacement, scope, test, or handoff language.
+- Compare visible values with the canonical customer-visible ledger and inspect visible annotations/layer context. Fail undeclared visible content and explicit internal markers such as `Placeholder`, `TBD`, `TODO`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` when they are not intentional canonical storefront copy.
+- Do not fail legitimate storefront words through broad single-word searches such as `test`, `source`, `scope`, or `approval`; use ledger correspondence and phrase/context evidence.
 - Treat any internal note in either preview state as blocking.
 
 ## Output
@@ -57,4 +59,4 @@ Return a Chinese finding for every failure with:
 问题类型 | 断点 | Section/节点 | 预期 | 实际 | 差值或溢出 | 是否可安全自动修复
 ```
 
-Do not report `通过` when any paired identity, content parity, alignment, containment, clipping, or preview-isolation check fails.
+Do not report `通过` when any paired identity, content-slot parity, alignment, containment, clipping, or preview-isolation check fails.

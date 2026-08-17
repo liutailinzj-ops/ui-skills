@@ -43,6 +43,7 @@ reference_fidelity:
   theme_mapping_status: pending | exact | adapted | blocked
 responsive:
   section_contract:
+  content_ledger_ref: content.customer_visible_ledger
   alignment_groups: []
   shared_content_policy:
   breakpoint_preview_widths: {}
@@ -77,6 +78,7 @@ sections:
     journey_stages: []
     analysis_evidence: []
     required_content_types: []
+    content_slot_ids: []
     asset_status: final | available | placeholder
     responsive_priority:
     likely_components: []
@@ -128,6 +130,8 @@ Keep section IDs stable so later production Skills can map Figma nodes and resum
 Every theme-based section requires an exact implementation mapping and evidence URL. Do not use custom implementation as a generic fallback.
 
 Every page section must trace to Product and Competitor Analysis, a required platform responsibility, an approved requirement, or an explicitly selected source module. For PDP work, include product applicability and a truthful template strategy. For selected competitor-module work, include exact shared content bindings, connected composition groups, one Responsive Section Contract with breakpoint states, and Theme Assembly Plan mapping for the selected scope only.
+
+The responsive content ledger is the only source for customer-visible text, media, and control values during Figma production. Internal evidence status, approval, provenance, replacement owner, and publication restrictions remain separate fields and never become visible suffixes, badges, or annotations. Desktop and Mobile share slot IDs and canonical values unless the contract contains an exact evidenced content variant.
 
 The `visual_direction_brief` supplies evidence and required outcomes to `$iwish-visual-direction`; it must not prescribe an unrelated palette, fixed card system, or regression-fixture style.
 

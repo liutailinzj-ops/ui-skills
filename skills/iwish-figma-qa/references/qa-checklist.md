@@ -44,11 +44,14 @@
 
 ## Visual direction inheritance
 
+- The selected visual signature records project evidence for color behavior, typography, first-screen topology, page rhythm, component grammar, imagery, and interaction.
+- Light-brand projects contain two materially different internal candidates and a recorded selection/rejection rationale; only the selected direction reached full Figma production.
 - The page uses the active authority version and only approved page/Section overrides; candidate recommendations have not leaked into project tokens or components.
 - Every page override is limited to its named fields and scope. A page-only exception has not silently changed the project-wide visual identity.
 - Major sections visibly inherit the approved typography, colors, imagery, density, spacing rhythm, media/content relationship, control language, and responsive behavior.
 - Representative responsive Section families and the completed breakpoint previews use the same project-specific visual grammar.
 - Repeated black boxes, generic card grids, default accent colors, or fixed long-page rhythms are not used without project evidence.
+- Three or more unsupported identity-bearing dimensions do not form a fixed house combination. Generic labels such as premium, modern, editorial, minimal, conversion best practice, or common DTC pattern do not count as evidence by themselves.
 - A technically complete wireframe is not reported as a client-ready UI draft.
 - Temporary imagery preserves the intended crop, product scale, density, and composition quality.
 
@@ -67,6 +70,8 @@
 
 ## Content and assets
 
+- Every visible text, media, and control resolves to a stable content-slot ID and canonical client value.
+- Desktop and Mobile use the same content-slot IDs and canonical values unless an exact evidenced content variant exists.
 - Temporary layers use `Placeholder /` names and are recorded in the manifest.
 - The client preview uses presentable sample content; visible internal placeholder instructions do not dominate the composition.
 - Unapproved factual claims are not presented as final.
@@ -119,6 +124,7 @@ For `selected_structure_modules`:
 
 ## Client preview separation
 
+- No visible internal marker such as `Placeholder`, `TBD`, `TODO`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` appears unless it is intentionally declared as canonical storefront content.
 - No visible `THEME NATIVE`, `SECTION CUSTOM`, `CONFIGURATION`, source-warning, or replacement-instruction labels appear inside client-preview frames.
 - Implementation notes and placeholder provenance live in the manifest or project/handoff documentation.
 - Customer screenshots are exported only from client-preview frames.
@@ -143,6 +149,7 @@ Mark QA blocked when any of these fail:
 - Missing paired Section identity, unexplained cross-breakpoint content difference, or an unapproved independent viewport composition.
 - Alignment-group edge mismatch above 1 px or an unexplained container-width change.
 - Client-preview separation.
+- Missing canonical content-slot binding, undeclared visible content, or rendered internal metadata.
 - Missing or duplicate required selected-module rows, unexplained critical-function loss, or a selected-module difference without evidenced native adaptation or a documented custom route.
 - A critical `theme_adaptation` row with no feasible evidenced native or approved custom route.
 - False PDP universality or failed required product state.

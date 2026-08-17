@@ -25,6 +25,7 @@ Placeholder / {Content Type}
 - Do not leave unexplained remainder space inside a grid row; use FILL or exact grid-derived widths.
 - Use Auto Height/HUG for any text that can wrap. A fixed-height Text node is allowed only for a verified single-line label or an intentionally clamped component state.
 - After inserting real or placeholder copy, reflow the parent and verify that text bounds do not intersect non-overlay siblings.
+- Apply canonical copy, media, controls, and final styles before fixing dependent heights or positions. Read actual rendered bounds after every font/style change; never assume the previous text height remains valid.
 - Reject a fixed-height section when its unused vertical band exceeds both 240 px and 25% of section height without a source-backed composition reason.
 - Require every normal child bound to remain inside its parent bound. Overflow is allowed only inside a named viewport with explicit `clip`, `scroll`, or `visible` behavior and evidenced controls or affordance.
 
@@ -35,6 +36,17 @@ Placeholder / {Content Type}
 - Record a reason when a section needs a different composition; do not silently fall back to a house component.
 - Reject repeated black boxes, generic card grids, or a fixed palette/rhythm that is not supported by project evidence.
 - Use real or tracked temporary imagery so the result can be judged as UI, not only as information architecture.
+- Compare the completed page with the selected seven-dimension visual signature. Typography, first-screen topology, page rhythm, and component grammar require project evidence; construction convenience is not evidence.
+
+## Content preflight
+
+Before creating full-page wrappers:
+
+- Resolve every visible text, media, and control to one stable content-slot ID and `canonical_client_value`.
+- Confirm Desktop and Mobile share Section order, slot IDs, and canonical values. Record only exact evidenced content variants.
+- Reject any rendered value that contains internal approval, placeholder, implementation, QA, source-warning, test, scope, or replacement instructions.
+- Keep status/provenance in manifest fields or internal layer metadata; do not build visible badges or suffixes from them.
+- Instantiate one representative responsive-risk Section pair with final content and Text Styles, then inspect actual bounds, wrapping, navigation, repeated items, media crop, and overflow before full-page assembly.
 
 ## Editability
 
@@ -46,6 +58,7 @@ Placeholder / {Content Type}
 - Preserve clear section boundaries for Shopify Sections or WordPress Blocks.
 - Bind every client-facing text node to an approved text style.
 - Keep visible implementation labels, replacement warnings, and internal source notes outside client-preview frames.
+- Keep visible node values equal to the canonical customer-visible ledger; internal layer names may retain `Placeholder /` without changing rendered content.
 
 ## Responsive behavior
 
@@ -121,6 +134,8 @@ Before continuing, verify:
 - Sticky or anchor navigation labels, order, and destinations match the selected module contract when included.
 - Text styles and component instances are bound.
 - The client preview contains no visible internal annotations.
+- Every visible text/media/control node resolves to a declared canonical content-slot ID; no internal metadata or marker is rendered.
+- The representative responsive-risk preflight used final styles/content and passed actual-bound, wrapping, crop, repetition, navigation, and overflow checks before full-page assembly.
 - Theme mapping still matches the approved capability map.
 - Reference responsibility, order, and layout-anatomy correspondence still matches the approved matrix when applicable.
 - Selected-module source identity, module fingerprints, selected scope, content items, composition groups, local order, topology, and exact evidenced theme settings still match the approved specifications when applicable.

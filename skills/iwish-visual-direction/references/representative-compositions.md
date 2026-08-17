@@ -2,6 +2,8 @@
 
 Create a small but visually decisive internal set before full-page production. Select the highest-risk section families, not the easiest modules to draw.
 
+Before Figma, resolve the two compact internal direction candidates required for light-brand inputs. Build representative Figma compositions only for the selected candidate. Do not spend full-page production time on parallel directions.
+
 ## Default set
 
 For a commerce page, prove:
@@ -13,6 +15,8 @@ For a commerce page, prove:
 For B2B, replace the commerce-specific region with the primary value-and-inquiry region when appropriate.
 
 Create one responsive Section/component family for each selected proof. Use the primary breakpoint as the design state, then create a derived Mobile or Desktop proof state only when stacking, crop, repetition, interaction, navigation, or content density changes. The proof state must use the same content bindings, Section identity, and component family.
+
+Populate every proof from the canonical customer-visible content ledger before judging wrapping, hierarchy, density, or responsive behavior. Internal approval/provenance labels must not appear inside the website composition.
 
 For theme-based work, derive every breakpoint difference from documented theme settings or observed automatic theme behavior. For custom work, record the intentional transformation in the Responsive Section Contract. Do not author different copy or a separate visual concept for the second state.
 
@@ -28,4 +32,4 @@ For theme-based work, derive every breakpoint difference from documented theme s
 
 ## Completion check
 
-The set is complete only when a reviewer can identify the intended brand character, hierarchy, imagery, spacing rhythm, component language, and responsive transformation without reading the contract. The paired state must look like the same website Section responding to a breakpoint. If the same layout and palette could be reused for an unrelated product with only text changes, or the second state rewrites the design, revise it.
+The set is complete only when a reviewer can identify the intended brand character, hierarchy, imagery, spacing rhythm, component language, and responsive transformation without reading the contract. The paired state must look like the same website Section responding to a breakpoint. If the same layout and palette could be reused for an unrelated product with only text changes, the selected candidate does not visibly differ from the rejected one in at least three signature dimensions, or the second state rewrites the design, revise it.

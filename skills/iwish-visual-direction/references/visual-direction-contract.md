@@ -10,6 +10,37 @@ visual_direction:
   concept_statement:
   brand_character: []
   audience_impression:
+  direction_candidates:
+    - candidate_id:
+      concept_statement:
+      signature_summary:
+      supporting_evidence: []
+      conflicts_or_weaknesses: []
+  selected_candidate_id:
+  selection_rationale:
+  rejected_candidate_rationale:
+  visual_signature:
+    color_behavior:
+      decision:
+      evidence: []
+    typography:
+      decision:
+      evidence: []
+    first_screen_topology:
+      decision:
+      evidence: []
+    page_rhythm:
+      decision:
+      evidence: []
+    component_grammar:
+      decision:
+      evidence: []
+    imagery:
+      decision:
+      evidence: []
+    interaction:
+      decision:
+      evidence: []
   typography:
     display:
     heading:
@@ -98,6 +129,15 @@ Before representative Figma production, check at minimum:
 - proposed page override versus project invariants and already-built dependent components.
 
 Mark `pass` only after contradictory candidates are resolved into one coherent direction. Missing evidence is an explicit gap, not permission to fall back to a generic default.
+
+## Candidate and signature gate
+
+- For `logo_and_color`, `logo_only`, or `no_brand_assets`, record exactly two compact internal candidates before selecting the primary direction. They must differ in at least three of the seven visual-signature dimensions; changing only color or copy does not create a second direction.
+- Do not build two complete Figma pages. Compare candidates through the contract and, only when necessary, small representative sketches. Carry only the selected candidate into representative Section families.
+- Accept a project-specific creative inference only when it names the product/audience/journey/content/asset/implementation fact that motivated the choice and explains why the alternative fits less well.
+- Reject generic rationales such as `premium`, `modern`, `editorial`, `minimal`, `conversion best practice`, `common DTC pattern`, or model preference when they stand alone.
+- Treat typography, first-screen topology, page rhythm, and component grammar as identity-bearing. Do not reuse a high-character font, split-hero formula, numbered-trio sequence, pill/rounded-card system, or fixed FAQ/CTA ending without project evidence.
+- Mark the gate `needs_resolution` when any signature dimension lacks evidence or when the two candidates collapse to the same fixed combination.
 
 ## Evidence rules
 

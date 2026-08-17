@@ -12,8 +12,10 @@ Extend an established project-specific visual direction into the requested compl
 - Production project manifest and website language.
 - Approved page blueprint and Product/Competitor Analysis.
 - Active Visual Direction Contract, authority version, and applicable approved page override.
+- Selected visual-signature record, signature evidence, selected candidate ID, and selection rationale.
 - Representative Section-family and breakpoint-proof node IDs.
 - Responsive Section Contracts, alignment groups, shared content bindings, and allowed breakpoint differences.
+- Canonical customer-visible content ledger with stable text/media/control slot IDs and internal marker policy.
 - Foundation IDs and component map.
 - Customer assets and temporary-asset policy.
 - Theme Capability Map and Theme Assembly Plan for theme-based work.
@@ -28,20 +30,22 @@ For a targeted revision, representative compositions remain valid unless the cha
 
 Read [references/build-contract.md](references/build-contract.md) and [references/asset-policy.md](references/asset-policy.md).
 
-1. Inspect the representative Section families and extract their actual typography, colors, imagery, media ratios, density, grid, spacing rhythm, component language, and responsive transformations.
+1. Inspect the representative Section families and extract their actual typography, colors, imagery, media ratios, density, grid, spacing rhythm, component language, and responsive transformations. Confirm they correspond to the selected visual signature rather than a rejected candidate or generic fallback.
 2. Resolve whether this is complete production or a targeted revision. For a revision, record target IDs, responsive counterparts, shared instances, immediate containment/alignment boundaries, invalidated dependencies, and preserved scope before mutation.
-3. Create paired Desktop and Mobile customer-preview wrapper frames with no visible internal annotations for complete production. For targeted revision, preserve existing wrappers and unrelated Sections.
-4. Build one responsive Section/component family per sequential Figma mutation, then place or update its paired Desktop and Mobile instances before continuing to the next Section.
-5. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
-6. For theme-based work, reproduce evidenced native Section/Block geometry and content slots, then apply the Visual Direction Contract through supported tokens, settings, and styling.
-7. For selected competitor-module work, build the selected modules from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation; derive the rest of the page from the approved research-led blueprint.
-8. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
-9. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
-10. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.
-11. Keep both preview states editable through the shared component family. Do not detach or rewrite one state independently; change only the breakpoint fields allowed by the Responsive Section Contract.
-12. Validate each paired Section at useful screenshot scale before proceeding. Compare content parity, alignment groups, parent containment, clipping, and theme-evidenced breakpoint behavior; repair deterministic layout problems immediately.
-13. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames.
-14. Return every created or mutated node ID, explicitly preserved node IDs, and update the production manifest.
+3. Run a content preflight before mutation: resolve every visible text/media/control slot to the canonical customer-visible ledger, reject visible internal markers, confirm one Section order for both breakpoints, and record the exact evidenced content variants.
+4. Validate one representative responsive-risk Section pair with canonical content and final Text Styles. Apply content/styles before measuring; read actual text bounds, reflow parents, and repair navigation, wrapping, media crop, repeated-item, and overflow behavior before assembling the full page.
+5. Create paired Desktop and Mobile customer-preview wrapper frames with no visible internal annotations for complete production. For targeted revision, preserve existing wrappers and unrelated Sections.
+6. Build one responsive Section/component family per sequential Figma mutation, then place or update its paired Desktop and Mobile instances before continuing to the next Section.
+7. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
+8. For theme-based work, reproduce evidenced native Section/Block geometry and content slots, then apply the Visual Direction Contract through supported tokens, settings, and styling.
+9. For selected competitor-module work, build the selected modules from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation; derive the rest of the page from the approved research-led blueprint.
+10. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
+11. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
+12. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.
+13. Keep both preview states editable through the shared component family. Do not detach or rewrite one state independently; change only the breakpoint fields allowed by the Responsive Section Contract.
+14. Validate each paired Section at useful screenshot scale before proceeding. Compare content-slot IDs and values, alignment groups, parent containment, clipping, and theme-evidenced breakpoint behavior; repair deterministic layout problems immediately.
+15. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames. Never render internal content status beside website copy.
+16. Return every created or mutated node ID, explicitly preserved node IDs, and update the production manifest.
 
 ## Visual Continuity Rules
 
@@ -51,6 +55,7 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 - Do not use the same component grammar for unrelated content responsibilities merely because it is easy to generate.
 - Do not call a structurally complete wireframe a client preview.
 - If the same output could fit an unrelated brand after text substitution, revise the visual composition before continuing.
+- If three or more identity-bearing signature dimensions cannot be traced to project evidence, return to `$iwish-visual-direction`; do not let full-page assembly turn an unsupported candidate into the de facto direction.
 - Auto Layout, components, Rxx coverage, and style binding are implementation requirements, not substitutes for visual design.
 
 ## Client and Internal Separation
@@ -58,6 +63,7 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 - Rendered website content uses the agreed website language.
 - Visible internal annotations, when needed outside client frames, use Chinese.
 - Do not create a QA panel in a client-preview page or frame.
+- Create visible content only from `canonical_client_value`. Keep `evidence_status`, approval, provenance, replacement owner, publication restriction, and internal-marker fields out of rendered nodes.
 - Default to reporting internal QA in the Codex conversation or an internal artifact.
 - If the customer receives the whole Figma file, place internal QA and implementation documentation in a separate file.
 
