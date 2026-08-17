@@ -1,6 +1,6 @@
 ---
 name: iwish-component-resolver
-description: Resolve the editable responsive Figma component and Section families required by an IWISH page blueprint by reusing compatible local/library components, extending or wrapping close matches, and creating project-local components when needed. Use after Figma foundations exist and before composing Shopify/WordPress breakpoint preview pages.
+description: Resolve editable responsive IWISH Figma components and Section families, theme/source contracts, properties, and breakpoint states, then arrange active masters in an aligned usable component-library presentation. Use after Figma foundations and visual direction exist and before Shopify/WordPress page assembly.
 ---
 
 # IWISH Component Resolver
@@ -41,7 +41,7 @@ Retrieved design recommendations and unapproved candidates do not qualify as com
 
 ## Componentization Rules
 
-Read [references/component-contract.md](references/component-contract.md).
+Read [references/component-contract.md](references/component-contract.md) and [references/component-library-presentation.md](references/component-library-presentation.md).
 
 - Componentize repeated elements and semantically reusable interactive elements.
 - Do not force every unique editorial section into the company library.
@@ -66,6 +66,8 @@ Read [references/component-contract.md](references/component-contract.md).
 - In `theme_adaptation`, allow `native_adaptation` and feasible in-scope custom implementation. Stop only for a critical `unresolved` mapping or failed source capture/identity.
 - Keep implementation annotations in the manifest or handoff documentation, not as visible client-preview content.
 - Build and validate one component family at a time.
+- Place every active master or component set into the aligned component-library root, category, and family row as it is created. Do not leave masters floating on the canvas and organize them later.
+- Capture the component library at readable scale before page assembly. Fail when categories, family rows, paired breakpoint variants, component-set bounds, captions, or variant order are not aligned and usable by UI.
 
 ## Company Library Policy
 
@@ -91,3 +93,4 @@ Return a component map containing:
 - Alignment group, container mode, grid span, equal-height policy, and explicit overflow behavior.
 - Validation screenshot and metadata status.
 - Visual-direction correspondence and any component-level divergence from the representative compositions.
+- Component-library root/category/family-row node IDs, presentation screenshot, alignment status, and active/archive separation.

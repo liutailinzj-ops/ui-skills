@@ -1,6 +1,6 @@
 ---
 name: iwish-page-strategy
-description: Analyze products, category context, competitors, DTC conversion chains or B2B buying paths, then define an evidence-backed page blueprint and implementation route. Use for Shopify or WordPress research-led partial theme customization, selected competitor-module translation into partial theme customization, or fully custom UI production before visual direction and Figma page generation.
+description: Analyze product truth, category context, competitors, presentation logic, DTC conversion chains or B2B buying paths, then define product-specific content strategy, Section Content Cards, an evidence-backed page blueprint, and implementation route. Use before visual direction for Shopify/WordPress research-led partial theme customization, selected competitor-module translation, or fully custom UI production.
 ---
 
 # IWISH Page Strategy
@@ -13,10 +13,11 @@ Produce the business, content, source, and implementation blueprint that `$iwish
 - Customer facts, assets, current site, requested page, and contracted features.
 - Separate structure, theme-capability, competitor, and visual-inspiration sources.
 - Site model, strategy mode, build route, theme state, content state, and website language.
+- Four-way asset-input route, supplied product truth, usable media, and missing decision-critical roles.
 
 ## Research
 
-Read [references/product-competitor-analysis.md](references/product-competitor-analysis.md) and [references/research-method.md](references/research-method.md). Complete product, category, competitor, and DTC conversion-chain or B2B buying-path analysis before page hierarchy or theme selection.
+Read [references/product-competitor-analysis.md](references/product-competitor-analysis.md), [references/research-method.md](references/research-method.md), and [references/content-strategy-contract.md](references/content-strategy-contract.md). Complete product, category, competitor, DTC conversion-chain or B2B buying-path analysis and the product-specific content strategy before page hierarchy or theme selection.
 
 - `research_led`: let product, competitor, and journey evidence determine content responsibilities and sequence.
 - `hybrid_led`: preserve selected source modules and design remaining responsibilities from research.
@@ -52,6 +53,8 @@ A theme demo may prove capability but may not replace a selected competitor modu
 - Preserve connected source compositions. Do not split them into unrelated full-width sections because semantic module names appear to match.
 - Define one Responsive Section Contract per page section. Desktop and Mobile are breakpoint states of the same section identity and shared content, not separate compositions.
 - Create the canonical customer-visible content ledger before visual direction. Give every visible text, media, and control slot one stable ID, canonical client value, evidence status, and breakpoint visibility. Keep provenance, approval, replacement, and placeholder instructions in internal metadata rather than the rendered value.
+- Create one Section Content Card per page Section. Record the visitor question, unique content job, product-specific angle, required information, media job, proof state, and next action. Reject generic lifestyle filler and repeated messages before visual direction.
+- Distinguish product truth, visually observable form/context, research inference, and prohibited unknowns. Missing factual authority is not permission to render `pending`, `placeholder`, `review`, confirmation, validation, or replacement language inside storefront copy.
 - For native/configured theme Sections, use documented theme breakpoint settings or observed automatic behavior. For custom Sections and fully custom work, define an explicit responsive implementation plan without creating a second content or component system.
 - Use `native_adaptation` only when evidenced native behavior preserves required content, critical function, and reading order while changing a named topology detail.
 - For theme customization, decide each Section independently as native, configured, styled, CSS, Liquid, new custom Section, app/third-party, or pending engineering confirmation. Choose the least complex route that preserves the approved content responsibility, topology, visual hierarchy, interaction, and responsive behavior; do not accept a material design loss merely to stay theme-native. A scoped new Section is a normal route when the contracted development freedom supports it. Do not impose a universal custom-work percentage.
@@ -63,6 +66,7 @@ A theme demo may prove capability but may not replace a selected competitor modu
 Produce [references/page-blueprint.md](references/page-blueprint.md) with:
 
 - Product and Competitor Analysis, evidence gaps, and conversion or buying-path implications.
+- Content Strategy Contract, message hierarchy, Section Content Cards, content sufficiency result, and conversion/buying coverage.
 - Page responsibilities, content types, sequence, responsive priority, and asset state.
 - Theme Capability Map and Theme Assembly Plan for theme-based work.
 - Responsive Section Contract, alignment groups, shared content bindings, and breakpoint states.

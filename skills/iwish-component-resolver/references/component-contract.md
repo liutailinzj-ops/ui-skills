@@ -63,6 +63,8 @@ SETTING_EVIDENCE exact evidence for every theme setting used
 - Define the collapse behavior when product-specific content is absent; empty modules must not leave reserved blank height.
 - Reject a component whose generic visual grammar overrides the approved representative composition even when its content slots are technically compatible.
 
+Every active component family must also satisfy the Component Library Presentation Contract. Structural validity does not excuse loose canvas placement, misaligned family rows, inconsistent variant order, overlapping component sets, or stale empty component-set bounds.
+
 For selected competitor-module work, the contract must preserve each selected module's visible content slots, local ordering, critical function, and responsive reading flow through one shared Section identity. Changed item visibility, columns, section boundaries, or interaction form may use `native_adaptation` when the exact difference and theme evidence are recorded; otherwise name the scoped custom implementation. Product-state properties may extend the component only after the selected module contract remains reproducible.
 
 When a component belongs to a connected composition group, preserve the group's shared container, adjacency, spacing, interaction, and responsive transformation. Multiple semantic components may exist internally, but they must not render as unrelated page sections.

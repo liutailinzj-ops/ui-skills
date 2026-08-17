@@ -33,7 +33,8 @@ Placeholder / Certification
 - Do not reuse one generic image or abstract primitive for different products, configurations, features, or scenes when the media is meant to explain their difference.
 - Do not show implementation classes, source warnings, replacement instructions, or large placeholder indexes as dominant content.
 - Resolve visible copy/media from `content.customer_visible_ledger`. The visible value contains only storefront content; provenance, approval, replacement, and risk fields remain internal.
-- Never render internal markers such as `Placeholder`, `TBD`, `TODO`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` inside customer-preview frames. Use a safe neutral storefront value or omit the optional slot without leaving dead space.
+- Never render internal markers such as `Placeholder`, `TBD`, `TODO`, `Pending`, `Review concept`, `Requires approval`, `Requires confirmation`, `Requires validation`, `Replace before launch`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` inside customer-preview frames. Use product-specific, externally readable, non-factual storefront copy or omit the optional slot without leaving dead space.
+- Do not turn evidence caution into visible draft-process copy. Keep price, certification, dimensions, performance, warranty, and other unavailable facts absent or represented by a normal optional UI state; explain their approval status only in the internal ledger and Chinese QA.
 - Export customer screenshots only from client-preview frames.
 
 ## Handoff record

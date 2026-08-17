@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH 视觉方向"
-  short_description: "为轻品牌项目创建设计方向、临时视觉资产与响应式代表构图"
-  default_prompt: "使用 $iwish-visual-direction 根据项目证据补齐品牌方向与临时视觉资产，并生成可验证的响应式代表构图。"
+  short_description: "根据品牌与产品素材建立项目视觉权威、临时素材系统、代表模块和整页构图板"
+  default_prompt: "使用 $iwish-visual-direction 建立项目视觉方向、代表模块与整页构图板。"

@@ -57,3 +57,20 @@ Placeholder / Product Image
 - Keep customer-preview frames visually clean and export only from those frames.
 - Pair every responsive Section instance across preview states by stable Section/component identity and shared content bindings.
 - Preserve established valid conventions in existing files.
+
+## Local component page
+
+Do not place masters loosely on the canvas. Create one aligned Auto Layout root and only the categories required by the project:
+
+```text
+组件库 / {Project}
+  00_基础组件
+  10_导航与全局
+  20_商业与转化
+  30_内容与媒体
+  40_产品与比较
+  50_表单与交互
+  90_项目专用 Section
+```
+
+Use the Component Library Presentation Contract for category, family-row, caption, variant, spacing, and alignment behavior. Record every root/category/family-row ID.

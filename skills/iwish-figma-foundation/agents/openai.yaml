@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH Figma 基础"
-  short_description: "建立 Figma 页面、变量、统一栅格与响应式预览基础"
-  default_prompt: "使用 $iwish-figma-foundation 在目标 Figma 文件中建立或补齐项目基础。"
+  short_description: "建立 Figma 变量、样式、响应式栅格、对齐组以及组件库排列基础"
+  default_prompt: "使用 $iwish-figma-foundation 建立目标文件的 Figma 项目基础。"

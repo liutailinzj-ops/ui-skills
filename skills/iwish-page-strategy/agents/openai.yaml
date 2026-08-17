@@ -1,4 +1,4 @@
 interface:
-  display_name: "IWISH 页面策略"
-  short_description: "为模板部分二开或纯定制生成产品、竞品与响应式页面蓝图"
-  default_prompt: "使用 $iwish-page-strategy 分析产品、竞品和转化链路，并生成页面蓝图、响应式 Section 合同、来源映射与主题方案。"
+  display_name: "IWISH 页面与内容策略"
+  short_description: "分析产品、品类、竞品呈现逻辑、内容责任、购买链路并生成页面蓝图"
+  default_prompt: "使用 $iwish-page-strategy 生成产品相关的内容策略与响应式页面蓝图。"

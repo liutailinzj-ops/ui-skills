@@ -12,6 +12,8 @@ strategy_mode: research_led | hybrid_led | custom_led
 theme_state: to_be_selected | demo_only | code_available | current_site
 content_state: final | mixed | placeholder
 brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
+product_asset_state: production_ready | partial | none
+asset_route: brand_ready_product_ready | brand_ready_product_missing | brand_missing_product_ready | brand_missing_product_missing
 reference_mode: selected_structure_modules | visual_inspiration | competitor_evidence | none
 fidelity_profile: theme_adaptation | not_applicable
 ```
@@ -66,6 +68,8 @@ Display once, then continue unless a blocking ambiguity exists:
 主题状态：待选择 / 只有预览 / 已有代码 / 现有网站
 内容模式：正式内容 / 混合内容 / 占位内容
 品牌资料：完整 VI / Logo + 品牌色 / 只有 Logo / 无品牌素材
+产品素材：可直接使用 / 部分可用 / 无产品素材
+素材处理：继承品牌与产品 / 继承品牌并补临时产品视觉 / 保留产品并补网站品牌方向 / 创建工作品牌与统一临时产品视觉
 网站语言：{language}
 来源角色：
 - 指定结构来源：{URL + 选中模块清单 / 无}
@@ -73,7 +77,7 @@ Display once, then continue unless a blocking ambiguity exists:
 - 竞品研究来源：{URL 列表或“由 AI 补充”}
 - 视觉参考来源：{URL 列表或“无”}
 本次页面：{page}
-接下来：产品与竞品分析 → 页面策略 → 视觉方向 → Figma 生成 → 后台内部检查
+接下来：产品与竞品分析 → 内容与页面策略 → 视觉方向 → 整页构图 → Figma 生成 → 后台内部检查
 ```
 
 Keep enum values and evaluation case information out of this card.

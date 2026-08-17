@@ -47,7 +47,7 @@ For every responsive Section pair:
 
 ### Customer-preview isolation
 
-- Compare visible values with the canonical customer-visible ledger and inspect visible annotations/layer context. Fail undeclared visible content and explicit internal markers such as `Placeholder`, `TBD`, `TODO`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` when they are not intentional canonical storefront copy.
+- Compare visible values with the canonical customer-visible ledger and inspect visible annotations/layer context. Fail undeclared visible content and draft-process markers such as `Placeholder`, `TBD`, `TODO`, `Pending approval`, `Review concept`, `Requires confirmation`, `Requires validation`, `Replace before launch`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction`. Allow a similar term only when the scoped requirement explicitly defines it as real user-facing functionality.
 - Do not fail legitimate storefront words through broad single-word searches such as `test`, `source`, `scope`, or `approval`; use ledger correspondence and phrase/context evidence.
 - Treat any internal note in either preview state as blocking.
 

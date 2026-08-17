@@ -1,0 +1,50 @@
+suite_id: round4_asset_route_matrix
+purpose: 验证品牌资产与产品素材四种组合在模板部分二开、指定竞品局部结构和纯自定义路线中的稳定性。
+figma_team: "team::1641483933611069221"
+isolation:
+  independent_thread_per_case: true
+  independent_figma_file_per_case: true
+  forbid_previous_results: true
+  fixture_pack_created_before_case: true
+rubrics:
+  - evals/rubrics/component-library-review.md
+  - evals/rubrics/content-page-composition-review.md
+  - evals/rubrics/technical-visual-review.md
+  - evals/rubrics/cross-case-bias-review.md
+cases:
+  - case_id: r4_a_brand_and_product_theme_customization
+    production_scenario: research_led_theme_customization
+    asset_route: brand_ready_product_ready
+    required_fixture: 完整工作 VI、Logo、色彩/字体规则、同一产品的主图/细节/场景图
+    verifies: 严格继承品牌与产品资产，不生成第二套身份
+  - case_id: r4_b_brand_no_product_theme_customization
+    production_scenario: research_led_theme_customization
+    asset_route: brand_ready_product_missing
+    required_fixture: Logo、品牌色和基础规则；无产品摄影
+    verifies: 保持品牌并生成一致的临时产品身份与多场景素材
+  - case_id: r4_c_no_brand_product_selected_modules
+    production_scenario: selected_modules_theme_customization
+    asset_route: brand_missing_product_ready
+    required_fixture: 无品牌系统；提供真实一致的产品主图/细节/场景图和指定竞品模块
+    verifies: 从产品与市场建立网站品牌方向，同时保持来源模块关系
+  - case_id: r4_d_no_brand_no_product_selected_modules
+    production_scenario: selected_modules_theme_customization
+    asset_route: brand_missing_product_missing
+    required_fixture: 只有产品品类、市场、指定竞品模块和目标主题
+    verifies: 工作品牌、统一临时产品身份、内容与主题映射的压力测试
+  - case_id: r4_e_brand_and_product_custom
+    production_scenario: custom
+    asset_route: brand_ready_product_ready
+    required_fixture: 完整工作 VI 与产品素材；无主题模块约束
+    verifies: 纯自定义创意不覆盖品牌资产，完整页面强于干净模板
+  - case_id: r4_f_no_brand_no_product_custom
+    production_scenario: custom
+    asset_route: brand_missing_product_missing
+    required_fixture: 只有品类、市场和业务目标
+    verifies: 开放品牌和纯自定义的最高压力场景，不得回退到默认高级 DTC 审美
+suite_pass:
+  all_component_library_reviews_pass: true
+  all_content_page_composition_reviews_pass: true
+  all_technical_visual_reviews_pass: true
+  cross_case_bias_review_pass: true
+  no_case_may_be_rescued_by_structure_metrics: true

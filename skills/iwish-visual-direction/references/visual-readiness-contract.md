@@ -10,6 +10,15 @@ Use this contract when customer VI, photography, renders, or product content is 
 
 Do not rename or recolor a supplied customer brand. Do not reuse the previous project's authored identity as a shortcut.
 
+## Brand/product asset matrix
+
+- Brand present + product present: inherit both; generate only missing page-specific roles.
+- Brand present + product missing: preserve brand and define one temporary product consistency anchor before generating views.
+- Brand missing + product present: keep product form/media truthful and author only a reversible website identity.
+- Brand missing + product missing: author a reversible working brand and one coherent temporary product identity; do not generate unrelated products per Section.
+
+When product media is missing, record stable product form, finish/material cues, control/detail language, and environment rules. Hero, detail, configuration, feature, and context assets may change viewpoint and scene but must preserve that identity unless the content explicitly depicts a different state or product.
+
 ## Visual-asset coverage matrix
 
 Create one row for every decision-critical media role:
@@ -56,5 +65,7 @@ Do not begin full-page production until screenshots prove:
 3. one imagery-led or media-dense module with final intended crop, density, and product scale;
 4. one responsive-risk transformation using the same content and component identity;
 5. the selected brand direction is identifiable without reading internal rationale.
+
+After this local gate, run the Page Composition Gate. Representative Sections alone do not authorize final page wrappers.
 
 Return to visual direction when the result still reads as a wireframe, repeats generic geometry, could fit an unrelated product after text replacement, or leaves UI to decide the core media composition.

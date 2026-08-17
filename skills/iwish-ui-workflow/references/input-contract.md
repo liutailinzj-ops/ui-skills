@@ -14,6 +14,13 @@ Request only these five categories:
 
 Do not ask the customer to define page sections, CTA strategy, components, detailed visual terminology, platform constraints, or a priority product.
 
+Normalize `现有资料` into two independent internal checks:
+
+- brand assets: complete VI, Logo + color, Logo only, or none;
+- product assets: production-ready, partial, or none.
+
+Do not ask the customer to fill a second long questionnaire. Inspect the provided files and record the four-way asset route internally.
+
 ## Internal project facts
 
 Obtain these from sales, project owner, UI, or engineering:
@@ -26,6 +33,7 @@ Obtain these from sales, project owner, UI, or engineering:
 - Theme store, vendor documentation, demo, or current-site URL when applicable.
 - Target Figma file or authorization to create one.
 - Whether missing material may use temporary assets.
+- Whether supplied product media is usable for first screen, detail, configuration/state, and context roles; record missing roles instead of treating the entire pack as simply present or absent.
 - Explicit role for each URL: selected structure modules, theme capability, competitor evidence, or visual inspiration.
 - Selected module names or screenshots when only part of a competitor page is required. Natural-language descriptions are sufficient.
 - For selected-reference work, confirm which modules are selected; the default is theme adaptation plus scoped custom implementation, not full-page replication.

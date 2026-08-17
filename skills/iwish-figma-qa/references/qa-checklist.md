@@ -22,6 +22,10 @@
 - Variants have purposeful axes and no excessive matrix.
 - Icons/media use suitable instance-swap or replaceable structures.
 - Instances are not detached without a documented reason.
+- The component-library root, categories, and family rows use Auto Layout and aligned shared origins.
+- Active component families are ordered consistently, non-overlapping, and separated from archive/deprecated families.
+- Paired Desktop/Mobile Section variants are top-aligned and component-set bounds contain no unexplained empty bands.
+- UI can locate and edit active masters without rearranging the component page.
 
 ## Layout
 
@@ -56,6 +60,9 @@
 - Temporary imagery preserves the intended crop, product scale, density, and composition quality.
 - The amount of customer material has not lowered visual fidelity; missing decision-critical media has been generated or licensed and remains replaceable.
 - Different products, configurations, features, and scenes use visibly different media when the visual carries their distinction. Repeated generic geometry with new labels fails.
+- The completed page matches the passed page-composition board in grid, Section order, macro rhythm, color/media distribution, density curve, primary conversion focus, and selected-module placement.
+- Strong isolated Sections do not hide a weak, repetitive, or visually unaligned complete page.
+- The default-risk audit does not allow three or more unsupported safe defaults to form the selected identity bundle.
 
 ## Responsive
 
@@ -99,6 +106,9 @@
 - Competitor observations explain presentation and conversion logic rather than visual similarity alone.
 - The page does not invent proof, reviews, certifications, results, specifications, prices, or guarantees.
 - Relevant conversion/buying gaps are reported. Do not fail a page merely because a responsibility belongs on another scoped page.
+- Every Section has a Section Content Card with a unique visitor question, product-specific angle, media job, proof state, and next action.
+- Three or more Sections do not repeat generic lifestyle language or remain valid for unrelated products after noun replacement.
+- Competitor research explains presentation, media, interaction, and conversion logic rather than only listing content topics.
 
 ## Reference fidelity
 
@@ -127,7 +137,7 @@ For `selected_structure_modules`:
 
 ## Client preview separation
 
-- No visible internal marker such as `Placeholder`, `TBD`, `TODO`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` appears unless it is intentionally declared as canonical storefront content.
+- No visible internal marker such as `Placeholder`, `TBD`, `TODO`, `Pending approval`, `Review concept`, `Requires confirmation`, `Requires validation`, `Replace before launch`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` appears. A real product UI status is allowed only when the scoped requirement explicitly defines it as user-facing functionality.
 - No visible `THEME NATIVE`, `SECTION CUSTOM`, `CONFIGURATION`, source-warning, or replacement-instruction labels appear inside client-preview frames.
 - Implementation notes and placeholder provenance live in the manifest or project/handoff documentation.
 - Customer screenshots are exported only from client-preview frames.
@@ -152,6 +162,9 @@ Mark QA blocked when any of these fail:
 - Missing paired Section identity, unexplained cross-breakpoint content difference, or an unapproved independent viewport composition.
 - Alignment-group edge mismatch above 1 px or an unexplained container-width change.
 - Client-preview separation.
+- Disordered or misaligned active component-library presentation.
+- Missing or failed page-composition board, or a complete page that materially diverges from its passed macro contract.
+- Failed content sufficiency: generic/repeated Sections, missing product-specific angles, or visible internal production-status language.
 - Missing canonical content-slot binding, undeclared visible content, or rendered internal metadata.
 - Missing or duplicate required selected-module rows, unexplained critical-function loss, or a selected-module difference without evidenced native adaptation or a documented custom route.
 - A critical `theme_adaptation` row with no feasible evidenced native or approved custom route.

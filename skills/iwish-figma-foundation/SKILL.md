@@ -1,6 +1,6 @@
 ---
 name: iwish-figma-foundation
-description: Inspect, create, or reconcile the project-level Figma file structure, variables, styles, grids, and foundation documentation for IWISH website UI work. Use before creating components or pages in a blank, starter-based, or existing Shopify/WordPress design file. A prebuilt Starter File or company component library is not required.
+description: Inspect, create, or reconcile IWISH Figma file structure, variables, styles, responsive grids, alignment groups, page foundations, and the aligned local-component library layout. Use before creating components or pages in blank, starter-based, or existing Shopify/WordPress files. A Starter File or company library is not required.
 ---
 
 # IWISH Figma Foundation
@@ -37,6 +37,7 @@ Never assume an empty local variable list means no library variables exist; sear
 - Validate foundations with metadata and screenshots before component creation.
 - Create or reuse an internal visual-direction page when representative compositions will be written.
 - Define viewport preview widths, page gutters, maximum container widths, named container modes, spacing scale, and alignment-group rules before Section production.
+- Define the local-component library content width, category/family row grid, caption column, variant gap, family gap, and shared row origin before component production. The component page must be an aligned internal system, not a loose canvas.
 - Treat Desktop and Mobile pages or frames as paired breakpoint previews of one responsive system. Do not create separate foundations, tokens, content systems, or component libraries for them.
 - During a targeted revision, mutate only foundations explicitly invalidated by the authority revision. A page-scoped override should normally use scoped variables/styles or component properties without rewriting unrelated project tokens.
 - Do not create a customer-visible QA page. Internal QA defaults to the Codex conversation or internal artifact; create an internal Figma QA page only when requested and use Chinese visible labels.
@@ -51,6 +52,7 @@ Update the project manifest with:
 - Text/effect style IDs.
 - Grid and frame defaults.
 - Responsive preview widths, container modes, alignment groups, and paired-preview conventions.
+- Component-library root layout, category/family row grid, spacing, and alignment conventions.
 - Existing-library findings.
 - Conflicts and resolutions.
 - Foundation screenshots and validation status.

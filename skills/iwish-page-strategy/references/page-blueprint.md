@@ -14,6 +14,8 @@ page:
   build_route: theme_customization | custom
   brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
   brand_authorship_mode: customer_led | constrained_authoring | open_concept
+  product_asset_state: production_ready | partial | none
+  asset_route: brand_ready_product_ready | brand_ready_product_missing | brand_missing_product_ready | brand_missing_product_missing
   reference_mode: selected_structure_modules | visual_inspiration | competitor_evidence | none
   fidelity_profile: theme_adaptation | not_applicable
 analysis:
@@ -25,6 +27,15 @@ analysis:
   evidence_gaps: []
   page_implications: []
   theme_criteria: []
+content_strategy:
+  product_truth:
+  audience_questions: []
+  category_decision_factors: []
+  competitor_presentation_logic: []
+  message_hierarchy:
+  section_content_cards: []
+  coverage:
+  sufficiency_status: pending | pass | needs_revision | blocked
 reference_fidelity:
   selected_module_sources: []
   selected_structure_modules: []
@@ -75,6 +86,8 @@ visual_direction_brief:
   decision_critical_visual_assets: []
   responsive_priorities: []
   prohibited_generic_defaults: []
+  asset_input_route:
+  temporary_product_consistency_anchor:
 sections:
   - id:
     name:
@@ -82,6 +95,11 @@ sections:
     journey_stages: []
     analysis_evidence: []
     required_content_types: []
+    visitor_question:
+    product_specific_angle:
+    media_job:
+    proof_state: confirmed | observable | temporary | unavailable
+    next_action:
     content_slot_ids: []
     asset_status: final | available | placeholder
     responsive_priority:

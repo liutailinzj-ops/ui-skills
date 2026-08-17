@@ -51,6 +51,22 @@ Before creating full-page wrappers:
 - Instantiate one representative responsive-risk Section pair with final content and Text Styles, then inspect actual bounds, wrapping, navigation, repeated items, media crop, and overflow before full-page assembly.
 - Validate the full representative set before wrappers: first screen or primary conversion, one semantic-differentiation module, and one imagery-led module. All decision-critical media must use the intended temporary assets rather than empty frames or repeated primitives.
 
+## Page composition preflight
+
+Before creating final preview wrappers:
+
+- Resolve the passed internal page-composition board.
+- Verify actual Section order, container modes, alignment groups, color/media distribution, density curve, primary conversion focus, and selected-module positions.
+- Confirm the board uses realistic content volume and intended temporary media rather than anonymous blocks.
+- Confirm representative Sections fit the complete-page rhythm without forcing unrelated Sections into one repeated grammar.
+- Reject final assembly when UI would still need to redesign the first screen, reorder most Sections, redistribute major color/media fields, or choose the page grid.
+
+## Component-library preflight
+
+- Resolve the component-library root, active categories, family rows, and component sets.
+- Verify Auto Layout, shared origins, row/category alignment within 1 px, top-aligned paired breakpoint variants, consistent variant ordering, tight set bounds, and no overlap.
+- Do not assemble the page from a library that UI must first rearrange.
+
 ## Editability
 
 - Do not flatten sections.

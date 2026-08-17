@@ -8,6 +8,7 @@ visual_direction:
   authority_state: draft | active | superseded
   brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
   brand_authorship_mode: customer_led | constrained_authoring | open_concept
+  asset_route: brand_ready_product_ready | brand_ready_product_missing | brand_missing_product_ready | brand_missing_product_missing
   preserved_customer_invariants: []
   project_authored_brand:
     name_or_wordmark_treatment:
@@ -26,6 +27,11 @@ visual_direction:
   selected_candidate_id:
   selection_rationale:
   rejected_candidate_rationale:
+  default_risk_audit:
+    familiar_safe_defaults: []
+    evidenced_fields: []
+    unsupported_combination_count:
+    third_candidate_required: true | false
   visual_signature:
     color_behavior:
       decision:
@@ -79,6 +85,11 @@ visual_direction:
       source_class:
       replacement_rule:
       asset_or_node_ids: []
+  temporary_product_consistency_anchor:
+    product_form:
+    finish_or_material:
+    control_or_detail_language:
+    environment_rules:
   composition:
     container_behavior:
     alignment_groups: []
@@ -124,6 +135,18 @@ visual_direction:
     findings: []
   revision_log: []
   prohibited_defaults: []
+  page_composition_gate:
+    board_node_id:
+    section_order: []
+    container_modes: []
+    alignment_groups: []
+    color_distribution:
+    media_distribution:
+    density_curve:
+    primary_conversion_focus:
+    source_module_positions: []
+    responsive_risk_sections: []
+    screenshot_status: pending | pass | needs_revision
 ```
 
 ## Authority and override rules
@@ -152,12 +175,14 @@ Mark `pass` only after contradictory candidates are resolved into one coherent d
 
 ## Candidate and signature gate
 
-- For `logo_and_color`, `logo_only`, or `no_brand_assets`, record exactly two compact internal candidates before selecting the primary direction. They must differ in at least three of the seven visual-signature dimensions; changing only color or copy does not create a second direction.
+- For `logo_and_color`, `logo_only`, or `no_brand_assets`, record at least two compact internal candidates before selecting the primary direction. They must differ in at least four of the seven visual-signature dimensions; changing only color or copy does not create a second direction.
+- Run the default-risk audit before selection. When three or more unsupported familiar defaults form one safe bundle, create a third materially different candidate and select from evidence rather than convenience.
 - Do not build two complete Figma pages. Compare candidates through the contract and, only when necessary, small representative sketches. Carry only the selected candidate into representative Section families.
 - Accept a project-specific creative inference only when it names the product/audience/journey/content/asset/implementation fact that motivated the choice and explains why the alternative fits less well.
 - Reject generic rationales such as `premium`, `modern`, `editorial`, `minimal`, `conversion best practice`, `common DTC pattern`, or model preference when they stand alone.
 - Treat typography, first-screen topology, page rhythm, and component grammar as identity-bearing. Do not reuse a high-character font, split-hero formula, numbered-trio sequence, pill/rounded-card system, or fixed FAQ/CTA ending without project evidence.
 - Mark the gate `needs_resolution` when any signature dimension lacks evidence or when the two candidates collapse to the same fixed combination.
+- Mark the gate `needs_resolution` when the complete-page composition board reveals weak alignment, repetitive macro rhythm, uncontrolled color/media distribution, or a page that requires UI to redesign the first screen or reorder most Sections.
 
 ## Evidence rules
 

@@ -28,6 +28,20 @@ sources:
   competitor_evidence_urls: []
   visual_inspiration_urls: []
   source_role_assignments: {}
+asset_input:
+  brand_assets: complete_vi | logo_and_color | logo_only | none
+  product_assets: production_ready | partial | none
+  route: brand_ready_product_ready | brand_ready_product_missing | brand_missing_product_ready | brand_missing_product_missing
+  supplied_brand_invariants: []
+  supplied_product_truth: []
+  usable_product_media: []
+  missing_decision_critical_media: []
+  temporary_media_allowed: true | false
+  consistency_anchor:
+    product_form:
+    finish_or_material:
+    control_or_detail_language:
+    environment_rules:
 theme:
   name:
   preset:
@@ -72,11 +86,34 @@ analysis:
   evidence_gaps: []
   page_implications: []
   sources: []
+content_strategy:
+  status: pending | pass | needs_revision | blocked
+  product_truth:
+  audience_questions: []
+  category_decision_factors: []
+  competitor_presentation_logic: []
+  conversion_or_buying_chain: []
+  message_hierarchy:
+  section_content_cards: []
+  coverage:
 strategy:
   page_blueprint:
   theme_assembly_plan:
   responsive_section_contract:
   product_coverage_matrix:
+  page_composition_gate:
+    board_node_id:
+    section_order: []
+    container_modes: []
+    alignment_groups: []
+    color_distribution:
+    media_distribution:
+    density_curve:
+    primary_conversion_focus:
+    source_module_positions: []
+    responsive_risk_sections: []
+    default_risk_audit:
+    screenshot_status: pending | pass | needs_revision
 visual_direction:
   status: pending | complete | blocked
   authority_version:
@@ -132,6 +169,14 @@ figma:
   responsive_section_components: {}
   paired_section_instances: {}
   internal_nodes: {}
+  component_library:
+    root_node_id:
+    category_node_ids: {}
+    family_row_node_ids: {}
+    component_set_node_ids: {}
+    archive_node_id:
+    presentation_screenshot:
+    alignment_status: pending | pass | needs_revision
 delivery_visibility:
   customer_preview_contains_internal_qa: false
   customer_preview_contains_rxx: false
@@ -172,6 +217,11 @@ internal_qa:
   display_label: 未检查 | 通过 | 需要调整 | 阻塞
   report_location:
   findings: []
+quality_gates:
+  component_library: not_run | pass | needs_adjustment | blocked
+  section_visual: not_run | pass | needs_adjustment | blocked
+  page_composition: not_run | pass | needs_adjustment | blocked
+  content_strategy: not_run | pass | needs_adjustment | blocked
 risks: []
 ```
 
@@ -180,6 +230,12 @@ Persist exact Figma node IDs returned by tools. Never guess or reconstruct IDs. 
 Keep the active visual authority stable across pages and sessions. A page override is valid only for its recorded page/Section scope, named fields, reason, evidence, approval state, and revision date. Recommendations, search results, model inferences, and unapproved alternatives remain under `candidate_decisions` and cannot replace active rules. When a project-wide rule changes, increment `authority_version`, append the exact change to `revision_log`, and list every invalidated page, component, variable, or representative composition under `workflow.revision_scope`.
 
 Maintain one canonical customer-visible content ledger before Figma production. Give every visible text, media, and control a stable slot ID, canonical client value, evidence status, and breakpoint visibility. Store approval state, placeholder provenance, replacement owner, source class, and internal instructions beside the slot as internal metadata; never concatenate those fields into the rendered client value. Desktop and Mobile resolve the same slot IDs and values unless the Responsive Section Contract records an evidenced content variant.
+
+Classify brand and product assets independently. Persist the four-way asset route and one temporary product consistency anchor whenever approved product media is missing. Generated views may change environment, crop, state, and viewpoint, but they must not silently change the product form, finish system, controls, or identifying details.
+
+Persist the Content Strategy Contract before visual direction. Each Section Content Card must record one visitor question, unique content job, product-specific angle, media job, proof state, and next action. Generic safe copy is not sufficient.
+
+Persist the page-composition board and component-library presentation before final page wrappers. Do not mark production complete when isolated Sections pass but the complete-page rhythm or component library remains unaligned.
 
 For light-brand projects, persist the brand-authorship mode, supplied invariants, project-authored brand fields, two materially different internal visual-direction candidates, and the selected candidate rationale. Record evidence for all seven visual-signature dimensions. Generic adjectives and model preference are not evidence; a named creative inference must connect to the product, audience, journey, content behavior, implementation route, or supplied asset and explain why the rejected candidate fits less well.
 

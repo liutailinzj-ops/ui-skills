@@ -1,6 +1,6 @@
 ---
 name: iwish-figma-qa
-description: Run silent internal quality checks and safe deterministic repairs for IWISH editable responsive Figma website designs, covering paired breakpoint identity, content parity, alignment groups, containment/clipping, visual-direction inheritance, source/theme fidelity, client-preview separation, variables/styles, components, assets, and Shopify/WordPress implementation risks. Use after production page generation or UI revision; report visible internal QA in Chinese and never expose QA inside customer-preview frames.
+description: Run silent internal quality checks and safe deterministic repairs for IWISH Figma delivery across component-library arrangement, Section visual quality, complete-page composition, product-specific content, asset consistency, paired breakpoints, geometry, source/theme fidelity, and client-preview separation. Use after page generation or revision; report internal QA in Chinese outside customer-preview frames.
 ---
 
 # IWISH Figma QA
@@ -20,21 +20,28 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 - Source specification, topology contract, composition groups, theme assembly, and adaptation decisions when applicable.
 - Product coverage and template strategy for PDP work.
 - Visual-Asset Coverage Matrix and project-authored brand record.
+- Four-way asset-input route and temporary product consistency anchor when applicable.
+- Content Strategy Contract, Section Content Cards, and content sufficiency result.
+- Page-composition board node ID and passed macro-composition record.
+- Component-library root/category/family-row node IDs and presentation contract.
 
 ## Internal QA Sequence
 
 1. Verify that requested customer-preview frames exist and contain only rendered website content.
-2. Compare major-section screenshots with the Visual Direction Contract, selected seven-dimension visual signature, signature evidence, project-authored brand record, Visual-Asset Coverage Matrix, and representative compositions. Check typography hierarchy, color behavior, first-screen topology, imagery, media ratios, product/scene differentiation, density, page rhythm, component grammar, interaction, and responsive transformation.
-3. Detect generic visual fallback: repeated black boxes, repeated equal-card grammar, repeated abstract product primitives, duplicated media for semantically different items, default accent color, or a house long-page rhythm unsupported by project evidence. If decision-critical media is missing/repeated or three or more identity-bearing dimensions form an unsupported fixed combination, return `需要调整` to `$iwish-visual-direction`; do not auto-redesign it in QA and do not report the page as complete.
-4. Verify selected-module source identity, content/layout correspondence, connected compositions, and target-theme evidence for selected competitor-module work.
-5. Verify theme route, Section/Block/Setting support, responsive behavior, and approved customization scope for theme-based work.
-6. Verify product/competitor analysis traceability for research-led or hybrid sections.
-7. Read [references/responsive-geometry-audit.md](references/responsive-geometry-audit.md) and run its node-level paired identity, canonical content-slot parity, alignment, containment, clipping, sizing, and preview-isolation checks.
-8. Run [references/qa-checklist.md](references/qa-checklist.md) for Figma structure, typography, components, assets, source/theme fidelity, and implementation risks.
-9. Capture each major section at useful scale. Do not rely only on a reduced full-page thumbnail.
-10. Repair deterministic low-risk problems such as removing accidental internal annotations, obvious clipping, safe layout sizing, naming, or variable/style bindings. Do not invent replacement storefront copy, auto-rewrite one breakpoint's content, or change the visual direction.
-11. Re-run the geometry audit and screenshots for repaired sections.
-12. Return the concise internal report from [references/report-template.md](references/report-template.md).
+2. Inspect the component-library page at readable scale. Check aligned root/category/family rows, common origins, captions, variant order, paired breakpoint top alignment, tight component-set bounds, spacing, overlap, and archive separation. A usable page preview cannot compensate for a disordered component library.
+3. Compare major-section screenshots with the Visual Direction Contract, selected seven-dimension visual signature, signature evidence, project-authored brand record, Visual-Asset Coverage Matrix, and representative compositions. Check typography hierarchy, color behavior, first-screen topology, imagery, media ratios, product/scene differentiation, density, page rhythm, component grammar, interaction, and responsive transformation.
+4. Compare the completed page with the page-composition board. Check shared grid, alignment groups, Section order, macro color/media distribution, density curve, primary conversion focus, complete-page rhythm, and selected-module placement. Isolated good Sections cannot compensate for a weak complete page.
+5. Check the Content Strategy Contract against visible copy and media. Verify unique visitor questions, product-specific angles, message hierarchy, competitor presentation logic, conversion/buying coverage, and absence of internal production status. Return `需要调整` when three or more Sections remain generic or repetitive even if the layout is correct.
+6. Detect generic visual fallback: repeated black boxes, repeated equal-card grammar, repeated abstract product primitives, duplicated media for semantically different items, default accent color, or a house long-page rhythm unsupported by project evidence. If decision-critical media is missing/repeated or three or more identity-bearing dimensions form an unsupported fixed combination, return `需要调整` to `$iwish-visual-direction`; do not auto-redesign it in QA and do not report the page as complete.
+7. Verify selected-module source identity, content/layout correspondence, connected compositions, and target-theme evidence for selected competitor-module work.
+8. Verify theme route, Section/Block/Setting support, responsive behavior, and approved customization scope for theme-based work.
+9. Verify product/competitor analysis traceability for research-led or hybrid sections.
+10. Read [references/responsive-geometry-audit.md](references/responsive-geometry-audit.md) and run its node-level paired identity, canonical content-slot parity, alignment, containment, clipping, sizing, and preview-isolation checks.
+11. Run [references/qa-checklist.md](references/qa-checklist.md) for Figma structure, typography, components, assets, source/theme fidelity, and implementation risks.
+12. Capture each major section at useful scale. Do not rely only on a reduced full-page thumbnail.
+13. Repair deterministic low-risk problems such as removing accidental internal annotations, obvious clipping, safe layout sizing, naming, or variable/style bindings. Do not invent replacement storefront copy, auto-rewrite one breakpoint's content, or change the visual direction.
+14. Re-run the geometry audit and screenshots for repaired sections.
+15. Return the concise internal report from [references/report-template.md](references/report-template.md).
 
 For a targeted revision, inspect the changed nodes, their responsive pairs, shared instances, and immediate alignment/containment boundaries. Run full-page QA only when a project master rule, global foundation, shared component, page order, or cross-page dependency changed.
 
@@ -47,7 +54,7 @@ For a targeted revision, inspect the changed nodes, their responsive pairs, shar
 - If an internal Figma QA page is explicitly required, use `内部检查 / QA` and keep it outside customer-preview pages.
 - If the customer receives the whole Figma file, write QA to a separate internal file.
 - Never place QA status, Rxx labels, theme mappings, source warnings, or replacement instructions inside customer-preview frames.
-- Validate visible values against the canonical customer-visible ledger, not broad keyword guesses. Internal marker phrases are blocking only when they are visible and not the canonical storefront value.
+- Validate visible values against the canonical customer-visible ledger and their semantic purpose, not broad keyword guesses. Draft-process phrases such as placeholder, pending approval, review concept, confirmation/validation requirements, and replacement instructions remain blocking even when they were mistakenly copied into the ledger, unless the scoped product UI explicitly requires that status as real user-facing functionality.
 
 ## Safety
 
@@ -63,6 +70,9 @@ For a targeted revision, inspect the changed nodes, their responsive pairs, shar
 ## Completion Criteria
 
 - The full page visibly inherits the Visual Direction Contract rather than a generic house template.
+- The component library is aligned, organized, non-overlapping, and directly usable by UI.
+- The completed page matches the passed page-composition board at macro level; good isolated Sections do not hide weak page rhythm or alignment.
+- The visible content passes the Content Strategy Contract and is sufficiently product-specific, non-repetitive, and externally readable.
 - Requested Desktop and Mobile previews are complete, visually inspectable, and paired to the same responsive Section/component families.
 - Shared Section identity, order, content bindings, controls, and copy match across breakpoints; every difference is evidenced and allowed.
 - Every visible text/media/control node resolves to the canonical customer-visible content ledger; internal status, provenance, approval, replacement, and publication fields remain outside rendered content.

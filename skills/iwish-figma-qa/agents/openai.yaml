@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH Figma 内部检查"
-  short_description: "检查视觉完成度、素材差异、响应式结构与主题实现风险"
-  default_prompt: "使用 $iwish-figma-qa 检查目标页面的视觉完成度、临时素材差异、响应式结构与主题实现风险。"
+  short_description: "检查组件库、Section、整页构图、内容与响应式质量"
+  default_prompt: "使用 $iwish-figma-qa 检查组件库排列、整页视觉、内容与 Figma 结构。"

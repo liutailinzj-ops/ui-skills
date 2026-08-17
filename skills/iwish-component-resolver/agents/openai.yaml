@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH 组件解析"
-  short_description: "根据页面蓝图建立共享内容与断点状态一致的响应式 Figma 组件"
-  default_prompt: "使用 $iwish-component-resolver 根据页面蓝图、视觉方向和主题映射建立本项目需要的 Figma 组件。"
+  short_description: "解析响应式组件、主题映射与编辑属性，并建立整齐可用的本地组件库"
+  default_prompt: "使用 $iwish-component-resolver 解析页面组件并整理本地组件库。"
