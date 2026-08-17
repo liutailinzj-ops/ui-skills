@@ -13,6 +13,7 @@ page:
   content_mode_label: 正式内容 | 混合内容 | 占位内容
   build_route: theme_customization | custom
   brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
+  brand_authorship_mode: customer_led | constrained_authoring | open_concept
   reference_mode: selected_structure_modules | visual_inspiration | competitor_evidence | none
   fidelity_profile: theme_adaptation | not_applicable
 analysis:
@@ -64,11 +65,14 @@ theme:
     excluded_capabilities: []
     engineering_review_status: pending | reviewed | not_required
 visual_direction_brief:
+  preserved_brand_invariants: []
+  allowed_project_authored_fields: []
   required_brand_impression: []
   content_emphasis: []
   source_visual_principles: []
   target_theme_constraints: []
   imagery_needs: []
+  decision_critical_visual_assets: []
   responsive_priorities: []
   prohibited_generic_defaults: []
 sections:
@@ -133,6 +137,6 @@ Every page section must trace to Product and Competitor Analysis, a required pla
 
 The responsive content ledger is the only source for customer-visible text, media, and control values during Figma production. Internal evidence status, approval, provenance, replacement owner, and publication restrictions remain separate fields and never become visible suffixes, badges, or annotations. Desktop and Mobile share slot IDs and canonical values unless the contract contains an exact evidenced content variant.
 
-The `visual_direction_brief` supplies evidence and required outcomes to `$iwish-visual-direction`; it must not prescribe an unrelated palette, fixed card system, or regression-fixture style.
+The `visual_direction_brief` supplies evidence and required outcomes to `$iwish-visual-direction`; it must not prescribe an unrelated palette, fixed card system, or regression-fixture style. Treat few or missing customer assets as permission to author a tracked temporary brand/visual system within the recorded invariants, not as permission to reduce composition quality.
 
 Keep evaluation baselines, expected changes, no-op checks, and case results out of this production blueprint.

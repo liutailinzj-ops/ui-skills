@@ -7,6 +7,13 @@ visual_direction:
   authority_version:
   authority_state: draft | active | superseded
   brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
+  brand_authorship_mode: customer_led | constrained_authoring | open_concept
+  preserved_customer_invariants: []
+  project_authored_brand:
+    name_or_wordmark_treatment:
+    creative_thesis:
+    authored_fields: []
+    evidence: []
   concept_statement:
   brand_character: []
   audience_impression:
@@ -59,6 +66,19 @@ visual_direction:
     crop_behavior:
     product_scale:
     temporary_asset_route:
+  visual_asset_coverage:
+    - slot_id:
+      communication_job:
+      subject:
+      environment:
+      viewpoint:
+      crop_and_ratio:
+      product_scale:
+      lighting_or_render_style:
+      required_variation:
+      source_class:
+      replacement_rule:
+      asset_or_node_ids: []
   composition:
     container_behavior:
     alignment_groups: []
@@ -145,13 +165,14 @@ Mark `pass` only after contradictory candidates are resolved into one coherent d
 - Keep source structure and theme capability evidence separate.
 - Do not copy a competitor's brand identity, protected copy, or distinctive assets.
 - Treat `logo_and_color` as a normal production input, not an exception. Use supplied brand assets first, verify contrast and digital usability, then build only the minimum project-local website system needed for the page.
+- Treat `constrained_authoring` and `open_concept` as deliberate project work. Record which identity fields were supplied and which were authored; project-authored brand decisions are editable working direction, not customer-approved formal VI.
 - When only one brand color exists, use neutral colors for most surfaces and the supplied color as the primary candidate accent. Add another saturated brand-like color only when customer material or an explicitly assigned visual reference supports it.
 - When only a Logo exists, derive restrained candidates from its form and color, record the inference, and keep them easy to revise through variables and styles.
 - Do not describe a project-local website color, type, spacing, or component system as the customer's formal VI.
 
 ## Route rules
 
-- `theme_customization`: use evidenced native behavior where suitable and explicitly name CSS, Liquid, new Section, app, or other custom expression required by each module. Do not apply a universal custom-work ratio.
+- `theme_customization`: use evidenced native behavior where it preserves the approved design responsibility and explicitly name CSS, Liquid, new Section, app, or other custom expression required by each module. Choose the least complex route that preserves the design; native availability is not a requirement to accept material visual loss. Do not apply a universal custom-work ratio.
 - `custom`: define an original visual system without theme-module constraints.
 - `hybrid_led` with `selected_structure_modules`: preserve only the selected modules' responsibility and layout relationships; do not promote the whole competitor page to a production requirement.
 - `research_led`: derive hierarchy and expression from product, category, competitors, and journey evidence.

@@ -1,0 +1,21 @@
+case_id: round3_b_open_brand_theme_customization
+route: research_led_theme_customization
+user_prompt: |
+  使用 $iwish-ui-workflow 完成一个 Shopify DTC Homepage，从研究、品牌方向、临时视觉素材到原生可编辑 Figma 直接执行，只有真实硬阻塞才提问。
+
+  项目资料：
+  - 产品：适合小户型厨房和旅行收纳的可充电精密咖啡研磨器
+  - 目标市场：澳大利亚 DTC
+  - 平台：Shopify
+  - 项目场景：自主策划 + 模板部分二次开发
+  - 主题：未选择，允许根据页面责任选择
+  - 页面：Homepage
+  - 网站语言：英文
+  - 品牌：尚未建立；请根据产品、用户、市场与竞争研究创建本项目的英文品牌名、Wordmark 方向、配色、字体和视觉系统
+  - 现有素材：无 Logo、无品牌色、无最终产品摄影、无已批准性能数据、认证、评价、价格或商业承诺
+  - 参考网站：无指定结构或视觉参考；竞品由 AI 调研
+  - 开发自由度：允许主题配置、样式、Custom CSS、Custom Liquid 和有依据的新 Section；逐模块选择最合适路线，不限制自定义比例
+  - 内容模式：客户可评审的英文占位内容
+  - Figma：新建独立设计文件，固定使用 liu tailin's team（Full，team::1641483933611069221）
+
+  临时产品与场景视觉需要完整到可以让客户判断首屏、产品形态、使用环境、图片构图和页面风格，并保持可替换；不得使用未经批准的事实型声明。生成同一响应式系统的 Desktop/Mobile 可编辑预览与组件结构，内部说明和 QA 不得进入客户预览。

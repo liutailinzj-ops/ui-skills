@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH 视觉方向"
-  short_description: "将页面策略转化为视觉方向、响应式 Section 与断点验证状态"
-  default_prompt: "使用 $iwish-visual-direction 根据页面策略、品牌资料、参考来源和响应式合同建立视觉方向与代表性 Section 构图。"
+  short_description: "为轻品牌项目创建设计方向、临时视觉资产与响应式代表构图"
+  default_prompt: "使用 $iwish-visual-direction 根据项目证据补齐品牌方向与临时视觉资产，并生成可验证的响应式代表构图。"

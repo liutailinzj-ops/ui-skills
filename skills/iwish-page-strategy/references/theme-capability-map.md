@@ -75,7 +75,7 @@ page_mappings:
 - Verify exact settings individually. `demo_observation` can support visible behavior but does not prove an editable setting; `marketing_only` cannot support `exact_native` or `composed_native`.
 - Treat the live demo as visual evidence and vendor documentation as capability evidence.
 - Treat all theme store, vendor documentation, demo, and current-theme URLs as theme capability evidence. They must not define page content, selected-module structure, or product identity unless the user explicitly selected the same URL as a module source.
-- Map the content responsibility to the closest native primitive before changing layout geometry.
+- Inspect the closest native primitive as an implementation baseline, then compare it with the required content responsibility, topology, hierarchy, interaction, responsive behavior, and approved visual direction. If native behavior causes material loss and the contracted scope allows it, map to style, CSS, Liquid, or a scoped new Section instead of treating the native approximation as the target design.
 - Record unsupported settings instead of inventing them.
 - Mark evidence as `partial` when only a screenshot or marketing feature list is available; do not promote partial evidence to an exact mapping.
 - Do not classify a section as custom merely because its copy or art direction is project-specific.
@@ -93,6 +93,7 @@ page_mappings:
 ### Theme customization
 
 - Prefer the lowest-complexity implementation that preserves the required content, layout relationship, interaction, and responsive behavior.
+- Do not treat native Section availability as a visual ceiling or use limited customer assets as a reason to lower fidelity.
 - Classify every Section as `theme_native`, `configuration`, `style`, `custom_css`, `custom_liquid`, `section_custom`, `app_or_third_party`, `custom`, or `pending_engineering`.
 - Use the contracted development scope and engineering estimate; do not enforce a universal Section-count or page-height percentage.
 - Record scope status, evidence, implementation owner, and unresolved estimate dependencies for non-native work.

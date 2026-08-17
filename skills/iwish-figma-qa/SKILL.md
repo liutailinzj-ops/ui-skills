@@ -19,12 +19,13 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 - Theme Capability Map and implementation notes when applicable.
 - Source specification, topology contract, composition groups, theme assembly, and adaptation decisions when applicable.
 - Product coverage and template strategy for PDP work.
+- Visual-Asset Coverage Matrix and project-authored brand record.
 
 ## Internal QA Sequence
 
 1. Verify that requested customer-preview frames exist and contain only rendered website content.
-2. Compare major-section screenshots with the Visual Direction Contract, selected seven-dimension visual signature, signature evidence, and representative compositions. Check typography hierarchy, color behavior, first-screen topology, imagery, media ratios, density, page rhythm, component grammar, interaction, and responsive transformation.
-3. Detect generic visual fallback: repeated black boxes, repeated equal-card grammar, default accent color, or a house long-page rhythm unsupported by project evidence. If three or more identity-bearing dimensions form an unsupported fixed combination, return `需要调整` to `$iwish-visual-direction`; do not auto-redesign it in QA.
+2. Compare major-section screenshots with the Visual Direction Contract, selected seven-dimension visual signature, signature evidence, project-authored brand record, Visual-Asset Coverage Matrix, and representative compositions. Check typography hierarchy, color behavior, first-screen topology, imagery, media ratios, product/scene differentiation, density, page rhythm, component grammar, interaction, and responsive transformation.
+3. Detect generic visual fallback: repeated black boxes, repeated equal-card grammar, repeated abstract product primitives, duplicated media for semantically different items, default accent color, or a house long-page rhythm unsupported by project evidence. If decision-critical media is missing/repeated or three or more identity-bearing dimensions form an unsupported fixed combination, return `需要调整` to `$iwish-visual-direction`; do not auto-redesign it in QA and do not report the page as complete.
 4. Verify selected-module source identity, content/layout correspondence, connected compositions, and target-theme evidence for selected competitor-module work.
 5. Verify theme route, Section/Block/Setting support, responsive behavior, and approved customization scope for theme-based work.
 6. Verify product/competitor analysis traceability for research-led or hybrid sections.
@@ -71,6 +72,7 @@ For a targeted revision, inspect the changed nodes, their responsive pairs, shar
 - Theme mappings and custom scope match the requested route.
 - Source/reference responsibilities and topology are preserved or truthfully documented at the requested fidelity.
 - Temporary material remains presentable, replaceable, and correctly tracked.
+- Every decision-critical media role is present at client-review fidelity and matches the Visual-Asset Coverage Matrix; different products, configurations, features, and scenes are visually distinguishable where required.
 - Customer-preview frames contain no visible internal QA, implementation, source, Rxx, or replacement content.
 - Remaining decisions have a clear UI, client, or engineering owner.
 

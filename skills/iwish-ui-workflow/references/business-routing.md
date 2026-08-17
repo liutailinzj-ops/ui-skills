@@ -50,7 +50,7 @@ Never promote a theme demo to the structure source unless the user explicitly as
 - `selected_modules_theme_customization`: preserve only the named selected reference modules and design all remaining responsibilities from research.
 - `custom`: create an original page system from requirements, research, references, and available brand inputs.
 
-For `theme_customization`, use evidenced native capability where it fits, then classify necessary CSS, Liquid, new Sections, apps, or other custom work per module. Do not enforce a universal custom-section percentage; use the contracted scope and engineering feasibility. For `custom`, use research, requirements, references, brand inputs, and platform feasibility without theme-module constraints.
+For `theme_customization`, inspect evidenced native capability, then classify configuration, style, CSS, Liquid, new Sections, apps, or other custom work per module. Choose the least complex route that preserves the approved design responsibility; do not lower visual fidelity merely to stay native. Do not enforce a universal custom-section percentage; use the contracted scope and engineering feasibility. For `custom`, use research, requirements, references, brand inputs, and platform feasibility without theme-module constraints.
 
 ## Chinese Project Recognition Card
 

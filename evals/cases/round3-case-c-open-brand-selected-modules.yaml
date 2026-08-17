@@ -1,0 +1,27 @@
+case_id: round3_c_open_brand_selected_modules
+route: selected_modules_theme_customization
+user_prompt: |
+  使用 $iwish-ui-workflow 完成一个 Shopify DTC PDP，从参考模块分析、项目品牌方向、临时视觉素材、主题二开映射到原生可编辑 Figma 直接执行，只有真实硬阻塞才提问。
+
+  项目资料：
+  - 产品：面向小厨房的一体式智能多功能电饭煲/炖煮锅
+  - 目标市场：英国 DTC
+  - 平台：Shopify
+  - 项目场景：指定竞品部分结构 + 模板部分二次开发
+  - 页面：PDP
+  - 网站语言：英文
+  - 品牌：尚未建立；请根据产品、用户、市场与竞争研究创建本项目的英文品牌名、Wordmark 方向、配色、字体和视觉系统，不复制参考品牌身份
+  - 指定结构来源：https://fromourplace.com/products/dream-cooker
+  - 只转换以下三个模块族：
+    1. 连续的产品媒体、产品信息、颜色/选项、包含物与购买控制区
+    2. “4 Modes to Do It All” 的多模式功能轮播关系
+    3. “The All New Tailored-To-You Control Panel” 的控制面板媒体与分页/标签说明关系
+  - 其余页面内容：根据产品、品类、竞品与购买链路研究生成，不复制来源整页
+  - 目标主题：Shopify Prestige
+  - 主题能力来源：https://themes.shopify.com/themes/prestige/presets/prestige
+  - 现有素材：无 Logo、无品牌色、无最终产品摄影、无已批准性能数据、认证、评价、价格或商业承诺
+  - 开发自由度：允许主题配置、样式、Custom CSS、Custom Liquid 和有依据的新 Section；逐模块选择最合适路线，不限制自定义比例
+  - 内容模式：客户可评审的英文占位内容
+  - Figma：新建独立设计文件，固定使用 liu tailin's team（Full，team::1641483933611069221）
+
+  保留三个选中模块族的内容责任、连接边界、视觉层级、主要媒体关系、交互与响应式逻辑，并映射到可实现的主题或二开路线。临时产品与场景视觉需要达到客户可评审程度且可替换，不得移植参考品牌文案、事实或资产。生成同一响应式系统的 Desktop/Mobile 可编辑预览与组件结构，内部说明和 QA 不得进入客户预览。

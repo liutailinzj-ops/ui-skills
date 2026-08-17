@@ -5,7 +5,7 @@ Use placeholder mode whenever final customer copy, product data, or imagery is i
 ## Allowed
 
 - Neutral temporary product names and descriptions.
-- Client-presentable neutral image treatments.
+- Client-presentable generated, licensed, rendered, illustrated, diagrammatic, or deliberately graphic temporary treatments that perform the intended visual communication job.
 - Licensed stock, generated images, or temporary internal references.
 - Representative products selected for layout testing.
 - AI-drafted copy whose unapproved status is recorded in the manifest, not rendered beside the copy.
@@ -29,6 +29,8 @@ Placeholder / Certification
 - Use realistic but non-factual sample names and copy where final content is missing.
 - Prefer generated or licensed category imagery for customer review.
 - Keep the composition visually complete enough for the customer to judge hierarchy, spacing, and style.
+- Keep the product type, configuration differences, feature differences, scene, crop, scale, and image density judgeable wherever those are part of the design responsibility.
+- Do not reuse one generic image or abstract primitive for different products, configurations, features, or scenes when the media is meant to explain their difference.
 - Do not show implementation classes, source warnings, replacement instructions, or large placeholder indexes as dominant content.
 - Resolve visible copy/media from `content.customer_visible_ledger`. The visible value contains only storefront content; provenance, approval, replacement, and risk fields remain internal.
 - Never render internal markers such as `Placeholder`, `TBD`, `TODO`, `待替换`, `未批准`, `待确认`, `概念预览`, `内部检查`, `QA`, `Rxx`, `Theme Native`, `Section Custom`, `source warning`, or `replacement instruction` inside customer-preview frames. Use a safe neutral storefront value or omit the optional slot without leaving dead space.
@@ -49,5 +51,6 @@ Store these outside the rendered client preview:
 - Inventing product specifications, certifications, prices, shipping promises, warranties, medical claims, performance claims, cases, or reviews as facts.
 - Treating competitor imagery as approved customer material.
 - Sending temporary competitor assets to production.
+- Calling repeated empty rectangles or generic geometry a client-review image system when the design responsibility requires product, configuration, feature, or context differentiation.
 
 Competitor imagery may be used only as clearly tagged internal composition reference. Prefer licensed or generated placeholders for customer-facing review. Replace all temporary assets before final production handoff.

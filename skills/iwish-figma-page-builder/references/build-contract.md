@@ -36,6 +36,8 @@ Placeholder / {Content Type}
 - Record a reason when a section needs a different composition; do not silently fall back to a house component.
 - Reject repeated black boxes, generic card grids, or a fixed palette/rhythm that is not supported by project evidence.
 - Use real or tracked temporary imagery so the result can be judged as UI, not only as information architecture.
+- Complete the Visual-Asset Coverage Matrix for every decision-critical media slot. Verify subject, environment, crop, scale, density, and required variation from actual screenshots.
+- Reject duplicated generic media when products, configurations, features, or scenes are supposed to differ visually.
 - Compare the completed page with the selected seven-dimension visual signature. Typography, first-screen topology, page rhythm, and component grammar require project evidence; construction convenience is not evidence.
 
 ## Content preflight
@@ -47,6 +49,7 @@ Before creating full-page wrappers:
 - Reject any rendered value that contains internal approval, placeholder, implementation, QA, source-warning, test, scope, or replacement instructions.
 - Keep status/provenance in manifest fields or internal layer metadata; do not build visible badges or suffixes from them.
 - Instantiate one representative responsive-risk Section pair with final content and Text Styles, then inspect actual bounds, wrapping, navigation, repeated items, media crop, and overflow before full-page assembly.
+- Validate the full representative set before wrappers: first screen or primary conversion, one semantic-differentiation module, and one imagery-led module. All decision-critical media must use the intended temporary assets rather than empty frames or repeated primitives.
 
 ## Editability
 
@@ -71,13 +74,13 @@ Before creating full-page wrappers:
 - Do not clip content accidentally. Any child outside a clipping parent blocks the Section unless a named evidenced overflow contract requires it.
 - For carousels, define viewport width, card width, gap, next-card preview, indicator or controls, and intended swipe behavior. A clipped card alone is not a carousel.
 
-## Theme fidelity
+## Theme feasibility and customization freedom
 
 - Use the exact section/block mapping approved in the Theme Capability Map.
 - Use exact target-theme Section, Block, and Setting names with field-level evidence. Descriptive or generated aliases are not mappings.
-- Keep layout, ordering, controls, and responsive behavior within documented theme settings.
+- Keep layout, ordering, controls, and responsive behavior within documented theme settings only for rows classified as native/configured. For style, CSS, Liquid, or new-Section rows, follow the recorded scoped implementation contract.
 - Record every visual divergence and its implementation level.
-- Do not auto-promote a section to custom. In `theme_adaptation`, use the best evidenced native fallback when higher fidelity crosses the route budget, and record the optional custom route. Stop only when the critical function itself cannot be represented or an explicit exact requirement needs a route decision.
+- Choose the least complex feasible route that preserves the approved design responsibility. Do not auto-promote a Section to custom for convenience, but do not downgrade hierarchy, media relationships, interaction, or responsive behavior merely to stay native. A scoped new Section is valid when contracted development freedom and evidence support it.
 
 ## Analysis traceability
 
@@ -128,6 +131,7 @@ Before continuing, verify:
 - No unexplained sibling bounding-box collision exists outside an intentional overlay container.
 - No section contains a source-unjustified blank vertical band larger than 240 px and 25% of its height.
 - Media crop/aspect, gallery height, and content-column balance match the recorded source layout class.
+- Every decision-critical media slot matches its Visual-Asset Coverage Matrix row; distinct configurations, products, features, and scenes are visually distinguishable.
 - Every child is contained by its parent or covered by a named, evidenced overflow contract; no hidden overflow is used to conceal sizing errors.
 - Any clipping parent with an out-of-bounds normal child fails, even when the child is visually hidden in the screenshot.
 - Composition groups, normalized major-region geometry, repeated-item counts, and interaction viewports match the topology contract.

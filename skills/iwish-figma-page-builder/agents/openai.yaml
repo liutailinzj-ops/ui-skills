@@ -1,4 +1,4 @@
 interface:
-  display_name: "IWISH Figma é¡µé¢ç”Ÿæˆ"
-  short_description: "ç”Ÿæˆä¸€å¥—å“åº”å¼ Section ç³»ç»ŸåŠé…å¯¹çš„ Desktop/Mobile Figma é¢„è§ˆ"
-  default_prompt: "ä½¿ç”¨ $iwish-figma-page-builder æ ¹æ®é¡µé¢è“å›¾ã€å“åº”å¼åˆåŒã€è§†è§‰æ–¹å‘å’Œç»„ä»¶æ˜ å°„ç”Ÿæˆå®Œæ•´ Figma é¡µé¢ã€‚"
+  display_name: "IWISH Figma Ò³ÃæÉú³É"
+  short_description: "ÓÃÕæÊµ»òÉú³ÉËØ²Ä¹¹½¨¿É±à¼­ÏìÓ¦Ê½ Figma Ò³ÃæÓë×é¼ş"
+  default_prompt: "Ê¹ÓÃ $iwish-figma-page-builder ¸ù¾İÊÓ¾õ·½Ïò¡¢ËØ²Ä¾ØÕóºÍÖ÷Ìâ¶ş¿ªÂ·ÏßÉú³ÉÍêÕû¿É±à¼­ Figma Ò³Ãæ¡£"

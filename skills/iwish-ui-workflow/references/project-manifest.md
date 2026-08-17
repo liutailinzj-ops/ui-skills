@@ -14,6 +14,7 @@ project:
   build_route: theme_customization | custom
   strategy_mode: research_led | hybrid_led | custom_led
   brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
+  brand_authorship_mode: customer_led | constrained_authoring | open_concept
   website_language:
 scope:
   requested_page:
@@ -86,6 +87,12 @@ visual_direction:
     - active_project_master_rules
     - evidence_backed_candidate
   project_invariants: []
+  preserved_customer_invariants: []
+  project_authored_brand:
+    name_or_wordmark_treatment:
+    creative_thesis:
+    authored_fields: []
+    evidence: []
   page_overrides: {}
   candidate_decisions: []
   direction_candidates: []
@@ -110,6 +117,7 @@ visual_direction:
   typography:
   color_system:
   imagery_direction:
+  visual_asset_coverage: []
   composition_rules:
   responsive_rules:
   prohibited_defaults: []
@@ -173,7 +181,9 @@ Keep the active visual authority stable across pages and sessions. A page overri
 
 Maintain one canonical customer-visible content ledger before Figma production. Give every visible text, media, and control a stable slot ID, canonical client value, evidence status, and breakpoint visibility. Store approval state, placeholder provenance, replacement owner, source class, and internal instructions beside the slot as internal metadata; never concatenate those fields into the rendered client value. Desktop and Mobile resolve the same slot IDs and values unless the Responsive Section Contract records an evidenced content variant.
 
-For light-brand projects, persist two materially different internal visual-direction candidates and the selected candidate rationale. Record evidence for all seven visual-signature dimensions. Generic adjectives and model preference are not evidence; a named creative inference must connect to the product, audience, journey, content behavior, implementation route, or supplied asset and explain why the rejected candidate fits less well.
+For light-brand projects, persist the brand-authorship mode, supplied invariants, project-authored brand fields, two materially different internal visual-direction candidates, and the selected candidate rationale. Record evidence for all seven visual-signature dimensions. Generic adjectives and model preference are not evidence; a named creative inference must connect to the product, audience, journey, content behavior, implementation route, or supplied asset and explain why the rejected candidate fits less well.
+
+Persist a Visual-Asset Coverage Matrix for every decision-critical media role. Missing customer imagery changes `source_class` and replacement work, not the fidelity target. Different products, configurations, features, and scenes must have visibly different temporary media when the media communicates their difference.
 
 Keep regression case IDs, baselines, topology signatures, no-op checks, cross-case results, and technical visual-gate results outside this production manifest. Store them only under `evals/` result artifacts.
 

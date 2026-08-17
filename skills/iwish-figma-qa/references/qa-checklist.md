@@ -54,6 +54,8 @@
 - Three or more unsupported identity-bearing dimensions do not form a fixed house combination. Generic labels such as premium, modern, editorial, minimal, conversion best practice, or common DTC pattern do not count as evidence by themselves.
 - A technically complete wireframe is not reported as a client-ready UI draft.
 - Temporary imagery preserves the intended crop, product scale, density, and composition quality.
+- The amount of customer material has not lowered visual fidelity; missing decision-critical media has been generated or licensed and remains replaceable.
+- Different products, configurations, features, and scenes use visibly different media when the visual carries their distinction. Repeated generic geometry with new labels fails.
 
 ## Responsive
 
@@ -77,6 +79,7 @@
 - Unapproved factual claims are not presented as final.
 - Competitor/reference imagery is not presented as customer-owned production material.
 - Missing content and replacement responsibility are recorded.
+- Every decision-critical media slot resolves to the Visual-Asset Coverage Matrix, including communication job, crop, scale, required variation, source class, and replacement rule.
 
 ## Platform feasibility
 

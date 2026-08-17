@@ -1,4 +1,4 @@
 interface:
   display_name: "IWISH UI 工作流"
-  short_description: "覆盖三种生产场景与局部修改的可编辑 Figma UI 工作流"
-  default_prompt: "使用 $iwish-ui-workflow 处理网站 UI：新项目自动识别自主策划模板二开、指定竞品部分结构模板二开或纯定制；已有项目按指定页面或模块进行局部修改，不默认重做整页。"
+  short_description: "编排品牌自建、临时视觉资产、主题二开与可编辑 Figma 交付"
+  default_prompt: "使用 $iwish-ui-workflow 从项目资料与研究开始，完成项目品牌方向、临时视觉资产、主题二开路线和可编辑 Figma UI。"

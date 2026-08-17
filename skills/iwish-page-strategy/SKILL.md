@@ -54,8 +54,7 @@ A theme demo may prove capability but may not replace a selected competitor modu
 - Create the canonical customer-visible content ledger before visual direction. Give every visible text, media, and control slot one stable ID, canonical client value, evidence status, and breakpoint visibility. Keep provenance, approval, replacement, and placeholder instructions in internal metadata rather than the rendered value.
 - For native/configured theme Sections, use documented theme breakpoint settings or observed automatic behavior. For custom Sections and fully custom work, define an explicit responsive implementation plan without creating a second content or component system.
 - Use `native_adaptation` only when evidenced native behavior preserves required content, critical function, and reading order while changing a named topology detail.
-- Resolve theme implementation in this order: native theme → configuration → style → custom CSS → custom Liquid → custom section → custom.
-- For theme customization, decide each Section independently as native, configured, styled, CSS, Liquid, new custom Section, app/third-party, or pending engineering confirmation. Do not impose a universal custom-work percentage.
+- For theme customization, decide each Section independently as native, configured, styled, CSS, Liquid, new custom Section, app/third-party, or pending engineering confirmation. Choose the least complex route that preserves the approved content responsibility, topology, visual hierarchy, interaction, and responsive behavior; do not accept a material design loss merely to stay theme-native. A scoped new Section is a normal route when the contracted development freedom supports it. Do not impose a universal custom-work percentage.
 - Do not select a visual palette, component house style, or generic Figma layout in this Skill. Provide evidence and requirements to `$iwish-visual-direction`.
 - Do not read or execute repository regression fixtures in production.
 
@@ -71,6 +70,6 @@ Produce [references/page-blueprint.md](references/page-blueprint.md) with:
 - Source specification, content-layout matrix, topology contract, and composition groups when applicable.
 - Product Coverage Matrix and truthful PDP template strategy when applicable.
 - Component requirements and implementation level without pre-designing generic components.
-- A Visual Direction Brief containing required brand impression, content emphasis, source visual principles, theme constraints, imagery needs, and responsive priorities. This is input to the visual-direction Skill, not a finished visual direction.
+- A Visual Direction Brief containing supplied brand invariants, the allowed project-authored brand fields, required brand impression, content emphasis, source visual principles, theme constraints, decision-critical visual-asset roles, and responsive priorities. This is input to the visual-direction Skill, not a finished visual direction.
 
 Do not write to Figma and do not produce QA or regression results in this Skill.

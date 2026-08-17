@@ -6,7 +6,12 @@ Use customer-provided assets when their identity and intended placement are clea
 
 ## Missing assets
 
-Apply the workflow placeholder policy. Use generated or licensed placeholders when available; otherwise use a neutral image treatment that still supports a client-presentable composition.
+Apply the workflow placeholder policy. Use generated or licensed placeholders for every decision-critical visual role. Use a neutral graphic treatment only when the selected project direction deliberately calls for it and the result still communicates product form, configuration, feature, or context at client-review fidelity.
+
+- Treat image generation or licensed sourcing as part of normal production when customer material is missing, not as an optional enhancement.
+- Follow the Visual-Asset Coverage Matrix for subject, environment, crop, scale, lighting/render style, and required variation.
+- Do not reuse one generic visual for semantically different configurations, products, features, herbs, or scenes.
+- Keep diagrams and editable geometry for explanatory overlays and deliberately graphic systems; do not make them the automatic replacement for all product and lifestyle media.
 
 - Put `Placeholder /` in the layer name and manifest.
 - Never render the `Placeholder /` prefix, approval state, source class, replacement owner, or publication restriction as website text.
