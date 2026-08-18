@@ -38,6 +38,8 @@ Never assume an empty local variable list means no library variables exist; sear
 - Create or reuse an internal visual-direction page when representative compositions will be written.
 - Define viewport preview widths, page gutters, maximum container widths, named container modes, spacing scale, and alignment-group rules before Section production.
 - Define the local-component library content width, category/family row grid, caption column, variant gap, family gap, and shared row origin before component production. The component page must be an aligned internal system, not a loose canvas.
+- Create the component-library root as one `FRAME` with vertical Auto Layout before creating any master. A page, section, or visually aligned set of page-level nodes is not a valid library root.
+- Return the actual root node ID and verify from live metadata that `type=FRAME` and `layoutMode=VERTICAL`; do not record a planned or inferred structure as completed.
 - Treat Desktop and Mobile pages or frames as paired breakpoint previews of one responsive system. Do not create separate foundations, tokens, content systems, or component libraries for them.
 - During a targeted revision, mutate only foundations explicitly invalidated by the authority revision. A page-scoped override should normally use scoped variables/styles or component properties without rewriting unrelated project tokens.
 - Do not create a customer-visible QA page. Internal QA defaults to the Codex conversation or internal artifact; create an internal Figma QA page only when requested and use Chinese visible labels.

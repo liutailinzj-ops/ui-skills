@@ -23,8 +23,10 @@
 - Icons/media use suitable instance-swap or replaceable structures.
 - Instances are not detached without a documented reason.
 - The component-library root, categories, and family rows use Auto Layout and aligned shared origins.
+- The component-library root is a `FRAME` with `layoutMode=VERTICAL`; the local-component Page or a `layoutMode=NONE` frame is never accepted as the root.
 - Active component families are ordered consistently, non-overlapping, and separated from archive/deprecated families.
 - Paired Desktop/Mobile Section variants are ordered horizontally as `Desktop | Mobile`, top-aligned, separated by the foundation variant gap, and component-set bounds contain no unexplained empty bands.
+- Every responsive variant is fully contained by its Component Set within 1 px on all edges.
 - UI can locate and edit active masters without rearranging the component page.
 
 ## Layout
@@ -67,6 +69,7 @@
 ## Responsive
 
 - Desktop and Mobile preview frames both exist as states of one responsive page system.
+- Both complete-preview roots are `FRAME` nodes with `layoutMode=VERTICAL`; manually aligned Section coordinates in `layoutMode=NONE` wrappers fail.
 - Every paired Section keeps the same stable identity, order, component family, content bindings, controls, and shared copy.
 - Mobile behavior is derived from the Responsive Section Contract, not independently redesigned or merely scaled.
 - Every breakpoint difference is listed and supported by theme evidence or the custom responsive plan.
@@ -76,6 +79,7 @@
 - Clipping is intentional and does not cut the active card.
 - A clipping parent has no out-of-bounds normal child unless an explicit overflow contract names that relationship and affordance.
 - Customer-facing headings, body copy, labels, and CTAs do not differ across breakpoints without an evidenced content variant.
+- Diagram/media cards keep label and body content in a non-intersecting content region unless a named intentional overlay zone passes final-copy contrast and padding checks.
 
 ## Content and assets
 
@@ -86,6 +90,7 @@
 - Unapproved factual claims are not presented as final.
 - Competitor/reference imagery is not presented as customer-owned production material.
 - Missing content and replacement responsibility are recorded.
+- Unsupported specification/proof groups do not render as repeated dashes, empty values, or `N/A` in customer previews.
 - Every decision-critical media slot resolves to the Visual-Asset Coverage Matrix, including communication job, crop, scale, required variation, source class, and replacement rule.
 
 ## Platform feasibility
@@ -177,6 +182,7 @@ Mark QA blocked when any of these fail:
 - Alignment-group edge mismatch above 1 px or an unexplained container-width change.
 - Client-preview separation.
 - Disordered or misaligned active component-library presentation.
+- A component-library root or complete-preview root that is not the required Auto Layout `FRAME`, a floating active master, or a variant outside its Component Set.
 - Missing full Desktop or Mobile preview, incomplete approved Section sequence, or an overall pass inferred from representative Sections only.
 - Missing or failed page-composition board, or a complete page that materially diverges from its passed macro contract.
 - Failed content sufficiency: generic/repeated Sections, missing product-specific angles, or visible internal production-status language.

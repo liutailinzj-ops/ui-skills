@@ -4,6 +4,7 @@ Run this deterministic read-only audit before reporting QA as passed. Inspect th
 
 ## Required inputs
 
+- Delivery Structure Gate result from [delivery-structure-gate.md](delivery-structure-gate.md).
 - Desktop and Mobile preview root IDs.
 - Responsive Section Contract IDs.
 - Canonical customer-visible content ledger and internal marker policy.
@@ -44,6 +45,7 @@ For every responsive Section pair:
 - Fail fixed-height wrappers that crop content or leave source-unjustified dead space.
 - Fail manually fixed child widths that cause an unexplained row remainder or inconsistent right edge.
 - Check same-row equal-height requirements and 1 px grid-span tolerance.
+- For diagram/media cards, detect text intersections with explanatory graphic bounds. Allow them only inside a named intentional overlay container with recorded contrast and padding behavior.
 
 ### Customer-preview isolation
 

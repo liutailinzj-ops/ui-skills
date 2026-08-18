@@ -76,3 +76,7 @@ Do not place masters loosely on the canvas. Create one aligned Auto Layout root 
 Use the Component Library Presentation Contract for category, family-row, caption, variant, spacing, and alignment behavior. Record every root/category/family-row ID.
 
 Within each responsive Section family row, reserve stable horizontal variant columns in `Desktop | Mobile` order, align both variants to the top, and use one foundation-defined inter-variant gap. Keep component-set bounds tight; viewport-height differences must not create vertical stacking or large empty bands.
+
+The root must be a `FRAME` with `layoutMode=VERTICAL`. Do not treat the local-component `PAGE` itself, a `SECTION`, or manually aligned top-level nodes as the root. Create category and family-row Auto Layout frames inside it before appending any active master.
+
+After the root is created, read it back from Figma and record `id`, `type`, `layoutMode`, direct category IDs, and active master count. Foundation status remains blocked unless the returned node is a vertical Auto Layout frame.

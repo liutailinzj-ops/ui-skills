@@ -15,6 +15,7 @@ Placeholder / {Content Type}
 
 - Use Frame nodes, not Group nodes, for layout structure.
 - Use Auto Layout for normal content flow.
+- Complete Desktop and Mobile preview roots must be vertical Auto Layout frames. Do not assemble a page by calculating Section y coordinates inside a `layoutMode=NONE` wrapper.
 - Set HUG, FILL, and FIXED deliberately after parenting nodes.
 - Use absolute positioning only for intentional decoration or overlap.
 - Keep containers, grids, padding, and section spacing traceable to foundations.
@@ -67,6 +68,7 @@ Before creating final preview wrappers:
 - Resolve the component-library root, active categories, family rows, and component sets.
 - Verify Auto Layout, shared origins, row/category alignment within 1 px, top-aligned paired breakpoint variants, consistent variant ordering, tight set bounds, and no overlap.
 - Do not assemble the page from a library that UI must first rearrange.
+- Read live metadata: the root must be a vertical Auto Layout `FRAME`, active masters must be descendants of it, and every responsive variant must be fully contained by its Component Set within 1 px.
 
 ## Editability
 
@@ -90,6 +92,7 @@ Before creating final preview wrappers:
 - Ensure touch targets, text size, image crops, and navigation behavior remain practical.
 - Do not clip content accidentally. Any child outside a clipping parent blocks the Section unless a named evidenced overflow contract requires it.
 - For carousels, define viewport width, card width, gap, next-card preview, indicator or controls, and intended swipe behavior. A clipped card alone is not a carousel.
+- For a Mobile card that combines a diagram/media region with labels or body copy, place text in a separate Auto Layout content region after the media by default. Overlay text only when the Visual Direction Contract explicitly requires it and the named overlay zone preserves contrast, padding, and non-intersection at final copy length.
 
 ## Theme feasibility and customization freedom
 
@@ -142,6 +145,7 @@ Do not use a visually polished semantic checklist as a substitute for steps 1–
 - Complete production requires full Desktop and Mobile customer-preview roots containing the entire approved Section sequence, including applicable header, commerce, content, global, cross-sell, footer, and sticky responsibilities.
 - Both roots must be assembled from the same responsive Section/component families and canonical content ledger. Mobile is a breakpoint state, not a separate redesign.
 - Capture and inspect both full-page screenshots after assembly. Do not set overall production complete until both preview states pass.
+- Read both roots after assembly and require vertical Auto Layout, recorded Section instances as direct children, full-width in-flow children, and final-child containment. Pixel-perfect manual placement does not pass.
 - If the requested scope intentionally stops at exploration, report only `代表性模块预检通过` and keep overall production in progress.
 
 ## Section validation gate
@@ -155,6 +159,7 @@ Before continuing, verify:
 - Nodes in one alignment group share left and right edges within 1 px; no unexplained fixed-width remainder exists.
 - Every multi-line Text node uses Auto Height/HUG or a documented clamp; no text is cropped or overlapping.
 - No unexplained sibling bounding-box collision exists outside an intentional overlay container.
+- Diagram/media cards keep labels and body copy outside the graphic bound unless a named intentional overlay zone passes final-copy contrast and intersection checks.
 - No section contains a source-unjustified blank vertical band larger than 240 px and 25% of its height.
 - Media crop/aspect, gallery height, and content-column balance match the recorded source layout class.
 - Every decision-critical media slot matches its Visual-Asset Coverage Matrix row; distinct configurations, products, features, and scenes are visually distinguishable.

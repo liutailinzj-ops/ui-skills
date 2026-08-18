@@ -32,6 +32,8 @@ Populate every decision-critical media slot from the Visual-Asset Coverage Matri
 
 For theme-based work, derive every breakpoint difference from documented theme settings or observed automatic theme behavior. For custom work, record the intentional transformation in the Responsive Section Contract. Do not author different copy or a separate visual concept for the second state.
 
+When a responsive-risk proof contains diagrammatic or configuration cards, validate one card with final-length label and body copy. On Mobile, use a separate content region after the graphic by default; permit overlay only when the selected direction names the overlay zone and the final text does not intersect the explanatory graphic.
+
 ## Figma placement
 
 - Put representative work on `02_视觉方向` or the compatible existing internal page.

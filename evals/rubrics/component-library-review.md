@@ -5,9 +5,11 @@
 ## 阻断项
 
 - Active master/component set 松散放置在画布，没有统一 Auto Layout 根节点。
+- 所谓根节点实际是 Page、Section 或 `layoutMode=NONE` 的普通 Frame；截图看起来对齐也不能替代此项。
 - 分类、组件家族行、标题或主组件没有共同左边界，误差超过 1 px。
 - Desktop/Mobile Section 变体未按 `Desktop | Mobile` 横向排列并顶对齐、顺序混乱、纵向堆叠或分散在不同区域。
 - Component Set 互相重叠、行间距不一致，或边界包含无依据的大面积空白。
+- 任一 Variant 的右边或下边超出 Component Set 边界 1 px 以上。
 - Variant 轴在不同组件家族中使用不同顺序或含义。
 - 已废弃组件与当前组件混排。
 - UI 必须先重新排列组件库才能正常查找、比较或编辑。

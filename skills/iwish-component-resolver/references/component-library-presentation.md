@@ -7,6 +7,7 @@
 - Align both variant origins to the top edge even when their heights differ.
 - Use the foundation variant gap and stable column starts; do not use per-family ad hoc spacing.
 - Component-set and family-row bounds must Hug Content tightly enough that no unexplained empty band remains.
+- A Component Set must fully contain every variant: each child origin is non-negative within 1 px and each child right/bottom edge is no more than 1 px outside the set bound.
 - Vertical breakpoint stacking, overlapping component sets, or loose absolute placement blocks page assembly. Repair the library before using its instances.
 
 The component page is an internal working surface, but it must be orderly enough for UI to find, compare, and edit component families without rearranging the file.
@@ -38,6 +39,7 @@ Create only categories consumed by the current project. Each category is a verti
 ## Alignment and sizing
 
 - Bind the library root, category frames, and rows to Auto Layout.
+- Require the root node itself to be a `FRAME` with `layoutMode=VERTICAL`; a page or ordinary `layoutMode=NONE` frame fails even when all rows appear aligned.
 - Use one library content width or a named wide mode. All category and row left/right edges must align within 1 px.
 - Keep captions, masters, and variant sets on shared column starts. Do not center one family and left-align another without a documented reason.
 - For full-width Section masters, keep real component size and place each family on its own row. Do not scale masters into illegible thumbnails or overlap rows to save canvas space.
@@ -63,5 +65,8 @@ Before page assembly, capture the active component library at readable scale and
 - component-set bounds contain unexplained large empty areas;
 - captions, variant order, or component names are inconsistent;
 - UI must rearrange the library before normal editing.
+- any active master sits outside the recorded library root, or any variant extends outside its Component Set.
+
+Run a live metadata read after the screenshot. The presentation gate passes only when visual inspection and node assertions both pass.
 
 This gate evaluates library usability, not customer-facing art direction. Keep the page outside customer preview and use Chinese for its visible internal labels.

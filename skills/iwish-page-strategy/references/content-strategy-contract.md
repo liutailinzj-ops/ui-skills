@@ -46,6 +46,7 @@ For B2B, replace desire/consumer trust with application fit, capability, qualifi
 - Make every Section answer one named visitor question and advance the page journey. Do not add generic ecommerce filler to make a long page.
 - Derive wording from confirmed product facts, visually observable form/context, category language, and named project inferences. Keep unverifiable performance, dimensions, materials, certification, price, reviews, warranty, and commercial promises out.
 - When facts are missing, use externally readable copy about form, use context, organization, compatibility questions, or intended decision support. Keep `pending`, `placeholder`, `review`, approval, validation, and replacement language in internal metadata only.
+- For a factual field group with insufficient values, choose its client-preview treatment before Figma: `omit_and_collapse`, `qualitative_decision_support`, or `internal_only`. Do not choose repeated dashes, empty cells, or `N/A` as the visible content strategy.
 - Keep product-specific terms, situations, choices, and objections. If a headline/body pair remains valid for coffee equipment, cat furniture, and a cooker after noun replacement, revise it.
 - Avoid repeating the same claim in Hero, benefits, steps, story, CTA, and FAQ. Record the unique content job of each Section.
 - Do not force every conversion responsibility onto one page. Record the connected page or unavailable proof when appropriate.

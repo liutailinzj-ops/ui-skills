@@ -68,7 +68,10 @@ Read [references/component-contract.md](references/component-contract.md) and [r
 - Build and validate one component family at a time.
 - Place every active master or component set into the aligned component-library root, category, and family row as it is created. Do not leave masters floating on the canvas and organize them later.
 - For every responsive Section family, place variants in one deterministic horizontal row ordered `Viewport=Desktop | Viewport=Mobile`, top-aligned with the foundation variant gap. Keep component-set bounds tight to content; do not stack viewport variants vertically or preserve unexplained empty bands.
+- After every responsive Component Set mutation, read its live bounds. Block when any variant has a negative origin or when `variant.x + variant.width` or `variant.y + variant.height` exceeds the Component Set bound by more than 1 px. Recompute the set and family-row height before creating page instances.
+- Before page assembly, verify the live library root is a vertical Auto Layout `FRAME`, every active category/family row is an Auto Layout descendant, and no active master remains page-level. Screenshot alignment alone is not evidence.
 - Capture the component library at readable scale before page assembly. Fail when categories, family rows, paired breakpoint variants, component-set bounds, captions, or variant order are not aligned and usable by UI.
+- Pass the live library, Component Set, and variant IDs to `$iwish-figma-qa`; do not replace node evidence with a prose `issues=[]` claim.
 
 ## Company Library Policy
 
