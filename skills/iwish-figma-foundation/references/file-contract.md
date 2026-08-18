@@ -2,22 +2,34 @@
 
 A Starter File is optional. The file contract is mandatory.
 
-## Default pages for a blank internal working file
+## Minimum pages for a blank working file
+
+```text
+03_基础样式
+04_本地组件
+10_Client Preview Desktop
+11_Client Preview Mobile
+```
+
+Create only pages that receive real content during the current run. Reuse compatible existing pages instead of creating duplicates.
+
+The following pages are conditional, not a blank-file checklist:
 
 ```text
 00_项目与简报
 01_研究与策略
 02_视觉方向
-03_基础样式
-04_本地组件
-10_Client Preview Desktop
-11_Client Preview Mobile
 90_参考资料
 95_内部检查
 99_归档
 ```
 
-Reuse compatible existing pages instead of creating duplicates. Do not create `95_内部检查` unless internal Figma QA is explicitly requested.
+- Create `00_项目与简报`, `01_研究与策略`, or `90_参考资料` only when the corresponding material will be placed in Figma and remains useful at handoff.
+- Create `02_视觉方向` only when representative compositions or an active visual-direction board will be written there.
+- Do not create `95_内部检查` unless internal Figma QA is explicitly requested.
+- Create `99_归档` only when real superseded nodes must remain recoverable inside the file.
+- Prefer the project manifest or internal artifacts for research, QA, implementation notes, and replacement tracking when no Figma canvas is needed.
+- Do not leave a page with zero visible top-level nodes. Before handoff, delete only pages revalidated as empty by exact page ID, or populate them with required final content.
 
 `10_Client Preview Desktop` and `11_Client Preview Mobile` are export views of the same responsive page and Section component families. They are not separate design workstreams. A project may place both preview frames on one compatible page when that better preserves pairing.
 
@@ -55,6 +67,7 @@ Placeholder / Product Image
 - Keep reusable master components on `04_本地组件` or the compatible existing page.
 - Keep reference captures on `90_参考资料`, never as final page layers.
 - Keep customer-preview frames visually clean and export only from those frames.
+- Keep the final file free of empty, placeholder-only, debug-only, and obsolete working pages. An optional page is not evidence of completeness.
 - Pair every responsive Section instance across preview states by stable Section/component identity and shared content bindings.
 - Preserve established valid conventions in existing files.
 

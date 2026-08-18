@@ -3,6 +3,8 @@
 ## File and naming
 
 - Expected pages and root frames exist.
+- Every existing page contains purposeful visible top-level content; optional research, reference, QA, and archive pages are absent when unused.
+- No page contains only setup placeholders, debug output, obsolete captures, or superseded residue without an explicit retained purpose.
 - No duplicate generated pages/components.
 - No unexplained unnamed layers.
 - Node IDs in the manifest still resolve.
@@ -184,6 +186,7 @@ Mark QA blocked when any of these fail:
 - Disordered or misaligned active component-library presentation.
 - A component-library root or complete-preview root that is not the required Auto Layout `FRAME`, a floating active master, or a variant outside its Component Set.
 - Missing full Desktop or Mobile preview, incomplete approved Section sequence, or an overall pass inferred from representative Sections only.
+- Any empty page or unresolved placeholder-only/debug-only working page in the final file.
 - Missing or failed page-composition board, or a complete page that materially diverges from its passed macro contract.
 - Failed content sufficiency: generic/repeated Sections, missing product-specific angles, or visible internal production-status language.
 - Missing canonical content-slot binding, undeclared visible content, or rendered internal metadata.

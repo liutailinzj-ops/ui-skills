@@ -44,6 +44,8 @@ Never assume an empty local variable list means no library variables exist; sear
 - During a targeted revision, mutate only foundations explicitly invalidated by the authority revision. A page-scoped override should normally use scoped variables/styles or component properties without rewriting unrelated project tokens.
 - Do not create a customer-visible QA page. Internal QA defaults to the Codex conversation or internal artifact; create an internal Figma QA page only when requested and use Chinese visible labels.
 - When the customer will receive the whole Figma file, keep internal QA in a separate file.
+- Treat optional pages as content-driven. Do not precreate research, reference, QA, or archive pages merely because their names appear in the file contract.
+- Before foundation handoff, inspect every created page and remove an exact-ID page only when live metadata confirms that it has zero visible top-level nodes and is not the file's sole page. Never leave empty canvases as future placeholders.
 
 ## Output
 
@@ -59,3 +61,4 @@ Update the project manifest with:
 - Conflicts and resolutions.
 - Foundation screenshots and validation status.
 - Visual-direction page ID and internal-QA location when applicable.
+- Populated page IDs plus any exact empty page IDs removed during reconciliation.

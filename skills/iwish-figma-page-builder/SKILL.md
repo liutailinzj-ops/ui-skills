@@ -56,7 +56,8 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 19. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames. Never render internal content status beside website copy.
 20. Capture and inspect full Desktop and Mobile screenshots after the last Section. Set both complete-preview states before requesting final QA; a component-library screenshot, composition board, or representative Section screenshot cannot substitute.
 21. Read back both preview roots. Require `type=FRAME`, `layoutMode=VERTICAL`, direct children as recorded Section instances, full-width non-absolute children, and complete final-child containment before requesting QA.
-22. Return every created or mutated node ID, explicitly preserved node IDs, and update the production manifest.
+22. Inspect every Figma page before requesting QA. Do not leave zero-content pages or pages containing only obsolete setup/debug residue. Delete only an exact-ID page revalidated as empty and not the file's sole page; otherwise report the residue for scoped cleanup.
+23. Return every created, mutated, or removed node ID, explicitly preserved node IDs, and update the production manifest.
 
 ## Visual Continuity Rules
 
@@ -73,6 +74,15 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 - If three or more identity-bearing signature dimensions cannot be traced to project evidence, return to `$iwish-visual-direction`; do not let full-page assembly turn an unsupported candidate into the de facto direction.
 - Auto Layout, components, Rxx coverage, and style binding are implementation requirements, not substitutes for visual design.
 
+## Review-ready Quality Bar
+
+- The complete page must be understandable and visually credible to a client without reading internal rationale.
+- Product/category identity, primary value, and purchase or inquiry path must be legible from the rendered page itself.
+- Typography, color, imagery, section rhythm, content specificity, and interaction language must form one project-specific direction across the full page, not a collection of isolated acceptable Sections.
+- Missing customer assets must be replaced with coherent, presentable, replaceable temporary assets at the same review fidelity; they may not reduce the result to wireframes or generic geometry.
+- UI should be able to refine copy, media, tokens, spacing, and bounded compositions through editable components. If UI must rebuild the first screen, page grid, most Section order, or primary visual language, the result is not client-review ready.
+- This is a quality and completeness baseline, not a reusable palette, font pairing, hero topology, editorial style, or fixture-brand template.
+
 ## Client and Internal Separation
 
 - Rendered website content uses the agreed website language.
@@ -85,6 +95,8 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 ## Completion
 
 For `complete_production`, completion is invalid unless both full-page preview roots exist, contain the complete approved Section sequence, use paired responsive families, and pass screenshot/structure QA. If work intentionally stops at design exploration, return `代表性模块预检通过` and `整体状态：进行中`; do not use `完成` or `通过` for the production result.
+
+Completion is also invalid when the final file contains an empty page or when the rendered result still requires UI to reconstruct its primary composition rather than perform bounded refinement.
 
 Return:
 

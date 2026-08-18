@@ -4,12 +4,21 @@ Run this deterministic read-only gate against the final Figma node IDs before an
 
 ## Required IDs
 
+- every live Figma page ID;
 - component-library root;
 - active category and family-row roots;
 - responsive Section Component Set IDs;
 - complete Desktop and Mobile preview roots.
 
 Missing or unresolved IDs are blocking.
+
+## File-page hygiene assertions
+
+1. Enumerate every live `PAGE` node from the file root. Do not trust a planned page list or prior manifest.
+2. A page with zero visible top-level nodes is blocking. Optional research, reference, QA, and archive pages must not exist merely as empty placeholders.
+3. Flag a page containing only setup placeholders, debug output, obsolete captures, or superseded residue for scoped review. Do not classify intentional final placeholder media inside an active design as page residue.
+4. A deterministic cleanup may remove only an exact page ID that was re-read immediately before mutation, has zero visible top-level nodes, and is not the file's sole remaining page. Record every removed page ID.
+5. Re-enumerate the file after cleanup. Delivery passes only when `empty_page_ids` is empty and no unresolved placeholder-only page remains.
 
 ## Component-library assertions
 
@@ -38,6 +47,11 @@ Return a compact machine-readable result before the Chinese summary:
 
 ```yaml
 delivery_structure_gate:
+  total_page_count:
+  populated_page_count:
+  empty_page_ids: []
+  placeholder_only_page_ids: []
+  removed_empty_page_ids: []
   library_root_id:
   library_root_type:
   library_layout_mode:

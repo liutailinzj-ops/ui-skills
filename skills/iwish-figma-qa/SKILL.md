@@ -29,7 +29,7 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 
 1. Verify that requested customer-preview frames exist and contain only rendered website content.
    - For complete production, both full Desktop and Mobile roots are mandatory and must contain the complete approved Section sequence. If either is missing, stop final QA and return `阻塞`; do not promote representative Sections, the component library, or the composition board to final delivery.
-2. Read [references/delivery-structure-gate.md](references/delivery-structure-gate.md) and run it from live Figma node properties. Ignore prior manifest pass flags and the producing task's prose result. Stop with `阻塞` when the library root is not a vertical Auto Layout frame, an active master floats outside it, a responsive variant exceeds its Component Set, or either complete-preview root is not vertical Auto Layout.
+2. Read [references/delivery-structure-gate.md](references/delivery-structure-gate.md) and run it from live Figma node properties. Enumerate every live page as well as the required roots. Ignore prior manifest pass flags and the producing task's prose result. Stop with `阻塞` when an empty/unresolved placeholder-only page remains, the library root is not a vertical Auto Layout frame, an active master floats outside it, a responsive variant exceeds its Component Set, or either complete-preview root is not vertical Auto Layout.
 3. Inspect the component-library page at readable scale. Check aligned root/category/family rows, common origins, captions, variant order, paired breakpoint top alignment, tight component-set bounds, spacing, overlap, and archive separation. A usable page preview cannot compensate for a disordered component library.
 4. Compare major-section screenshots with the Visual Direction Contract, selected seven-dimension visual signature, signature evidence, project-authored brand record, Visual-Asset Coverage Matrix, and representative compositions. Check typography hierarchy, color behavior, first-screen topology, imagery, media ratios, product/scene differentiation, density, page rhythm, component grammar, interaction, and responsive transformation.
 5. Compare the completed page with the page-composition board. Check shared grid, alignment groups, Section order, macro color/media distribution, density curve, primary conversion focus, complete-page rhythm, and selected-module placement. Isolated good Sections cannot compensate for a weak complete page.
@@ -73,6 +73,8 @@ For a targeted revision, inspect the changed nodes, their responsive pairs, shar
 ## Completion Criteria
 
 - The full page visibly inherits the Visual Direction Contract rather than a generic house template.
+- The file contains no empty page or unresolved placeholder-only/debug-only working page.
+- The rendered page is client-review ready and requires only bounded UI refinement, not reconstruction of the first screen, page grid, most Section order, or primary visual language.
 - The component library is aligned, organized, non-overlapping, and directly usable by UI.
 - The live Delivery Structure Gate is `pass`; its evidence record, not a prose claim, confirms library/root Auto Layout and variant containment.
 - The completed page matches the passed page-composition board at macro level; good isolated Sections do not hide weak page rhythm or alignment.
