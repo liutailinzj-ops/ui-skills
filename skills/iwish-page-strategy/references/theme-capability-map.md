@@ -2,12 +2,30 @@
 
 Create this artifact before the page blueprint for theme-customization work.
 
+## Target theme contract
+
+Resolve the target before mapping Sections:
+
+- `provided`: use the exact provided target theme. Do not replace it with a more convenient or familiar theme.
+- `not_provided`: research current official theme-store and vendor evidence, compare suitable paid candidates, and automatically select one best-fit target. Score category/catalog fit, required commerce and content responsibilities, selected competitor-module topology, functional needs, responsive behavior, visual-direction brief, evidence quality, and expected customization burden.
+- `not_applicable`: use only for fully custom work; skip this artifact and do not impose theme constraints.
+
+Record the candidate list, selection criteria, selected reason, and concise rejection reasons. Do not model who selected, purchased, confirmed, or approved the theme, and do not pause for that workflow. Do not choose Dawn or another free theme because its code is public; a free theme is eligible only when it was provided as the target or the project explicitly permits free themes.
+
 ## Theme evidence
 
 ```yaml
 theme:
+  input_state: provided | not_provided
   name:
   preset:
+  selection_basis: provided | matched
+  is_paid: true | false
+  matching:
+    candidate_themes: []
+    criteria: []
+    selected_reason:
+    rejected_reasons: []
   reference_url:
   vendor_docs_url:
   demo_url:
@@ -87,6 +105,7 @@ page_mappings:
 - Do not use invented names such as `approved modular composition` or `static prototype` as theme evidence. `approved` is valid only when the manifest contains explicit approval provenance for the exact deviation.
 - In `theme_adaptation`, `native_adaptation` and feasible in-scope custom implementations continue. A critical `unresolved` row blocks until engineering confirms a route or UI changes the selected module.
 - For PDP work, verify conditional visibility, block ordering, product-template assignment, and empty-state behavior where the proposed template strategy depends on them.
+- Map the complete page system, including required header, commerce, content, cross-sell, global, and footer responsibilities. Mapping three representative Sections is a preflight result, not a complete Theme Capability Map or final page assembly.
 
 ## Route gates
 

@@ -15,6 +15,7 @@ input:
   platform: shopify
   production_scenario: custom
   build_route: custom
+  target_theme_input: not_applicable
   strategy_intent: Research the product, category, competitors, and customer journey, then create an original fully custom homepage system.
   competitor_evidence_urls: []
   visual_inspiration_urls: []
@@ -37,6 +38,7 @@ assertions:
   - Missing proof and imagery use safe, presentable placeholders without invented factual claims.
   - Components and responsive Section families are designed for the approved page responsibilities rather than forced into theme primitives.
   - Desktop and Mobile are paired breakpoint previews of the same editable responsive system.
+  - Complete Desktop and Mobile homepage previews exist; representative Sections or a density-only composition board cannot pass the case.
   - Apply the technical visual review rubric before accepting the generated UI.
 
 anti_overfit:

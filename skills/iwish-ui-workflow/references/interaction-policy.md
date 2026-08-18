@@ -5,9 +5,10 @@ Use exception-driven interaction. The normal production path is automatic routin
 ## Do not pause for
 
 - Missing final copy, product images, priority product, detailed style terms, marketing strategy, page sections, or Starter File.
-- A theme not yet selected when theme selection is in internal scope.
+- A definite theme not being provided for a theme-customization project. Automatically match a suitable paid theme and continue.
 - High-confidence route inference from clear Chinese instructions.
 - Decisions that can safely use reversible project-local defaults or clearly tracked temporary content.
+- Questions about who selected, purchased, confirmed, or approved a theme; those business-process details are outside the Skill contract.
 - Regression or technical visual-gate questions; those are not part of the UI production workflow.
 
 ## Ask only when

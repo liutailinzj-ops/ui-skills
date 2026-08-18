@@ -1,5 +1,7 @@
 # Representative Compositions
 
+Representative compositions are an internal visual and responsive preflight. They validate the direction before full-page assembly but never replace the complete Desktop and Mobile customer-preview pages. If a task intentionally stops after exploration, report only `代表性模块预检通过` and keep production status `进行中`.
+
 Create a small but visually decisive internal set before full-page production. Select the highest-risk section families, not the easiest modules to draw.
 
 Before Figma, resolve the two compact internal direction candidates required for light-brand inputs. Build representative Figma compositions only for the selected candidate. Do not spend full-page production time on parallel directions.

@@ -25,6 +25,7 @@ input:
   structure_source_urls:
     - https://uk.fiido.com/products/fiido-c700-city-ebike
   theme:
+    input_state: provided
     name: Concept
     preset: Inova
     capability_urls:
@@ -50,6 +51,7 @@ assertions:
   - Theme-native capability is not stretched into a false exact mapping merely to avoid a justified custom Section.
   - Logo and supplied brand color inform a restrained project-local website visual system; unsupported high-saturation colors are not invented as additional brand colors.
   - Desktop and Mobile are paired breakpoint previews of the same responsive Section families.
+  - Complete Desktop and Mobile PDP previews exist and use Concept exactly; representative selected-module families alone cannot pass the case.
   - Apply the technical visual review rubric before accepting the generated UI.
 
 anti_overfit:

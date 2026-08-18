@@ -24,7 +24,7 @@
 - Instances are not detached without a documented reason.
 - The component-library root, categories, and family rows use Auto Layout and aligned shared origins.
 - Active component families are ordered consistently, non-overlapping, and separated from archive/deprecated families.
-- Paired Desktop/Mobile Section variants are top-aligned and component-set bounds contain no unexplained empty bands.
+- Paired Desktop/Mobile Section variants are ordered horizontally as `Desktop | Mobile`, top-aligned, separated by the foundation variant gap, and component-set bounds contain no unexplained empty bands.
 - UI can locate and edit active masters without rearranging the component page.
 
 ## Layout
@@ -90,6 +90,11 @@
 
 ## Platform feasibility
 
+- Target-theme input is exactly `已提供确定模板`, `未提供确定模板`, or `纯定制不适用`; no customer-confirmation or purchaser workflow is modeled.
+- A provided target theme is used exactly. A theme-customization project without a provided target has one automatically matched paid theme with candidate, selection, and rejection evidence.
+- Dawn or another free theme is not used as a convenience fallback unless it was provided as the target or the project explicitly permits free themes.
+- Fully custom work marks theme selection, capability mapping, and route gate not applicable.
+
 - Every theme-based section maps to an exact documented theme section/block and evidence URL.
 - Every required setting uses its exact target-theme name and has field-level editor, vendor-documentation, or current-theme evidence. Demo observation alone does not prove an editable setting.
 - Implementation levels use theme-native, configuration, style, custom CSS, custom Liquid, section-custom, app/third-party, custom, or pending-engineering.
@@ -134,6 +139,15 @@ For `selected_structure_modules`:
 - A single base template is called reusable only after scenario validation.
 - Multiple templates have evidenced platform/theme assignment support.
 - Limited catalog evidence is reported as `coverage_partial`, not universal coverage.
+- Decision-critical purchase responsibilities remain visible and testable even when values are temporary: price/compare-at hierarchy, rating present/absent, inventory, shipping, options and wrapping, quantity, purchase actions, and sticky purchase behavior where included. Presentation-only sample values are tracked internally and are not reported as facts.
+
+## Complete-page delivery
+
+- Representative Section families, composition boards, and component-library views are preflight artifacts only.
+- Complete production contains full Desktop and Mobile customer-preview roots with the entire approved Section sequence and applicable header, commerce, content, global, cross-sell, footer, and sticky responsibilities.
+- Both previews are assembled from the same responsive Section/component families and canonical content ledger.
+- Full-page screenshots were captured after assembly and both complete-preview manifest states are `pass`.
+- Exploration-only work may report `代表性模块预检通过`, but the overall production state remains `进行中`.
 
 ## Client preview separation
 
@@ -163,6 +177,7 @@ Mark QA blocked when any of these fail:
 - Alignment-group edge mismatch above 1 px or an unexplained container-width change.
 - Client-preview separation.
 - Disordered or misaligned active component-library presentation.
+- Missing full Desktop or Mobile preview, incomplete approved Section sequence, or an overall pass inferred from representative Sections only.
 - Missing or failed page-composition board, or a complete page that materially diverges from its passed macro contract.
 - Failed content sufficiency: generic/repeated Sections, missing product-specific angles, or visible internal production-status language.
 - Missing canonical content-slot binding, undeclared visible content, or rendered internal metadata.

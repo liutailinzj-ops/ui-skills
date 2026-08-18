@@ -12,6 +12,7 @@ page:
   content_mode: final | mixed | placeholder
   content_mode_label: 正式内容 | 混合内容 | 占位内容
   build_route: theme_customization | custom
+  target_theme_input: provided | not_provided | not_applicable
   brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
   brand_authorship_mode: customer_led | constrained_authoring | open_concept
   product_asset_state: production_ready | partial | none
@@ -67,8 +68,16 @@ pdp:
   conditional_modules: []
   template_assignments: []
 theme:
+  input_state: provided | not_provided | not_applicable
   name:
   preset:
+  selection_basis: provided | matched | not_applicable
+  is_paid: true | false | not_applicable
+  matching:
+    candidate_themes: []
+    criteria: []
+    selected_reason:
+    rejected_reasons: []
   capability_map:
   customization_scope:
     source:
@@ -150,6 +159,8 @@ research_sources: []
 Keep section IDs stable so later production Skills can map Figma nodes and resume safely.
 
 Every theme-based section requires an exact implementation mapping and evidence URL. Do not use custom implementation as a generic fallback.
+
+For theme-customization work, `provided` means use the exact target theme and `not_provided` means automatically match a current paid target before capability mapping. Theme matching is an internal design/feasibility decision, not a customer-confirmation workflow. Fully custom work uses `not_applicable` and contains no theme mapping.
 
 Every page section must trace to Product and Competitor Analysis, a required platform responsibility, an approved requirement, or an explicitly selected source module. For PDP work, include product applicability and a truthful template strategy. For selected competitor-module work, include exact shared content bindings, connected composition groups, one Responsive Section Contract with breakpoint states, and Theme Assembly Plan mapping for the selected scope only.
 

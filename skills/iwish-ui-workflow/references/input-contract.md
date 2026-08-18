@@ -31,6 +31,7 @@ Obtain these from sales, project owner, UI, or engineering:
 - Contracted page and feature scope.
 - Website language and market.
 - Theme store, vendor documentation, demo, or current-site URL when applicable.
+- Whether a definite target theme has already been provided. Record only `已提供确定模板`, `未提供确定模板`, or `纯定制不适用`; do not collect who selected or confirmed it.
 - Target Figma file or authorization to create one.
 - Whether missing material may use temporary assets.
 - Whether supplied product media is usable for first screen, detail, configuration/state, and context roles; record missing roles instead of treating the entire pack as simply present or absent.
@@ -40,7 +41,7 @@ Obtain these from sales, project owner, UI, or engineering:
 - Available catalog or product records for PDP work; a complete catalog is not required.
 - Whether the customer will receive a full Figma file or only preview frames/exports.
 
-For theme-customization routes, obtain theme evidence internally. Do not ask the customer to research theme capabilities.
+For theme-customization routes, obtain theme evidence internally. When no definite theme is provided, automatically match a suitable paid theme; do not ask the customer to research theme capabilities or pause for theme approval. Pure custom work does not select a theme.
 
 ## Accepted launch package
 
@@ -52,15 +53,16 @@ UI may provide Chinese natural language instead of enums:
 内部项目范围：{平台、建站方式、页面范围、网站语言}
 指定结构网站：{只需要转换其中部分模块的网站；没有则写“无指定”}
 指定参考模块：{填写模块名称、截图或描述；无指定时可省略}
-主题能力资料：{主题商店、开发商文档、演示站或现有网站；未选择则写“允许 AI 选择”}
+确定模板：{模板名称/链接 / 未提供 / 纯定制不适用}
 竞品研究网站：{客户竞品或“由 AI 补充”}
 视觉参考网站：{只参考风格的网站；没有则写“无”}
 项目场景：{自主策划 + 模板部分二开 / 指定竞品部分结构 + 模板部分二开 / 纯定制}
-主题情况：{未选择 / 只有预览 / 已购买 / 现有网站}
 目标 Figma：{链接或允许新建}
 本次页面：{页面名称}
 内容模式：{正式内容 / 混合内容 / 占位内容}
 客户是否会获得完整 Figma 文件：{是 / 否}
 ```
 
-When UI writes “按 A 的结构用 B 主题做”, normalize B into `theme_capability_urls` and ask which A modules are selected when the module scope is missing. Do not silently convert the whole A page into a production requirement.
+When UI writes “按 A 的结构用 B 主题做”, normalize B as the provided definite target theme and into `theme_capability_urls`; ask which A modules are selected when the module scope is missing. Do not silently convert the whole A page into a production requirement.
+
+When UI writes `未提供`, select the target theme internally from current paid-theme evidence. Do not ask who will choose, purchase, or confirm the theme. When UI writes `纯定制不适用`, skip theme matching and theme capability mapping.

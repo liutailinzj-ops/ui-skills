@@ -1,5 +1,9 @@
 # Page Composition Gate
 
+The board is a judgeable miniature of the intended page, not a density diagram. Every Section miniature must show its media role or temporary thumbnail, text hierarchy, controls, surface behavior, container/alignment mode, and approximate final proportion. When final media is missing, use a generated/licensed temporary image or a faithful media-role block that names subject, crop, scale, and scene; anonymous monochrome rectangles cannot carry the board.
+
+A board made primarily of color bands, density blocks, generic cards, or empty image boxes is `needs_revision` even when its Section order is correct. UI must be able to compare the board with the eventual full-page screenshot without redesigning the first screen, major media distribution, or page rhythm.
+
 Validate the complete page as one visual system before building final wrappers. Representative Sections prove local quality; this gate proves page-level composition.
 
 ## Composition board

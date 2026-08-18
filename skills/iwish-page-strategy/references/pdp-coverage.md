@@ -52,6 +52,7 @@ Do not create multiple templates merely because products have different text or 
 ## PDP Layout Rules
 
 - Keep the purchase area stable while allowing title, price, variants, badges, subscription, shipping, and CTA states to grow or collapse safely.
+- Show all decision-critical purchase responsibilities in the primary design even when final values are unavailable: price and optional compare-at/discount hierarchy, rating present/absent state, inventory, shipping, variants/options and wrapping, quantity, purchase actions, and sticky purchase behavior when included. Use neutral presentation-only sample values recorded as placeholders; do not claim them as verified facts.
 - Make below-fold modules conditional when their content is product-specific.
 - Define what happens when a module has no content; do not leave empty bands.
 - Validate long titles, option wrapping, absent ratings, different gallery counts, missing proof, and Mobile stacking.

@@ -67,6 +67,7 @@ Read [references/component-contract.md](references/component-contract.md) and [r
 - Keep implementation annotations in the manifest or handoff documentation, not as visible client-preview content.
 - Build and validate one component family at a time.
 - Place every active master or component set into the aligned component-library root, category, and family row as it is created. Do not leave masters floating on the canvas and organize them later.
+- For every responsive Section family, place variants in one deterministic horizontal row ordered `Viewport=Desktop | Viewport=Mobile`, top-aligned with the foundation variant gap. Keep component-set bounds tight to content; do not stack viewport variants vertically or preserve unexplained empty bands.
 - Capture the component library at readable scale before page assembly. Fail when categories, family rows, paired breakpoint variants, component-set bounds, captions, or variant order are not aligned and usable by UI.
 
 ## Company Library Policy

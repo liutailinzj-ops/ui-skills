@@ -41,17 +41,20 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 5. Validate the component-library presentation and page-composition board. Do not create full-page wrappers until the first screen, one differentiation module, one imagery-led module, the aligned component library, and the complete-page composition all pass. Return to strategy, visual direction, or foundation when content, macro rhythm, color/media distribution, grid, or alignment remains unresolved.
 6. Create paired Desktop and Mobile customer-preview wrapper frames with no visible internal annotations for complete production. For targeted revision, preserve existing wrappers and unrelated Sections.
 7. Build one responsive Section/component family per sequential Figma mutation, then place or update its paired Desktop and Mobile instances before continuing to the next Section.
-8. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
-9. For theme-based work, use evidenced native Section/Block geometry where it preserves the design responsibility. When native geometry materially weakens the approved hierarchy, media relationship, interaction, or responsive behavior and development scope allows it, use styling, CSS, Liquid, or a scoped new Section and record the route. Theme capability is an implementation inventory, not a requirement to imitate the demo or accept a weaker composition.
-10. For selected competitor-module work, build the selected modules from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation; derive the rest of the page from the approved research-led blueprint.
-11. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
-12. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
-13. Bind each decision-critical media node to its Visual-Asset Coverage Matrix row. Semantically different products, configurations, features, or scenes must be visibly different; do not satisfy distinct media slots by duplicating one generic illustration and changing text.
-14. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.
-15. Keep both preview states editable through the shared component family. Do not detach or rewrite one state independently; change only the breakpoint fields allowed by the Responsive Section Contract.
-16. Validate each paired Section at useful screenshot scale before proceeding. Compare content-slot IDs and values, visual-asset roles, alignment groups, parent containment, clipping, and theme-evidenced breakpoint behavior; repair deterministic layout problems immediately.
-17. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames. Never render internal content status beside website copy.
-18. Return every created or mutated node ID, explicitly preserved node IDs, and update the production manifest.
+8. Complete the entire blueprint inside both wrappers, including required header, commerce, content, global, cross-sell, footer, and sticky responsibilities. Representative families are preflight evidence only; never stop complete production after placing only those families.
+9. Reuse resolved component instances and project-local components; keep editorial sections editable without forcing every unique composition into a generic card family.
+10. For theme-based work, use evidenced native Section/Block geometry where it preserves the design responsibility. When native geometry materially weakens the approved hierarchy, media relationship, interaction, or responsive behavior and development scope allows it, use styling, CSS, Liquid, or a scoped new Section and record the route. Theme capability is an implementation inventory, not a requirement to imitate the demo or accept a weaker composition.
+11. For selected competitor-module work, build the selected modules from source specifications and visual correspondence rather than topics or memory. Preserve requested content, connected compositions, hierarchy, reading flow, and documented theme adaptation; derive the rest of the page from the approved research-led blueprint.
+12. For research-led work, preserve each section's trace to product, competitor, and journey evidence without adding generic ecommerce filler.
+13. Use customer imagery first. When material is missing, use licensed, generated, or tracked temporary imagery that preserves intended crop, density, product scale, and composition.
+14. Bind each decision-critical media node to its Visual-Asset Coverage Matrix row. Semantically different products, configurations, features, or scenes must be visibly different; do not satisfy distinct media slots by duplicating one generic illustration and changing text.
+15. For PDP and other transaction pages, render decision-critical commerce states even when factual data is missing. Use neutral presentation-only sample values tracked internally for price hierarchy, discount/compare-at state, rating present/absent, inventory, shipping, variants/options, quantity, purchase actions, and sticky purchase behavior; never present them as verified facts.
+16. Bind project colors, spacing, radii, text, and effects to variables/styles. Keep client-facing text editable and styled.
+17. Keep both preview states editable through the shared component family. Do not detach or rewrite one state independently; change only the breakpoint fields allowed by the Responsive Section Contract.
+18. Validate each paired Section at useful screenshot scale before proceeding. Compare content-slot IDs and values, visual-asset roles, alignment groups, parent containment, clipping, and theme-evidenced breakpoint behavior; repair deterministic layout problems immediately.
+19. Keep theme mappings, source warnings, Rxx identifiers, implementation notes, temporary-asset provenance, and QA results outside customer-preview frames. Never render internal content status beside website copy.
+20. Capture and inspect full Desktop and Mobile screenshots after the last Section. Set both complete-preview states before requesting final QA; a component-library screenshot, composition board, or representative Section screenshot cannot substitute.
+21. Return every created or mutated node ID, explicitly preserved node IDs, and update the production manifest.
 
 ## Visual Continuity Rules
 
@@ -78,6 +81,8 @@ Read [references/build-contract.md](references/build-contract.md) and [reference
 - If the customer receives the whole Figma file, place internal QA and implementation documentation in a separate file.
 
 ## Completion
+
+For `complete_production`, completion is invalid unless both full-page preview roots exist, contain the complete approved Section sequence, use paired responsive families, and pass screenshot/structure QA. If work intentionally stops at design exploration, return `代表性模块预检通过` and `整体状态：进行中`; do not use `完成` or `通过` for the production result.
 
 Return:
 

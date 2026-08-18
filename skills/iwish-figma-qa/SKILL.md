@@ -28,13 +28,14 @@ Inspect rendered screenshots and node structure as an internal safeguard. Load t
 ## Internal QA Sequence
 
 1. Verify that requested customer-preview frames exist and contain only rendered website content.
+   - For complete production, both full Desktop and Mobile roots are mandatory and must contain the complete approved Section sequence. If either is missing, stop final QA and return `阻塞`; do not promote representative Sections, the component library, or the composition board to final delivery.
 2. Inspect the component-library page at readable scale. Check aligned root/category/family rows, common origins, captions, variant order, paired breakpoint top alignment, tight component-set bounds, spacing, overlap, and archive separation. A usable page preview cannot compensate for a disordered component library.
 3. Compare major-section screenshots with the Visual Direction Contract, selected seven-dimension visual signature, signature evidence, project-authored brand record, Visual-Asset Coverage Matrix, and representative compositions. Check typography hierarchy, color behavior, first-screen topology, imagery, media ratios, product/scene differentiation, density, page rhythm, component grammar, interaction, and responsive transformation.
 4. Compare the completed page with the page-composition board. Check shared grid, alignment groups, Section order, macro color/media distribution, density curve, primary conversion focus, complete-page rhythm, and selected-module placement. Isolated good Sections cannot compensate for a weak complete page.
 5. Check the Content Strategy Contract against visible copy and media. Verify unique visitor questions, product-specific angles, message hierarchy, competitor presentation logic, conversion/buying coverage, and absence of internal production status. Return `需要调整` when three or more Sections remain generic or repetitive even if the layout is correct.
 6. Detect generic visual fallback: repeated black boxes, repeated equal-card grammar, repeated abstract product primitives, duplicated media for semantically different items, default accent color, or a house long-page rhythm unsupported by project evidence. If decision-critical media is missing/repeated or three or more identity-bearing dimensions form an unsupported fixed combination, return `需要调整` to `$iwish-visual-direction`; do not auto-redesign it in QA and do not report the page as complete.
 7. Verify selected-module source identity, content/layout correspondence, connected compositions, and target-theme evidence for selected competitor-module work.
-8. Verify theme route, Section/Block/Setting support, responsive behavior, and approved customization scope for theme-based work.
+8. Verify target-theme input state, theme route, Section/Block/Setting support, responsive behavior, and approved customization scope for theme-based work. A provided target must be used exactly; an unprovided target must resolve to a suitable paid theme with recorded matching evidence; fully custom work must be `纯定制不适用`. Block a convenience fallback to Dawn/free themes unless explicitly provided or permitted.
 9. Verify product/competitor analysis traceability for research-led or hybrid sections.
 10. Read [references/responsive-geometry-audit.md](references/responsive-geometry-audit.md) and run its node-level paired identity, canonical content-slot parity, alignment, containment, clipping, sizing, and preview-isolation checks.
 11. Run [references/qa-checklist.md](references/qa-checklist.md) for Figma structure, typography, components, assets, source/theme fidelity, and implementation risks.
@@ -50,6 +51,7 @@ For a targeted revision, inspect the changed nodes, their responsive pairs, shar
 - Use the agreed website language inside rendered website frames.
 - Use Chinese for every visible internal QA heading, status, finding, implementation note, replacement list, and risk label.
 - Keep internal enum values in the manifest only. Display `通过`, `需要调整`, or `阻塞` to UI.
+- Use `代表性模块预检通过` only for an internal preflight that intentionally stops before full-page assembly. It never means the production delivery is complete; display the overall state as `进行中`.
 - Default to returning QA in the Codex conversation or an internal artifact without creating Figma nodes.
 - If an internal Figma QA page is explicitly required, use `内部检查 / QA` and keep it outside customer-preview pages.
 - If the customer receives the whole Figma file, write QA to a separate internal file.
@@ -74,6 +76,7 @@ For a targeted revision, inspect the changed nodes, their responsive pairs, shar
 - The completed page matches the passed page-composition board at macro level; good isolated Sections do not hide weak page rhythm or alignment.
 - The visible content passes the Content Strategy Contract and is sufficiently product-specific, non-repetitive, and externally readable.
 - Requested Desktop and Mobile previews are complete, visually inspectable, and paired to the same responsive Section/component families.
+- Both complete-preview manifest states are `pass`; representative-preflight status is not used as a substitute.
 - Shared Section identity, order, content bindings, controls, and copy match across breakpoints; every difference is evidenced and allowed.
 - Every visible text/media/control node resolves to the canonical customer-visible content ledger; internal status, provenance, approval, replacement, and publication fields remain outside rendered content.
 - Alignment groups, containment, clipping, and fixed-size checks pass from actual node geometry.
@@ -86,4 +89,4 @@ For a targeted revision, inspect the changed nodes, their responsive pairs, shar
 - Customer-preview frames contain no visible internal QA, implementation, source, Rxx, or replacement content.
 - Remaining decisions have a clear UI, client, or engineering owner.
 
-Report internal fields separately, but summarize them in Chinese. Use `通过` only when no production-impacting issue remains, `需要调整` for non-blocking internal follow-ups, and `阻塞` for a real source, route, design, Figma, or implementation failure.
+Report internal fields separately, but summarize them in Chinese. Use `通过` only when no production-impacting issue remains and both complete previews passed, `需要调整` for non-blocking internal follow-ups on an otherwise complete delivery, and `阻塞` for a real source, route, design, Figma, implementation, or missing-complete-preview failure. Use `代表性模块预检通过 / 整体状态：进行中` for valid exploration-only output.

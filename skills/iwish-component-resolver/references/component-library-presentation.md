@@ -1,5 +1,14 @@
 # Component Library Presentation Contract
 
+## Responsive family geometry
+
+- One Section family occupies one horizontal family row.
+- Variant order is always `Viewport=Desktop | Viewport=Mobile`, left to right.
+- Align both variant origins to the top edge even when their heights differ.
+- Use the foundation variant gap and stable column starts; do not use per-family ad hoc spacing.
+- Component-set and family-row bounds must Hug Content tightly enough that no unexplained empty band remains.
+- Vertical breakpoint stacking, overlapping component sets, or loose absolute placement blocks page assembly. Repair the library before using its instances.
+
 The component page is an internal working surface, but it must be orderly enough for UI to find, compare, and edit component families without rearranging the file.
 
 ## Required structure

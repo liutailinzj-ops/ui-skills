@@ -43,12 +43,20 @@ asset_input:
     control_or_detail_language:
     environment_rules:
 theme:
+  input_state: provided | not_provided | not_applicable
   name:
   preset:
-  state: to_be_selected | demo_only | code_available | current_site
+  selection_basis: provided | matched | not_applicable
+  state: demo_only | code_available | current_site | matched_from_public_evidence | not_applicable
+  is_paid: true | false | not_applicable
+  matching:
+    candidate_themes: []
+    criteria: []
+    selected_reason:
+    rejected_reasons: []
   capability_map:
   evidence_urls: []
-  route_gate: pass | blocked
+  route_gate: pass | blocked | not_applicable
   customization_scope:
     source:
     approved_capabilities: []
@@ -212,6 +220,12 @@ workflow:
     preserved_dependencies: []
     qa_scope: local | full_page
   completed: []
+delivery:
+  scope: complete_page | targeted_revision | design_exploration
+  representative_preflight_status: not_run | pass | needs_revision | blocked
+  complete_desktop_preview_status: not_run | pass | blocked
+  complete_mobile_preview_status: not_run | pass | blocked
+  overall_completion_status: in_progress | complete | blocked
 internal_qa:
   status: not_run | pass | needs_adjustment | blocked
   display_label: 未检查 | 通过 | 需要调整 | 阻塞
@@ -235,7 +249,11 @@ Classify brand and product assets independently. Persist the four-way asset rout
 
 Persist the Content Strategy Contract before visual direction. Each Section Content Card must record one visitor question, unique content job, product-specific angle, media job, proof state, and next action. Generic safe copy is not sufficient.
 
-Persist the page-composition board and component-library presentation before final page wrappers. Do not mark production complete when isolated Sections pass but the complete-page rhythm or component library remains unaligned.
+Persist only the target-theme input state, selected target theme, selection basis, evidence, and matching rationale. Do not persist customer-confirmation workflow, purchaser identity, or approval steps. For `theme_customization`, `provided` uses the exact supplied target and `not_provided` must resolve to one evidence-backed paid target without pausing. For `custom`, use `not_applicable` throughout. A free theme may be matched only when the project explicitly permits free themes.
+
+Persist the page-composition board and component-library presentation before final page wrappers. Do not mark production complete when isolated Sections pass but the complete-page rhythm or component library remains unaligned. A board made only of anonymous density/color blocks does not pass; it must expose judgeable media roles, text hierarchy, controls, surfaces, Section order, and approximate final proportions.
+
+Set `representative_preflight_status` independently from final delivery. For `complete_page`, set `overall_completion_status: complete` only after both complete Desktop and Mobile previews exist, are assembled from the same responsive Section families, and have passed QA. Representative-Section success, a component library, or a composition board cannot substitute for either preview.
 
 For light-brand projects, persist the brand-authorship mode, supplied invariants, project-authored brand fields, two materially different internal visual-direction candidates, and the selected candidate rationale. Record evidence for all seven visual-signature dimensions. Generic adjectives and model preference are not evidence; a named creative inference must connect to the product, audience, journey, content behavior, implementation route, or supplied asset and explain why the rejected candidate fits less well.
 

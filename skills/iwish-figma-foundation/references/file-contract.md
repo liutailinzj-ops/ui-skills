@@ -74,3 +74,5 @@ Do not place masters loosely on the canvas. Create one aligned Auto Layout root 
 ```
 
 Use the Component Library Presentation Contract for category, family-row, caption, variant, spacing, and alignment behavior. Record every root/category/family-row ID.
+
+Within each responsive Section family row, reserve stable horizontal variant columns in `Desktop | Mobile` order, align both variants to the top, and use one foundation-defined inter-variant gap. Keep component-set bounds tight; viewport-height differences must not create vertical stacking or large empty bands.

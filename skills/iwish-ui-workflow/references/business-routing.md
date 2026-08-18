@@ -9,7 +9,8 @@ site_model: dtc | b2b | mixed
 production_scenario: research_led_theme_customization | selected_modules_theme_customization | custom
 build_route: theme_customization | custom
 strategy_mode: research_led | hybrid_led | custom_led
-theme_state: to_be_selected | demo_only | code_available | current_site
+target_theme_input: provided | not_provided | not_applicable
+theme_state: demo_only | code_available | current_site | matched_from_public_evidence | not_applicable
 content_state: final | mixed | placeholder
 brand_input_state: full_vi | logo_and_color | logo_only | no_brand_assets
 product_asset_state: production_ready | partial | none
@@ -54,6 +55,14 @@ Never promote a theme demo to the structure source unless the user explicitly as
 
 For `theme_customization`, inspect evidenced native capability, then classify configuration, style, CSS, Liquid, new Sections, apps, or other custom work per module. Choose the least complex route that preserves the approved design responsibility; do not lower visual fidelity merely to stay native. Do not enforce a universal custom-section percentage; use the contracted scope and engineering feasibility. For `custom`, use research, requirements, references, brand inputs, and platform feasibility without theme-module constraints.
 
+## Target theme routing
+
+- `provided`: use the exact provided target theme and inspect its current official capability evidence.
+- `not_provided`: compare suitable current paid themes and automatically select the closest fit using product/category, page responsibilities, functional requirements, selected competitor structures, responsive behavior, visual-direction brief, and customization burden. Continue without an approval pause.
+- `not_applicable`: use only for `custom`; do not select or map a theme.
+- Do not record who selected, purchased, confirmed, or approved a theme. The Skill needs only the current input state and the resulting target theme.
+- Do not select Dawn or another free theme merely for convenience or public source access. A free theme is valid only when provided as the target or explicitly permitted by the project.
+
 ## Chinese Project Recognition Card
 
 Display once, then continue unless a blocking ambiguity exists:
@@ -65,7 +74,7 @@ Display once, then continue unless a blocking ambiguity exists:
 建站方式：模板部分二开 / 纯定制
 项目场景：自主策划 + 模板部分二开 / 指定竞品部分结构 + 模板部分二开 / 纯定制
 参考方式：无指定结构 / 只转换选中模块 / 不适用
-主题状态：待选择 / 只有预览 / 已有代码 / 现有网站
+目标模板：已提供 {theme} / 未提供，已自动匹配 {theme} / 纯定制不适用
 内容模式：正式内容 / 混合内容 / 占位内容
 品牌资料：完整 VI / Logo + 品牌色 / 只有 Logo / 无品牌素材
 产品素材：可直接使用 / 部分可用 / 无产品素材
@@ -73,7 +82,7 @@ Display once, then continue unless a blocking ambiguity exists:
 网站语言：{language}
 来源角色：
 - 指定结构来源：{URL + 选中模块清单 / 无}
-- 主题能力来源：{URL 或“无 / 待选择”}
+- 主题能力来源：{URL 或“纯定制不适用”}
 - 竞品研究来源：{URL 列表或“由 AI 补充”}
 - 视觉参考来源：{URL 列表或“无”}
 本次页面：{page}

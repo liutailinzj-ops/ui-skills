@@ -19,8 +19,10 @@ input:
   structure_source_urls: []
   competitor_evidence_urls: []
   visual_inspiration_urls: []
-  theme_state: to_be_selected
-  theme_selection_in_scope: true
+  target_theme_input: not_provided
+  theme_matching:
+    paid_theme_required: true
+    automatic: true
   customization_scope:
     allow_configuration: true
     allow_style: true
@@ -40,11 +42,12 @@ assertions:
   - Production scenario is research_led_theme_customization and internal strategy is research_led; selected-module source fields are not fabricated.
   - Product, category, competitor, and DTC conversion analysis occurs before theme selection and page hierarchy.
   - Competitors are researched from current evidence and are not copied as one page target.
-  - Theme selection is justified by the resulting page responsibilities and exact documented native capabilities.
+  - A current paid target theme is matched automatically from category, page responsibilities, functional needs, responsive behavior, visual direction, evidence quality, and customization burden; Dawn/free-theme convenience fallback fails this case.
   - Every page Section is classified by exact theme/native/custom implementation level and scope status; no universal custom percentage is invented.
   - Native theme capability is used where it preserves the design responsibility, while justified in-scope custom Sections remain available.
   - Missing proof and imagery use safe placeholders without invented performance facts.
   - Desktop and Mobile are editable paired breakpoint previews of the same responsive Section/component families and pass geometry, content-parity, containment, overflow, and component QA.
+  - Complete Desktop and Mobile homepage previews exist; representative Sections, a composition board, or a component library alone cannot pass the case.
   - A project-specific visual direction and representative compositions exist before the full page; the result does not inherit the visual grammar of another fixture.
   - Apply the technical visual review rubric before accepting the generated UI.
 

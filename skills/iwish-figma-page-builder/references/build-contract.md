@@ -60,6 +60,7 @@ Before creating final preview wrappers:
 - Confirm the board uses realistic content volume and intended temporary media rather than anonymous blocks.
 - Confirm representative Sections fit the complete-page rhythm without forcing unrelated Sections into one repeated grammar.
 - Reject final assembly when UI would still need to redesign the first screen, reorder most Sections, redistribute major color/media fields, or choose the page grid.
+- Reject a board composed only of anonymous color/density blocks, empty media rectangles, or generic cards. It must expose judgeable media/thumbnail roles, text hierarchy, controls, surfaces, Section order, and approximate final proportions.
 
 ## Component-library preflight
 
@@ -133,6 +134,15 @@ Do not use a visually polished semantic checklist as a substitute for steps 1–
 - Collapse absent optional modules without blank section height.
 - Use multiple product templates only when the blueprint selects `template_family` and theme/platform assignment is evidenced.
 - Report `coverage_partial` when the available product evidence cannot support a catalog-wide claim.
+- Keep decision-critical purchase responsibilities visible in the primary composition even when final values are unavailable: price and optional compare-at/discount hierarchy, rating present/absent, inventory, shipping, variants/options and wrapping, quantity, purchase actions, and sticky purchase behavior when included. Use neutral sample values tracked as placeholders; never present them as verified facts.
+
+## Complete-page delivery gate
+
+- Representative responsive Section families, the component library, and the page-composition board are preflight artifacts only.
+- Complete production requires full Desktop and Mobile customer-preview roots containing the entire approved Section sequence, including applicable header, commerce, content, global, cross-sell, footer, and sticky responsibilities.
+- Both roots must be assembled from the same responsive Section/component families and canonical content ledger. Mobile is a breakpoint state, not a separate redesign.
+- Capture and inspect both full-page screenshots after assembly. Do not set overall production complete until both preview states pass.
+- If the requested scope intentionally stops at exploration, report only `代表性模块预检通过` and keep overall production in progress.
 
 ## Section validation gate
 
